@@ -1,0 +1,37 @@
+{
+  "stage": "3.0",
+  "source": "road_vrp_7 July only",
+  "cost_file_sha256": "3612b66ad23df15ed409c86f2585755d4393d7a9044c38dd3ee1a30e5b49dd68",
+  "edge_file_sha256": "23f5e3524e05004e5b597bb4d0edd945321a3ddb516cb939b344acf5e0ab52a1",
+  "tasks_manifest_sha256": "520afcd810fcb8c519903c39f760109aebcb7104d7d92d3e811c8aa60d228a24",
+  "task_sha256": {
+    "task_0000.json": "c1415513d260d118e10b42ccd76a79f3989dbeefa68b0a374839b8436b4492d1"
+  },
+  "split": "train",
+  "only_eligible": true,
+  "methods": [
+    "greedy",
+    "sa",
+    "vnd",
+    "official_alns"
+  ],
+  "planners": [
+    "static",
+    "oracle"
+  ],
+  "seeds": [
+    42
+  ],
+  "wall_sec": 2.0,
+  "iterations": 100,
+  "od_step_min": 20,
+  "od_hours": 5.0,
+  "max_tasks": 1,
+  "max_scenarios": 1,
+  "requested_scenario_ids": null,
+  "selected_scenario_ids": [
+    "2025-07-02_0800"
+  ],
+  "expected_count": 8,
+  "historical_label_usage": "oracle planning uses complete historical future; hindsight only"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "COMPLETE",
+  "grid_records": 8,
+  "task_count": 1,
+  "dates": [
+    "2025-07-02"
+  ],
+  "scenario_count": 1,
+  "comparison_count": 10,
+  "main_metric": "ex_post_road_travel_sec",
+  "ci_method": "bootstrap tasks, 3000 resamples; exploratory, dates are repeated environments",
+  "limitations": [
+    "Historical road labels + unmeasured OSM fallback, not full ground truth",
+    "Oracle uses hindsight future traffic, not deployable",
+    "Synthetic delivery customers/demands, not real freight orders",
+    "Greedy construction time and search time reported separately",
+    "Shared traffic days and seeds are NOT independent task replicates"
+  ]
+}

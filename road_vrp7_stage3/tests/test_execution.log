@@ -1,0 +1,48 @@
+PASS solver greedy static 1789.38
+PASS solver sa static 1789.38
+PASS solver vnd static 1789.38
+PASS solver greedy oracle 1739.75
+PASS solver sa oracle 1739.75
+PASS solver vnd oracle 1689.75
+OD task_0000 2025-07-22_0800 jobs=6 cache=True
+  greedy        static seed=42 ex-post=1789.4s planned=1750.0s search=0.00s
+  greedy        oracle seed=42 ex-post=1739.8s planned=1736.9s search=0.00s
+  sa            static seed=42 ex-post=1789.4s planned=1750.0s search=0.00s
+  sa            oracle seed=42 ex-post=1739.8s planned=1736.9s search=0.01s
+  vnd           static seed=42 ex-post=1789.4s planned=1750.0s search=0.00s
+  vnd           oracle seed=42 ex-post=1739.8s planned=1736.9s search=0.01s
+{
+  "status": "COMPLETE",
+  "expected_count": 6,
+  "actual_count": 6,
+  "cost_sha256": "07557a9d81154ec67cb99f29c13132f080870c9b142e6522b7aafc2cb690c17d",
+  "split": "validation",
+  "include_ineligible": false,
+  "total_run_elapsed_sec": 0.3903719559998535,
+  "note": "Oracle hindsight only; all final roads replayed on same July FIFO hybrid costs"
+}
+solver planner  records  mean_ex_post_sec  median_ex_post_sec  std_ex_post_sec  mean_wall_sec  mean_observed_share  mean_score_calls
+greedy  oracle        1          1739.750            1739.750              NaN          0.098                0.029             1.000
+greedy  static        1          1789.375            1789.375              NaN          0.016                0.029             1.000
+    sa  oracle        1          1739.750            1739.750              NaN          0.116                0.029            49.000
+    sa  static        1          1789.375            1789.375              NaN          0.018                0.029            39.000
+   vnd  oracle        1          1739.750            1739.750              NaN          0.107                0.029            53.000
+   vnd  static        1          1789.375            1789.375              NaN          0.015                0.029            53.000
+
+                comparison reference  num_tasks  paired_runs  mean_gain_pct  ci_2_5_pct  ci_97_5_pct  paired_win_rate  positive_tasks
+oracle vs static / greedy    oracle          1            1          2.773       2.773        2.773            1.000               1
+    oracle vs static / sa    oracle          1            1          2.773       2.773        2.773            1.000               1
+   oracle vs static / vnd    oracle          1            1          2.773       2.773        2.773            1.000               1
+{
+  "status": "COMPLETE",
+  "expected_count": 6,
+  "actual_count": 6,
+  "cost_sha256": "07557a9d81154ec67cb99f29c13132f080870c9b142e6522b7aafc2cb690c17d",
+  "split": "validation",
+  "include_ineligible": false,
+  "total_run_elapsed_sec": 0.0061079130000507575,
+  "note": "Oracle hindsight only; all final roads replayed on same July FIFO hybrid costs"
+}
+PASS strict result-grid negative control
+SKIP official ALNS integration: install alns==7.0.0 and rerun on server
+PASS stage3 synthetic July fixture, baseline methods, resume, paired analysis
