@@ -18,7 +18,6 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import networkx as nx
-import osmnx as ox
 
 META = ['street','direction','length','start_latitude','start_longitude','end_latitude','end_longitude']
 USE = ['time','segment_id','speed'] + META

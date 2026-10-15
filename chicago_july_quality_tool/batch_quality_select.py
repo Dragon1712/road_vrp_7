@@ -471,7 +471,7 @@ def main(argv=None):
     (out/"selected_scenarios.json").write_text(json.dumps(payload,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     config={k:((str(v) if isinstance(v,(Path,dt.date)) else [t.strftime('%H:%M') for t in v])
                 if k=="departures" else (str(v) if isinstance(v,(Path,dt.date)) else v)) for k,v in vars(args).items()}
-    manifest={"input_git_repo":"Dragon1712/road_vrp","reference_git_commit":"e64d6f1118ba910d983ff07aa1bdc892ccdb409c",
+    manifest={"input_git_repo":"Dragon1712/road_vrp_7","reference_git_commit":None,"mapping_origin":"independent_July_CSVs_and_fresh_OSM",
               "script_version":"1.0.0", "configuration":config,"expected_dates":len(all_days),
               "files_found":int(days.exists.sum()),"missing_file_dates":missing,
               "selected_count":len(payload),"eligible_scenario_count":int(scenarios.eligible.sum()),
