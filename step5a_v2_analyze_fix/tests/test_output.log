@@ -1,0 +1,14 @@
+SOLVER GROUPS
+   solver planner  n  mean_road_sec  mean_search_sec  p95_search_sec  mean_iterations  mean_score_calls  mean_observed_edge_share  mean_failed_repairs  mean_te_nonzero_calls  mean_te_static_fallback_calls  mean_extra_route_cost_calls  fraction_90pct_wall
+   at_rr  oracle  1        95.0000           5.0000          5.0000         100.0000          200.0000                    0.1000               0.0000                 0.0000                         0.0000                       0.0000               1.0000
+   at_rr  static  1        95.0000           5.0000          5.0000         100.0000          200.0000                    0.1000               0.0000                 0.0000                         0.0000                       0.0000               1.0000
+baseline  oracle  1       100.0000           5.0000          5.0000         100.0000          200.0000                    0.1000               0.0000                 0.0000                         0.0000                       0.0000               1.0000
+baseline  static  1       100.0000           5.0000          5.0000         100.0000          200.0000                    0.1000               0.0000                 0.0000                         0.0000                       0.0000               1.0000
+
+PAIRED
+      new            reference planner  pairs  tasks  mean_pair_gain_pct  task_bootstrap95_low  task_bootstrap95_high  win_rate  positive_tasks  average_road_delta_sec  mean_new_search_sec  mean_ref_search_sec  mean_new_iterations  mean_ref_iterations  mean_new_score_calls  mean_ref_score_calls
+   at_rr             baseline  static      1      1              5.0000                5.0000                 5.0000    1.0000               1                  5.0000               5.0000               5.0000             100.0000             100.0000              200.0000              200.0000
+   at_rr             baseline  oracle      1      1              5.0000                5.0000                 5.0000    1.0000               1                  5.0000               5.0000               5.0000             100.0000             100.0000              200.0000              200.0000
+baseline stage3_official_alns  static      1      1              0.0000                0.0000                 0.0000    0.0000               0                  0.0000               5.0000               5.0000             100.0000             100.0000              200.0000              200.0000
+baseline stage3_official_alns  oracle      1      1              0.0000                0.0000                 0.0000    0.0000               0                  0.0000               5.0000               5.0000             100.0000             100.0000              200.0000              200.0000
+PASS: actual Stage3/Step5 config field aliases, full synthetic Pilot analysis, strict negative checks

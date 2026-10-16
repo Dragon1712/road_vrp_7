@@ -105,6 +105,53 @@ def export_mechanism_logs(path,out,metrics):
             'pair_rows':len(pairs),'sample_event_rows':len(events)}
 
 
+def validate_stage3_reference_config(basecfg, cfg):
+    """Compare pinned Stage3/Step5 references despite their historical key spellings.
+
+    Stage3 uses `tasks_manifest_sha256` (plural); Step5A uses
+    `task_manifest_sha256` (singular). No missing digest is silently accepted.
+    """
+    if basecfg.get('split') != 'validation' or cfg.get('split') != 'validation':
+        raise ValueError('Both reference experiments must be validation-only')
+    for key in ('cost_file_sha256', 'edge_file_sha256'):
+        left, right = basecfg.get(key), cfg.get(key)
+        if not left or not right or left != right:
+            raise ValueError(f'Stage3/Step5 reference mismatch: {key}')
+    left = basecfg.get('tasks_manifest_sha256')  # Stage3's actual spelling
+    right = cfg.get('task_manifest_sha256')      # Step5A's actual spelling
+    if not left or not right or left != right:
+        raise ValueError('Stage3/Step5 reference mismatch: tasks_manifest_sha256 vs task_manifest_sha256')
+    budget_pairs = (
+        ('wall_sec', 'wall_sec', float),
+        ('iterations', 'max_iterations', int),
+        ('od_step_min', 'od_step_min', int),
+        ('od_hours', 'od_hours', float),
+    )
+    for old_key,new_key,cast in budget_pairs:
+        try:
+            old,new = cast(basecfg[old_key]), cast(cfg[new_key])
+        except (KeyError,TypeError,ValueError) as exc:
+            raise ValueError(f'Missing/invalid comparable budget: {old_key} vs {new_key}') from exc
+        if old != new:
+            raise ValueError(f'Stage3/Step5 budget mismatch: {old_key}={old}, {new_key}={new}')
+    base_tasks = basecfg.get('task_sha256')
+    v2_tasks = cfg.get('task_sha256')
+    if not isinstance(base_tasks,dict) or not isinstance(v2_tasks,dict) or not v2_tasks:
+        raise ValueError('Task SHA256 mappings missing')
+    for filename,digest in v2_tasks.items():
+        if not digest or base_tasks.get(filename)!=digest:
+            raise ValueError(f'Stage3/Step5 task content mismatch: {filename}')
+    if not set(cfg.get('seeds',[])).issubset(set(basecfg.get('seeds',[]))):
+        raise ValueError('Stage5 seed not covered by Stage3 reference')
+    if not set(cfg.get('scenario_ids',[])).issubset(set(basecfg.get('selected_scenario_ids',[]))):
+        raise ValueError('Stage5 scenario outside Stage3 reference')
+    if not set(cfg.get('planners',[])).issubset(set(basecfg.get('planners',[]))):
+        raise ValueError('Stage5 planner not covered by Stage3 reference')
+    if 'official_alns' not in basecfg.get('methods',[]):
+        raise ValueError('Stage3 reference lacks official_alns')
+    return True
+
+
 def analyze(stage5,output,stage3=None):
     path=Path(stage5);out=Path(output)
     cfg=read_json(path/'run_config.json')
@@ -148,22 +195,17 @@ def analyze(stage5,output,stage3=None):
     if stage3:
         prev=Path(stage3)
         basecfg=read_json(prev/'run_config.json')
-        if basecfg.get('split')!='validation':raise ValueError('Stage3 baseline not a validation split')
-        for k in ('cost_file_sha256','edge_file_sha256','tasks_manifest_sha256'):
-            if basecfg[k]!=cfg[k]:raise ValueError('Stage3 cost/task manifest mismatch '+k)
-        if (float(basecfg['wall_sec'])!=float(cfg['wall_sec']) or
-            int(basecfg['iterations'])!=int(cfg['max_iterations']) or
-            int(basecfg['od_step_min'])!=int(cfg['od_step_min']) or
-            float(basecfg['od_hours'])!=float(cfg['od_hours'])):
-            raise ValueError('Stage3 and Step5 budgets/OD configuration differ: do not compare')
-        for taskname,digest in cfg['task_sha256'].items():
-            if basecfg['task_sha256'].get(taskname)!=digest:
-                raise ValueError('Stage3 and Step5 task bytes differ')
+        validate_stage3_reference_config(basecfg, cfg)
         b=pd.read_csv(prev/'metrics.csv',dtype={'task_id':str,'scenario_id':str,'solver':str,'planner':str})
         b=b[b.solver=='official_alns'].copy()
         baseline=a[a.solver=='baseline']
+        # A full Stage3 run contains MORE scenarios/tasks/seeds than Pilot.
+        # Restrict to the matching subset, but do not permit duplicate keys.
+        if b.duplicated(PAIR).any() or baseline.duplicated(PAIR).any():
+            raise ValueError('Duplicate Stage3/Step5 baseline pairing keys')
         subset=b.merge(baseline[PAIR].drop_duplicates(),on=PAIR,how='inner',validate='many_to_one')
-        if len(subset)!=len(baseline):raise ValueError('Stage3 official_ALNS missing some Stage5 baseline keys')
+        if len(subset)!=len(baseline) or set(map(tuple,subset[PAIR].itertuples(index=False,name=None)))!=set(map(tuple,baseline[PAIR].itertuples(index=False,name=None))):
+            raise ValueError('Stage3 official_ALNS missing/unexpected Stage5 baseline pairing keys')
         required=baseline[PAIR].drop_duplicates()
         for key in ('task_id','scenario_id','planner','seed'):
             if required[key].isna().any():raise ValueError('Invalid match key')
@@ -185,7 +227,7 @@ def analyze(stage5,output,stage3=None):
                 'TE-WR vs te_local tests downstream time externality vs local arc saving, not vs Stage3 total Worst.',
                 'The operator gain/acceptance statistics describe Destroy+Repair interactions, not causal Destroy-only effects.',
                 'Static mode must not access dynamic traffic; AT shadow feature auditing occurs only in Oracle.',
-                'Stage3 baseline comparison requires same version, seeds, clock config and hashes.']}
+                'Stage3 reference is a diagnostic comparability check: hashes, budgets and paired IDs match, but telemetry overhead may change timing and trajectories; code-version identity is not established.']}
     write_json(out/'analysis_summary.json',summary)
     print('SOLVER GROUPS\n',g.to_string(index=False,float_format=lambda z:f'{z:.4f}'))
     print('\nPAIRED\n',pd.DataFrame(pairs).to_string(index=False,float_format=lambda z:f'{z:.4f}'))

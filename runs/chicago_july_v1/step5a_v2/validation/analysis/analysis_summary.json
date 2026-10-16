@@ -1,0 +1,26 @@
+{
+  "stage": "Step5-A",
+  "validation_only": true,
+  "experiment_complete": true,
+  "count": 5280,
+  "expected": 5280,
+  "stage3_rechecked": true,
+  "mechanism_log_summary": {
+    "mechanism_runs": 5280,
+    "operator_rows": 21600,
+    "pair_rows": 43200,
+    "sample_event_rows": 633600
+  },
+  "interpretation_warnings": [
+    "Oracle uses recorded future; deployable traffic prediction not demonstrated.",
+    "Traffic labels are hybrid: few roads measured; unmeasured edges use static fallback.",
+    "Task-bootstrap interval is exploratory because dates/seeds share road samples.",
+    "5s search budget equal, but different operators consume different iterations.",
+    "Stage3 score_calls counts obj.cost(), not all route_cost / OD calls; extra traffic route-cost calls logged separately.",
+    "AT-RR vs at_timeonly tests congestion level/trend above the common ETA/spatial mechanism.",
+    "TE-WR vs te_local tests downstream time externality vs local arc saving, not vs Stage3 total Worst.",
+    "The operator gain/acceptance statistics describe Destroy+Repair interactions, not causal Destroy-only effects.",
+    "Static mode must not access dynamic traffic; AT shadow feature auditing occurs only in Oracle.",
+    "Stage3 reference is a diagnostic comparability check: hashes, budgets and paired IDs match, but telemetry overhead may change timing and trajectories; code-version identity is not established."
+  ]
+}

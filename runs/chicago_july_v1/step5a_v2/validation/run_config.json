@@ -1,0 +1,68 @@
+{
+  "stage": "5A-traffic-operators-v2-audit",
+  "split": "validation",
+  "baseline_contract": "Stage3-official-alns-7.0.0",
+  "alns_version": "7.0.0",
+  "cost_file_sha256": "3612b66ad23df15ed409c86f2585755d4393d7a9044c38dd3ee1a30e5b49dd68",
+  "edge_file_sha256": "23f5e3524e05004e5b597bb4d0edd945321a3ddb516cb939b344acf5e0ab52a1",
+  "task_manifest_sha256": "520afcd810fcb8c519903c39f760109aebcb7104d7d92d3e811c8aa60d228a24",
+  "task_sha256": {
+    "task_0000.json": "c1415513d260d118e10b42ccd76a79f3989dbeefa68b0a374839b8436b4492d1",
+    "task_0001.json": "91e8d05e0a29176fa27d12495e0d4aa19d941354aca7a2342024e65146fbc632",
+    "task_0002.json": "569c54dd819b029f3ca0c627a0a0a231e383c80f27cd237c5b5b674dd595227d",
+    "task_0003.json": "658e69c126f155df3814207706b282f1dbac4550885f977c1a6e99be0f377155",
+    "task_0004.json": "fc7b80c3bffd51b946f5d0b90ae2bbc79346315c312b6662262da704ded328d1",
+    "task_0005.json": "e32aa8f5223820721a34a94a24e0f9555c96b08cc15b28a7b97cd6ae3f072996",
+    "task_0006.json": "7bfc55ea3dfb5be9c9720a9fc65feb8f4262c593ac5b27d60d2f7f8e31cc743c",
+    "task_0007.json": "6bc283a19c38efecd70ec127dd88b5961ed2956626f7c205c54222ec95d129f1",
+    "task_0008.json": "799c05923f469633511ab1466b0f1e130f60481bcca0ea6b2c509e46b9e9c02f",
+    "task_0009.json": "671ae71e6d1cc805b8d849d7d9547694995ddd8ab283ac5712cc149769a71175"
+  },
+  "source_sha256": {
+    "run_experiment.py": "a51944575b83467600331a3c9ef7a72ec46d24f1928ec3a706a6f16dc5c8455c",
+    "traffic_operators.py": "bc1c9827fd4312f14bfdb94c67dc68470d7f59f389158058c673fe48cd6e5e8a"
+  },
+  "stage3_sol_sha256": "727bbfd60eaee1e4613ec519fbed24f2d33160ae46c74f444f72990e17427e98",
+  "stage3_cost_sha256": "c72ffda19a91cb7717053b57a5bed9f774ac4b8a9733d9a3d7a8c054f44e7f0e",
+  "variants": [
+    "baseline",
+    "at_space",
+    "at_timeonly",
+    "at_rr",
+    "at_misaligned",
+    "te_static_local",
+    "te_local",
+    "te_wr",
+    "te_positive",
+    "both",
+    "placebo_both"
+  ],
+  "planners": [
+    "static",
+    "oracle"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "scenario_ids": [
+    "2025-07-22_0800",
+    "2025-07-22_1700",
+    "2025-07-23_0800",
+    "2025-07-23_1700",
+    "2025-07-24_0800",
+    "2025-07-24_1700",
+    "2025-07-25_0800",
+    "2025-07-25_1700"
+  ],
+  "wall_sec": 5.0,
+  "max_iterations": 5000,
+  "od_step_min": 20,
+  "od_hours": 5.0,
+  "max_tasks": null,
+  "max_scenarios": null,
+  "expected_count": 5280,
+  "caveat": "Oracle uses actual future as historical hindsight; never deploy. Measured road share sparse.",
+  "instrumentation": "all arms use acceptance+operator timers within 5s search budget"
+}
