@@ -1,0 +1,48 @@
+{
+  "stage": "5A-traffic-operators-v1",
+  "split": "validation",
+  "baseline_contract": "Stage3-official-alns-7.0.0",
+  "alns_version": "7.0.0",
+  "cost_file_sha256": "3612b66ad23df15ed409c86f2585755d4393d7a9044c38dd3ee1a30e5b49dd68",
+  "edge_file_sha256": "23f5e3524e05004e5b597bb4d0edd945321a3ddb516cb939b344acf5e0ab52a1",
+  "task_manifest_sha256": "520afcd810fcb8c519903c39f760109aebcb7104d7d92d3e811c8aa60d228a24",
+  "task_sha256": {
+    "task_0000.json": "c1415513d260d118e10b42ccd76a79f3989dbeefa68b0a374839b8436b4492d1",
+    "task_0001.json": "91e8d05e0a29176fa27d12495e0d4aa19d941354aca7a2342024e65146fbc632"
+  },
+  "source_sha256": {
+    "run_experiment.py": "57a0f0410994623c06c90b47afe5805a50cd3c3ae76aadfc0a8249e9be4386f6",
+    "traffic_operators.py": "3968c7a9264c1552d34f92226f685ce6c7062c637ed78c892cb5aa7edd2c7e8d"
+  },
+  "stage3_sol_sha256": "727bbfd60eaee1e4613ec519fbed24f2d33160ae46c74f444f72990e17427e98",
+  "stage3_cost_sha256": "c72ffda19a91cb7717053b57a5bed9f774ac4b8a9733d9a3d7a8c054f44e7f0e",
+  "variants": [
+    "baseline",
+    "at_timeonly",
+    "at_rr",
+    "te_local",
+    "te_wr",
+    "both",
+    "placebo_both"
+  ],
+  "planners": [
+    "static",
+    "oracle"
+  ],
+  "seeds": [
+    42,
+    43
+  ],
+  "scenario_ids": [
+    "2025-07-22_0800",
+    "2025-07-22_1700"
+  ],
+  "wall_sec": 5.0,
+  "max_iterations": 5000,
+  "od_step_min": 20,
+  "od_hours": 5.0,
+  "max_tasks": 2,
+  "max_scenarios": 2,
+  "expected_count": 112,
+  "caveat": "Oracle uses actual future as historical hindsight; never deploy. Measured road share sparse."
+}

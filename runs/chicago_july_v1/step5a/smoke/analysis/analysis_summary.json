@@ -1,0 +1,18 @@
+{
+  "stage": "Step5-A",
+  "validation_only": true,
+  "experiment_complete": true,
+  "count": 14,
+  "expected": 14,
+  "stage3_rechecked": false,
+  "interpretation_warnings": [
+    "Oracle uses recorded future; deployable traffic prediction not demonstrated.",
+    "Traffic labels are hybrid: few roads measured; unmeasured edges use static fallback.",
+    "Task-bootstrap interval is exploratory because dates/seeds share road samples.",
+    "5s search budget equal, but different operators consume different iterations.",
+    "Stage3 score_calls counts obj.cost(), not all route_cost / OD calls; extra traffic route-cost calls logged separately.",
+    "AT-RR vs at_timeonly tests congestion level/trend above the common ETA/spatial mechanism.",
+    "TE-WR vs te_local tests downstream time externality vs local arc saving, not vs Stage3 total Worst.",
+    "Stage3 baseline comparison requires same version, seeds, clock config and hashes."
+  ]
+}
