@@ -1,0 +1,38 @@
+{
+  "stage": "4-budget-timecool-v1",
+  "source": "road_vrp_7 July validation ONLY",
+  "cost_file_sha256": "3612b66ad23df15ed409c86f2585755d4393d7a9044c38dd3ee1a30e5b49dd68",
+  "edge_file_sha256": "23f5e3524e05004e5b597bb4d0edd945321a3ddb516cb939b344acf5e0ab52a1",
+  "tasks": {
+    "task_0000.json": "c1415513d260d118e10b42ccd76a79f3989dbeefa68b0a374839b8436b4492d1"
+  },
+  "task_manifest_sha256": "520afcd810fcb8c519903c39f760109aebcb7104d7d92d3e811c8aa60d228a24",
+  "stage3_solvers_sha256": "727bbfd60eaee1e4613ec519fbed24f2d33160ae46c74f444f72990e17427e98",
+  "stage3_road_sha256": "c72ffda19a91cb7717053b57a5bed9f774ac4b8a9733d9a3d7a8c054f44e7f0e",
+  "stage4_script_sha256": "3683eb79579719b19343734c3824b850b14d4fdfe4d64bf0c0792a7901c4c5e0",
+  "split": "validation",
+  "wall_sec": 0.35,
+  "max_iterations": 5000,
+  "final_temperature_ratio": 0.005,
+  "od_step_min": 20,
+  "od_hours": 5.0,
+  "methods": [
+    "sa_timecool",
+    "vnd_multistart",
+    "alns_timecool"
+  ],
+  "planners": [
+    "static",
+    "oracle"
+  ],
+  "seeds": [
+    42
+  ],
+  "scenario_ids": [
+    "2025-07-22_0800"
+  ],
+  "max_tasks": 1,
+  "max_scenarios": 1,
+  "expected_count": 6,
+  "metrics": "ex-post FIFO July hybrid road travel; ALNS oracle = hindsight only"
+}

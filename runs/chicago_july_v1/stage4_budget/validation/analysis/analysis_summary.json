@@ -1,0 +1,14 @@
+{
+  "validation_only": true,
+  "stage4_n": 1440,
+  "stage3_n": 1920,
+  "verified_complete_grid": true,
+  "comparisons": 10,
+  "important_caveats": [
+    "SA wall budget + cooling changed together relative to Stage3 SA: causal separation needs another ablation.",
+    "VND multistart changes the search strategy, not only wall budget; do not call pure budget equalization.",
+    "Stage3 ALNS uses 5s and timecool ALNS uses same 5s; operator configuration held fixed.",
+    "Oracle uses full July future as ex-post hindsight, never causal deployment claim.",
+    "Bootstrap resamples 10 tasks; days/seeds shared, uncertainty is exploratory."
+  ]
+}

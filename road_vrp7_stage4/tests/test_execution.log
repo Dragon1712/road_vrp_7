@@ -1,0 +1,47 @@
+OD task_0000 2025-07-22_0800 cache_hit=False jobs=6
+  sa_timecool       static seed=42 ex-post=1789.38s search=0.003s iters=100
+  sa_timecool       oracle seed=42 ex-post=1739.75s search=0.012s iters=100
+  vnd_multistart    static seed=42 ex-post=1789.38s search=0.004s iters=100
+  vnd_multistart    oracle seed=42 ex-post=1639.75s search=0.010s iters=100
+  alns_timecool     static seed=42 ex-post=1695.88s search=0.030s iters=27
+  alns_timecool     oracle seed=42 ex-post=1639.38s search=0.033s iters=5
+{
+  "status": "COMPLETE",
+  "expected": 6,
+  "actual": 6,
+  "elapsed_sec": 0.5530908289999843,
+  "stage2_sha256": "07557a9d81154ec67cb99f29c13132f080870c9b142e6522b7aafc2cb690c17d",
+  "split": "validation",
+  "read_only_stage3_baseline": true
+}
+{
+  "status": "COMPLETE",
+  "expected": 6,
+  "actual": 6,
+  "elapsed_sec": 0.0028126740000402606,
+  "stage2_sha256": "07557a9d81154ec67cb99f29c13132f080870c9b142e6522b7aafc2cb690c17d",
+  "split": "validation",
+  "read_only_stage3_baseline": true
+}
+        solver planner  n  mean_road_sec  mean_search_sec  mean_score_calls  mean_iterations  median_iterations  mean_obs_edge_share  fraction_spent_90pct_wall
+ alns_timecool  oracle  1       1639.375            0.033            23.000            5.000              5.000                0.031                      1.000
+ alns_timecool  static  1       1695.875            0.030           111.000           27.000             27.000                0.109                      1.000
+   sa_timecool  oracle  1       1739.750            0.012            95.000          100.000            100.000                0.029                      0.000
+   sa_timecool  static  1       1789.375            0.003            89.000          100.000            100.000                0.029                      0.000
+vnd_multistart  oracle  1       1639.750            0.010           104.000          100.000            100.000                0.031                      0.000
+vnd_multistart  static  1       1789.375            0.004           104.000          100.000            100.000                0.029                      0.000
+
+PAIRED
+                             comparison planner  pairs  task_count  mean_pair_gain_pct  task_bootstrap_ci_low  task_bootstrap_ci_high  win_rate  positive_tasks  mean_road_delta_sec  mean_new_search_sec  mean_reference_search_sec  mean_new_score_calls  mean_reference_score_calls
+              sa_timecool vs stage3_sa  static      1           1               0.000                  0.000                   0.000     0.000               0                0.000                0.003                      0.003                89.000                      89.000
+   sa_timecool vs stage3_official_alns  static      1           1              -5.513                 -5.513                  -5.513     0.000               0              -93.500                0.003                      0.030                89.000                     111.000
+          vnd_multistart vs stage3_vnd  static      1           1               0.000                  0.000                   0.000     0.000               0                0.000                0.004                      0.004               104.000                     104.000
+vnd_multistart vs stage3_official_alns  static      1           1              -5.513                 -5.513                  -5.513     0.000               0              -93.500                0.004                      0.030               104.000                     111.000
+ alns_timecool vs stage3_official_alns  static      1           1               0.000                  0.000                   0.000     0.000               0                0.000                0.030                      0.030               111.000                     111.000
+              sa_timecool vs stage3_sa  oracle      1           1               0.000                  0.000                   0.000     0.000               0                0.000                0.012                      0.012                95.000                      95.000
+   sa_timecool vs stage3_official_alns  oracle      1           1              -6.123                 -6.123                  -6.123     0.000               0             -100.375                0.012                      0.033                95.000                      23.000
+          vnd_multistart vs stage3_vnd  oracle      1           1               0.000                  0.000                   0.000     0.000               0                0.000                0.010                      0.010               104.000                     104.000
+vnd_multistart vs stage3_official_alns  oracle      1           1              -0.023                 -0.023                  -0.023     0.000               0               -0.375                0.010                      0.033               104.000                      23.000
+ alns_timecool vs stage3_official_alns  oracle      1           1               0.000                  0.000                   0.000     0.000               0                0.000                0.033                      0.033                23.000                      23.000
+PASS Stage4 synthetic: time-temperature, 3 solvers (ALNS fake only), full grid, resume, paired audit, test-lock
+NOTE Real official ALNS 7.0.0 integration still REQUIRES server smoke test.
