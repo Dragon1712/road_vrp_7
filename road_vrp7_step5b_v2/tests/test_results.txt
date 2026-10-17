@@ -1,0 +1,13 @@
+PASS: 3 modes x 2 planners, 90 feasible non-trivial repairs, static leakage, zero-support gate, exact vs topK, deadline
+PASS: Official ALNS 7 select/update signatures, cold-start all pairs, nonnegative reward
+PASS C0_baseline operators dict_keys(['random', 'worst', 'related']) sections 0
+PASS C1_original_section operators dict_keys(['random', 'worst', 'related', 'section']) sections 12
+PASS C2_noop_guard operators dict_keys(['random', 'worst', 'related', 'section']) sections 12
+PASS C3_topk operators dict_keys(['random', 'worst', 'related', 'section']) sections 12
+PASS C4_time_ucb operators dict_keys(['random', 'related', 'worst', 'section']) sections 42
+PASS C5_gated operators dict_keys(['random', 'related', 'worst', 'section']) sections 43
+PASS C6_shuffled operators dict_keys(['random', 'related', 'worst', 'section']) sections 41
+PASS analyzer: complete grid, paired output, missing metrics, missing solutions, counter inconsistency
+PASS python -m compileall -q road_vrp7_step5b_v2
+PASS bash -n road_vrp7_step5b_v2/run_stage5b_v2.sh
+NOT RUN actual Chicago + official alns==7.0.0 smoke: requires user's server/datasets.
