@@ -1,0 +1,23 @@
+{
+  "study": "Step5B-v2 isolated wall-clock ablation",
+  "name": "budget_60s_v1",
+  "budgets": [
+    5.0,
+    15.0,
+    30.0,
+    60.0
+  ],
+  "max_iterations": 5000,
+  "params": {
+    "variants": "C0_baseline,C3_topk,C4_time_ucb,C5_gated",
+    "planners": "oracle",
+    "seeds": "42,43",
+    "splits": "validation",
+    "max_tasks": 3,
+    "max_scenarios": 2
+  },
+  "source_sha256": {
+    "run_experiment.py": "1e69a4f9e206990775016c2ad01b5845422402f570b7bed737574456e65f8d7c",
+    "analyze_step5b_v2.py": "5636b8a0b124a9220f93cc0c515d66cf17c3d1b0cd0a7d09e041572e8b990fbc"
+  }
+}
