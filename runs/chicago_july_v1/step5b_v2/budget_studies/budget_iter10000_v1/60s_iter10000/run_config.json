@@ -1,0 +1,55 @@
+{
+  "stage": "step5b-v2",
+  "data_role": "July development only, prior test split labels NOT blind test",
+  "cost_hash": "3612b66ad23df15ed409c86f2585755d4393d7a9044c38dd3ee1a30e5b49dd68",
+  "edge_hash": "23f5e3524e05004e5b597bb4d0edd945321a3ddb516cb939b344acf5e0ab52a1",
+  "task_manifest_hash": "520afcd810fcb8c519903c39f760109aebcb7104d7d92d3e811c8aa60d228a24",
+  "tasks": {
+    "task_0000.json": "c1415513d260d118e10b42ccd76a79f3989dbeefa68b0a374839b8436b4492d1",
+    "task_0001.json": "91e8d05e0a29176fa27d12495e0d4aa19d941354aca7a2342024e65146fbc632",
+    "task_0002.json": "569c54dd819b029f3ca0c627a0a0a231e383c80f27cd237c5b5b674dd595227d"
+  },
+  "source": {
+    "road_vrp7_step5b_v2/run_experiment.py": "1e69a4f9e206990775016c2ad01b5845422402f570b7bed737574456e65f8d7c",
+    "road_vrp7_step5b_v2/section_v2.py": "ded8d785a2a817aa2c2fae6ce0064ac95d42de8fe4e8c9b0481bcd2bfbee456e",
+    "road_vrp7_step5b_v2/time_selector.py": "e7f0e2ac64f67b87796a2766e6e67045a07dc0d1797bcfa4a5f79f67a47b6ea1",
+    "road_vrp7_step5b_v2/analyze_step5b_v2.py": "5636b8a0b124a9220f93cc0c515d66cf17c3d1b0cd0a7d09e041572e8b990fbc",
+    "road_vrp7_step5b/section_operators.py": "56e1de6f4b0036a62f1be0cb2aaff10902ce73494d336d4dc04b35cd5e99bf15",
+    "road_vrp7_stage3/solvers.py": "727bbfd60eaee1e4613ec519fbed24f2d33160ae46c74f444f72990e17427e98",
+    "road_vrp7_stage3/road_vrp.py": "c72ffda19a91cb7717053b57a5bed9f774ac4b8a9733d9a3d7a8c054f44e7f0e"
+  },
+  "variants": [
+    "C0_baseline",
+    "C3_topk",
+    "C4_time_ucb",
+    "C5_gated"
+  ],
+  "planners": [
+    "oracle"
+  ],
+  "seeds": [
+    42,
+    43
+  ],
+  "splits": [
+    "validation"
+  ],
+  "scenarios": [
+    "2025-07-22_0800",
+    "2025-07-22_1700"
+  ],
+  "include_ineligible": false,
+  "max_tasks": 3,
+  "max_scenarios": 2,
+  "scenario_ids": null,
+  "wall_sec": 60.0,
+  "max_iterations": 10000,
+  "od_step_min": 20,
+  "od_hours": 5.0,
+  "traffic_weight": 0.45,
+  "top_k": 12,
+  "ucb_c": 0.35,
+  "ucb_epsilon": 0.08,
+  "expected_count": 48,
+  "support_note": "Static-shortest-path observed-mask snapshot proxy; NOT dynamic-path observation"
+}
