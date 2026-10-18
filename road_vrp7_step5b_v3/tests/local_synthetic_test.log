@@ -1,0 +1,13 @@
+PASS snapshots: timestamping, censorship, monotonic best, invalid grids
+PASS UCB modes: common policy, calibrated positive divisor, telemetry
+PASS frozen cost calibration SHA, complete operator grid, no silent overwrite
+PASS 6 runs and 24 snapshots
+
+SOLVERS
+
+{'solver': 'C0_baseline', 'planner': 'oracle', 'records': 2, 'mean_road_sec': 1050.0, 'mean_plan_sec': 1000.0, 'mean_iterations': 1000.0, 'mean_wall_sec': 30.02, 'iteration_cap_count': 0}
+{'solver': 'C3_topk', 'planner': 'oracle', 'records': 2, 'mean_road_sec': 1100.0, 'mean_plan_sec': 1050.0, 'mean_iterations': 1000.0, 'mean_wall_sec': 30.02, 'iteration_cap_count': 0}
+{'solver': 'U0_gain', 'planner': 'oracle', 'records': 2, 'mean_road_sec': 1150.0, 'mean_plan_sec': 1100.0, 'mean_iterations': 1000.0, 'mean_wall_sec': 30.02, 'iteration_cap_count': 0}
+PASS analysis: complete grid, same-run progress, censoring, repeated run diff, bad checkpoint rejection
+PASS all installer patch anchors (real frozen v2 source checked on user server)
+ALL SYNTHETIC TESTS PASSED; real ALNS-7 integration requires smoke.
