@@ -1,0 +1,47 @@
+{
+  "schema": "step6a_feature_contract_v1",
+  "description": "Strict whitelist. Future train/evaluation loaders must never treat full JSON rows as feature dictionaries.",
+  "state_features": [
+    "routes",
+    "original_static_cost_sec",
+    "departure_hour_local",
+    "departure_weekday_local"
+  ],
+  "candidate_features": [
+    "route_index",
+    "position",
+    "size",
+    "block_demand",
+    "route_load",
+    "vehicle_capacity",
+    "static_section_cost_sec",
+    "route_length",
+    "relative_position",
+    "history_observed_share",
+    "history_observed_rel_cost",
+    "history_coverage_by_slot",
+    "history_rel_cost_by_slot",
+    "history_has_observation"
+  ],
+  "NEVER_AS_FEATURE": [
+    "original_td_cost_sec",
+    "td_gain_sec",
+    "static_gain_same_td_move_sec",
+    "static_repair_td_gain_sec",
+    "td_advantage_over_static_repair_sec",
+    "td_repaired_routes",
+    "static_repaired_routes",
+    "td_repair_reason",
+    "static_repair_reason",
+    "td_repair_wall_sec",
+    "static_repair_wall_sec",
+    "source_solver",
+    "source_line",
+    "seed",
+    "task_id",
+    "scenario_id",
+    "candidate_id",
+    "candidate_index"
+  ],
+  "notes": "Observed history is strictly pre-departure RAW records; labels are hindsight TD oracle and static counterfactuals. Route/customer IDs only via graph/route encoders; never embed task identity directly."
+}

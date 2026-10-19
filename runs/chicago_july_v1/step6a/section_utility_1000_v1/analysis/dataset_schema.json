@@ -1,0 +1,50 @@
+{
+  "feature_contract": "step6a_feature_contract_v1",
+  "feature_names": [
+    "original_static_cost_sec",
+    "departure_hour_local",
+    "departure_weekday_local",
+    "route_index",
+    "position",
+    "size",
+    "block_demand",
+    "route_load",
+    "vehicle_capacity",
+    "static_section_cost_sec",
+    "route_length",
+    "relative_position",
+    "history_observed_share",
+    "history_observed_rel_cost",
+    "history_has_observation",
+    "history_coverage_tminus_6",
+    "history_coverage_tminus_5",
+    "history_coverage_tminus_4",
+    "history_coverage_tminus_3",
+    "history_coverage_tminus_2",
+    "history_coverage_tminus_1",
+    "history_rel_cost_tminus_6",
+    "history_rel_cost_tminus_5",
+    "history_rel_cost_tminus_4",
+    "history_rel_cost_tminus_3",
+    "history_rel_cost_tminus_2",
+    "history_rel_cost_tminus_1"
+  ],
+  "label_names": [
+    "td_gain_sec",
+    "static_gain_same_td_move_sec",
+    "static_repair_static_gain_sec",
+    "static_repair_td_gain_sec",
+    "td_advantage_over_static_repair_sec"
+  ],
+  "shape_X": [
+    7584,
+    27
+  ],
+  "shape_y": [
+    7584,
+    5
+  ],
+  "task_roles": "train/val/internal_test by sorted tasks; valid only inside July development",
+  "date_roles": "independent train/val/internal_test by chronological day; never mix evaluation protocols",
+  "warning": "True prospective deployment needs non-Oracle state generation. Labels are retrospective Oracle only."
+}
