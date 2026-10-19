@@ -1,0 +1,69 @@
+{
+  "stage": "step5c-v1",
+  "data_role": "July development only, prior test split labels NOT blind test",
+  "cost_hash": "3612b66ad23df15ed409c86f2585755d4393d7a9044c38dd3ee1a30e5b49dd68",
+  "edge_hash": "23f5e3524e05004e5b597bb4d0edd945321a3ddb516cb939b344acf5e0ab52a1",
+  "task_manifest_hash": "520afcd810fcb8c519903c39f760109aebcb7104d7d92d3e811c8aa60d228a24",
+  "tasks": {
+    "task_0000.json": "c1415513d260d118e10b42ccd76a79f3989dbeefa68b0a374839b8436b4492d1"
+  },
+  "source": {
+    "road_vrp7_step5c/run_experiment.py": "79001b0cf3a2ba990923a9b6a56d6423f0a22058ae1eb97f932154270c5b830a",
+    "road_vrp7_step5c/section_v2.py": "ded8d785a2a817aa2c2fae6ce0064ac95d42de8fe4e8c9b0481bcd2bfbee456e",
+    "road_vrp7_step5c/time_selector.py": "e7f0e2ac64f67b87796a2766e6e67045a07dc0d1797bcfa4a5f79f67a47b6ea1",
+    "road_vrp7_step5c/selectors_v3.py": "46e32c382a70526d4eb43ecbe9194356ee1f8e1c13b17e944d2ffee556a4c5a7",
+    "road_vrp7_step5c/snapshots_v3.py": "d9ab9de8ab2c45e9f219b33b59a7e017a8a70b94f259a0c7ff6a75d29a11e0e0",
+    "road_vrp7_step5c/calibrate_cost.py": "1b1abb8055c0770a9b1507a7341640a4acdadb7ce46effba0d96b032d6b4698d",
+    "road_vrp7_step5c/analyze_step5c.py": "c0153efecbf072ae78105a25269f8c27267dc1386e1a03ea35e979f0f2c937ce",
+    "road_vrp7_step5c/selectors_step5c.py": "4fc0f9e747978a2ae0c75ae7f0905666a2889e895f2473ddf8ef708b646959dd",
+    "road_vrp7_step5c/learn_lrw.py": "e00164664a236c2ed12cbd1e58662164cc828d2fc5a126ec70735d6e3bd4bb44",
+    "road_vrp7_step5b/section_operators.py": "56e1de6f4b0036a62f1be0cb2aaff10902ce73494d336d4dc04b35cd5e99bf15",
+    "road_vrp7_stage3/solvers.py": "727bbfd60eaee1e4613ec519fbed24f2d33160ae46c74f444f72990e17427e98",
+    "road_vrp7_stage3/road_vrp.py": "c72ffda19a91cb7717053b57a5bed9f774ac4b8a9733d9a3d7a8c054f44e7f0e"
+  },
+  "variants": [
+    "C3_topk",
+    "U2_calibrated",
+    "C7_alpha_ucb",
+    "C8_thompson",
+    "C9_lrw"
+  ],
+  "planners": [
+    "oracle"
+  ],
+  "seeds": [
+    42
+  ],
+  "splits": [
+    "validation"
+  ],
+  "scenarios": [
+    "2025-07-23_0800"
+  ],
+  "include_ineligible": false,
+  "max_tasks": 1,
+  "max_scenarios": null,
+  "scenario_ids": [
+    "2025-07-23_0800"
+  ],
+  "wall_sec": 0.5,
+  "max_iterations": 20000,
+  "anneal_iterations": 5000,
+  "snapshot_times": [
+    0.1,
+    0.2,
+    0.4
+  ],
+  "calibration_file": "road_vrp7_step5b_v3/calibration/section_pair_costs_dev.json",
+  "calibration_sha256": "4dd4ef646d33d9c8f4f0836f0f49f394cd416641e44ec3983dd77bd287222ce2",
+  "lrw_profile_file": "road_vrp7_step5c/calibration/lrw_from_v3_pilot.json",
+  "lrw_profile_sha256": "4494a85e47eb501b288f44551558f6a307a39c94c46cba68a332105d400917ee",
+  "od_step_min": 20,
+  "od_hours": 5.0,
+  "traffic_weight": 0.45,
+  "top_k": 12,
+  "ucb_c": 0.35,
+  "ucb_epsilon": 0.08,
+  "expected_count": 5,
+  "support_note": "Static-shortest-path observed-mask snapshot proxy; NOT dynamic-path observation"
+}

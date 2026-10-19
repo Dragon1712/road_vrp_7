@@ -1,0 +1,70 @@
+{
+  "schema": "lrw_pair_weights_v1",
+  "method": "smoothed new-best rate + 0.25 improving rate; 15% uniform exploration floor",
+  "source_path": "runs/chicago_july_v1/step5b_v3/decoupled_pilot_v1/30s_anneal5000_cap20000/solutions.jsonl",
+  "source_sha256": "ec276a098f58e40db31d1c5b6b3cf4218eef5a063a39e9b8f12984a307b06761",
+  "source_role": "previous July development logs, NOT blind test",
+  "trained_records": 12,
+  "training_tasks": [
+    "task_0000",
+    "task_0001",
+    "task_0002"
+  ],
+  "training_scenarios": [
+    "2025-07-22_0800",
+    "2025-07-22_1700"
+  ],
+  "weights": {
+    "random|greedy": 0.09813143745028297,
+    "random|regret2": 0.10427954680751264,
+    "worst|greedy": 0.13962865932284774,
+    "worst|regret2": 0.13511947087118079,
+    "related|greedy": 0.10298499875263571,
+    "related|regret2": 0.1204001551957247,
+    "section|greedy": 0.16490934148505249,
+    "section|regret2": 0.134546390114763
+  },
+  "counts": {
+    "section|greedy": {
+      "calls": 2198.0,
+      "improving": 434.0,
+      "new_best": 28.0
+    },
+    "random|greedy": {
+      "calls": 6816.0,
+      "improving": 806.0,
+      "new_best": 28.0
+    },
+    "random|regret2": {
+      "calls": 8824.0,
+      "improving": 1194.0,
+      "new_best": 22.0
+    },
+    "worst|greedy": {
+      "calls": 6262.0,
+      "improving": 1055.0,
+      "new_best": 58.0
+    },
+    "worst|regret2": {
+      "calls": 7540.0,
+      "improving": 1332.0,
+      "new_best": 40.0
+    },
+    "section|regret2": {
+      "calls": 2597.0,
+      "improving": 462.0,
+      "new_best": 12.0
+    },
+    "related|greedy": {
+      "calls": 5704.0,
+      "improving": 655.0,
+      "new_best": 40.0
+    },
+    "related|regret2": {
+      "calls": 7277.0,
+      "improving": 1085.0,
+      "new_best": 43.0
+    }
+  },
+  "warning": "Not GRLOS authors original LRW. Same-task evaluation is development not held-out task generalization."
+}
