@@ -1,0 +1,42 @@
+{
+  "stage": "step6a-offline-v2",
+  "data_role": "July development ONLY; not blind test",
+  "states": 20,
+  "candidates": 160,
+  "valid_labels": 160,
+  "invalid_labels": 0,
+  "positive_actions": 31,
+  "negative_actions": 129,
+  "tied_actions": 0,
+  "positive_rate": 0.19375,
+  "states_with_two_plus_valid_actions": 20,
+  "mean_within_state_static_repair_vs_td_spearman": 0.8901488653410521,
+  "mean_within_state_same_move_static_vs_td_spearman": 0.8642854566231657,
+  "states_static_top1_differs_from_td_top1": 7,
+  "top1_disagreement_rate": 0.35,
+  "mean_oracle_vs_static_selection_regret_sec": 9.016658301036387,
+  "mean_oracle_best_gain_sec": 47.889107956927546,
+  "tasks": [
+    "task_0000",
+    "task_0001"
+  ],
+  "dates": [
+    "2025-07-22"
+  ],
+  "seeds": [
+    42,
+    43
+  ],
+  "source_solvers": [
+    "C3_topk"
+  ],
+  "warnings": [
+    "These are hindsight labels from frozen BEST snapshots, not ALNS arbitrary current-state trajectories.",
+    "Oracle-generated source routes may encode privileged future traffic indirectly; not a deployment evaluation.",
+    "Oracle ranking and regret are diagnostic upper bounds, NOT results from a trained model.",
+    "No observed-road ground truth exists for permanently unmonitored roads.",
+    "Task split uses groups, but current July data were previously inspected; no blind-test claim.",
+    "Raw historical slots strictly precede departure; never use Oracle future costs as model features.",
+    "Timed-out/censored repairs are excluded from supervised statistics."
+  ]
+}

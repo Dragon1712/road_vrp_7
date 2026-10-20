@@ -1,0 +1,266 @@
+[
+  {
+    "protocol": "task",
+    "counts": {
+      "train": {
+        "candidates": 4456,
+        "states": 557,
+        "positives": 59
+      },
+      "val": {
+        "candidates": 1688,
+        "states": 211,
+        "positives": 27
+      },
+      "internal_test": {
+        "candidates": 1440,
+        "states": 180,
+        "positives": 18
+      }
+    },
+    "methods": {
+      "B1_static_RF": {
+        "static_features": [
+          "original_static_cost_sec",
+          "departure_hour_local",
+          "departure_weekday_local",
+          "route_index",
+          "position",
+          "size",
+          "block_demand",
+          "route_load",
+          "vehicle_capacity",
+          "static_section_cost_sec",
+          "route_length",
+          "relative_position"
+        ],
+        "history_feature_count": 0,
+        "threshold_chosen_on_validation": 1.01,
+        "test_PR_AUC": 0.010577644949342234,
+        "test_ROC_AUC": 0.40678230973589624,
+        "test_positive_base_rate": 0.0125,
+        "test_ungated_optimistic_relabelled_gain_sec": 0.2721444575322999,
+        "test_policy": {
+          "states": 180,
+          "executed_states": 0,
+          "execution_rate": 0.0,
+          "mean_actual_gain_sec": 0.0,
+          "total_actual_gain_sec": 0.0,
+          "mean_oracle_noop_upper_bound_sec": 1.9825494991408454,
+          "positive_executions": 0,
+          "negative_or_zero_executions": 0
+        },
+        "validation_policy": {
+          "states": 211,
+          "executed_states": 0,
+          "execution_rate": 0.0,
+          "mean_actual_gain_sec": 0.0,
+          "total_actual_gain_sec": 0.0,
+          "mean_oracle_noop_upper_bound_sec": 2.5779148370592515,
+          "positive_executions": 0,
+          "negative_or_zero_executions": 0
+        }
+      },
+      "B2_static_plus_history_RF": {
+        "static_features": [
+          "original_static_cost_sec",
+          "departure_hour_local",
+          "departure_weekday_local",
+          "route_index",
+          "position",
+          "size",
+          "block_demand",
+          "route_load",
+          "vehicle_capacity",
+          "static_section_cost_sec",
+          "route_length",
+          "relative_position"
+        ],
+        "history_feature_count": 15,
+        "threshold_chosen_on_validation": 1.01,
+        "test_PR_AUC": 0.01789752669146996,
+        "test_ROC_AUC": 0.5747382403500547,
+        "test_positive_base_rate": 0.0125,
+        "test_ungated_optimistic_relabelled_gain_sec": 0.2721444575322999,
+        "test_policy": {
+          "states": 180,
+          "executed_states": 0,
+          "execution_rate": 0.0,
+          "mean_actual_gain_sec": 0.0,
+          "total_actual_gain_sec": 0.0,
+          "mean_oracle_noop_upper_bound_sec": 1.9825494991408454,
+          "positive_executions": 0,
+          "negative_or_zero_executions": 0
+        },
+        "validation_policy": {
+          "states": 211,
+          "executed_states": 0,
+          "execution_rate": 0.0,
+          "mean_actual_gain_sec": 0.0,
+          "total_actual_gain_sec": 0.0,
+          "mean_oracle_noop_upper_bound_sec": 2.5779148370592515,
+          "positive_executions": 0,
+          "negative_or_zero_executions": 0
+        }
+      },
+      "B0_static_score_unconditional": {
+        "test_policy": {
+          "states": 180,
+          "executed_states": 180,
+          "execution_rate": 1.0,
+          "mean_actual_gain_sec": -196.32441296047634,
+          "total_actual_gain_sec": -35338.39433288574,
+          "mean_oracle_noop_upper_bound_sec": 1.9825494991408454,
+          "positive_executions": 1,
+          "negative_or_zero_executions": 179
+        },
+        "note": "Unconditional heuristic executes even negative moves; diagnostic only, not ALNS"
+      },
+      "B0_noop": {
+        "test_policy": {
+          "states": 180,
+          "executed_states": 0,
+          "execution_rate": 0.0,
+          "mean_actual_gain_sec": 0.0,
+          "total_actual_gain_sec": 0.0,
+          "mean_oracle_noop_upper_bound_sec": 1.9825494991408454,
+          "positive_executions": 0,
+          "negative_or_zero_executions": 0
+        }
+      }
+    },
+    "positive_labels_total": 104
+  },
+  {
+    "protocol": "date",
+    "counts": {
+      "train": {
+        "candidates": 3720,
+        "states": 465,
+        "positives": 54
+      },
+      "val": {
+        "candidates": 1944,
+        "states": 243,
+        "positives": 16
+      },
+      "internal_test": {
+        "candidates": 1920,
+        "states": 240,
+        "positives": 34
+      }
+    },
+    "methods": {
+      "B1_static_RF": {
+        "static_features": [
+          "original_static_cost_sec",
+          "departure_hour_local",
+          "departure_weekday_local",
+          "route_index",
+          "position",
+          "size",
+          "block_demand",
+          "route_load",
+          "vehicle_capacity",
+          "static_section_cost_sec",
+          "route_length",
+          "relative_position"
+        ],
+        "history_feature_count": 0,
+        "threshold_chosen_on_validation": 1.01,
+        "test_PR_AUC": 0.06297752135206958,
+        "test_ROC_AUC": 0.6997847919655668,
+        "test_positive_base_rate": 0.017708333333333333,
+        "test_ungated_optimistic_relabelled_gain_sec": 0.2746554410395523,
+        "test_policy": {
+          "states": 240,
+          "executed_states": 0,
+          "execution_rate": 0.0,
+          "mean_actual_gain_sec": 0.0,
+          "total_actual_gain_sec": 0.0,
+          "mean_oracle_noop_upper_bound_sec": 1.6107066323359807,
+          "positive_executions": 0,
+          "negative_or_zero_executions": 0
+        },
+        "validation_policy": {
+          "states": 243,
+          "executed_states": 0,
+          "execution_rate": 0.0,
+          "mean_actual_gain_sec": 0.0,
+          "total_actual_gain_sec": 0.0,
+          "mean_oracle_noop_upper_bound_sec": 2.085216817541868,
+          "positive_executions": 0,
+          "negative_or_zero_executions": 0
+        }
+      },
+      "B2_static_plus_history_RF": {
+        "static_features": [
+          "original_static_cost_sec",
+          "departure_hour_local",
+          "departure_weekday_local",
+          "route_index",
+          "position",
+          "size",
+          "block_demand",
+          "route_load",
+          "vehicle_capacity",
+          "static_section_cost_sec",
+          "route_length",
+          "relative_position"
+        ],
+        "history_feature_count": 15,
+        "threshold_chosen_on_validation": 1.01,
+        "test_PR_AUC": 0.057979880280850424,
+        "test_ROC_AUC": 0.6809696837377581,
+        "test_positive_base_rate": 0.017708333333333333,
+        "test_ungated_optimistic_relabelled_gain_sec": 0.2746554410395523,
+        "test_policy": {
+          "states": 240,
+          "executed_states": 0,
+          "execution_rate": 0.0,
+          "mean_actual_gain_sec": 0.0,
+          "total_actual_gain_sec": 0.0,
+          "mean_oracle_noop_upper_bound_sec": 1.6107066323359807,
+          "positive_executions": 0,
+          "negative_or_zero_executions": 0
+        },
+        "validation_policy": {
+          "states": 243,
+          "executed_states": 0,
+          "execution_rate": 0.0,
+          "mean_actual_gain_sec": 0.0,
+          "total_actual_gain_sec": 0.0,
+          "mean_oracle_noop_upper_bound_sec": 2.085216817541868,
+          "positive_executions": 0,
+          "negative_or_zero_executions": 0
+        }
+      },
+      "B0_static_score_unconditional": {
+        "test_policy": {
+          "states": 240,
+          "executed_states": 240,
+          "execution_rate": 1.0,
+          "mean_actual_gain_sec": -151.21092432104052,
+          "total_actual_gain_sec": -36290.62183704972,
+          "mean_oracle_noop_upper_bound_sec": 1.6107066323359807,
+          "positive_executions": 6,
+          "negative_or_zero_executions": 234
+        },
+        "note": "Unconditional heuristic executes even negative moves; diagnostic only, not ALNS"
+      },
+      "B0_noop": {
+        "test_policy": {
+          "states": 240,
+          "executed_states": 0,
+          "execution_rate": 0.0,
+          "mean_actual_gain_sec": 0.0,
+          "total_actual_gain_sec": 0.0,
+          "mean_oracle_noop_upper_bound_sec": 1.6107066323359807,
+          "positive_executions": 0,
+          "negative_or_zero_executions": 0
+        }
+      }
+    },
+    "positive_labels_total": 104
+  }
+]

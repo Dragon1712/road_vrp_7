@@ -1,0 +1,44 @@
+{
+  "stage": "step6a-offline-v2",
+  "data_role": "July development only; no blind holdout",
+  "source_experiment": "runs/chicago_july_v1/step6a_v2/current_source_current_static_smoke_v1",
+  "source_snapshot_sha256": "d6028bc49ad94bbf301654290a61202cc4d9c3660f7f104b5d15cdd6672fb323",
+  "source_config_sha256": "acab4b0c8abb99bcb439251e91475fe36417edabdc46d84e535048595ba6457e",
+  "source_cost_hash": "3612b66ad23df15ed409c86f2585755d4393d7a9044c38dd3ee1a30e5b49dd68",
+  "source_edge_hash": "23f5e3524e05004e5b597bb4d0edd945321a3ddb516cb939b344acf5e0ab52a1",
+  "task_manifest_sha256": "520afcd810fcb8c519903c39f760109aebcb7104d7d92d3e811c8aa60d228a24",
+  "task_files": {
+    "task_0000.json": "c1415513d260d118e10b42ccd76a79f3989dbeefa68b0a374839b8436b4492d1"
+  },
+  "code_sha256": {
+    "road_vrp7_step6a/section_dataset.py": "b166fe488c4b1e7483e6f06999a571427a4a6462d74139874263ab3ff8b0870d",
+    "road_vrp7_step6a/analyze_step6a.py": "2846577da1ec2f4cec1433d71f5dc337881315f79a9b5756c5ad168601e1f406",
+    "road_vrp7_step6a/export_step6a.py": "70bf589b223084a71727126f197837d24d666bf534fe71790bf415f09e875711",
+    "road_vrp7_step6a/feature_schema.json": "dde329e8560cb562734597ba1943de10dc16557ee0851c78122d5a0a5e14a5ba",
+    "road_vrp7_step5b_v3/section_v2.py": "ded8d785a2a817aa2c2fae6ce0064ac95d42de8fe4e8c9b0481bcd2bfbee456e",
+    "road_vrp7_stage3/road_vrp.py": "c72ffda19a91cb7717053b57a5bed9f774ac4b8a9733d9a3d7a8c054f44e7f0e",
+    "road_vrp7_step6a_v2/label_current.py": "d2b948b09bbfae8851916eecf8e0231bf88e3c79f156a2243c4372890266a4a0",
+    "road_vrp7_step6a_v2/capture_current.py": "470c8ca84b8f787768438710173d77db8a1818b1af400191e5cc9dc6a410b02c"
+  },
+  "source_solvers": [
+    "C3_topk"
+  ],
+  "target_times": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "max_states": 10,
+  "max_tasks": 1,
+  "max_scenarios": 1,
+  "states_seed": 20261019,
+  "actions_per_state": 4,
+  "top_k": 12,
+  "candidate_deadline_sec": 3.0,
+  "enable_swap": true,
+  "lookback_slots": 6,
+  "od_step_min": 20,
+  "od_hours": 5.0,
+  "label_role": "retrospective oracle objective; NOT deployable features",
+  "feature_role": "pre-departure raw observed traffic only; static topology"
+}

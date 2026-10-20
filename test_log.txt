@@ -1,0 +1,94 @@
+{
+  "status": "COMPLETE",
+  "output": "/tmp/tmp0_3c_zt9/output",
+  "reports": [
+    {
+      "protocol": "task",
+      "counts": {
+        "train": {
+          "candidates": 720,
+          "states": 144,
+          "positives": 238
+        },
+        "val": {
+          "candidates": 240,
+          "states": 48,
+          "positives": 85
+        },
+        "internal_test": {
+          "candidates": 240,
+          "states": 48,
+          "positives": 85
+        }
+      },
+      "test": {
+        "B1_static_RF": {
+          "PR_AUC": 0.8643182496924173,
+          "threshold": 0.7,
+          "policy_gain_sec": 6.1875
+        },
+        "B2_static_plus_history_RF": {
+          "PR_AUC": 0.9631186954333295,
+          "threshold": 0.7,
+          "policy_gain_sec": 8.1875
+        },
+        "B0_static_score_unconditional": {
+          "PR_AUC": null,
+          "threshold": null,
+          "policy_gain_sec": 4.6875
+        },
+        "B0_noop": {
+          "PR_AUC": null,
+          "threshold": null,
+          "policy_gain_sec": 0.0
+        }
+      }
+    },
+    {
+      "protocol": "date",
+      "counts": {
+        "train": {
+          "candidates": 600,
+          "states": 120,
+          "positives": 190
+        },
+        "val": {
+          "candidates": 300,
+          "states": 60,
+          "positives": 113
+        },
+        "internal_test": {
+          "candidates": 300,
+          "states": 60,
+          "positives": 105
+        }
+      },
+      "test": {
+        "B1_static_RF": {
+          "PR_AUC": 0.8271233300996541,
+          "threshold": 0.5,
+          "policy_gain_sec": 4.85
+        },
+        "B2_static_plus_history_RF": {
+          "PR_AUC": 0.965135335298059,
+          "threshold": 0.5,
+          "policy_gain_sec": 8.75
+        },
+        "B0_static_score_unconditional": {
+          "PR_AUC": null,
+          "threshold": null,
+          "policy_gain_sec": 4.8
+        },
+        "B0_noop": {
+          "PR_AUC": null,
+          "threshold": null,
+          "policy_gain_sec": 0.0
+        }
+      }
+    }
+  ]
+}
+PASS: B0 full synthetic fit/eval, role isolation and output immutability
+PASS: A-v2 honest CURRENT loader, source planner leakage checks
+PASS: A-v2 accepted-state bounded sampling and non-best priority
+ALL SYNTHETIC TESTS PASSED
