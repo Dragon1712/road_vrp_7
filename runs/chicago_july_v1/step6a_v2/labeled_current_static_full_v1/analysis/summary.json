@@ -1,0 +1,53 @@
+{
+  "stage": "step6a-offline-v2",
+  "data_role": "July development ONLY; not blind test",
+  "states": 472,
+  "candidates": 3776,
+  "valid_labels": 3776,
+  "invalid_labels": 0,
+  "positive_actions": 737,
+  "negative_actions": 3039,
+  "tied_actions": 0,
+  "positive_rate": 0.1951800847457627,
+  "states_with_two_plus_valid_actions": 472,
+  "mean_within_state_static_repair_vs_td_spearman": 0.8975535890837878,
+  "mean_within_state_same_move_static_vs_td_spearman": 0.8873238975787833,
+  "states_static_top1_differs_from_td_top1": 131,
+  "top1_disagreement_rate": 0.2775423728813559,
+  "mean_oracle_vs_static_selection_regret_sec": 6.902386514178378,
+  "mean_oracle_best_gain_sec": 53.40053367313867,
+  "tasks": [
+    "task_0000",
+    "task_0001",
+    "task_0002",
+    "task_0003",
+    "task_0004",
+    "task_0005",
+    "task_0006",
+    "task_0007",
+    "task_0008",
+    "task_0009"
+  ],
+  "dates": [
+    "2025-07-22",
+    "2025-07-23",
+    "2025-07-24",
+    "2025-07-25"
+  ],
+  "seeds": [
+    42,
+    43
+  ],
+  "source_solvers": [
+    "C3_topk"
+  ],
+  "warnings": [
+    "These are hindsight labels from frozen BEST snapshots, not ALNS arbitrary current-state trajectories.",
+    "Oracle-generated source routes may encode privileged future traffic indirectly; not a deployment evaluation.",
+    "Oracle ranking and regret are diagnostic upper bounds, NOT results from a trained model.",
+    "No observed-road ground truth exists for permanently unmonitored roads.",
+    "Task split uses groups, but current July data were previously inspected; no blind-test claim.",
+    "Raw historical slots strictly precede departure; never use Oracle future costs as model features.",
+    "Timed-out/censored repairs are excluded from supervised statistics."
+  ]
+}
