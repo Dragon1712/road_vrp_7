@@ -1,0 +1,46 @@
+{
+  "stage": "step6b1-v2",
+  "source": "runs/chicago_july_v1/step6a_v2/labeled_current_static_full_v1",
+  "seed": 44,
+  "trees": 120,
+  "methods": [
+    "P0_class_core",
+    "P1_class_static_time",
+    "P2_reg_static_time",
+    "P3_pairwise_static_time",
+    "P4_two_part_static_time",
+    "P5_reg_history",
+    "P6_pairwise_history",
+    "P7_two_part_history",
+    "P8_class_history",
+    "P9_pairwise_interaction_static",
+    "P10_pairwise_interaction_history",
+    "P11_two_part_calibrated_static",
+    "P12_two_part_calibrated_history"
+  ],
+  "protocols": [
+    "task",
+    "date"
+  ],
+  "target": "static_repair_td_gain_sec",
+  "source_sha256": {
+    "X": "8b8f2830626e84c6c8ed2ec57f5d811e28cf330ad5f2c501b44a5bfb2dd492b4",
+    "y": "53efc818f7f831ef659719cc6afb95280182b08fe647afe6911113392fde3027",
+    "groups": "721209b760f632eab5252ea13ff940a773c08a7b43330e80bfd45291f2710e39",
+    "schema": "4a80ab878a7593b394440ab927267481d19223ca38a835f8af5905d7c78201d4",
+    "config": "28b8e1ee6bfa68eb697afb364eba7fdcdfe37a8c1b249dd53ce4778f87f9e01d",
+    "summary": "293992399fee2d1db0775e707e6c81fb00562806e6b79589e99f2083af909647"
+  },
+  "code_sha256": {
+    "train.py": "77835ec951c2eb5e9292c9f4ab95359f4d5bd153aa855a8c029485e9045e6095",
+    "models.py": "e4eeec3eb53ad8e1aa5e28f385f82842e319fda10fb1086f1cf1c2976e3a0567",
+    "dataset.py": "e85724c9c6d1a93fe19532390f265ceb9ad7a63a38f9636a2dd25725d214f7be",
+    "audit_static_repair.py": "f5f0071aa9b962dccf0c2be117e26abb4187558828441fda983d8a056347adbd"
+  },
+  "caveats": [
+    "Development data: no blind month, offline single-step TD objective labels.",
+    "No full 30s ALNS integration or road replay; no model inference latency included.",
+    "Dates can share identical static route structure. Repeated seeds reuse held-out states.",
+    "Class probabilities calibrated only on grouped training OOF, not the validation or test split."
+  ]
+}

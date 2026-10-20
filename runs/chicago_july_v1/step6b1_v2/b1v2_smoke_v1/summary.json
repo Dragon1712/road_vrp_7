@@ -1,0 +1,342 @@
+{
+  "status": "COMPLETE",
+  "reports": [
+    {
+      "protocol": "task",
+      "primary_label": "static_repair_td_gain_sec",
+      "methods": {
+        "P1_class_static_time": {
+          "kind": "cls",
+          "feature_mode": "static",
+          "feature_count": 12,
+          "validation_threshold": 0.7,
+          "validation_policy": {
+            "states": 86,
+            "executed_states": 26,
+            "execution_rate": 0.3023255813953488,
+            "positive_executions": 20,
+            "nonpositive_executions": 6,
+            "mean_signed_gain_sec": 36.867693396501764,
+            "total_signed_gain_sec": 3170.6216320991516,
+            "mean_static_repair_oracle_noop_bound_sec": 82.2119882896889,
+            "mean_policy_regret_to_static_repair_oracle_sec": 45.34429489318715,
+            "mean_oracle_td_repair_same_chosen_section_executed_sec": 36.907798195994175,
+            "mean_oracle_repair_upgrade_all_states_sec": 0.040104799492414606,
+            "mean_oracle_repair_upgrade_executed_only_sec": 0.13265433678260216,
+            "candidate_ranking_top1_match_rate": 0.23255813953488372
+          },
+          "internal_test_policy": {
+            "states": 96,
+            "executed_states": 20,
+            "execution_rate": 0.20833333333333334,
+            "positive_executions": 17,
+            "nonpositive_executions": 3,
+            "mean_signed_gain_sec": 29.80699037015438,
+            "total_signed_gain_sec": 2861.4710755348206,
+            "mean_static_repair_oracle_noop_bound_sec": 60.36693284784754,
+            "mean_policy_regret_to_static_repair_oracle_sec": 30.55994247769316,
+            "mean_oracle_td_repair_same_chosen_section_executed_sec": 31.58494741221269,
+            "mean_oracle_repair_upgrade_all_states_sec": 1.7779570420583088,
+            "mean_oracle_repair_upgrade_executed_only_sec": 8.534193801879884,
+            "candidate_ranking_top1_match_rate": 0.22916666666666666
+          },
+          "test_metrics": {
+            "mean_state_spearman": 0.11368401762579063,
+            "states_spearman_defined": 96,
+            "state_top1_hit_rate": 0.22916666666666666,
+            "global_ranking_PR_AUC": 0.6373184366099199,
+            "global_ranking_ROC_AUC": 0.8570068733620136,
+            "gate_positive_PR_AUC": 0.6373184366099199,
+            "gate_positive_ROC_AUC": 0.8570068733620136,
+            "gate_Brier_score": 0.09256309585823803
+          },
+          "group_training_calibration": {},
+          "training_pair_count": null
+        },
+        "P2_reg_static_time": {
+          "kind": "reg",
+          "feature_mode": "static",
+          "feature_count": 12,
+          "validation_threshold": -40.0,
+          "validation_policy": {
+            "states": 86,
+            "executed_states": 36,
+            "execution_rate": 0.4186046511627907,
+            "positive_executions": 20,
+            "nonpositive_executions": 16,
+            "mean_signed_gain_sec": 30.671439922479696,
+            "total_signed_gain_sec": 2637.743833333254,
+            "mean_static_repair_oracle_noop_bound_sec": 82.2119882896889,
+            "mean_policy_regret_to_static_repair_oracle_sec": 51.54054836720921,
+            "mean_oracle_td_repair_same_chosen_section_executed_sec": 31.022808726443802,
+            "mean_oracle_repair_upgrade_all_states_sec": 0.35136880396410475,
+            "mean_oracle_repair_upgrade_executed_only_sec": 0.839381031692028,
+            "candidate_ranking_top1_match_rate": 0.1511627906976744
+          },
+          "internal_test_policy": {
+            "states": 96,
+            "executed_states": 32,
+            "execution_rate": 0.3333333333333333,
+            "positive_executions": 21,
+            "nonpositive_executions": 11,
+            "mean_signed_gain_sec": 33.22937671343485,
+            "total_signed_gain_sec": 3190.020164489746,
+            "mean_static_repair_oracle_noop_bound_sec": 60.36693284784754,
+            "mean_policy_regret_to_static_repair_oracle_sec": 27.137556134412687,
+            "mean_oracle_td_repair_same_chosen_section_executed_sec": 35.64437564214071,
+            "mean_oracle_repair_upgrade_all_states_sec": 2.414998928705851,
+            "mean_oracle_repair_upgrade_executed_only_sec": 7.244996786117554,
+            "candidate_ranking_top1_match_rate": 0.3125
+          },
+          "test_metrics": {
+            "mean_state_spearman": 0.3731030167414698,
+            "states_spearman_defined": 96,
+            "state_top1_hit_rate": 0.3125,
+            "global_ranking_PR_AUC": 0.6258335397194315,
+            "global_ranking_ROC_AUC": 0.8411153142461553,
+            "gate_positive_PR_AUC": null,
+            "gate_positive_ROC_AUC": null,
+            "gate_Brier_score": null,
+            "signed_prediction_MAE_sec": 74.25715191258232
+          },
+          "group_training_calibration": {},
+          "training_pair_count": null
+        },
+        "P3_pairwise_static_time": {
+          "kind": "pair",
+          "feature_mode": "static",
+          "feature_count": 12,
+          "validation_threshold": 0.5,
+          "validation_policy": {
+            "states": 86,
+            "executed_states": 18,
+            "execution_rate": 0.20930232558139536,
+            "positive_executions": 15,
+            "nonpositive_executions": 3,
+            "mean_signed_gain_sec": 23.69993684180947,
+            "total_signed_gain_sec": 2038.1945683956146,
+            "mean_static_repair_oracle_noop_bound_sec": 82.2119882896889,
+            "mean_policy_regret_to_static_repair_oracle_sec": 58.512051447879436,
+            "mean_oracle_td_repair_same_chosen_section_executed_sec": 23.73598018635151,
+            "mean_oracle_repair_upgrade_all_states_sec": 0.03604334454203761,
+            "mean_oracle_repair_upgrade_executed_only_sec": 0.17220709058973524,
+            "candidate_ranking_top1_match_rate": 0.16279069767441862
+          },
+          "internal_test_policy": {
+            "states": 96,
+            "executed_states": 14,
+            "execution_rate": 0.14583333333333334,
+            "positive_executions": 11,
+            "nonpositive_executions": 3,
+            "mean_signed_gain_sec": 27.639732385675114,
+            "total_signed_gain_sec": 2653.414309024811,
+            "mean_static_repair_oracle_noop_bound_sec": 60.36693284784754,
+            "mean_policy_regret_to_static_repair_oracle_sec": 32.727200462172426,
+            "mean_oracle_td_repair_same_chosen_section_executed_sec": 28.31720168888569,
+            "mean_oracle_repair_upgrade_all_states_sec": 0.6774693032105764,
+            "mean_oracle_repair_upgrade_executed_only_sec": 4.645503793443952,
+            "candidate_ranking_top1_match_rate": 0.3541666666666667
+          },
+          "test_metrics": {
+            "mean_state_spearman": 0.2924412532791009,
+            "states_spearman_defined": 96,
+            "state_top1_hit_rate": 0.3541666666666667,
+            "global_ranking_PR_AUC": null,
+            "global_ranking_ROC_AUC": null,
+            "gate_positive_PR_AUC": 0.6373184366099199,
+            "gate_positive_ROC_AUC": 0.8570068733620136,
+            "gate_Brier_score": 0.09256309585823803
+          },
+          "group_training_calibration": {},
+          "training_pair_count": 8088
+        },
+        "P9_pairwise_interaction_static": {
+          "kind": "pair_inter",
+          "feature_mode": "static",
+          "feature_count": 12,
+          "validation_threshold": 0.5,
+          "validation_policy": {
+            "states": 86,
+            "executed_states": 20,
+            "execution_rate": 0.23255813953488372,
+            "positive_executions": 16,
+            "nonpositive_executions": 4,
+            "mean_signed_gain_sec": 21.63059958746267,
+            "total_signed_gain_sec": 1860.2315645217896,
+            "mean_static_repair_oracle_noop_bound_sec": 82.2119882896889,
+            "mean_policy_regret_to_static_repair_oracle_sec": 60.58138870222624,
+            "mean_oracle_td_repair_same_chosen_section_executed_sec": 21.96917971899343,
+            "mean_oracle_repair_upgrade_all_states_sec": 0.3385801315307617,
+            "mean_oracle_repair_upgrade_executed_only_sec": 1.4558945655822755,
+            "candidate_ranking_top1_match_rate": 0.13953488372093023
+          },
+          "internal_test_policy": {
+            "states": 96,
+            "executed_states": 15,
+            "execution_rate": 0.15625,
+            "positive_executions": 11,
+            "nonpositive_executions": 4,
+            "mean_signed_gain_sec": 27.333373621106148,
+            "total_signed_gain_sec": 2624.00386762619,
+            "mean_static_repair_oracle_noop_bound_sec": 60.36693284784754,
+            "mean_policy_regret_to_static_repair_oracle_sec": 33.033559226741396,
+            "mean_oracle_td_repair_same_chosen_section_executed_sec": 28.03903495768706,
+            "mean_oracle_repair_upgrade_all_states_sec": 0.7056613365809122,
+            "mean_oracle_repair_upgrade_executed_only_sec": 4.516232554117838,
+            "candidate_ranking_top1_match_rate": 0.3854166666666667
+          },
+          "test_metrics": {
+            "mean_state_spearman": 0.40361343791707033,
+            "states_spearman_defined": 96,
+            "state_top1_hit_rate": 0.3854166666666667,
+            "global_ranking_PR_AUC": null,
+            "global_ranking_ROC_AUC": null,
+            "gate_positive_PR_AUC": 0.6373184366099199,
+            "gate_positive_ROC_AUC": 0.8570068733620136,
+            "gate_Brier_score": 0.09256309585823803
+          },
+          "group_training_calibration": {},
+          "training_pair_count": 8088
+        },
+        "P11_two_part_calibrated_static": {
+          "kind": "two_cal",
+          "feature_mode": "static",
+          "feature_count": 12,
+          "validation_threshold": -10.0,
+          "validation_policy": {
+            "states": 86,
+            "executed_states": 24,
+            "execution_rate": 0.27906976744186046,
+            "positive_executions": 19,
+            "nonpositive_executions": 5,
+            "mean_signed_gain_sec": 35.92513970718827,
+            "total_signed_gain_sec": 3089.5620148181915,
+            "mean_static_repair_oracle_noop_bound_sec": 82.2119882896889,
+            "mean_policy_regret_to_static_repair_oracle_sec": 46.28684858250063,
+            "mean_oracle_td_repair_same_chosen_section_executed_sec": 36.16278922557831,
+            "mean_oracle_repair_upgrade_all_states_sec": 0.2376495183900345,
+            "mean_oracle_repair_upgrade_executed_only_sec": 0.8515774408976237,
+            "candidate_ranking_top1_match_rate": 0.12790697674418605
+          },
+          "internal_test_policy": {
+            "states": 96,
+            "executed_states": 19,
+            "execution_rate": 0.19791666666666666,
+            "positive_executions": 19,
+            "nonpositive_executions": 0,
+            "mean_signed_gain_sec": 41.03789965311686,
+            "total_signed_gain_sec": 3939.6383666992188,
+            "mean_static_repair_oracle_noop_bound_sec": 60.36693284784754,
+            "mean_policy_regret_to_static_repair_oracle_sec": 19.32903319473068,
+            "mean_oracle_td_repair_same_chosen_section_executed_sec": 43.173422733942665,
+            "mean_oracle_repair_upgrade_all_states_sec": 2.1355230808258057,
+            "mean_oracle_repair_upgrade_executed_only_sec": 10.790011355751439,
+            "candidate_ranking_top1_match_rate": 0.3229166666666667
+          },
+          "test_metrics": {
+            "mean_state_spearman": 0.41769224834854884,
+            "states_spearman_defined": 96,
+            "state_top1_hit_rate": 0.3229166666666667,
+            "global_ranking_PR_AUC": 0.5969512398807427,
+            "global_ranking_ROC_AUC": 0.7996464421698067,
+            "gate_positive_PR_AUC": 0.6373146629816638,
+            "gate_positive_ROC_AUC": 0.8570006922810661,
+            "gate_Brier_score": 0.0968904550033614,
+            "signed_prediction_MAE_sec": 71.3887654764169
+          },
+          "group_training_calibration": {
+            "method": "group_oof_platt",
+            "n_groups": 6,
+            "oof_positive_rate": 0.17327586206896553,
+            "oof_raw_brier": 0.11287620519888003,
+            "oof_platt_brier": 0.10840932859176378
+          },
+          "training_pair_count": null
+        }
+      },
+      "controls": {
+        "always_noop": {
+          "states": 96,
+          "executed_states": 0,
+          "execution_rate": 0.0,
+          "positive_executions": 0,
+          "nonpositive_executions": 0,
+          "mean_signed_gain_sec": 0.0,
+          "total_signed_gain_sec": 0.0,
+          "mean_static_repair_oracle_noop_bound_sec": 60.36693284784754,
+          "mean_policy_regret_to_static_repair_oracle_sec": 60.36693284784754,
+          "mean_oracle_td_repair_same_chosen_section_executed_sec": 0.0,
+          "mean_oracle_repair_upgrade_all_states_sec": 0.0,
+          "mean_oracle_repair_upgrade_executed_only_sec": null,
+          "candidate_ranking_top1_match_rate": 0.16666666666666666
+        },
+        "static_score_unconditional": {
+          "states": 96,
+          "executed_states": 96,
+          "execution_rate": 1.0,
+          "positive_executions": 20,
+          "nonpositive_executions": 76,
+          "mean_signed_gain_sec": -129.94138939181963,
+          "total_signed_gain_sec": -12474.373381614685,
+          "mean_static_repair_oracle_noop_bound_sec": 60.36693284784754,
+          "mean_policy_regret_to_static_repair_oracle_sec": 190.30832223966718,
+          "mean_oracle_td_repair_same_chosen_section_executed_sec": -126.42305710911751,
+          "mean_oracle_repair_upgrade_all_states_sec": 3.518332282702128,
+          "mean_oracle_repair_upgrade_executed_only_sec": 3.518332282702128,
+          "candidate_ranking_top1_match_rate": 0.13541666666666666
+        }
+      },
+      "splits": {
+        "train": {
+          "states": 290,
+          "candidates": 2320,
+          "positive_candidates": 402,
+          "tasks": [
+            "task_0000",
+            "task_0001",
+            "task_0002",
+            "task_0003",
+            "task_0004",
+            "task_0005"
+          ],
+          "dates": [
+            "2025-07-22",
+            "2025-07-23",
+            "2025-07-24",
+            "2025-07-25"
+          ]
+        },
+        "val": {
+          "states": 86,
+          "candidates": 688,
+          "positive_candidates": 152,
+          "tasks": [
+            "task_0006",
+            "task_0007"
+          ],
+          "dates": [
+            "2025-07-22",
+            "2025-07-23",
+            "2025-07-24",
+            "2025-07-25"
+          ]
+        },
+        "internal_test": {
+          "states": 96,
+          "candidates": 768,
+          "positive_candidates": 126,
+          "tasks": [
+            "task_0008",
+            "task_0009"
+          ],
+          "dates": [
+            "2025-07-22",
+            "2025-07-23",
+            "2025-07-24",
+            "2025-07-25"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "stage": "step6b1-supervised-v1",
+  "source": "runs/chicago_july_v1/step6a_v2/labeled_current_static_full_v1",
+  "source_sha256": {
+    "X": "8b8f2830626e84c6c8ed2ec57f5d811e28cf330ad5f2c501b44a5bfb2dd492b4",
+    "y": "53efc818f7f831ef659719cc6afb95280182b08fe647afe6911113392fde3027",
+    "groups": "721209b760f632eab5252ea13ff940a773c08a7b43330e80bfd45291f2710e39",
+    "schema": "4a80ab878a7593b394440ab927267481d19223ca38a835f8af5905d7c78201d4"
+  },
+  "code_sha256": {
+    "train_b1.py": "bafb833e6b69cec442fcf1f187805ae719f642c24d1a82092c21ae2a99781bba",
+    "dataset.py": "7fff1f017b298f1682e71714edb9551e5eadc7a1033bc2e197a39473aea53d51",
+    "audit_static_repair.py": "48993e043e6c8657cf26d898528645d72c8cf1d550f5cdd78e6f37583aac47f0"
+  },
+  "protocols": [
+    "task"
+  ],
+  "seed": 42,
+  "trees": 10,
+  "methods": [
+    "P1_class_static_time",
+    "P2_reg_static_time",
+    "P3_pairwise_static_time"
+  ],
+  "primary_target": "static_repair_td_gain_sec",
+  "auxiliary_oracle_upper_bound": "td_gain_sec",
+  "warnings": [
+    "July development: internal task/date tests only, no unseen-month generalization.",
+    "The evaluator uses retrospective Oracle TD objective to score STATIC repaired actions.",
+    "Scores are offline single-step counterfactuals, not 30-second ALNS or road-level replay.",
+    "All repair label generation happened offline; full online feature/repair cost is not included.",
+    "Static current-state generation can yield identical route structures in multiple days.",
+    "Within-state label differences are not independent examples for significance testing."
+  ]
+}

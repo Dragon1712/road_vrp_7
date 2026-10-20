@@ -1,0 +1,257 @@
+{
+  "protocol": "task",
+  "target": "static_repair_td_gain_sec",
+  "source": "runs/chicago_july_v1/step6a_v2/labeled_current_static_full_v1",
+  "positive_rate_all": 0.18008474576271186,
+  "splits": {
+    "train": {
+      "states": 290,
+      "candidates": 2320,
+      "positive_candidates": 402,
+      "task_ids": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003",
+        "task_0004",
+        "task_0005"
+      ],
+      "dates": [
+        "2025-07-22",
+        "2025-07-23",
+        "2025-07-24",
+        "2025-07-25"
+      ]
+    },
+    "val": {
+      "states": 86,
+      "candidates": 688,
+      "positive_candidates": 152,
+      "task_ids": [
+        "task_0006",
+        "task_0007"
+      ],
+      "dates": [
+        "2025-07-22",
+        "2025-07-23",
+        "2025-07-24",
+        "2025-07-25"
+      ]
+    },
+    "internal_test": {
+      "states": 96,
+      "candidates": 768,
+      "positive_candidates": 126,
+      "task_ids": [
+        "task_0008",
+        "task_0009"
+      ],
+      "dates": [
+        "2025-07-22",
+        "2025-07-23",
+        "2025-07-24",
+        "2025-07-25"
+      ]
+    }
+  },
+  "methods": {
+    "P1_class_static_time": {
+      "features": [
+        "original_static_cost_sec",
+        "departure_hour_local",
+        "departure_weekday_local",
+        "route_index",
+        "position",
+        "size",
+        "block_demand",
+        "route_load",
+        "vehicle_capacity",
+        "static_section_cost_sec",
+        "route_length",
+        "relative_position"
+      ],
+      "mode": "static",
+      "kind": "cls",
+      "threshold_chosen_on_val": 0.7,
+      "validation_policy": {
+        "states": 86,
+        "executed_states": 26,
+        "execution_rate": 0.3023255813953488,
+        "positive_executions": 20,
+        "nonpositive_executions": 6,
+        "mean_signed_gain_sec": 36.867693396501764,
+        "total_signed_gain_sec": 3170.6216320991516,
+        "mean_oracle_static_repair_noop_bound_sec": 82.2119882896889,
+        "mean_policy_regret_sec": 45.34429489318715,
+        "mean_oracle_td_repair_same_section_sec": 36.907798195994175,
+        "mean_oracle_repair_upgrade_on_executed_sec": 0.040104799492414606,
+        "section_top1_agreement_rate": 0.23255813953488372
+      },
+      "internal_test_policy": {
+        "states": 96,
+        "executed_states": 20,
+        "execution_rate": 0.20833333333333334,
+        "positive_executions": 17,
+        "nonpositive_executions": 3,
+        "mean_signed_gain_sec": 29.80699037015438,
+        "total_signed_gain_sec": 2861.4710755348206,
+        "mean_oracle_static_repair_noop_bound_sec": 60.36693284784754,
+        "mean_policy_regret_sec": 30.55994247769316,
+        "mean_oracle_td_repair_same_section_sec": 31.58494741221269,
+        "mean_oracle_repair_upgrade_on_executed_sec": 1.7779570420583088,
+        "section_top1_agreement_rate": 0.22916666666666666
+      },
+      "test_metrics": {
+        "PR_AUC": 0.6373184366099199,
+        "ROC_AUC": 0.8570068733620136,
+        "mean_within_state_spearman": 0.11368401762579063,
+        "positive_PR_AUC": 0.6373184366099199
+      },
+      "candidate_predictions_file": "task/P1_class_static_time_test_candidates.csv",
+      "state_predictions_file": "task/P1_class_static_time_test_states.csv",
+      "training_pairs": null
+    },
+    "P2_reg_static_time": {
+      "features": [
+        "original_static_cost_sec",
+        "departure_hour_local",
+        "departure_weekday_local",
+        "route_index",
+        "position",
+        "size",
+        "block_demand",
+        "route_load",
+        "vehicle_capacity",
+        "static_section_cost_sec",
+        "route_length",
+        "relative_position"
+      ],
+      "mode": "static",
+      "kind": "reg",
+      "threshold_chosen_on_val": -40.0,
+      "validation_policy": {
+        "states": 86,
+        "executed_states": 36,
+        "execution_rate": 0.4186046511627907,
+        "positive_executions": 20,
+        "nonpositive_executions": 16,
+        "mean_signed_gain_sec": 30.671439922479696,
+        "total_signed_gain_sec": 2637.743833333254,
+        "mean_oracle_static_repair_noop_bound_sec": 82.2119882896889,
+        "mean_policy_regret_sec": 51.54054836720921,
+        "mean_oracle_td_repair_same_section_sec": 31.022808726443802,
+        "mean_oracle_repair_upgrade_on_executed_sec": 0.35136880396410475,
+        "section_top1_agreement_rate": 0.1511627906976744
+      },
+      "internal_test_policy": {
+        "states": 96,
+        "executed_states": 32,
+        "execution_rate": 0.3333333333333333,
+        "positive_executions": 21,
+        "nonpositive_executions": 11,
+        "mean_signed_gain_sec": 33.22937671343485,
+        "total_signed_gain_sec": 3190.020164489746,
+        "mean_oracle_static_repair_noop_bound_sec": 60.36693284784754,
+        "mean_policy_regret_sec": 27.137556134412687,
+        "mean_oracle_td_repair_same_section_sec": 35.64437564214071,
+        "mean_oracle_repair_upgrade_on_executed_sec": 2.414998928705851,
+        "section_top1_agreement_rate": 0.3125
+      },
+      "test_metrics": {
+        "PR_AUC": 0.6258335397194315,
+        "ROC_AUC": 0.8411153142461553,
+        "mean_within_state_spearman": 0.3731030167414698,
+        "signed_regression_MAE_sec": 74.25715191258232
+      },
+      "candidate_predictions_file": "task/P2_reg_static_time_test_candidates.csv",
+      "state_predictions_file": "task/P2_reg_static_time_test_states.csv",
+      "training_pairs": null
+    },
+    "P3_pairwise_static_time": {
+      "features": [
+        "original_static_cost_sec",
+        "departure_hour_local",
+        "departure_weekday_local",
+        "route_index",
+        "position",
+        "size",
+        "block_demand",
+        "route_load",
+        "vehicle_capacity",
+        "static_section_cost_sec",
+        "route_length",
+        "relative_position"
+      ],
+      "mode": "static",
+      "kind": "pair",
+      "threshold_chosen_on_val": 0.5,
+      "validation_policy": {
+        "states": 86,
+        "executed_states": 18,
+        "execution_rate": 0.20930232558139536,
+        "positive_executions": 15,
+        "nonpositive_executions": 3,
+        "mean_signed_gain_sec": 23.69993684180947,
+        "total_signed_gain_sec": 2038.1945683956146,
+        "mean_oracle_static_repair_noop_bound_sec": 82.2119882896889,
+        "mean_policy_regret_sec": 58.512051447879436,
+        "mean_oracle_td_repair_same_section_sec": 23.73598018635151,
+        "mean_oracle_repair_upgrade_on_executed_sec": 0.03604334454203761,
+        "section_top1_agreement_rate": 0.16279069767441862
+      },
+      "internal_test_policy": {
+        "states": 96,
+        "executed_states": 14,
+        "execution_rate": 0.14583333333333334,
+        "positive_executions": 11,
+        "nonpositive_executions": 3,
+        "mean_signed_gain_sec": 27.639732385675114,
+        "total_signed_gain_sec": 2653.414309024811,
+        "mean_oracle_static_repair_noop_bound_sec": 60.36693284784754,
+        "mean_policy_regret_sec": 32.727200462172426,
+        "mean_oracle_td_repair_same_section_sec": 28.31720168888569,
+        "mean_oracle_repair_upgrade_on_executed_sec": 0.6774693032105764,
+        "section_top1_agreement_rate": 0.3541666666666667
+      },
+      "test_metrics": {
+        "PR_AUC": 0.22643328133681423,
+        "ROC_AUC": 0.5726771497799535,
+        "mean_within_state_spearman": 0.2924412532791009,
+        "positive_PR_AUC": 0.6373184366099199
+      },
+      "candidate_predictions_file": "task/P3_pairwise_static_time_test_candidates.csv",
+      "state_predictions_file": "task/P3_pairwise_static_time_test_states.csv",
+      "training_pairs": 8088
+    }
+  },
+  "control": {
+    "always_noop": {
+      "states": 96,
+      "executed_states": 0,
+      "execution_rate": 0.0,
+      "positive_executions": 0,
+      "nonpositive_executions": 0,
+      "mean_signed_gain_sec": 0.0,
+      "total_signed_gain_sec": 0.0,
+      "mean_oracle_static_repair_noop_bound_sec": 60.36693284784754,
+      "mean_policy_regret_sec": 60.36693284784754,
+      "mean_oracle_td_repair_same_section_sec": 0.0,
+      "mean_oracle_repair_upgrade_on_executed_sec": 0.0,
+      "section_top1_agreement_rate": 0.16666666666666666
+    },
+    "static_score_unconditional": {
+      "states": 96,
+      "executed_states": 96,
+      "execution_rate": 1.0,
+      "positive_executions": 20,
+      "nonpositive_executions": 76,
+      "mean_signed_gain_sec": -129.94138939181963,
+      "total_signed_gain_sec": -12474.373381614685,
+      "mean_oracle_static_repair_noop_bound_sec": 60.36693284784754,
+      "mean_policy_regret_sec": 190.30832223966718,
+      "mean_oracle_td_repair_same_section_sec": -126.42305710911751,
+      "mean_oracle_repair_upgrade_on_executed_sec": 3.518332282702128,
+      "section_top1_agreement_rate": 0.13541666666666666
+    }
+  }
+}
