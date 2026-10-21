@@ -44,6 +44,14 @@ case "$STAGE" in
       --scenario-ids 2025-07-27_0800,2025-07-27_1700 \
       --planners oracle,static --seeds "$SEEDS" \
       "${ARGS[@]}" "${RESUME_ARGS[@]}" ;;
+  budget)
+    "$PY" road_vrp7_step5b_v2/budget_ablation.py --action run "${@:2}" ;;
+  analyze_budget)
+    "$PY" road_vrp7_step5b_v2/budget_ablation.py --action analyze "${@:2}" ;;
+  budget_all)
+    "$PY" road_vrp7_step5b_v2/budget_ablation.py --action all "${@:2}" ;;
+  budget_dry_run)
+    "$PY" road_vrp7_step5b_v2/budget_ablation.py --action dry-run "${@:2}" ;;
   analyze)
     WHICH="${2:-pilot}"
     "$PY" road_vrp7_step5b_v2/analyze_step5b_v2.py \

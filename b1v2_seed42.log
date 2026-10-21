@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/xys/code/WZL/road_vrp_7/road_vrp7_step6b1_v2/train.py", line 242, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/home/xys/code/WZL/road_vrp_7/road_vrp7_step6b1_v2/train.py", line 239, in main
+    run(a.source_dir,a.output_dir,('task','date') if a.protocol=='both' else (a.protocol,),a.seed,a.trees,
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        [n.strip() for n in a.methods.split(',') if n.strip()])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xys/code/WZL/road_vrp_7/road_vrp7_step6b1_v2/train.py", line 203, in run
+    if output.exists():raise FileExistsError('Independent study directory required: '+str(output))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: Independent study directory required: runs/chicago_july_v1/step6b1_v2/b1v2_seed42_full_v1
