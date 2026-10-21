@@ -1,0 +1,52 @@
+{
+  "stage": "step6c1r-anchored-selective-defer-v1",
+  "source": "runs/chicago_july_v1/step6a_v2/labeled_current_static_full_v1",
+  "features": "runs/chicago_july_v1/step6b2/features_boundary_v1",
+  "graph_study": "runs/chicago_july_v1/step6c1/c1_graph_full_v1",
+  "anchor_study": "runs/chicago_july_v1/step6b2_r/b2r_ablation_seed47_v1",
+  "seed": 47,
+  "arms": [
+    "OOF_ZERO",
+    "FULL_ZERO",
+    "FULL_DEFER",
+    "FULL_DEFER_SAFE"
+  ],
+  "variants": [
+    "D0",
+    "D1"
+  ],
+  "protocols": [
+    "task",
+    "date"
+  ],
+  "epochs": 30,
+  "pretrain_epochs": 0,
+  "train_label": "static_repair_td_gain_sec",
+  "source_sha256": {
+    "X": "8b8f2830626e84c6c8ed2ec57f5d811e28cf330ad5f2c501b44a5bfb2dd492b4",
+    "y": "53efc818f7f831ef659719cc6afb95280182b08fe647afe6911113392fde3027",
+    "groups": "721209b760f632eab5252ea13ff940a773c08a7b43330e80bfd45291f2710e39",
+    "schema": "4a80ab878a7593b394440ab927267481d19223ca38a835f8af5905d7c78201d4",
+    "config": "28b8e1ee6bfa68eb697afb364eba7fdcdfe37a8c1b249dd53ce4778f87f9e01d",
+    "summary": "293992399fee2d1db0775e707e6c81fb00562806e6b79589e99f2083af909647"
+  },
+  "graph_sha256": "39f6a596bd918aa4de9992c99586eedf8a477a4fe3887443a9182045f7e39276",
+  "F4_sha256": "0032f79325dd64614b060e58829a934bcf985549b0124f606d3454f1afbf22bb",
+  "code_sha256": {
+    "r_model.py": "ad26cbf5e278188f84359e075cc990f5c66ec88e280da8393184bc1e83c2d57b",
+    "train_c1r.py": "2b9d2d64d684277268804443bbfdf03488edabb64e023c38b01150907ec5a858"
+  },
+  "research_sources": {
+    "cost_sensitive_defer": "literature/code/learn-to-defer-master",
+    "baseline_bootstrap": "literature/code/SPIBB-master/spibb.py",
+    "routing_subproblem_delegate": "literature/code/learning-to-delegate-main/supervised.py",
+    "masked_traffic_pretrain": "literature/code/spin-main/spin/models/spin.py"
+  },
+  "critical_notes": [
+    "July previously used for model development; not blind.",
+    "FULL train uses frozen RF in-sample anchor; helps alignment but may overfit.",
+    "FULL_DEFER offline default is frozen M0 within sampled K; actual online fallback is C3.",
+    "Gate is tuned on validation ONLY and does not offer SPIBB theoretical safety.",
+    "No SPCLT integrated; graph representation is unchanged from original C1."
+  ]
+}

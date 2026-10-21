@@ -1,0 +1,326 @@
+{
+  "_anchor_diagnostics": {
+    "mean_oof_minus_full_sec": -1.3362289760077224,
+    "std_oof_minus_full_sec": 23.27412546888651,
+    "train_OOF_MAE": 35.28362812031608,
+    "train_fullRF_MAE": 22.83712164266855
+  },
+  "D0_OOF_ZERO": {
+    "test_zero_noop": {
+      "states": 122,
+      "executed_states": 57,
+      "execution_rate": 0.4672131147540984,
+      "positive_executions": 40,
+      "nonpositive_executions": 17,
+      "mean_signed_gain_sec": 40.16662556684164,
+      "total_signed_gain_sec": 4900.32831915468,
+      "mean_static_repair_oracle_noop_bound_sec": 59.00777606812657,
+      "mean_policy_regret_to_static_repair_oracle_sec": 18.841150501284933,
+      "mean_oracle_td_repair_same_chosen_section_executed_sec": 40.87345579174943,
+      "mean_oracle_repair_upgrade_all_states_sec": 0.7068302249077891,
+      "mean_oracle_repair_upgrade_executed_only_sec": 1.5128646919078994,
+      "candidate_ranking_top1_match_rate": 0.5901639344262295
+    },
+    "test_M0_proxy_fallback": {
+      "states": 122,
+      "mean_signed_gain_sec_per_state": 42.09919974537658,
+      "mean_m0_proxy_gain_sec_per_state": 41.814961918125874,
+      "mean_improvement_vs_m0_proxy_sec_per_state": 0.28423782725070346,
+      "delegation_rate": 0.4672131147540984,
+      "reasons": {
+        "no_gate": 57,
+        "score_below_zero": 65
+      },
+      "warning": "Rejected action substitutes M0 candidate/zero OFFLINE; online B2-R rejects to ORIGINAL C3."
+    },
+    "best_validation_epoch": 13,
+    "gate_validation_only": null,
+    "pretrain_losses": [],
+    "model_sha256": "b19e82985a6a0d8e018bf7ab478e9eda5c527e7ce701bc642c48a60c205942e3",
+    "caution": "Zero-noop and M0-proxy are separate retrospective offline conventions; real online fallback=C3."
+  },
+  "D0_FULL_ZERO": {
+    "test_zero_noop": {
+      "states": 122,
+      "executed_states": 64,
+      "execution_rate": 0.5245901639344263,
+      "positive_executions": 43,
+      "nonpositive_executions": 21,
+      "mean_signed_gain_sec": 38.8422403869326,
+      "total_signed_gain_sec": 4738.753327205777,
+      "mean_static_repair_oracle_noop_bound_sec": 59.00777606812657,
+      "mean_policy_regret_to_static_repair_oracle_sec": 20.16553568119397,
+      "mean_oracle_td_repair_same_chosen_section_executed_sec": 39.57875773799224,
+      "mean_oracle_repair_upgrade_all_states_sec": 0.73651735105964,
+      "mean_oracle_repair_upgrade_executed_only_sec": 1.4039862004574388,
+      "candidate_ranking_top1_match_rate": 0.5655737704918032
+    },
+    "test_M0_proxy_fallback": {
+      "states": 122,
+      "mean_signed_gain_sec_per_state": 40.65734145399488,
+      "mean_m0_proxy_gain_sec_per_state": 41.814961918125874,
+      "mean_improvement_vs_m0_proxy_sec_per_state": -1.1576204641309917,
+      "delegation_rate": 0.5245901639344263,
+      "reasons": {
+        "no_gate": 64,
+        "score_below_zero": 58
+      },
+      "warning": "Rejected action substitutes M0 candidate/zero OFFLINE; online B2-R rejects to ORIGINAL C3."
+    },
+    "best_validation_epoch": 15,
+    "gate_validation_only": null,
+    "pretrain_losses": [],
+    "model_sha256": "2aa02ea386a06bcc2aa2755cec11d82b5d99c4d8d8c0f74a4f767dc2df8eceb7",
+    "caution": "Zero-noop and M0-proxy are separate retrospective offline conventions; real online fallback=C3."
+  },
+  "D0_FULL_DEFER": {
+    "test_zero_noop": {
+      "states": 122,
+      "executed_states": 47,
+      "execution_rate": 0.38524590163934425,
+      "positive_executions": 39,
+      "nonpositive_executions": 8,
+      "mean_signed_gain_sec": 43.518432007583435,
+      "total_signed_gain_sec": 5309.2487049251795,
+      "mean_static_repair_oracle_noop_bound_sec": 59.00777606812657,
+      "mean_policy_regret_to_static_repair_oracle_sec": 15.48934406054313,
+      "mean_oracle_td_repair_same_chosen_section_executed_sec": 44.13306905255943,
+      "mean_oracle_repair_upgrade_all_states_sec": 0.6146370449759921,
+      "mean_oracle_repair_upgrade_executed_only_sec": 1.5954408401504476,
+      "candidate_ranking_top1_match_rate": 0.6229508196721312
+    },
+    "test_M0_proxy_fallback": {
+      "states": 122,
+      "mean_signed_gain_sec_per_state": 44.766619045837004,
+      "mean_m0_proxy_gain_sec_per_state": 41.814961918125874,
+      "mean_improvement_vs_m0_proxy_sec_per_state": 2.951657127711128,
+      "delegation_rate": 0.38524590163934425,
+      "reasons": {
+        "no_gate": 47,
+        "score_below_zero": 75
+      },
+      "warning": "Rejected action substitutes M0 candidate/zero OFFLINE; online B2-R rejects to ORIGINAL C3."
+    },
+    "best_validation_epoch": 22,
+    "gate_validation_only": null,
+    "pretrain_losses": [],
+    "model_sha256": "a4f5dc34e758baf6529d6c013abcf92dad4ced4269cc01e7834998bed6ebaa77",
+    "caution": "Zero-noop and M0-proxy are separate retrospective offline conventions; real online fallback=C3."
+  },
+  "D0_FULL_DEFER_SAFE": {
+    "test_zero_noop": {
+      "states": 122,
+      "executed_states": 44,
+      "execution_rate": 0.36065573770491804,
+      "positive_executions": 36,
+      "nonpositive_executions": 8,
+      "mean_signed_gain_sec": 40.46099170321813,
+      "total_signed_gain_sec": 4936.240987792611,
+      "mean_static_repair_oracle_noop_bound_sec": 59.00777606812657,
+      "mean_policy_regret_to_static_repair_oracle_sec": 18.546784364908444,
+      "mean_oracle_td_repair_same_chosen_section_executed_sec": 41.07562874819411,
+      "mean_oracle_repair_upgrade_all_states_sec": 0.6146370449759921,
+      "mean_oracle_repair_upgrade_executed_only_sec": 1.7042208974334327,
+      "candidate_ranking_top1_match_rate": 0.6229508196721312
+    },
+    "test_M0_proxy_fallback": {
+      "states": 122,
+      "mean_signed_gain_sec_per_state": 43.13429848544422,
+      "mean_m0_proxy_gain_sec_per_state": 41.814961918125874,
+      "mean_improvement_vs_m0_proxy_sec_per_state": 1.3193365673183417,
+      "delegation_rate": 0.36065573770491804,
+      "reasons": {
+        "insufficient_static_margin": 2,
+        "large_residual": 1,
+        "passed": 4,
+        "same_as_static": 40,
+        "score_below_zero": 75
+      },
+      "warning": "Rejected action substitutes M0 candidate/zero OFFLINE; online B2-R rejects to ORIGINAL C3."
+    },
+    "best_validation_epoch": 22,
+    "gate_validation_only": {
+      "margin": 0.0,
+      "max_correction": 20.0,
+      "min_coverage": 0.0,
+      "validation_m0_proxy": {
+        "states": 116,
+        "mean_improvement_vs_m0_proxy_sec_per_state": 0.4462660448304538,
+        "mean_signed_gain_sec_per_state": 49.57097104868595,
+        "mean_m0_proxy_gain_sec_per_state": 49.124705003855496,
+        "delegation_rate": 0.3620689655172414
+      }
+    },
+    "pretrain_losses": [],
+    "model_sha256": "9135dbb45e81547f2e094813bf603bb90eda608591ed439b4b58cb07b36a81c2",
+    "caution": "Zero-noop and M0-proxy are separate retrospective offline conventions; real online fallback=C3."
+  },
+  "D1_OOF_ZERO": {
+    "test_zero_noop": {
+      "states": 122,
+      "executed_states": 43,
+      "execution_rate": 0.3524590163934426,
+      "positive_executions": 34,
+      "nonpositive_executions": 9,
+      "mean_signed_gain_sec": 39.89557533894406,
+      "total_signed_gain_sec": 4867.260191351175,
+      "mean_static_repair_oracle_noop_bound_sec": 59.00777606812657,
+      "mean_policy_regret_to_static_repair_oracle_sec": 19.112200729182508,
+      "mean_oracle_td_repair_same_chosen_section_executed_sec": 40.37253520358354,
+      "mean_oracle_repair_upgrade_all_states_sec": 0.47695986463947865,
+      "mean_oracle_repair_upgrade_executed_only_sec": 1.3532349647910789,
+      "candidate_ranking_top1_match_rate": 0.6475409836065574
+    },
+    "test_M0_proxy_fallback": {
+      "states": 122,
+      "mean_signed_gain_sec_per_state": 41.53556763026558,
+      "mean_m0_proxy_gain_sec_per_state": 41.814961918125874,
+      "mean_improvement_vs_m0_proxy_sec_per_state": -0.2793942878602958,
+      "delegation_rate": 0.3524590163934426,
+      "reasons": {
+        "no_gate": 43,
+        "score_below_zero": 79
+      },
+      "warning": "Rejected action substitutes M0 candidate/zero OFFLINE; online B2-R rejects to ORIGINAL C3."
+    },
+    "best_validation_epoch": 11,
+    "gate_validation_only": null,
+    "pretrain_losses": [],
+    "model_sha256": "517f6b101b811463b0deb17de7abb3482bc008010eeb323c6610c27b9194abeb",
+    "caution": "Zero-noop and M0-proxy are separate retrospective offline conventions; real online fallback=C3."
+  },
+  "D1_FULL_ZERO": {
+    "test_zero_noop": {
+      "states": 122,
+      "executed_states": 58,
+      "execution_rate": 0.47540983606557374,
+      "positive_executions": 43,
+      "nonpositive_executions": 15,
+      "mean_signed_gain_sec": 37.65044333608668,
+      "total_signed_gain_sec": 4593.354087002575,
+      "mean_static_repair_oracle_noop_bound_sec": 59.00777606812657,
+      "mean_policy_regret_to_static_repair_oracle_sec": 21.357332732039886,
+      "mean_oracle_td_repair_same_chosen_section_executed_sec": 38.48944745347148,
+      "mean_oracle_repair_upgrade_all_states_sec": 0.8390041173847972,
+      "mean_oracle_repair_upgrade_executed_only_sec": 1.7648017641542286,
+      "candidate_ranking_top1_match_rate": 0.5901639344262295
+    },
+    "test_M0_proxy_fallback": {
+      "states": 122,
+      "mean_signed_gain_sec_per_state": 39.15270657953425,
+      "mean_m0_proxy_gain_sec_per_state": 41.814961918125874,
+      "mean_improvement_vs_m0_proxy_sec_per_state": -2.6622553385916303,
+      "delegation_rate": 0.47540983606557374,
+      "reasons": {
+        "no_gate": 58,
+        "score_below_zero": 64
+      },
+      "warning": "Rejected action substitutes M0 candidate/zero OFFLINE; online B2-R rejects to ORIGINAL C3."
+    },
+    "best_validation_epoch": 20,
+    "gate_validation_only": null,
+    "pretrain_losses": [],
+    "model_sha256": "42ca32bb882c6c8138e17c21068e496c2f09a27cabe04a7770ba277c59d36714",
+    "caution": "Zero-noop and M0-proxy are separate retrospective offline conventions; real online fallback=C3."
+  },
+  "D1_FULL_DEFER": {
+    "test_zero_noop": {
+      "states": 122,
+      "executed_states": 53,
+      "execution_rate": 0.4344262295081967,
+      "positive_executions": 41,
+      "nonpositive_executions": 12,
+      "mean_signed_gain_sec": 40.02016870891217,
+      "total_signed_gain_sec": 4882.460582487285,
+      "mean_static_repair_oracle_noop_bound_sec": 59.00777606812657,
+      "mean_policy_regret_to_static_repair_oracle_sec": 18.987607359214397,
+      "mean_oracle_td_repair_same_chosen_section_executed_sec": 40.50654645032081,
+      "mean_oracle_repair_upgrade_all_states_sec": 0.4863777414086412,
+      "mean_oracle_repair_upgrade_executed_only_sec": 1.1195864990915891,
+      "candidate_ranking_top1_match_rate": 0.6065573770491803
+    },
+    "test_M0_proxy_fallback": {
+      "states": 122,
+      "mean_signed_gain_sec_per_state": 41.56514686388803,
+      "mean_m0_proxy_gain_sec_per_state": 41.814961918125874,
+      "mean_improvement_vs_m0_proxy_sec_per_state": -0.24981505423784256,
+      "delegation_rate": 0.4344262295081967,
+      "reasons": {
+        "no_gate": 53,
+        "score_below_zero": 69
+      },
+      "warning": "Rejected action substitutes M0 candidate/zero OFFLINE; online B2-R rejects to ORIGINAL C3."
+    },
+    "best_validation_epoch": 15,
+    "gate_validation_only": null,
+    "pretrain_losses": [],
+    "model_sha256": "5d60ac1db2c8c230851fda03ebde0e8e4bfc140d63625dd1020c0ba30e4078cf",
+    "caution": "Zero-noop and M0-proxy are separate retrospective offline conventions; real online fallback=C3."
+  },
+  "D1_FULL_DEFER_SAFE": {
+    "test_zero_noop": {
+      "states": 122,
+      "executed_states": 46,
+      "execution_rate": 0.3770491803278688,
+      "positive_executions": 34,
+      "nonpositive_executions": 12,
+      "mean_signed_gain_sec": 35.55217312783247,
+      "total_signed_gain_sec": 4337.3651215955615,
+      "mean_static_repair_oracle_noop_bound_sec": 59.00777606812657,
+      "mean_policy_regret_to_static_repair_oracle_sec": 23.4556029402941,
+      "mean_oracle_td_repair_same_chosen_section_executed_sec": 36.038550869241114,
+      "mean_oracle_repair_upgrade_all_states_sec": 0.4863777414086412,
+      "mean_oracle_repair_upgrade_executed_only_sec": 1.289958357649005,
+      "candidate_ranking_top1_match_rate": 0.6065573770491803
+    },
+    "test_M0_proxy_fallback": {
+      "states": 122,
+      "mean_signed_gain_sec_per_state": 42.149599989967754,
+      "mean_m0_proxy_gain_sec_per_state": 41.814961918125874,
+      "mean_improvement_vs_m0_proxy_sec_per_state": 0.33463807184188094,
+      "delegation_rate": 0.3770491803278688,
+      "reasons": {
+        "insufficient_static_margin": 3,
+        "large_residual": 4,
+        "passed": 1,
+        "same_as_static": 45,
+        "score_below_zero": 69
+      },
+      "warning": "Rejected action substitutes M0 candidate/zero OFFLINE; online B2-R rejects to ORIGINAL C3."
+    },
+    "best_validation_epoch": 15,
+    "gate_validation_only": {
+      "margin": 0.0,
+      "max_correction": 20.0,
+      "min_coverage": 0.05,
+      "validation_m0_proxy": {
+        "states": 116,
+        "mean_improvement_vs_m0_proxy_sec_per_state": 0.8516710380028034,
+        "mean_signed_gain_sec_per_state": 49.976376041858295,
+        "mean_m0_proxy_gain_sec_per_state": 49.124705003855496,
+        "delegation_rate": 0.46551724137931033
+      }
+    },
+    "pretrain_losses": [],
+    "model_sha256": "a8ef2cf1ef990a224c0376a6e9b451cd5f7beaf359b99d663862ee6b25749e51",
+    "caution": "Zero-noop and M0-proxy are separate retrospective offline conventions; real online fallback=C3."
+  },
+  "M0": {
+    "test_policy": {
+      "states": 122,
+      "executed_states": 66,
+      "execution_rate": 0.5409836065573771,
+      "positive_executions": 46,
+      "nonpositive_executions": 20,
+      "mean_signed_gain_sec": 41.814961918125874,
+      "total_signed_gain_sec": 5101.425354011357,
+      "mean_static_repair_oracle_noop_bound_sec": 59.00777606812657,
+      "mean_policy_regret_to_static_repair_oracle_sec": 17.192814150000693,
+      "mean_oracle_td_repair_same_chosen_section_executed_sec": 42.649156405666815,
+      "mean_oracle_repair_upgrade_all_states_sec": 0.8341944875409368,
+      "mean_oracle_repair_upgrade_executed_only_sec": 1.5419958709090045,
+      "candidate_ranking_top1_match_rate": 0.6147540983606558
+    },
+    "frozen_threshold": -18.51807723492104
+  }
+}
