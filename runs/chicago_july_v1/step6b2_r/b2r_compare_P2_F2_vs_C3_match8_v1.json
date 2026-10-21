@@ -1,0 +1,183 @@
+{
+  "stage": "step6b2r-paired-v1",
+  "baseline": "runs/chicago_july_v1/step6b2_r/b2r_online_C3_match8_v1",
+  "treatment": "runs/chicago_july_v1/step6b2_r/b2r_online_P2_F2_match8_v1",
+  "records": 8,
+  "mean_road_improvement_sec": 28.125,
+  "median_road_improvement_sec": 18.8125,
+  "wins": 5,
+  "losses": 2,
+  "ties": 1,
+  "mean_relative_road_improvement": 0.007176144124485704,
+  "mean_inference_sec": 0.19261604314669967,
+  "mean_scoring_sec": 0.2646935392403975,
+  "mean_model_calls": 39.875,
+  "mean_c3_fallbacks": 312.25,
+  "mean_learned_actions": 22.375,
+  "by_task": {
+    "task_0008": 39.75,
+    "task_0009": 16.5
+  },
+  "by_date": {
+    "2025-07-25": 28.125
+  },
+  "notes": [
+    "Identical task/scenario/seed required. Inference+feature costs are inside 30s search.",
+    "Comparison is July development, not blind. Source states used for training may overlap test tasks.",
+    "Difference includes changed Section sampling and fallback behaviour; compare sampled_random and C3."
+  ],
+  "rows": [
+    {
+      "key": [
+        "task_0008",
+        "2025-07-25_0800",
+        42
+      ],
+      "improvement_sec": -44.125,
+      "base_road_sec": 3813.375,
+      "treatment_road_sec": 3857.5,
+      "base_iterations": 20000.0,
+      "treatment_iterations": 19173.0,
+      "model_calls": 47.0,
+      "score_calls": 47.0,
+      "scoring_sec": 0.32548642717301846,
+      "inference_sec": 0.23114225827157497,
+      "c3_fallbacks": 351.0,
+      "gate_fallbacks": 18.0,
+      "learned_actions": 29.0
+    },
+    {
+      "key": [
+        "task_0008",
+        "2025-07-25_0800",
+        43
+      ],
+      "improvement_sec": 154.5,
+      "base_road_sec": 3880.0,
+      "treatment_road_sec": 3725.5,
+      "base_iterations": 19514.0,
+      "treatment_iterations": 17977.0,
+      "model_calls": 44.0,
+      "score_calls": 44.0,
+      "scoring_sec": 0.30359557550400496,
+      "inference_sec": 0.2150512458756566,
+      "c3_fallbacks": 326.0,
+      "gate_fallbacks": 14.0,
+      "learned_actions": 30.0
+    },
+    {
+      "key": [
+        "task_0008",
+        "2025-07-25_1700",
+        42
+      ],
+      "improvement_sec": -5.75,
+      "base_road_sec": 3797.75,
+      "treatment_road_sec": 3803.5,
+      "base_iterations": 20000.0,
+      "treatment_iterations": 20000.0,
+      "model_calls": 46.0,
+      "score_calls": 46.0,
+      "scoring_sec": 0.30861786659806967,
+      "inference_sec": 0.21995667926967144,
+      "c3_fallbacks": 361.0,
+      "gate_fallbacks": 21.0,
+      "learned_actions": 27.0
+    },
+    {
+      "key": [
+        "task_0008",
+        "2025-07-25_1700",
+        43
+      ],
+      "improvement_sec": 54.375,
+      "base_road_sec": 3807.375,
+      "treatment_road_sec": 3753.0,
+      "base_iterations": 19487.0,
+      "treatment_iterations": 20000.0,
+      "model_calls": 51.0,
+      "score_calls": 51.0,
+      "scoring_sec": 0.34469831362366676,
+      "inference_sec": 0.24500697385519743,
+      "c3_fallbacks": 404.0,
+      "gate_fallbacks": 20.0,
+      "learned_actions": 34.0
+    },
+    {
+      "key": [
+        "task_0009",
+        "2025-07-25_0800",
+        42
+      ],
+      "improvement_sec": 21.625,
+      "base_road_sec": 4011.125,
+      "treatment_road_sec": 3989.5,
+      "base_iterations": 19188.0,
+      "treatment_iterations": 20000.0,
+      "model_calls": 35.0,
+      "score_calls": 35.0,
+      "scoring_sec": 0.2212150301784277,
+      "inference_sec": 0.16962939035147429,
+      "c3_fallbacks": 290.0,
+      "gate_fallbacks": 21.0,
+      "learned_actions": 17.0
+    },
+    {
+      "key": [
+        "task_0009",
+        "2025-07-25_0800",
+        43
+      ],
+      "improvement_sec": 28.375,
+      "base_road_sec": 4017.875,
+      "treatment_road_sec": 3989.5,
+      "base_iterations": 20000.0,
+      "treatment_iterations": 20000.0,
+      "model_calls": 33.0,
+      "score_calls": 33.0,
+      "scoring_sec": 0.2108272099867463,
+      "inference_sec": 0.1592493113130331,
+      "c3_fallbacks": 257.0,
+      "gate_fallbacks": 19.0,
+      "learned_actions": 15.0
+    },
+    {
+      "key": [
+        "task_0009",
+        "2025-07-25_1700",
+        42
+      ],
+      "improvement_sec": 16.0,
+      "base_road_sec": 4061.125,
+      "treatment_road_sec": 4045.125,
+      "base_iterations": 19533.0,
+      "treatment_iterations": 20000.0,
+      "model_calls": 33.0,
+      "score_calls": 33.0,
+      "scoring_sec": 0.2107659662142396,
+      "inference_sec": 0.1568878199905157,
+      "c3_fallbacks": 262.0,
+      "gate_fallbacks": 19.0,
+      "learned_actions": 15.0
+    },
+    {
+      "key": [
+        "task_0009",
+        "2025-07-25_1700",
+        43
+      ],
+      "improvement_sec": 0.0,
+      "base_road_sec": 4057.5,
+      "treatment_road_sec": 4057.5,
+      "base_iterations": 20000.0,
+      "treatment_iterations": 20000.0,
+      "model_calls": 30.0,
+      "score_calls": 30.0,
+      "scoring_sec": 0.19234192464500666,
+      "inference_sec": 0.1440046662464738,
+      "c3_fallbacks": 247.0,
+      "gate_fallbacks": 20.0,
+      "learned_actions": 12.0
+    }
+  ]
+}

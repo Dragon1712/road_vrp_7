@@ -1,0 +1,42 @@
+{
+  "stage": "step6b2r-ablation-v1",
+  "code_sha256": {
+    "train_b2_r.py": "fbc761f02ebca44844baba76b019c327836e099adcf0970f39c62d486683a78f",
+    "features.py": "c00245b8f92a65f21b35b8a57b6078c851475f875218a2fe5d53d96587d14615",
+    "models.py": "e4eeec3eb53ad8e1aa5e28f385f82842e319fda10fb1086f1cf1c2976e3a0567",
+    "dataset.py": "e85724c9c6d1a93fe19532390f265ceb9ad7a63a38f9636a2dd25725d214f7be",
+    "train.py": "77835ec951c2eb5e9292c9f4ab95359f4d5bd153aa855a8c029485e9045e6095"
+  },
+  "seed": 46,
+  "trees": 120,
+  "methods": [
+    "P2",
+    "P4"
+  ],
+  "modes": [
+    "F2",
+    "F3",
+    "F4"
+  ],
+  "protocols": [
+    "task",
+    "date"
+  ],
+  "features_source": "runs/chicago_july_v1/step6b2/features_boundary_v1",
+  "frozen_source_sha256": {
+    "X": "8b8f2830626e84c6c8ed2ec57f5d811e28cf330ad5f2c501b44a5bfb2dd492b4",
+    "y": "53efc818f7f831ef659719cc6afb95280182b08fe647afe6911113392fde3027",
+    "groups": "721209b760f632eab5252ea13ff940a773c08a7b43330e80bfd45291f2710e39",
+    "schema": "4a80ab878a7593b394440ab927267481d19223ca38a835f8af5905d7c78201d4",
+    "config": "28b8e1ee6bfa68eb697afb364eba7fdcdfe37a8c1b249dd53ce4778f87f9e01d",
+    "summary": "293992399fee2d1db0775e707e6c81fb00562806e6b79589e99f2083af909647"
+  },
+  "boundary_X_sha256": "0032f79325dd64614b060e58829a934bcf985549b0124f606d3454f1afbf22bb",
+  "source_label": "static_repair_td_gain_sec",
+  "label_scope": "retrospective TD cost of Static Repair",
+  "notes": [
+    "F5 only valid for task protocol with multiple dates in EACH split.",
+    "No test set labels are used for threshold selection.",
+    "Repeated training seeds reuse identical held-out tasks/dates; descriptive only."
+  ]
+}

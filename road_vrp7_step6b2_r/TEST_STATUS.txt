@@ -1,0 +1,15 @@
+2026-10-21 TEST STATUS (synthetic/local)
+Independent Step6-B2-R tests: 8 PASS
+ - budget-zero fallback to original C3
+ - cadence and gate fallback to original C3, monkeypatch restoration
+ - cheap static-gate fallback avoids model inference
+ - accepted candidate, state-cache hit & model predict once
+ - F5 appears only in task protocol; no carryover to date report
+ - pretrained fixed model + time-shuffled traffic placebo
+ - strict task/scenario/seed matched road replay score sign
+ - old F5 date report corrected copy, source file unchanged
+Upstream Step6-B2 regression suite: 9 PASS
+Python AST/compile + shell syntax: PASS
+
+NOT TESTED: Real Chicago road tensors + alns==7.0.0 solver integration.
+Run bash road_vrp7_step6b2_r/run_b2r.sh test on the server first.
