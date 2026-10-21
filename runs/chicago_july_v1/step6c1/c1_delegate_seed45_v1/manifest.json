@@ -1,0 +1,45 @@
+{
+  "stage": "step6c1-delegation-v1",
+  "seed": 45,
+  "source": "runs/chicago_july_v1/step6a_v2/labeled_current_static_full_v1",
+  "graph_study": "runs/chicago_july_v1/step6c1/c1_graph_full_v1",
+  "anchor_study": "runs/chicago_july_v1/step6b2_r/b2r_ablation_seed45_v1",
+  "source_sha256": {
+    "X": "8b8f2830626e84c6c8ed2ec57f5d811e28cf330ad5f2c501b44a5bfb2dd492b4",
+    "y": "53efc818f7f831ef659719cc6afb95280182b08fe647afe6911113392fde3027",
+    "groups": "721209b760f632eab5252ea13ff940a773c08a7b43330e80bfd45291f2710e39",
+    "schema": "4a80ab878a7593b394440ab927267481d19223ca38a835f8af5905d7c78201d4",
+    "config": "28b8e1ee6bfa68eb697afb364eba7fdcdfe37a8c1b249dd53ce4778f87f9e01d",
+    "summary": "293992399fee2d1db0775e707e6c81fb00562806e6b79589e99f2083af909647"
+  },
+  "boundary_X_sha256": "0032f79325dd64614b060e58829a934bcf985549b0124f606d3454f1afbf22bb",
+  "graph_sha256": "39f6a596bd918aa4de9992c99586eedf8a477a4fe3887443a9182045f7e39276",
+  "code_sha256": {
+    "c1_model.py": "22fa25c5409fee0d38f57216bb3a4e09047b6f76812e31cfe9d85087f3b1b3bd",
+    "graph_features.py": "aee4b6eb646625c064e55efdf6cdcf5c05e21218844e24db65ef87f0318a17f3",
+    "train_c1.py": "c73b8d7ccc44ace0d3ac50ad55f82ff429640b0f90f0e2dfcea3c1d9c2966c7a"
+  },
+  "protocols": [
+    "task",
+    "date"
+  ],
+  "variants": [
+    "D0",
+    "D1",
+    "D2T",
+    "D2"
+  ],
+  "epochs": 30,
+  "pretrain_epochs": 4,
+  "decision_weight": 1.0,
+  "threshold": 0.0,
+  "training_target": "static_repair_td_gain_sec",
+  "static_anchor_train_mode": "group_oof_on_train; frozen full RF at val/test/online",
+  "warnings": [
+    "July development: internal_test is NOT an independent blind test.",
+    "D2 is a lightweight SPIN-inspired raw-edge graph encoder, NOT official SPIN.",
+    "No SPCLT contrastive learning in C1.",
+    "Offline no-op has zero gain, online rejection falls back to C3; they differ.",
+    "Task/date splits have very few truly independent groups; repeated seeds are not independent."
+  ]
+}

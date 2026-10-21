@@ -1,0 +1,15 @@
+{
+  "stage": "step6c1-online-wrapper-v1",
+  "model_sha256": "618e642d78f8c20fc7f3233012e890a6f669b66ddd50dddbb58e6a4b765b385f",
+  "graph_training_sha256": "39f6a596bd918aa4de9992c99586eedf8a477a4fe3887443a9182045f7e39276",
+  "code_sha256": {
+    "c1_model.py": "22fa25c5409fee0d38f57216bb3a4e09047b6f76812e31cfe9d85087f3b1b3bd",
+    "graph_features.py": "aee4b6eb646625c064e55efdf6cdcf5c05e21218844e24db65ef87f0318a17f3",
+    "online_c1.py": "a8928ba733a66baf8d5b48f97793ded337c901b2946f7fbaae31d50ce01bb759"
+  },
+  "notes": [
+    "Frozen B2-R solver, same sampler, cadence, C3 fallback and 30s budget.",
+    "The B2 legacy model_code_sha256 field identifies the B1 scorer interface; use this sidecar for C1.",
+    "OD precompute and initial historical loading excluded from SEARCH budget as in B2-R."
+  ]
+}
