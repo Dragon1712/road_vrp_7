@@ -1,0 +1,103 @@
+test_noop_candidate_changes_do_not_count_as_action (test_audit.TestAudit.test_noop_candidate_changes_do_not_count_as_action) ... ok
+test_real_reports_ingested (test_audit.TestAudit.test_real_reports_ingested) ... ok
+test_wrong_reward_caught (test_audit.TestAudit.test_wrong_reward_caught) ... ok
+test_paired_and_strict_meta (test_online.TestOnline.test_paired_and_strict_meta) ... ok
+test_mock_model_frozen_perm_and_write (test_placebo.TestPlacebo.test_mock_model_frozen_perm_and_write) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.012s
+
+OK
+[
+  {
+    "protocol": "task",
+    "method": "M0",
+    "train_seeds": 1,
+    "mean_gain_diff_sec_per_state": 0.0,
+    "seeds_positive": 0,
+    "seeds_negative": 0,
+    "seeds_tied": 1,
+    "seedwise_gain_diffs_sec": [
+      0.0
+    ]
+  },
+  {
+    "protocol": "task",
+    "method": "M3",
+    "train_seeds": 1,
+    "mean_gain_diff_sec_per_state": 0.5,
+    "seeds_positive": 1,
+    "seeds_negative": 0,
+    "seeds_tied": 0,
+    "seedwise_gain_diffs_sec": [
+      0.5
+    ]
+  }
+]
+{
+  "M0": {
+    "mean_road_cost_sec": 150.0,
+    "mean_road_improvement_vs_M0_sec": 0.0,
+    "median_road_improvement_vs_M0_sec": 0.0,
+    "mean_relative_improvement_vs_M0": 0.0,
+    "wins": 0,
+    "losses": 0,
+    "ties": 2,
+    "mean_iterations": 19000.0,
+    "mean_feature_sec": 0.0,
+    "mean_inference_sec": 0.0,
+    "mean_scoring_sec": 0.0,
+    "mean_model_actions": 0.0,
+    "mean_c3_fallbacks": 0.0,
+    "mean_precompute_wall_sec": 0.0,
+    "by_task": {
+      "task_0000": 0.0,
+      "task_0001": 0.0
+    },
+    "by_date": {
+      "2025-07-25": 0.0
+    },
+    "paired_diffs_sec": [
+      0.0,
+      0.0
+    ]
+  },
+  "M3": {
+    "mean_road_cost_sec": 150.0,
+    "mean_road_improvement_vs_M0_sec": 0.0,
+    "median_road_improvement_vs_M0_sec": 0.0,
+    "mean_relative_improvement_vs_M0": 0.025,
+    "wins": 1,
+    "losses": 1,
+    "ties": 0,
+    "mean_iterations": 19000.0,
+    "mean_feature_sec": 0.0,
+    "mean_inference_sec": 0.0,
+    "mean_scoring_sec": 0.0,
+    "mean_model_actions": 0.0,
+    "mean_c3_fallbacks": 0.0,
+    "mean_precompute_wall_sec": 0.0,
+    "by_task": {
+      "task_0000": 10.0,
+      "task_0001": -10.0
+    },
+    "by_date": {
+      "2025-07-25": 0.0
+    },
+    "paired_diffs_sec": [
+      10.0,
+      -10.0
+    ]
+  }
+}
+[
+  {
+    "method": "M3",
+    "shuffle": "traffic_and_mask",
+    "observations": 1,
+    "mean_delta_vs_true_sec_per_state": 0.0,
+    "median_delta_vs_true_sec_per_state": 0.0,
+    "fraction_traffic_placebo_worse_than_true": 0.0,
+    "independent_sample_warning": "Model/permutation repetitions reuse heldout states; do not use as independent sample size."
+  }
+]
