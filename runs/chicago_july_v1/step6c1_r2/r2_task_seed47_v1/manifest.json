@@ -1,0 +1,30 @@
+{
+  "stage": "step6c1r2-c3-advantage-train-v1",
+  "seed": 47,
+  "protocol": "task",
+  "modes": [
+    "F2",
+    "F4"
+  ],
+  "training_source": "runs/chicago_july_v1/step6c1_r2/r2_c3_label_train8x8_v1",
+  "label_sha256": "a1d50ca4a7f31baaf56805c077a2e2d3cb6ced422763d36e640ff5e2b2a29cf4",
+  "groups_sha256": "c9a9c975c204c1e81f0ce88d3151f7a4211e4e8437210e2751ce0fbe7e405825",
+  "split_roles": {
+    "task_0000": "train",
+    "task_0001": "train",
+    "task_0002": "train",
+    "task_0003": "train",
+    "task_0004": "validation",
+    "task_0005": "validation",
+    "task_0006": "internal_test",
+    "task_0007": "internal_test"
+  },
+  "model_source": "runs/chicago_july_v1/step6a_v2/labeled_current_static_full_v1",
+  "training_objective": "Static Repair one-step TD advantage vs ACTUAL frozen C3 action",
+  "validation_objective": "real C3-relative signed gain, conservative harm penalty",
+  "test_role": "internal_test is development only, never used in model selection",
+  "code_sha256": {
+    "r2_policy.py": "ff4d86950c9d1b6863979d7e155d14b35e60233febd31f5262054e6044428e41",
+    "train_c3.py": "f273d5711e9ee9e7700b2199fb9a9e2528750e07ca9d37ed816d4fe2c8fd2068"
+  }
+}

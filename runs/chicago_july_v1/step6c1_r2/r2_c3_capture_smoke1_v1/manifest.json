@@ -1,0 +1,34 @@
+{
+  "stage": "step6c1r2-real-C3-capture-v1",
+  "source_run_config_sha256": "28b8e1ee6bfa68eb697afb364eba7fdcdfe37a8c1b249dd53ce4778f87f9e01d",
+  "section_sha256": "ded8d785a2a817aa2c2fae6ce0064ac95d42de8fe4e8c9b0481bcd2bfbee456e",
+  "solver_sha256": "1d77b5266bd0481d2a5231311efdc83f6dd21a84c40a23e1386f2e7e90086ea1",
+  "road_sha256": "3612b66ad23df15ed409c86f2585755d4393d7a9044c38dd3ee1a30e5b49dd68",
+  "edge_sha256": "23f5e3524e05004e5b597bb4d0edd945321a3ddb516cb939b344acf5e0ab52a1",
+  "collector_code_sha256": "cdd3df86f15a44b6042e4e34046b3b3bd6a0e2064cb928b8dbfe33ea090bef62",
+  "split": "train",
+  "stride": 8,
+  "max_per_run": 3,
+  "max_iterations": 20000,
+  "anneal_iterations": 5000,
+  "wall_sec": 30,
+  "top_k": 12,
+  "seeds": [
+    42,
+    43
+  ],
+  "runs": 1,
+  "run_keys": [
+    [
+      "task_0000",
+      "2025-07-02_0800",
+      42
+    ]
+  ],
+  "notes": [
+    "Frozen selector original.destroy performs the only C3 RNG draw.",
+    "Capture wall-time overhead is included in solver search, so captured traces are NOT a cost benchmark.",
+    "C3 may select a Section outside the downstream eight sampled candidates.",
+    "Labels must be added RETROSPECTIVELY, never inside online ALNS."
+  ]
+}

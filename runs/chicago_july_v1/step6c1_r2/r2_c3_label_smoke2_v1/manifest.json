@@ -1,0 +1,24 @@
+{
+  "stage": "step6c1r2-real-C3-labelled-v1",
+  "capture_manifest_sha256": "96cef3556d58ba49aeb7634b8b6e1e3662ec84a1347fa0cf790d64579300e5f3",
+  "capture_state_sha256": "0ffd71b8625f49aebd03d7781b3c2a306428c76927cbba743f23ef571e6fcac2",
+  "pair_sha256": "ba6143cbfe53a1cfc8df8d7a4551002214141840a5ec181ec191af037c8f82f2",
+  "groups_sha256": "63306cc8ceb63ad7e93a2f7b9ed0d85b50ecb4e23358879c6d526e3fa79020d0",
+  "road_sha256": "3612b66ad23df15ed409c86f2585755d4393d7a9044c38dd3ee1a30e5b49dd68",
+  "edge_sha256": "23f5e3524e05004e5b597bb4d0edd945321a3ddb516cb939b344acf5e0ab52a1",
+  "label_code_sha256": "4017d912cd6b8c6a05527b8a94473f428e03d7758fe91ded9579b860aef0eb76",
+  "source_dir": "runs/chicago_july_v1/step6c1_r2/r2_c3_capture_smoke1_v1",
+  "label_role": "RETROSPECTIVE oracle TD objective ONLY, never online feature",
+  "feature_role": "F4 historical observations strictly before departure",
+  "action_count": 8,
+  "sampler_seed": 20261019,
+  "top_k": 12,
+  "deadline_sec": 3.0,
+  "enable_swap": true,
+  "notes": [
+    "B is the ACTUAL C3 Section observed during frozen C3 training trajectory.",
+    "Both C3 baseline and learner actions use frozen Static Repair and TD ex-post scoring.",
+    "One-step static-repair TD advantage is NOT full 30-second ALNS return.",
+    "States are observationally collected; ALNS runtime and RNG dependence remain."
+  ]
+}

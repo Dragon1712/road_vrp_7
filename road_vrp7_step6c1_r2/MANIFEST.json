@@ -1,0 +1,26 @@
+{
+  "stage": "step6c1r2-code-v1",
+  "based_on_github_commit": "c929836b3ea76518d4a1e681b1dbc729f69d4c69",
+  "files": {
+    ".gitignore": "60c9bdd905fcf45ac485c680d32e9773962cf061b6f041dcddd033911558a672",
+    "README.md": "a267bcb4f421ba610a0b3baad1a6be223b15fc86e3e5e33c839fb6e6174b58e3",
+    "collect_c3.py": "fbc054a8362072b58cc63873106fa603247a06f8be99812a9892cc39b179e103",
+    "compare_r2.py": "ad0ffd3508f6bb9e7a0b0f97e43185d13d8593349c86eda09de1ea05ad3eef85",
+    "label_c3.py": "4017d912cd6b8c6a05527b8a94473f428e03d7758fe91ded9579b860aef0eb76",
+    "online_r2.py": "eb0d130f9023aa4ba524fd092279777b509c08fbe3c3ddf6dd439f7bc806b7c1",
+    "r2_core.py": "22ec8fd006002d6f359efa4a0e3e741874e18fb6766f27c2638b56dc4aaf5e44",
+    "r2_policy.py": "ff4d86950c9d1b6863979d7e155d14b35e60233febd31f5262054e6044428e41",
+    "run_r2.sh": "0ff39667b6b93b93eb030195e1c7d06dded6864b7c58c9d1a810afdb362e2548",
+    "tests/test_online_stub.py": "c470c267c85a49055446f03d18dc63ffd2d612fbd78bc7fb109f90acf31a2cc9",
+    "tests/test_r2.py": "3016e2529a85babb54ec35f9bf0d6fe5f46d21acaebf38d502b0a867af3ed68d",
+    "tests/test_train_integration.py": "9a01e5619df2545b60fe69d58ef4b4744835d11dba84080541103a36a68a2d46",
+    "train_c3.py": "f273d5711e9ee9e7700b2199fb9a9e2528750e07ca9d37ed816d4fe2c8fd2068"
+  },
+  "verification": "12 synthetic tests and Python/Bash syntax only; real Chicago/ALNS integration not executed",
+  "known_limits": [
+    "True-C3 uses frozen C3 Section sampling; learned prospective policy distribution shift remains.",
+    "Offline label is one-step Static Repair TD gain, not final 30-second ALNS gain.",
+    "C3 label repair has per-counterfactual independent deadline, unlike deadline-limited ALNS repair near stop.",
+    "July internal_test is repeatedly used development data, not a blind independent test."
+  ]
+}
