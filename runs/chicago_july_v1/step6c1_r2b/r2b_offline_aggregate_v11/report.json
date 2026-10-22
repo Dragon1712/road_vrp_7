@@ -1,0 +1,1001 @@
+{
+  "stage": "step6c1r2b-offline-aggregate-v1",
+  "shared_data": {
+    "labels_sha": "a1d50ca4a7f31baaf56805c077a2e2d3cb6ced422763d36e640ff5e2b2a29cf4",
+    "groups_sha": "c9a9c975c204c1e81f0ce88d3151f7a4211e4e8437210e2751ce0fbe7e405825",
+    "protocol": "task"
+  },
+  "n_training_seeds": 6,
+  "summary": {
+    "F4_BASE_MEAN": {
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "mean_internal_test_advantage_sec_per_state": 74.87418694283285,
+      "min_seed_advantage": 71.84139460735605,
+      "max_seed_advantage": 78.13642567573697,
+      "mean_override_rate": 0.650390625,
+      "always_defer_seeds": 0,
+      "total_harmful_overrides_across_correlated_repetitions": 102
+    },
+    "F4_BASE_RISK": {
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "mean_internal_test_advantage_sec_per_state": 74.87418694283285,
+      "min_seed_advantage": 71.84139460735605,
+      "max_seed_advantage": 78.13642567573697,
+      "mean_override_rate": 0.650390625,
+      "always_defer_seeds": 0,
+      "total_harmful_overrides_across_correlated_repetitions": 102
+    },
+    "F4_MASK_ONLY_MEAN": {
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "mean_internal_test_advantage_sec_per_state": 72.0673845627801,
+      "min_seed_advantage": 67.86697805314907,
+      "max_seed_advantage": 76.20219610529603,
+      "mean_override_rate": 0.6360677083333334,
+      "always_defer_seeds": 0,
+      "total_harmful_overrides_across_correlated_repetitions": 111
+    },
+    "F4_MASK_ONLY_RISK": {
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "mean_internal_test_advantage_sec_per_state": 73.62102048426459,
+      "min_seed_advantage": 67.86697805314907,
+      "max_seed_advantage": 79.97459415093181,
+      "mean_override_rate": 0.6243489583333334,
+      "always_defer_seeds": 0,
+      "total_harmful_overrides_across_correlated_repetitions": 98
+    },
+    "F4_NO_RELIABILITY_MEAN": {
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "mean_internal_test_advantage_sec_per_state": 81.23197999327992,
+      "min_seed_advantage": 77.45891386193034,
+      "max_seed_advantage": 83.87091141758356,
+      "mean_override_rate": 0.61328125,
+      "always_defer_seeds": 0,
+      "total_harmful_overrides_across_correlated_repetitions": 72
+    },
+    "F4_NO_RELIABILITY_RISK": {
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "mean_internal_test_advantage_sec_per_state": 78.96996118210882,
+      "min_seed_advantage": 74.30201516096713,
+      "max_seed_advantage": 81.5082358630898,
+      "mean_override_rate": 0.5833333333333334,
+      "always_defer_seeds": 0,
+      "total_harmful_overrides_across_correlated_repetitions": 64
+    },
+    "F4_SHUFFLE_MEAN": {
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "mean_internal_test_advantage_sec_per_state": 70.36313666970516,
+      "min_seed_advantage": 68.76812956832873,
+      "max_seed_advantage": 73.28376600081901,
+      "mean_override_rate": 0.6744791666666666,
+      "always_defer_seeds": 0,
+      "total_harmful_overrides_across_correlated_repetitions": 138
+    },
+    "F4_SHUFFLE_RISK": {
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "mean_internal_test_advantage_sec_per_state": 70.46840854804698,
+      "min_seed_advantage": 68.76812956832873,
+      "max_seed_advantage": 73.00637980858664,
+      "mean_override_rate": 0.6731770833333334,
+      "always_defer_seeds": 0,
+      "total_harmful_overrides_across_correlated_repetitions": 138
+    },
+    "F4_SHUFFLE_COVERAGE_MEAN": {
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "mean_internal_test_advantage_sec_per_state": 71.20111361010156,
+      "min_seed_advantage": 68.29025544729666,
+      "max_seed_advantage": 74.39116266186466,
+      "mean_override_rate": 0.6647135416666666,
+      "always_defer_seeds": 0,
+      "total_harmful_overrides_across_correlated_repetitions": 126
+    },
+    "F4_SHUFFLE_COVERAGE_RISK": {
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "mean_internal_test_advantage_sec_per_state": 71.1500275869621,
+      "min_seed_advantage": 68.29025544729666,
+      "max_seed_advantage": 74.39116266186466,
+      "mean_override_rate": 0.6608072916666666,
+      "always_defer_seeds": 0,
+      "total_harmful_overrides_across_correlated_repetitions": 124
+    },
+    "F4_SHUFFLE_JOINT_MEAN": {
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "mean_internal_test_advantage_sec_per_state": 77.18678793173422,
+      "min_seed_advantage": 72.50423026812132,
+      "max_seed_advantage": 80.23994422724354,
+      "mean_override_rate": 0.6100260416666666,
+      "always_defer_seeds": 0,
+      "total_harmful_overrides_across_correlated_repetitions": 92
+    },
+    "F4_SHUFFLE_JOINT_RISK": {
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "mean_internal_test_advantage_sec_per_state": 76.8484928146069,
+      "min_seed_advantage": 71.84203843359137,
+      "max_seed_advantage": 80.23994422724354,
+      "mean_override_rate": 0.5924479166666666,
+      "always_defer_seeds": 0,
+      "total_harmful_overrides_across_correlated_repetitions": 84
+    }
+  },
+  "records": [
+    {
+      "seed": 42,
+      "arm": "F4_BASE",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 71.84139460735605,
+      "internal_test_override_rate": 0.68359375,
+      "internal_test_harmful_overrides": 23,
+      "validation_gain_sec_per_state": 74.25059564071853,
+      "internal_test_wilson_upper": 0.17910526682176436
+    },
+    {
+      "seed": 42,
+      "arm": "F4_BASE",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 71.84139460735605,
+      "internal_test_override_rate": 0.68359375,
+      "internal_test_harmful_overrides": 23,
+      "validation_gain_sec_per_state": 74.25059564071853,
+      "internal_test_wilson_upper": 0.17910526682176436
+    },
+    {
+      "seed": 42,
+      "arm": "F4_MASK_ONLY",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 69.03650530245795,
+      "internal_test_override_rate": 0.6875,
+      "internal_test_harmful_overrides": 25,
+      "validation_gain_sec_per_state": 72.83206134077773,
+      "internal_test_wilson_upper": 0.190759328276675
+    },
+    {
+      "seed": 42,
+      "arm": "F4_MASK_ONLY",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 69.03650530245795,
+      "internal_test_override_rate": 0.6875,
+      "internal_test_harmful_overrides": 25,
+      "validation_gain_sec_per_state": 72.83206134077773,
+      "internal_test_wilson_upper": 0.190759328276675
+    },
+    {
+      "seed": 42,
+      "arm": "F4_SHUFFLE",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 69.02851936376828,
+      "internal_test_override_rate": 0.69921875,
+      "internal_test_harmful_overrides": 27,
+      "validation_gain_sec_per_state": 72.6691418829796,
+      "internal_test_wilson_upper": 0.2000163491952849
+    },
+    {
+      "seed": 42,
+      "arm": "F4_SHUFFLE",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 69.02851936376828,
+      "internal_test_override_rate": 0.69921875,
+      "internal_test_harmful_overrides": 27,
+      "validation_gain_sec_per_state": 72.6691418829796,
+      "internal_test_wilson_upper": 0.2000163491952849
+    },
+    {
+      "seed": 42,
+      "arm": "F4_NO_RELIABILITY",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 83.33391178332386,
+      "internal_test_override_rate": 0.609375,
+      "internal_test_harmful_overrides": 11,
+      "validation_gain_sec_per_state": 70.07157773350627,
+      "internal_test_wilson_upper": 0.11205321175229659
+    },
+    {
+      "seed": 42,
+      "arm": "F4_NO_RELIABILITY",
+      "gate": "RISK",
+      "threshold": 20.0,
+      "internal_test_gain_sec_per_state": 78.65933667923673,
+      "internal_test_override_rate": 0.55859375,
+      "internal_test_harmful_overrides": 10,
+      "validation_gain_sec_per_state": 66.62384762898,
+      "internal_test_wilson_upper": 0.1135735280764984
+    },
+    {
+      "seed": 42,
+      "arm": "F4_SHUFFLE_JOINT",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 73.8718091363553,
+      "internal_test_override_rate": 0.609375,
+      "internal_test_harmful_overrides": 19,
+      "validation_gain_sec_per_state": 67.92889193407245,
+      "internal_test_wilson_upper": 0.1714279115862103
+    },
+    {
+      "seed": 42,
+      "arm": "F4_SHUFFLE_JOINT",
+      "gate": "RISK",
+      "threshold": 40.0,
+      "internal_test_gain_sec_per_state": 71.84203843359137,
+      "internal_test_override_rate": 0.50390625,
+      "internal_test_harmful_overrides": 11,
+      "validation_gain_sec_per_state": 64.1196747346803,
+      "internal_test_wilson_upper": 0.1347162341906933
+    },
+    {
+      "seed": 42,
+      "arm": "F4_SHUFFLE_COVERAGE",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 68.29025544729666,
+      "internal_test_override_rate": 0.703125,
+      "internal_test_harmful_overrides": 27,
+      "validation_gain_sec_per_state": 74.43375075713993,
+      "internal_test_wilson_upper": 0.1989425603231169
+    },
+    {
+      "seed": 42,
+      "arm": "F4_SHUFFLE_COVERAGE",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 68.29025544729666,
+      "internal_test_override_rate": 0.703125,
+      "internal_test_harmful_overrides": 27,
+      "validation_gain_sec_per_state": 74.43375075713993,
+      "internal_test_wilson_upper": 0.1989425603231169
+    },
+    {
+      "seed": 43,
+      "arm": "F4_BASE",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 75.72149872835143,
+      "internal_test_override_rate": 0.640625,
+      "internal_test_harmful_overrides": 16,
+      "validation_gain_sec_per_state": 73.3318008308197,
+      "internal_test_wilson_upper": 0.14245310810476772
+    },
+    {
+      "seed": 43,
+      "arm": "F4_BASE",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 75.72149872835143,
+      "internal_test_override_rate": 0.640625,
+      "internal_test_harmful_overrides": 16,
+      "validation_gain_sec_per_state": 73.3318008308197,
+      "internal_test_wilson_upper": 0.14245310810476772
+    },
+    {
+      "seed": 43,
+      "arm": "F4_MASK_ONLY",
+      "gate": "MEAN",
+      "threshold": 10.0,
+      "internal_test_gain_sec_per_state": 76.20219610529603,
+      "internal_test_override_rate": 0.5859375,
+      "internal_test_harmful_overrides": 11,
+      "validation_gain_sec_per_state": 70.89991587153054,
+      "internal_test_wilson_upper": 0.11640528268799373
+    },
+    {
+      "seed": 43,
+      "arm": "F4_MASK_ONLY",
+      "gate": "RISK",
+      "threshold": 10.0,
+      "internal_test_gain_sec_per_state": 76.20219610529603,
+      "internal_test_override_rate": 0.5859375,
+      "internal_test_harmful_overrides": 11,
+      "validation_gain_sec_per_state": 70.89991587153054,
+      "internal_test_wilson_upper": 0.11640528268799373
+    },
+    {
+      "seed": 43,
+      "arm": "F4_SHUFFLE",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 68.76812956832873,
+      "internal_test_override_rate": 0.703125,
+      "internal_test_harmful_overrides": 26,
+      "validation_gain_sec_per_state": 73.94345120757498,
+      "internal_test_wilson_upper": 0.19281092184259882
+    },
+    {
+      "seed": 43,
+      "arm": "F4_SHUFFLE",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 68.76812956832873,
+      "internal_test_override_rate": 0.703125,
+      "internal_test_harmful_overrides": 26,
+      "validation_gain_sec_per_state": 73.94345120757498,
+      "internal_test_wilson_upper": 0.19281092184259882
+    },
+    {
+      "seed": 43,
+      "arm": "F4_NO_RELIABILITY",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 79.2624149066396,
+      "internal_test_override_rate": 0.62109375,
+      "internal_test_harmful_overrides": 13,
+      "validation_gain_sec_per_state": 70.00842012512294,
+      "internal_test_wilson_upper": 0.12488469973744618
+    },
+    {
+      "seed": 43,
+      "arm": "F4_NO_RELIABILITY",
+      "gate": "RISK",
+      "threshold": 10.0,
+      "internal_test_gain_sec_per_state": 74.30201516096713,
+      "internal_test_override_rate": 0.546875,
+      "internal_test_harmful_overrides": 8,
+      "validation_gain_sec_per_state": 69.21295039225515,
+      "internal_test_wilson_upper": 0.0985836905537131
+    },
+    {
+      "seed": 43,
+      "arm": "F4_SHUFFLE_JOINT",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 72.50423026812132,
+      "internal_test_override_rate": 0.60546875,
+      "internal_test_harmful_overrides": 17,
+      "validation_gain_sec_per_state": 67.21600067522013,
+      "internal_test_wilson_upper": 0.15784727961239786
+    },
+    {
+      "seed": 43,
+      "arm": "F4_SHUFFLE_JOINT",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 72.50423026812132,
+      "internal_test_override_rate": 0.60546875,
+      "internal_test_harmful_overrides": 17,
+      "validation_gain_sec_per_state": 67.21600067522013,
+      "internal_test_wilson_upper": 0.15784727961239786
+    },
+    {
+      "seed": 43,
+      "arm": "F4_SHUFFLE_COVERAGE",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 69.89909760502633,
+      "internal_test_override_rate": 0.66015625,
+      "internal_test_harmful_overrides": 19,
+      "validation_gain_sec_per_state": 73.44803818916625,
+      "internal_test_wilson_upper": 0.1586530299041041
+    },
+    {
+      "seed": 43,
+      "arm": "F4_SHUFFLE_COVERAGE",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 69.89909760502633,
+      "internal_test_override_rate": 0.66015625,
+      "internal_test_harmful_overrides": 19,
+      "validation_gain_sec_per_state": 73.44803818916625,
+      "internal_test_wilson_upper": 0.1586530299041041
+    },
+    {
+      "seed": 44,
+      "arm": "F4_BASE",
+      "gate": "MEAN",
+      "threshold": 5.0,
+      "internal_test_gain_sec_per_state": 71.93314945875318,
+      "internal_test_override_rate": 0.65234375,
+      "internal_test_harmful_overrides": 20,
+      "validation_gain_sec_per_state": 72.12604247430136,
+      "internal_test_wilson_upper": 0.16726376924525108
+    },
+    {
+      "seed": 44,
+      "arm": "F4_BASE",
+      "gate": "RISK",
+      "threshold": 5.0,
+      "internal_test_gain_sec_per_state": 71.93314945875318,
+      "internal_test_override_rate": 0.65234375,
+      "internal_test_harmful_overrides": 20,
+      "validation_gain_sec_per_state": 72.12604247430136,
+      "internal_test_wilson_upper": 0.16726376924525108
+    },
+    {
+      "seed": 44,
+      "arm": "F4_MASK_ONLY",
+      "gate": "MEAN",
+      "threshold": 10.0,
+      "internal_test_gain_sec_per_state": 75.54631563127623,
+      "internal_test_override_rate": 0.609375,
+      "internal_test_harmful_overrides": 11,
+      "validation_gain_sec_per_state": 70.91661097736869,
+      "internal_test_wilson_upper": 0.11205321175229659
+    },
+    {
+      "seed": 44,
+      "arm": "F4_MASK_ONLY",
+      "gate": "RISK",
+      "threshold": 10.0,
+      "internal_test_gain_sec_per_state": 75.54631563127623,
+      "internal_test_override_rate": 0.609375,
+      "internal_test_harmful_overrides": 11,
+      "validation_gain_sec_per_state": 70.91661097736869,
+      "internal_test_wilson_upper": 0.11205321175229659
+    },
+    {
+      "seed": 44,
+      "arm": "F4_SHUFFLE",
+      "gate": "MEAN",
+      "threshold": 5.0,
+      "internal_test_gain_sec_per_state": 73.28376600081901,
+      "internal_test_override_rate": 0.61328125,
+      "internal_test_harmful_overrides": 16,
+      "validation_gain_sec_per_state": 73.9269475750225,
+      "internal_test_wilson_upper": 0.14860463072135122
+    },
+    {
+      "seed": 44,
+      "arm": "F4_SHUFFLE",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 73.00637980858664,
+      "internal_test_override_rate": 0.62890625,
+      "internal_test_harmful_overrides": 18,
+      "validation_gain_sec_per_state": 73.92858549762241,
+      "internal_test_wilson_upper": 0.1592329337682566
+    },
+    {
+      "seed": 44,
+      "arm": "F4_NO_RELIABILITY",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 80.84443922250648,
+      "internal_test_override_rate": 0.62109375,
+      "internal_test_harmful_overrides": 14,
+      "validation_gain_sec_per_state": 70.88773227178172,
+      "internal_test_wilson_upper": 0.13223869817642112
+    },
+    {
+      "seed": 44,
+      "arm": "F4_NO_RELIABILITY",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 80.84443922250648,
+      "internal_test_override_rate": 0.62109375,
+      "internal_test_harmful_overrides": 14,
+      "validation_gain_sec_per_state": 70.88773227178172,
+      "internal_test_wilson_upper": 0.13223869817642112
+    },
+    {
+      "seed": 44,
+      "arm": "F4_SHUFFLE_JOINT",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 78.61290617438499,
+      "internal_test_override_rate": 0.58203125,
+      "internal_test_harmful_overrides": 10,
+      "validation_gain_sec_per_state": 68.83177627452824,
+      "internal_test_wilson_upper": 0.10912995741227606
+    },
+    {
+      "seed": 44,
+      "arm": "F4_SHUFFLE_JOINT",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 78.61290617438499,
+      "internal_test_override_rate": 0.58203125,
+      "internal_test_harmful_overrides": 10,
+      "validation_gain_sec_per_state": 68.83177627452824,
+      "internal_test_wilson_upper": 0.10912995741227606
+    },
+    {
+      "seed": 44,
+      "arm": "F4_SHUFFLE_COVERAGE",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 70.87729915839736,
+      "internal_test_override_rate": 0.66796875,
+      "internal_test_harmful_overrides": 22,
+      "validation_gain_sec_per_state": 74.2343758860552,
+      "internal_test_wilson_upper": 0.17662303955696637
+    },
+    {
+      "seed": 44,
+      "arm": "F4_SHUFFLE_COVERAGE",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 70.87729915839736,
+      "internal_test_override_rate": 0.66796875,
+      "internal_test_harmful_overrides": 22,
+      "validation_gain_sec_per_state": 74.2343758860552,
+      "internal_test_wilson_upper": 0.17662303955696637
+    },
+    {
+      "seed": 45,
+      "arm": "F4_BASE",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 75.80015224861563,
+      "internal_test_override_rate": 0.6640625,
+      "internal_test_harmful_overrides": 17,
+      "validation_gain_sec_per_state": 73.61389707600028,
+      "internal_test_wilson_upper": 0.1443342739254092
+    },
+    {
+      "seed": 45,
+      "arm": "F4_BASE",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 75.80015224861563,
+      "internal_test_override_rate": 0.6640625,
+      "internal_test_harmful_overrides": 17,
+      "validation_gain_sec_per_state": 73.61389707600028,
+      "internal_test_wilson_upper": 0.1443342739254092
+    },
+    {
+      "seed": 45,
+      "arm": "F4_MASK_ONLY",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 69.53841100007412,
+      "internal_test_override_rate": 0.6640625,
+      "internal_test_harmful_overrides": 23,
+      "validation_gain_sec_per_state": 71.75247537068208,
+      "internal_test_wilson_upper": 0.18419728414584263
+    },
+    {
+      "seed": 45,
+      "arm": "F4_MASK_ONLY",
+      "gate": "RISK",
+      "threshold": 20.0,
+      "internal_test_gain_sec_per_state": 79.97459415093181,
+      "internal_test_override_rate": 0.56640625,
+      "internal_test_harmful_overrides": 7,
+      "validation_gain_sec_per_state": 70.80459433424403,
+      "internal_test_wilson_upper": 0.08671720261158636
+    },
+    {
+      "seed": 45,
+      "arm": "F4_SHUFFLE",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 72.35702770019998,
+      "internal_test_override_rate": 0.68359375,
+      "internal_test_harmful_overrides": 22,
+      "validation_gain_sec_per_state": 73.57681781787687,
+      "internal_test_wilson_upper": 0.17271456070026545
+    },
+    {
+      "seed": 45,
+      "arm": "F4_SHUFFLE",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 72.35702770019998,
+      "internal_test_override_rate": 0.68359375,
+      "internal_test_harmful_overrides": 22,
+      "validation_gain_sec_per_state": 73.57681781787687,
+      "internal_test_wilson_upper": 0.17271456070026545
+    },
+    {
+      "seed": 45,
+      "arm": "F4_NO_RELIABILITY",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 83.87091141758356,
+      "internal_test_override_rate": 0.609375,
+      "internal_test_harmful_overrides": 8,
+      "validation_gain_sec_per_state": 71.45229918721088,
+      "internal_test_wilson_upper": 0.08872954214773944
+    },
+    {
+      "seed": 45,
+      "arm": "F4_NO_RELIABILITY",
+      "gate": "RISK",
+      "threshold": 5.0,
+      "internal_test_gain_sec_per_state": 81.04682630492243,
+      "internal_test_override_rate": 0.5859375,
+      "internal_test_harmful_overrides": 8,
+      "validation_gain_sec_per_state": 70.63140231396028,
+      "internal_test_wilson_upper": 0.09218508612819093
+    },
+    {
+      "seed": 45,
+      "arm": "F4_SHUFFLE_JOINT",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 80.23994422724354,
+      "internal_test_override_rate": 0.609375,
+      "internal_test_harmful_overrides": 14,
+      "validation_gain_sec_per_state": 68.04433956310459,
+      "internal_test_wilson_upper": 0.13470487804707298
+    },
+    {
+      "seed": 45,
+      "arm": "F4_SHUFFLE_JOINT",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 80.23994422724354,
+      "internal_test_override_rate": 0.609375,
+      "internal_test_harmful_overrides": 14,
+      "validation_gain_sec_per_state": 68.04433956310459,
+      "internal_test_wilson_upper": 0.13470487804707298
+    },
+    {
+      "seed": 45,
+      "arm": "F4_SHUFFLE_COVERAGE",
+      "gate": "MEAN",
+      "threshold": 5.0,
+      "internal_test_gain_sec_per_state": 74.39116266186466,
+      "internal_test_override_rate": 0.62109375,
+      "internal_test_harmful_overrides": 16,
+      "validation_gain_sec_per_state": 73.2541774776837,
+      "internal_test_wilson_upper": 0.14679354864927055
+    },
+    {
+      "seed": 45,
+      "arm": "F4_SHUFFLE_COVERAGE",
+      "gate": "RISK",
+      "threshold": 5.0,
+      "internal_test_gain_sec_per_state": 74.39116266186466,
+      "internal_test_override_rate": 0.62109375,
+      "internal_test_harmful_overrides": 16,
+      "validation_gain_sec_per_state": 73.2541774776837,
+      "internal_test_wilson_upper": 0.14679354864927055
+    },
+    {
+      "seed": 46,
+      "arm": "F4_BASE",
+      "gate": "MEAN",
+      "threshold": 5.0,
+      "internal_test_gain_sec_per_state": 75.8125009381838,
+      "internal_test_override_rate": 0.63671875,
+      "internal_test_harmful_overrides": 13,
+      "validation_gain_sec_per_state": 72.60405682319106,
+      "internal_test_wilson_upper": 0.12190651419283594
+    },
+    {
+      "seed": 46,
+      "arm": "F4_BASE",
+      "gate": "RISK",
+      "threshold": 5.0,
+      "internal_test_gain_sec_per_state": 75.8125009381838,
+      "internal_test_override_rate": 0.63671875,
+      "internal_test_harmful_overrides": 13,
+      "validation_gain_sec_per_state": 72.60405682319106,
+      "internal_test_wilson_upper": 0.12190651419283594
+    },
+    {
+      "seed": 46,
+      "arm": "F4_MASK_ONLY",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 67.86697805314907,
+      "internal_test_override_rate": 0.6796875,
+      "internal_test_harmful_overrides": 27,
+      "validation_gain_sec_per_state": 73.39460101864097,
+      "internal_test_wilson_upper": 0.205563692613078
+    },
+    {
+      "seed": 46,
+      "arm": "F4_MASK_ONLY",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 67.86697805314907,
+      "internal_test_override_rate": 0.6796875,
+      "internal_test_harmful_overrides": 27,
+      "validation_gain_sec_per_state": 73.39460101864097,
+      "internal_test_wilson_upper": 0.205563692613078
+    },
+    {
+      "seed": 46,
+      "arm": "F4_SHUFFLE",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 69.03665860788897,
+      "internal_test_override_rate": 0.6953125,
+      "internal_test_harmful_overrides": 25,
+      "validation_gain_sec_per_state": 73.1814969098159,
+      "internal_test_wilson_upper": 0.18868664469639557
+    },
+    {
+      "seed": 46,
+      "arm": "F4_SHUFFLE",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 69.03665860788897,
+      "internal_test_override_rate": 0.6953125,
+      "internal_test_harmful_overrides": 25,
+      "validation_gain_sec_per_state": 73.1814969098159,
+      "internal_test_wilson_upper": 0.18868664469639557
+    },
+    {
+      "seed": 46,
+      "arm": "F4_NO_RELIABILITY",
+      "gate": "MEAN",
+      "threshold": 5.0,
+      "internal_test_gain_sec_per_state": 77.45891386193034,
+      "internal_test_override_rate": 0.60546875,
+      "internal_test_harmful_overrides": 15,
+      "validation_gain_sec_per_state": 69.54215810821188,
+      "internal_test_wilson_upper": 0.14302895736162924
+    },
+    {
+      "seed": 46,
+      "arm": "F4_NO_RELIABILITY",
+      "gate": "RISK",
+      "threshold": 10.0,
+      "internal_test_gain_sec_per_state": 77.45891386193034,
+      "internal_test_override_rate": 0.60546875,
+      "internal_test_harmful_overrides": 15,
+      "validation_gain_sec_per_state": 69.14610403776896,
+      "internal_test_wilson_upper": 0.14302895736162924
+    },
+    {
+      "seed": 46,
+      "arm": "F4_SHUFFLE_JOINT",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 78.49437362197932,
+      "internal_test_override_rate": 0.61328125,
+      "internal_test_harmful_overrides": 14,
+      "validation_gain_sec_per_state": 69.33702942179661,
+      "internal_test_wilson_upper": 0.13387266812254997
+    },
+    {
+      "seed": 46,
+      "arm": "F4_SHUFFLE_JOINT",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 78.49437362197932,
+      "internal_test_override_rate": 0.61328125,
+      "internal_test_harmful_overrides": 14,
+      "validation_gain_sec_per_state": 69.33702942179661,
+      "internal_test_wilson_upper": 0.13387266812254997
+    },
+    {
+      "seed": 46,
+      "arm": "F4_SHUFFLE_COVERAGE",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 72.78705777859432,
+      "internal_test_override_rate": 0.67578125,
+      "internal_test_harmful_overrides": 20,
+      "validation_gain_sec_per_state": 73.18761193247337,
+      "internal_test_wilson_upper": 0.16164287693784796
+    },
+    {
+      "seed": 46,
+      "arm": "F4_SHUFFLE_COVERAGE",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 72.78705777859432,
+      "internal_test_override_rate": 0.67578125,
+      "internal_test_harmful_overrides": 20,
+      "validation_gain_sec_per_state": 73.18761193247337,
+      "internal_test_wilson_upper": 0.16164287693784796
+    },
+    {
+      "seed": 47,
+      "arm": "F4_BASE",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 78.13642567573697,
+      "internal_test_override_rate": 0.625,
+      "internal_test_harmful_overrides": 13,
+      "validation_gain_sec_per_state": 73.91307217707072,
+      "internal_test_wilson_upper": 0.12412660280486099
+    },
+    {
+      "seed": 47,
+      "arm": "F4_BASE",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 78.13642567573697,
+      "internal_test_override_rate": 0.625,
+      "internal_test_harmful_overrides": 13,
+      "validation_gain_sec_per_state": 73.91307217707072,
+      "internal_test_wilson_upper": 0.12412660280486099
+    },
+    {
+      "seed": 47,
+      "arm": "F4_MASK_ONLY",
+      "gate": "MEAN",
+      "threshold": 10.0,
+      "internal_test_gain_sec_per_state": 74.21390128442727,
+      "internal_test_override_rate": 0.58984375,
+      "internal_test_harmful_overrides": 14,
+      "validation_gain_sec_per_state": 72.64123094679235,
+      "internal_test_wilson_upper": 0.13902597893772528
+    },
+    {
+      "seed": 47,
+      "arm": "F4_MASK_ONLY",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 73.09953366247646,
+      "internal_test_override_rate": 0.6171875,
+      "internal_test_harmful_overrides": 17,
+      "validation_gain_sec_per_state": 72.66435839320911,
+      "internal_test_wilson_upper": 0.1549461735422764
+    },
+    {
+      "seed": 47,
+      "arm": "F4_SHUFFLE",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 69.70471877722593,
+      "internal_test_override_rate": 0.65234375,
+      "internal_test_harmful_overrides": 22,
+      "validation_gain_sec_per_state": 72.77163444027246,
+      "internal_test_wilson_upper": 0.18071227421739833
+    },
+    {
+      "seed": 47,
+      "arm": "F4_SHUFFLE",
+      "gate": "RISK",
+      "threshold": 10.0,
+      "internal_test_gain_sec_per_state": 70.61373623950931,
+      "internal_test_override_rate": 0.62890625,
+      "internal_test_harmful_overrides": 20,
+      "validation_gain_sec_per_state": 72.77163444027246,
+      "internal_test_wilson_upper": 0.17328917211091044
+    },
+    {
+      "seed": 47,
+      "arm": "F4_NO_RELIABILITY",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 82.62128876769566,
+      "internal_test_override_rate": 0.61328125,
+      "internal_test_harmful_overrides": 11,
+      "validation_gain_sec_per_state": 69.86804741200467,
+      "internal_test_wilson_upper": 0.11135929273835461
+    },
+    {
+      "seed": 47,
+      "arm": "F4_NO_RELIABILITY",
+      "gate": "RISK",
+      "threshold": 10.0,
+      "internal_test_gain_sec_per_state": 81.5082358630898,
+      "internal_test_override_rate": 0.58203125,
+      "internal_test_harmful_overrides": 9,
+      "validation_gain_sec_per_state": 69.73620216622658,
+      "internal_test_wilson_upper": 0.10100880042999504
+    },
+    {
+      "seed": 47,
+      "arm": "F4_SHUFFLE_JOINT",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 79.39746416232083,
+      "internal_test_override_rate": 0.640625,
+      "internal_test_harmful_overrides": 18,
+      "validation_gain_sec_per_state": 68.04296346400224,
+      "internal_test_wilson_upper": 0.15641187403252418
+    },
+    {
+      "seed": 47,
+      "arm": "F4_SHUFFLE_JOINT",
+      "gate": "RISK",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 79.39746416232083,
+      "internal_test_override_rate": 0.640625,
+      "internal_test_harmful_overrides": 18,
+      "validation_gain_sec_per_state": 68.04296346400224,
+      "internal_test_wilson_upper": 0.15641187403252418
+    },
+    {
+      "seed": 47,
+      "arm": "F4_SHUFFLE_COVERAGE",
+      "gate": "MEAN",
+      "threshold": 0.0,
+      "internal_test_gain_sec_per_state": 70.96180900943,
+      "internal_test_override_rate": 0.66015625,
+      "internal_test_harmful_overrides": 22,
+      "validation_gain_sec_per_state": 73.92356376956741,
+      "internal_test_wilson_upper": 0.17864428876818997
+    },
+    {
+      "seed": 47,
+      "arm": "F4_SHUFFLE_COVERAGE",
+      "gate": "RISK",
+      "threshold": 5.0,
+      "internal_test_gain_sec_per_state": 70.65529287059326,
+      "internal_test_override_rate": 0.63671875,
+      "internal_test_harmful_overrides": 20,
+      "validation_gain_sec_per_state": 73.92356376956741,
+      "internal_test_wilson_upper": 0.1712330988499511
+    }
+  ],
+  "notes": [
+    "Six training seeds reuse the same held-out states.",
+    "No model selection on internal_test metrics; reports are diagnostic only."
+  ]
+}

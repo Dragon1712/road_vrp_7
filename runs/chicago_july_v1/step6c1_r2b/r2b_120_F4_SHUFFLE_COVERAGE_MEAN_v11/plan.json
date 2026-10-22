@@ -1,0 +1,58 @@
+{
+  "stage": "step6c1r2b-120-v1",
+  "arm": "F4_SHUFFLE_COVERAGE_MEAN",
+  "tasks": [
+    "task_0008",
+    "task_0009"
+  ],
+  "scenarios": [
+    "2025-07-22_0800",
+    "2025-07-22_1700",
+    "2025-07-23_0800",
+    "2025-07-23_1700",
+    "2025-07-24_0800",
+    "2025-07-24_1700"
+  ],
+  "seeds": [
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+  ],
+  "model_path": "runs/chicago_july_v1/step6c1_r2b/r2b_controls_seed42_v11/R2B_F4_SHUFFLE_COVERAGE_MEAN.joblib",
+  "model_sha256": "0efd818af571f307dfce52834d690178e778b8a1239de481d019a9aca58bfada",
+  "model_mode": "F4",
+  "engine": "controlled",
+  "source_path": "runs/chicago_july_v1/step6a_v2/labeled_current_static_full_v1",
+  "source_sha256": "28b8e1ee6bfa68eb697afb364eba7fdcdfe37a8c1b249dd53ce4778f87f9e01d",
+  "frozen_solver_sha256": "1d77b5266bd0481d2a5231311efdc83f6dd21a84c40a23e1386f2e7e90086ea1",
+  "frozen_selector_sha256": "ded8d785a2a817aa2c2fae6ce0064ac95d42de8fe4e8c9b0481bcd2bfbee456e",
+  "base_adapter_sha256": "4087091c36a0c9a527f20baff4fe7de736918fde887e063f619dcb419eddbcd0",
+  "original_online_sha256": "a4d9fd6883f16612cc5687928a03186f8bf317f871f67ad36a3027cf593e8822",
+  "r2b_online_sha256": "d088f29d1a33d920e0525cfc843d3d5485a45f9defaa64b2026e28461a49dd95",
+  "r2b_policy_sha256": "ef49b951ff60cffad17825c752cfd9763f5ea4678aec275cebd356fe9b95fc59",
+  "original_r2_policy_sha256": "ff4d86950c9d1b6863979d7e155d14b35e60233febd31f5262054e6044428e41",
+  "study_code_sha256": "5fd1d3bb05de75de63fb20159e035ee0cadf5c3b104ae6c3f69ad3c1b424cdde",
+  "wall_sec": 30,
+  "max_iterations": 20000,
+  "anneal_iterations": 5000,
+  "top_k": 12,
+  "action_count": 8,
+  "sampler_seed": 20261019,
+  "score_every": 8,
+  "max_scoring_sec": 2.0,
+  "cache_size": 0,
+  "threshold_override": null,
+  "notes": [
+    "Validation days are DEVELOPMENT, not blind test.",
+    "All arms use the same task/scenario/seeds; C3 and M0 have different frozen selection rules.",
+    "Only the R2/R2B learned arms use the actual-C3 shadow draw.",
+    "Historical setup and OD construction excluded from 30s search exactly as upstream B2-R."
+  ]
+}

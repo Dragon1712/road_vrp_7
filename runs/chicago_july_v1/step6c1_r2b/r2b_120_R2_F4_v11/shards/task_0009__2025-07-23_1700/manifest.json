@@ -1,0 +1,54 @@
+{
+  "stage": "step6b2r-30s-v1",
+  "arm": "learned",
+  "model_method": "P2",
+  "model_mode": "F4",
+  "model_protocol": "task",
+  "model_sha256": "4fc82fb3f2772ec2e88ac6a173b7c544abbf2c720f8b7459d3ec81c588a40198",
+  "source_sha256": "28b8e1ee6bfa68eb697afb364eba7fdcdfe37a8c1b249dd53ce4778f87f9e01d",
+  "road_sha256": "3612b66ad23df15ed409c86f2585755d4393d7a9044c38dd3ee1a30e5b49dd68",
+  "edge_sha256": "23f5e3524e05004e5b597bb4d0edd945321a3ddb516cb939b344acf5e0ab52a1",
+  "solver_sha256": "1d77b5266bd0481d2a5231311efdc83f6dd21a84c40a23e1386f2e7e90086ea1",
+  "adapter_sha256": "4087091c36a0c9a527f20baff4fe7de736918fde887e063f619dcb419eddbcd0",
+  "feature_code_sha256": "c00245b8f92a65f21b35b8a57b6078c851475f875218a2fe5d53d96587d14615",
+  "model_code_sha256": "e4eeec3eb53ad8e1aa5e28f385f82842e319fda10fb1086f1cf1c2976e3a0567",
+  "section_sha256": "ded8d785a2a817aa2c2fae6ce0064ac95d42de8fe4e8c9b0481bcd2bfbee456e",
+  "history_setup_sec": 0.11896235682070255,
+  "seeds": [
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+  ],
+  "task_ids": [
+    "task_0009"
+  ],
+  "scenario_ids": [
+    "2025-07-23_1700"
+  ],
+  "split": "validation",
+  "wall_sec": 30,
+  "max_iterations": 20000,
+  "anneal_iterations": 5000,
+  "top_k": 12,
+  "action_count": 8,
+  "sampler_seed": 20261019,
+  "r_score_every": 8,
+  "r_max_scoring_sec": 2.0,
+  "r_cache_size": 0,
+  "r_min_static_fraction": 0.0,
+  "r_fallback": "c3",
+  "notes": [
+    "OD and historical loading time excluded from 30-second SEARCH budget and reported separately.",
+    "Model scoring+features inside 30-second C3 search stop rule.",
+    "Road replay occurs after search and cannot influence operators.",
+    "Sampled_random and learned use stratified 8-section Section sampler; C3 uses its original top20pct sampler.",
+    "Global historic tensor read/preparation is outside search and explicitly in manifest history_setup_sec."
+  ]
+}

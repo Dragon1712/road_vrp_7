@@ -1,0 +1,43 @@
+{
+  "stage": "step6c1r2b-controlled-train-v1",
+  "seed": 46,
+  "protocol": "task",
+  "arms": [
+    "F4_BASE",
+    "F4_MASK_ONLY",
+    "F4_SHUFFLE",
+    "F4_NO_RELIABILITY",
+    "F4_SHUFFLE_JOINT",
+    "F4_SHUFFLE_COVERAGE"
+  ],
+  "dataset_dir": "runs/chicago_july_v1/step6c1_r2/r2_c3_label_train8x8_v1",
+  "pair_sha256": "a1d50ca4a7f31baaf56805c077a2e2d3cb6ced422763d36e640ff5e2b2a29cf4",
+  "groups_sha256": "c9a9c975c204c1e81f0ce88d3151f7a4211e4e8437210e2751ce0fbe7e405825",
+  "model_source": "runs/chicago_july_v1/step6a_v2/labeled_current_static_full_v1",
+  "group_roles": {
+    "task_0000": "train",
+    "task_0001": "train",
+    "task_0002": "train",
+    "task_0003": "train",
+    "task_0004": "validation",
+    "task_0005": "validation",
+    "task_0006": "internal_test",
+    "task_0007": "internal_test"
+  },
+  "selected_only_on": "validation",
+  "risk_harm_threshold_sec": 40.0,
+  "risk_upper_probability": 0.1,
+  "min_validation_overrides": 20,
+  "risk_bound": "max",
+  "risk_bootstraps": 600,
+  "code_sha256": {
+    "r2b_policy.py": "ef49b951ff60cffad17825c752cfd9763f5ea4678aec275cebd356fe9b95fc59",
+    "train_controls.py": "0f03fb26542ab53855f39444815cecad819fb587d6236f03d4c775583f17094f"
+  },
+  "notes": [
+    "F4 traffic value is 26:36; reliability is 36:44; all structural features unchanged.",
+    "Traffic shuffle is deterministic per candidate group, independent of TD labels.",
+    "Risk gate combines run-cluster bootstrap and Wilson bound: descriptive, not a safety guarantee.",
+    "Internal test is development only, not a blind final test."
+  ]
+}
