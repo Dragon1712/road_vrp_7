@@ -1,0 +1,36 @@
+{
+  "stage": "R3-SV-paired-restart-v1",
+  "one_step_sha256": "13ebccdd29c1e0a6761f5abb429653dce0beb86ce390e3547e7824d359547be0",
+  "pilot_sha256": "9517ead304eb5d67afd666fd839ee0dd20deff0a74817a3f26e6c336a3e5fa0a",
+  "label_sha256": "a1d50ca4a7f31baaf56805c077a2e2d3cb6ced422763d36e640ff5e2b2a29cf4",
+  "capture_sha256": "ba88f557d2d8e12369e250cb39a33ac089d764b7a7fca802bc36f14bf5c32bae",
+  "frozen_solver_sha256": "1d77b5266bd0481d2a5231311efdc83f6dd21a84c40a23e1386f2e7e90086ea1",
+  "frozen_section_sha256": "ded8d785a2a817aa2c2fae6ce0064ac95d42de8fe4e8c9b0481bcd2bfbee456e",
+  "code_sha256": {
+    "sv_core.py": "a699df3c6008a731674fd591c786afd75aa1a07ea04b740cf66b25cb33c0faca",
+    "rollout_sv.py": "74b32bfabafa7431748d9af0118c35c333304ff7d4a7541da8d10a5fe4082856"
+  },
+  "road_sha256": "3612b66ad23df15ed409c86f2585755d4393d7a9044c38dd3ee1a30e5b49dd68",
+  "edge_sha256": "23f5e3524e05004e5b597bb4d0edd945321a3ddb516cb939b344acf5e0ab52a1",
+  "task_manifest_sha256": "520afcd810fcb8c519903c39f760109aebcb7104d7d92d3e811c8aa60d228a24",
+  "states": [
+    "0f3417d123333684c7fff8b0"
+  ],
+  "horizons": [
+    5,
+    20,
+    50
+  ],
+  "replicates": 1,
+  "top_k": 12,
+  "repair_deadline": 3.0,
+  "enable_swap": true,
+  "od_step_min": 20,
+  "od_hours": 5.0,
+  "sampler_seed": 20261019,
+  "wall_per_arm": 30.0,
+  "anneal_iterations": 5000,
+  "road_replay": true,
+  "meaning": "paired FROZEN C3 RESTART from repaired route, not exact original-trajectory continuation",
+  "caveat": "ALNS selector weights, annealing phase and RNG internal state are not captured in R2; road costs are retrospective only, never sent to search"
+}
