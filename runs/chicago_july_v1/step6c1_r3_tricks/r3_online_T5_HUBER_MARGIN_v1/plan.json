@@ -1,0 +1,48 @@
+{
+  "stage": "step6c1r3t-pilot-v1",
+  "arm": "T5_HUBER_MARGIN",
+  "tasks": [
+    "task_0008",
+    "task_0009"
+  ],
+  "scenarios": [
+    "2025-07-25_0800",
+    "2025-07-25_1700"
+  ],
+  "seeds": [
+    60,
+    61,
+    62,
+    63,
+    64
+  ],
+  "split": "validation",
+  "model_path": "runs/chicago_july_v1/step6c1_r3_tricks/r3_seed42_v1/T5_HUBER_MARGIN.joblib",
+  "model_sha256": "94463cb0ffe1bd9b7330459eb5d7cb7e171fd9f0ab1d851d1dd441c58d5733b1",
+  "model_mode": "F2",
+  "engine": "R3",
+  "source_path": "runs/chicago_july_v1/step6a_v2/labeled_current_static_full_v1",
+  "source_sha256": "28b8e1ee6bfa68eb697afb364eba7fdcdfe37a8c1b249dd53ce4778f87f9e01d",
+  "frozen_solver_sha256": "1d77b5266bd0481d2a5231311efdc83f6dd21a84c40a23e1386f2e7e90086ea1",
+  "frozen_selector_sha256": "ded8d785a2a817aa2c2fae6ce0064ac95d42de8fe4e8c9b0481bcd2bfbee456e",
+  "base_adapter_sha256": "4087091c36a0c9a527f20baff4fe7de736918fde887e063f619dcb419eddbcd0",
+  "original_online_sha256": "a4d9fd6883f16612cc5687928a03186f8bf317f871f67ad36a3027cf593e8822",
+  "r3_online_sha256": "fc779911bd860a7c6c9f418d50a2d986199ddbeb0a599f7184d65e87f4630ba5",
+  "r3_models_sha256": "766feab73ca9baafd40223e87b6b03fa192610dd6b4b9e38cb00f65feffa8d49",
+  "study_code_sha256": "bc662d475d17627cb254b1aca82a56c284bcbd4c680ec0424e26c9a17cd8129d",
+  "merge_code_sha256": "9020cfb519e7042937416e5b23d5e1397301aa352631ef63d41bb6d832a6d33e",
+  "wall_sec": 30,
+  "max_iterations": 20000,
+  "anneal_iterations": 5000,
+  "top_k": 12,
+  "action_count": 8,
+  "sampler_seed": 20261019,
+  "score_every": 8,
+  "max_scoring_sec": 2.0,
+  "cache_size": 0,
+  "notes": [
+    "Development July-25 / new solver seeds; not blind final test",
+    "C3 top-20% vs learned stratified 8 candidate mechanisms unchanged",
+    "M0 uses its historical cache64; R2/R3 cache0 for RNG-dependent real C3 actions"
+  ]
+}

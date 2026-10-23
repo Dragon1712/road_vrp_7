@@ -1,0 +1,460 @@
+{
+  "stage": "step6c1r3t-paired-pilot-v1",
+  "inputs": {
+    "C3": "runs/chicago_july_v1/step6c1_r3_tricks/r3_online_C3_v1",
+    "M0": "runs/chicago_july_v1/step6c1_r3_tricks/r3_online_M0_v1",
+    "T0_R2_F2": "runs/chicago_july_v1/step6c1_r3_tricks/r3_online_T0_R2_F2_v1",
+    "T2_CB_HUBER": "runs/chicago_july_v1/step6c1_r3_tricks/r3_online_T2_CB_HUBER_v1",
+    "T4_WEIGHTED_PAIR": "runs/chicago_july_v1/step6c1_r3_tricks/r3_online_T4_WEIGHTED_PAIR_v1",
+    "T5_HUBER_MARGIN": "runs/chicago_july_v1/step6c1_r3_tricks/r3_online_T5_HUBER_MARGIN_v1",
+    "T6_WEIGHTED_MARGIN": "runs/chicago_july_v1/step6c1_r3_tricks/r3_online_T6_WEIGHTED_MARGIN_v1",
+    "T7_BLEND_MARGIN": "runs/chicago_july_v1/step6c1_r3_tricks/r3_online_T7_BLEND_MARGIN_v1"
+  },
+  "comparisons": {
+    "T0_R2_F2": {
+      "C3": {
+        "n_runs": 20,
+        "n_task_scenario_clusters": 4,
+        "mean_improvement_sec": -17.5375,
+        "median_improvement_sec": -25.0625,
+        "win": 7,
+        "loss": 12,
+        "tie": 1,
+        "min_improvement_sec": -152.625,
+        "max_improvement_sec": 110.625,
+        "cluster_bootstrap_95pct_interval_sec": [
+          -33.0125,
+          3.575
+        ],
+        "per_cluster_mean": {
+          "task_0008|2025-07-25_0800": -19.025,
+          "task_0008|2025-07-25_1700": -37.675,
+          "task_0009|2025-07-25_0800": 13.875,
+          "task_0009|2025-07-25_1700": -27.325
+        },
+        "per_task_mean": {
+          "task_0008": -28.35,
+          "task_0009": -6.725
+        },
+        "per_scenario_mean": {
+          "2025-07-25_0800": -2.575,
+          "2025-07-25_1700": -32.5
+        },
+        "per_solver_seed_mean": {
+          "60": -38.84375,
+          "61": -67.78125,
+          "62": 39.96875,
+          "63": -27.15625,
+          "64": 6.125
+        }
+      },
+      "M0": {
+        "n_runs": 20,
+        "n_task_scenario_clusters": 4,
+        "mean_improvement_sec": -4.29375,
+        "median_improvement_sec": 0.0,
+        "win": 9,
+        "loss": 7,
+        "tie": 4,
+        "min_improvement_sec": -104.0,
+        "max_improvement_sec": 125.75,
+        "cluster_bootstrap_95pct_interval_sec": [
+          -22.7125,
+          24.04375
+        ],
+        "per_cluster_mean": {
+          "task_0008|2025-07-25_0800": -19.775,
+          "task_0008|2025-07-25_1700": 38.65,
+          "task_0009|2025-07-25_0800": -10.4,
+          "task_0009|2025-07-25_1700": -25.65
+        },
+        "per_task_mean": {
+          "task_0008": 9.4375,
+          "task_0009": -18.025
+        },
+        "per_scenario_mean": {
+          "2025-07-25_0800": -15.0875,
+          "2025-07-25_1700": 6.5
+        },
+        "per_solver_seed_mean": {
+          "60": -7.375,
+          "61": 15.4375,
+          "62": -8.40625,
+          "63": -22.65625,
+          "64": 1.53125
+        }
+      }
+    },
+    "T2_CB_HUBER": {
+      "C3": {
+        "n_runs": 20,
+        "n_task_scenario_clusters": 4,
+        "mean_improvement_sec": -4.0625,
+        "median_improvement_sec": -1.625,
+        "win": 8,
+        "loss": 11,
+        "tie": 1,
+        "min_improvement_sec": -98.0,
+        "max_improvement_sec": 92.75,
+        "cluster_bootstrap_95pct_interval_sec": [
+          -13.6625,
+          3.225
+        ],
+        "per_cluster_mean": {
+          "task_0008|2025-07-25_0800": -1.1,
+          "task_0008|2025-07-25_1700": -17.85,
+          "task_0009|2025-07-25_0800": -2.4,
+          "task_0009|2025-07-25_1700": 5.1
+        },
+        "per_task_mean": {
+          "task_0008": -9.475,
+          "task_0009": 1.35
+        },
+        "per_scenario_mean": {
+          "2025-07-25_0800": -1.75,
+          "2025-07-25_1700": -6.375
+        },
+        "per_solver_seed_mean": {
+          "60": -25.09375,
+          "61": -60.3125,
+          "62": 31.40625,
+          "63": 18.65625,
+          "64": 15.03125
+        }
+      },
+      "M0": {
+        "n_runs": 20,
+        "n_task_scenario_clusters": 4,
+        "mean_improvement_sec": 9.18125,
+        "median_improvement_sec": 11.6875,
+        "win": 11,
+        "loss": 9,
+        "tie": 0,
+        "min_improvement_sec": -83.25,
+        "max_improvement_sec": 107.875,
+        "cluster_bootstrap_95pct_interval_sec": [
+          -18.3125,
+          43.39375
+        ],
+        "per_cluster_mean": {
+          "task_0008|2025-07-25_0800": -1.85,
+          "task_0008|2025-07-25_1700": 58.475,
+          "task_0009|2025-07-25_0800": -26.675,
+          "task_0009|2025-07-25_1700": 6.775
+        },
+        "per_task_mean": {
+          "task_0008": 28.3125,
+          "task_0009": -9.95
+        },
+        "per_scenario_mean": {
+          "2025-07-25_0800": -14.2625,
+          "2025-07-25_1700": 32.625
+        },
+        "per_solver_seed_mean": {
+          "60": 6.375,
+          "61": 22.90625,
+          "62": -16.96875,
+          "63": 23.15625,
+          "64": 10.4375
+        }
+      }
+    },
+    "T4_WEIGHTED_PAIR": {
+      "C3": {
+        "n_runs": 20,
+        "n_task_scenario_clusters": 4,
+        "mean_improvement_sec": -26.08125,
+        "median_improvement_sec": -22.0625,
+        "win": 6,
+        "loss": 13,
+        "tie": 1,
+        "min_improvement_sec": -173.125,
+        "max_improvement_sec": 71.25,
+        "cluster_bootstrap_95pct_interval_sec": [
+          -73.36875,
+          5.3625
+        ],
+        "per_cluster_mean": {
+          "task_0008|2025-07-25_0800": -12.6,
+          "task_0008|2025-07-25_1700": -95.2,
+          "task_0009|2025-07-25_0800": 11.35,
+          "task_0009|2025-07-25_1700": -7.875
+        },
+        "per_task_mean": {
+          "task_0008": -53.9,
+          "task_0009": 1.7375
+        },
+        "per_scenario_mean": {
+          "2025-07-25_0800": -0.625,
+          "2025-07-25_1700": -51.5375
+        },
+        "per_solver_seed_mean": {
+          "60": -49.8125,
+          "61": -64.65625,
+          "62": 39.0625,
+          "63": -30.84375,
+          "64": -24.15625
+        }
+      },
+      "M0": {
+        "n_runs": 20,
+        "n_task_scenario_clusters": 4,
+        "mean_improvement_sec": -12.8375,
+        "median_improvement_sec": -8.9375,
+        "win": 6,
+        "loss": 14,
+        "tie": 0,
+        "min_improvement_sec": -101.0,
+        "max_improvement_sec": 57.625,
+        "cluster_bootstrap_95pct_interval_sec": [
+          -17.3875,
+          -7.9875
+        ],
+        "per_cluster_mean": {
+          "task_0008|2025-07-25_0800": -13.35,
+          "task_0008|2025-07-25_1700": -18.875,
+          "task_0009|2025-07-25_0800": -12.925,
+          "task_0009|2025-07-25_1700": -6.2
+        },
+        "per_task_mean": {
+          "task_0008": -16.1125,
+          "task_0009": -9.5625
+        },
+        "per_scenario_mean": {
+          "2025-07-25_0800": -13.1375,
+          "2025-07-25_1700": -12.5375
+        },
+        "per_solver_seed_mean": {
+          "60": -18.34375,
+          "61": 18.5625,
+          "62": -9.3125,
+          "63": -26.34375,
+          "64": -28.75
+        }
+      }
+    },
+    "T5_HUBER_MARGIN": {
+      "C3": {
+        "n_runs": 20,
+        "n_task_scenario_clusters": 4,
+        "mean_improvement_sec": -4.0625,
+        "median_improvement_sec": -1.625,
+        "win": 8,
+        "loss": 11,
+        "tie": 1,
+        "min_improvement_sec": -98.0,
+        "max_improvement_sec": 92.75,
+        "cluster_bootstrap_95pct_interval_sec": [
+          -13.6625,
+          3.225
+        ],
+        "per_cluster_mean": {
+          "task_0008|2025-07-25_0800": -1.1,
+          "task_0008|2025-07-25_1700": -17.85,
+          "task_0009|2025-07-25_0800": -2.4,
+          "task_0009|2025-07-25_1700": 5.1
+        },
+        "per_task_mean": {
+          "task_0008": -9.475,
+          "task_0009": 1.35
+        },
+        "per_scenario_mean": {
+          "2025-07-25_0800": -1.75,
+          "2025-07-25_1700": -6.375
+        },
+        "per_solver_seed_mean": {
+          "60": -25.09375,
+          "61": -60.3125,
+          "62": 31.40625,
+          "63": 18.65625,
+          "64": 15.03125
+        }
+      },
+      "M0": {
+        "n_runs": 20,
+        "n_task_scenario_clusters": 4,
+        "mean_improvement_sec": 9.18125,
+        "median_improvement_sec": 11.6875,
+        "win": 11,
+        "loss": 9,
+        "tie": 0,
+        "min_improvement_sec": -83.25,
+        "max_improvement_sec": 107.875,
+        "cluster_bootstrap_95pct_interval_sec": [
+          -18.3125,
+          43.39375
+        ],
+        "per_cluster_mean": {
+          "task_0008|2025-07-25_0800": -1.85,
+          "task_0008|2025-07-25_1700": 58.475,
+          "task_0009|2025-07-25_0800": -26.675,
+          "task_0009|2025-07-25_1700": 6.775
+        },
+        "per_task_mean": {
+          "task_0008": 28.3125,
+          "task_0009": -9.95
+        },
+        "per_scenario_mean": {
+          "2025-07-25_0800": -14.2625,
+          "2025-07-25_1700": 32.625
+        },
+        "per_solver_seed_mean": {
+          "60": 6.375,
+          "61": 22.90625,
+          "62": -16.96875,
+          "63": 23.15625,
+          "64": 10.4375
+        }
+      }
+    },
+    "T6_WEIGHTED_MARGIN": {
+      "C3": {
+        "n_runs": 20,
+        "n_task_scenario_clusters": 4,
+        "mean_improvement_sec": -26.08125,
+        "median_improvement_sec": -22.0625,
+        "win": 6,
+        "loss": 13,
+        "tie": 1,
+        "min_improvement_sec": -173.125,
+        "max_improvement_sec": 71.25,
+        "cluster_bootstrap_95pct_interval_sec": [
+          -73.36875,
+          5.3625
+        ],
+        "per_cluster_mean": {
+          "task_0008|2025-07-25_0800": -12.6,
+          "task_0008|2025-07-25_1700": -95.2,
+          "task_0009|2025-07-25_0800": 11.35,
+          "task_0009|2025-07-25_1700": -7.875
+        },
+        "per_task_mean": {
+          "task_0008": -53.9,
+          "task_0009": 1.7375
+        },
+        "per_scenario_mean": {
+          "2025-07-25_0800": -0.625,
+          "2025-07-25_1700": -51.5375
+        },
+        "per_solver_seed_mean": {
+          "60": -49.8125,
+          "61": -64.65625,
+          "62": 39.0625,
+          "63": -30.84375,
+          "64": -24.15625
+        }
+      },
+      "M0": {
+        "n_runs": 20,
+        "n_task_scenario_clusters": 4,
+        "mean_improvement_sec": -12.8375,
+        "median_improvement_sec": -8.9375,
+        "win": 6,
+        "loss": 14,
+        "tie": 0,
+        "min_improvement_sec": -101.0,
+        "max_improvement_sec": 57.625,
+        "cluster_bootstrap_95pct_interval_sec": [
+          -17.3875,
+          -7.9875
+        ],
+        "per_cluster_mean": {
+          "task_0008|2025-07-25_0800": -13.35,
+          "task_0008|2025-07-25_1700": -18.875,
+          "task_0009|2025-07-25_0800": -12.925,
+          "task_0009|2025-07-25_1700": -6.2
+        },
+        "per_task_mean": {
+          "task_0008": -16.1125,
+          "task_0009": -9.5625
+        },
+        "per_scenario_mean": {
+          "2025-07-25_0800": -13.1375,
+          "2025-07-25_1700": -12.5375
+        },
+        "per_solver_seed_mean": {
+          "60": -18.34375,
+          "61": 18.5625,
+          "62": -9.3125,
+          "63": -26.34375,
+          "64": -28.75
+        }
+      }
+    },
+    "T7_BLEND_MARGIN": {
+      "C3": {
+        "n_runs": 20,
+        "n_task_scenario_clusters": 4,
+        "mean_improvement_sec": -18.25625,
+        "median_improvement_sec": -4.625,
+        "win": 8,
+        "loss": 10,
+        "tie": 2,
+        "min_improvement_sec": -120.625,
+        "max_improvement_sec": 124.125,
+        "cluster_bootstrap_95pct_interval_sec": [
+          -46.2125,
+          9.7
+        ],
+        "per_cluster_mean": {
+          "task_0008|2025-07-25_0800": -45.225,
+          "task_0008|2025-07-25_1700": -47.2,
+          "task_0009|2025-07-25_0800": -1.1,
+          "task_0009|2025-07-25_1700": 20.5
+        },
+        "per_task_mean": {
+          "task_0008": -46.2125,
+          "task_0009": 9.7
+        },
+        "per_scenario_mean": {
+          "2025-07-25_0800": -23.1625,
+          "2025-07-25_1700": -13.35
+        },
+        "per_solver_seed_mean": {
+          "60": -32.8125,
+          "61": -50.15625,
+          "62": 46.1875,
+          "63": -26.875,
+          "64": -27.625
+        }
+      },
+      "M0": {
+        "n_runs": 20,
+        "n_task_scenario_clusters": 4,
+        "mean_improvement_sec": -5.0125,
+        "median_improvement_sec": -20.375,
+        "win": 9,
+        "loss": 11,
+        "tie": 0,
+        "min_improvement_sec": -126.25,
+        "max_improvement_sec": 139.25,
+        "cluster_bootstrap_95pct_interval_sec": [
+          -35.675,
+          25.65
+        ],
+        "per_cluster_mean": {
+          "task_0008|2025-07-25_0800": -45.975,
+          "task_0008|2025-07-25_1700": 29.125,
+          "task_0009|2025-07-25_0800": -25.375,
+          "task_0009|2025-07-25_1700": 22.175
+        },
+        "per_task_mean": {
+          "task_0008": -8.425,
+          "task_0009": -1.6
+        },
+        "per_scenario_mean": {
+          "2025-07-25_0800": -35.675,
+          "2025-07-25_1700": 25.65
+        },
+        "per_solver_seed_mean": {
+          "60": -1.34375,
+          "61": 33.0625,
+          "62": -2.1875,
+          "63": -22.375,
+          "64": -32.21875
+        }
+      }
+    }
+  },
+  "warning": "Development / nonblind, shared road situations and only two tasks; CI descriptive only."
+}

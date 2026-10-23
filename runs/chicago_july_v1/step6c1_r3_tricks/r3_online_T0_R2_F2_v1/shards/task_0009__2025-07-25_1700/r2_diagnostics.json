@@ -1,0 +1,87 @@
+{
+  "stage": "step6c1r2-online-v1",
+  "model_sha256": "62b3b78b018971e8318e20121fb5d665897cdd75906c8daf50e9a26c8b0c1454",
+  "code_sha256": {
+    "online_r2.py": "a4d9fd6883f16612cc5687928a03186f8bf317f871f67ad36a3027cf593e8822",
+    "r2_policy.py": "ff4d86950c9d1b6863979d7e155d14b35e60233febd31f5262054e6044428e41"
+  },
+  "runs": [
+    {
+      "task_id": "task_0009",
+      "scenario_id": "2025-07-25_1700",
+      "seed": 60,
+      "road_cost_sec": 4093.75,
+      "r2_shadow_calls": 31,
+      "r2_shadow_sec": 0.013278942555189133,
+      "r2_effective_overrides": 28,
+      "r2_same_as_C3": 0,
+      "r2_predicted_advantage_sum": 4030.012569832518,
+      "r2_policy_rejected": 3,
+      "r2_c3_missing_or_invalid": 0,
+      "r2_score_budget_prevented": 0
+    },
+    {
+      "task_id": "task_0009",
+      "scenario_id": "2025-07-25_1700",
+      "seed": 61,
+      "road_cost_sec": 4024.875,
+      "r2_shadow_calls": 30,
+      "r2_shadow_sec": 0.012368754483759403,
+      "r2_effective_overrides": 27,
+      "r2_same_as_C3": 0,
+      "r2_predicted_advantage_sum": 3519.198961752559,
+      "r2_policy_rejected": 3,
+      "r2_c3_missing_or_invalid": 0,
+      "r2_score_budget_prevented": 0
+    },
+    {
+      "task_id": "task_0009",
+      "scenario_id": "2025-07-25_1700",
+      "seed": 62,
+      "road_cost_sec": 4052.0,
+      "r2_shadow_calls": 34,
+      "r2_shadow_sec": 0.01384193915873766,
+      "r2_effective_overrides": 33,
+      "r2_same_as_C3": 0,
+      "r2_predicted_advantage_sum": 4594.916626562856,
+      "r2_policy_rejected": 1,
+      "r2_c3_missing_or_invalid": 0,
+      "r2_score_budget_prevented": 0
+    },
+    {
+      "task_id": "task_0009",
+      "scenario_id": "2025-07-25_1700",
+      "seed": 63,
+      "road_cost_sec": 4087.0,
+      "r2_shadow_calls": 35,
+      "r2_shadow_sec": 0.013955888338387012,
+      "r2_effective_overrides": 31,
+      "r2_same_as_C3": 0,
+      "r2_predicted_advantage_sum": 3586.683089463623,
+      "r2_policy_rejected": 4,
+      "r2_c3_missing_or_invalid": 0,
+      "r2_score_budget_prevented": 0
+    },
+    {
+      "task_id": "task_0009",
+      "scenario_id": "2025-07-25_1700",
+      "seed": 64,
+      "road_cost_sec": 4093.75,
+      "r2_shadow_calls": 39,
+      "r2_shadow_sec": 0.015313481912016869,
+      "r2_effective_overrides": 37,
+      "r2_same_as_C3": 0,
+      "r2_predicted_advantage_sum": 5082.204195751797,
+      "r2_policy_rejected": 2,
+      "r2_c3_missing_or_invalid": 0,
+      "r2_score_budget_prevented": 0
+    }
+  ],
+  "force_defer": false,
+  "notes": [
+    "Cloned RNG/Stats shadow C3 is paired to real C3 fallback at the same state.",
+    "Shadow draw and paired feature extraction are included INSIDE 30s wall budget.",
+    "Online behavior changes the later ALNS trajectory; offline one-step proxy is not 30s gain.",
+    "The scoring budget limits R2 shadow+feature+prediction CPU time; no cached RNG-dependent C3 actions."
+  ]
+}
