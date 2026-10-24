@@ -1,0 +1,2802 @@
+{
+  "stage": "R3-VQ3-DECISION-RISK-LOTO-v1",
+  "status": "COMPLETE",
+  "seed": 45,
+  "trees": 160,
+  "n_original_train_tasks": 4,
+  "n_selected_states": 144,
+  "horizons": [
+    20,
+    50
+  ],
+  "policies": [
+    "C3",
+    "E0_FULL",
+    "E0_MATCHED",
+    "VQ_MEAN",
+    "RESID_OOF25",
+    "RESID_OOF50",
+    "PAIR_RANK",
+    "PAIR_REGRET",
+    "E0_RISK20",
+    "E0_RISK35",
+    "RESID25_RISK35",
+    "PAIR_REGRET_RISK35",
+    "E0_SCORE_COVERAGE35"
+  ],
+  "macro_task_metrics": {
+    "20": {
+      "C3": {
+        "mean_gain_sec": 0.0,
+        "mean_regret_sec": 77.2831443504051,
+        "top1_hit": 0.18055555555555555,
+        "override_rate": 0.0,
+        "harm_gt40_per_state": 0.0,
+        "harm_gt40_per_override": 0.0,
+        "mean_excess_harm_gt40": 0.0
+      },
+      "E0_FULL": {
+        "mean_gain_sec": 6.215024594907405,
+        "mean_regret_sec": 71.06811975549769,
+        "top1_hit": 0.18055555555555555,
+        "override_rate": 0.798611111111111,
+        "harm_gt40_per_state": 0.2222222222222222,
+        "harm_gt40_per_override": 0.2770170454545455,
+        "mean_excess_harm_gt40": 9.9959716796875
+      },
+      "E0_MATCHED": {
+        "mean_gain_sec": 6.562332718460649,
+        "mean_regret_sec": 70.72081163194444,
+        "top1_hit": 0.1875,
+        "override_rate": 0.7222222222222222,
+        "harm_gt40_per_state": 0.2222222222222222,
+        "harm_gt40_per_override": 0.30046546590664236,
+        "mean_excess_harm_gt40": 10.524219654224536
+      },
+      "VQ_MEAN": {
+        "mean_gain_sec": -5.1872377748842595,
+        "mean_regret_sec": 82.47038212528935,
+        "top1_hit": 0.11805555555555555,
+        "override_rate": 0.4861111111111111,
+        "harm_gt40_per_state": 0.18055555555555555,
+        "harm_gt40_per_override": 0.3709345479082321,
+        "mean_excess_harm_gt40": 9.395082826967592
+      },
+      "RESID_OOF25": {
+        "mean_gain_sec": 7.026593243634257,
+        "mean_regret_sec": 70.25655110677084,
+        "top1_hit": 0.19444444444444442,
+        "override_rate": 0.7569444444444444,
+        "harm_gt40_per_state": 0.2222222222222222,
+        "harm_gt40_per_override": 0.29191745036572625,
+        "mean_excess_harm_gt40": 9.873494466145832
+      },
+      "RESID_OOF50": {
+        "mean_gain_sec": 8.466489438657407,
+        "mean_regret_sec": 68.81665491174769,
+        "top1_hit": 0.2222222222222222,
+        "override_rate": 0.7083333333333333,
+        "harm_gt40_per_state": 0.19444444444444442,
+        "harm_gt40_per_override": 0.2637605042016807,
+        "mean_excess_harm_gt40": 8.40491626880787
+      },
+      "PAIR_RANK": {
+        "mean_gain_sec": -0.2708468967013893,
+        "mean_regret_sec": 77.55399124710648,
+        "top1_hit": 0.125,
+        "override_rate": 0.8333333333333333,
+        "harm_gt40_per_state": 0.26388888888888884,
+        "harm_gt40_per_override": 0.3142600574712644,
+        "mean_excess_harm_gt40": 13.770738389756945
+      },
+      "PAIR_REGRET": {
+        "mean_gain_sec": 4.509137188946759,
+        "mean_regret_sec": 72.77400716145833,
+        "top1_hit": 0.1388888888888889,
+        "override_rate": 0.8263888888888888,
+        "harm_gt40_per_state": 0.24305555555555555,
+        "harm_gt40_per_override": 0.2902452791461412,
+        "mean_excess_harm_gt40": 13.001695421006945
+      },
+      "E0_RISK20": {
+        "mean_gain_sec": 0.0,
+        "mean_regret_sec": 77.2831443504051,
+        "top1_hit": 0.18055555555555555,
+        "override_rate": 0.0,
+        "harm_gt40_per_state": 0.0,
+        "harm_gt40_per_override": 0.0,
+        "mean_excess_harm_gt40": 0.0
+      },
+      "E0_RISK35": {
+        "mean_gain_sec": 2.3992648654513897,
+        "mean_regret_sec": 74.8838794849537,
+        "top1_hit": 0.18055555555555555,
+        "override_rate": 0.3888888888888889,
+        "harm_gt40_per_state": 0.13194444444444445,
+        "harm_gt40_per_override": 0.23655303030303032,
+        "mean_excess_harm_gt40": 7.405381944444444
+      },
+      "RESID25_RISK35": {
+        "mean_gain_sec": 0.3972574869791661,
+        "mean_regret_sec": 76.88588686342594,
+        "top1_hit": 0.18055555555555558,
+        "override_rate": 0.3888888888888889,
+        "harm_gt40_per_state": 0.13194444444444445,
+        "harm_gt40_per_override": 0.24068181818181816,
+        "mean_excess_harm_gt40": 6.5974301938657405
+      },
+      "PAIR_REGRET_RISK35": {
+        "mean_gain_sec": -2.200688114872685,
+        "mean_regret_sec": 79.48383246527777,
+        "top1_hit": 0.1527777777777778,
+        "override_rate": 0.4513888888888889,
+        "harm_gt40_per_state": 0.15277777777777776,
+        "harm_gt40_per_override": 0.23964285714285716,
+        "mean_excess_harm_gt40": 9.241608796296296
+      },
+      "E0_SCORE_COVERAGE35": {
+        "mean_gain_sec": 5.580742730034724,
+        "mean_regret_sec": 71.70240162037038,
+        "top1_hit": 0.2013888888888889,
+        "override_rate": 0.3402777777777778,
+        "harm_gt40_per_state": 0.11805555555555555,
+        "harm_gt40_per_override": 0.23322981366459627,
+        "mean_excess_harm_gt40": 4.801703559027778
+      }
+    },
+    "50": {
+      "C3": {
+        "mean_gain_sec": 0.0,
+        "mean_regret_sec": 69.7672752097801,
+        "top1_hit": 0.13194444444444445,
+        "override_rate": 0.0,
+        "harm_gt40_per_state": 0.0,
+        "harm_gt40_per_override": 0.0,
+        "mean_excess_harm_gt40": 0.0
+      },
+      "E0_FULL": {
+        "mean_gain_sec": 1.1011284722222205,
+        "mean_regret_sec": 68.66614673755787,
+        "top1_hit": 0.16666666666666666,
+        "override_rate": 0.798611111111111,
+        "harm_gt40_per_state": 0.2152777777777778,
+        "harm_gt40_per_override": 0.2672537878787879,
+        "mean_excess_harm_gt40": 13.285621925636574
+      },
+      "E0_MATCHED": {
+        "mean_gain_sec": 1.6906557436342586,
+        "mean_regret_sec": 68.07661946614584,
+        "top1_hit": 0.15972222222222224,
+        "override_rate": 0.7222222222222222,
+        "harm_gt40_per_state": 0.2013888888888889,
+        "harm_gt40_per_override": 0.26347794362500243,
+        "mean_excess_harm_gt40": 10.572930230034723
+      },
+      "VQ_MEAN": {
+        "mean_gain_sec": -3.0109365957754637,
+        "mean_regret_sec": 72.77821180555556,
+        "top1_hit": 0.1388888888888889,
+        "override_rate": 0.5833333333333334,
+        "harm_gt40_per_state": 0.1736111111111111,
+        "harm_gt40_per_override": 0.29083013640238703,
+        "mean_excess_harm_gt40": 10.025585033275462
+      },
+      "RESID_OOF25": {
+        "mean_gain_sec": 2.6446578414351842,
+        "mean_regret_sec": 67.1226173683449,
+        "top1_hit": 0.14583333333333334,
+        "override_rate": 0.7777777777777777,
+        "harm_gt40_per_state": 0.2013888888888889,
+        "harm_gt40_per_override": 0.25606514924356005,
+        "mean_excess_harm_gt40": 12.281652379918981
+      },
+      "RESID_OOF50": {
+        "mean_gain_sec": 5.426744249131943,
+        "mean_regret_sec": 64.34053096064815,
+        "top1_hit": 0.1597222222222222,
+        "override_rate": 0.7638888888888888,
+        "harm_gt40_per_state": 0.1875,
+        "harm_gt40_per_override": 0.2403612012987013,
+        "mean_excess_harm_gt40": 11.96201804832176
+      },
+      "PAIR_RANK": {
+        "mean_gain_sec": -12.72990360966435,
+        "mean_regret_sec": 82.49717881944444,
+        "top1_hit": 0.09027777777777779,
+        "override_rate": 0.826388888888889,
+        "harm_gt40_per_state": 0.2708333333333333,
+        "harm_gt40_per_override": 0.3271561771561772,
+        "mean_excess_harm_gt40": 18.425148292824076
+      },
+      "PAIR_REGRET": {
+        "mean_gain_sec": -12.277330186631945,
+        "mean_regret_sec": 82.04460539641204,
+        "top1_hit": 0.10416666666666667,
+        "override_rate": 0.8680555555555555,
+        "harm_gt40_per_state": 0.2569444444444444,
+        "harm_gt40_per_override": 0.29565590659340657,
+        "mean_excess_harm_gt40": 17.854410807291668
+      },
+      "E0_RISK20": {
+        "mean_gain_sec": 0.0,
+        "mean_regret_sec": 69.7672752097801,
+        "top1_hit": 0.13194444444444445,
+        "override_rate": 0.0,
+        "harm_gt40_per_state": 0.0,
+        "harm_gt40_per_override": 0.0,
+        "mean_excess_harm_gt40": 0.0
+      },
+      "E0_RISK35": {
+        "mean_gain_sec": 1.6906557436342586,
+        "mean_regret_sec": 68.07661946614584,
+        "top1_hit": 0.15972222222222224,
+        "override_rate": 0.7222222222222222,
+        "harm_gt40_per_state": 0.2013888888888889,
+        "harm_gt40_per_override": 0.26347794362500243,
+        "mean_excess_harm_gt40": 10.572930230034723
+      },
+      "RESID25_RISK35": {
+        "mean_gain_sec": 2.6446578414351842,
+        "mean_regret_sec": 67.1226173683449,
+        "top1_hit": 0.14583333333333334,
+        "override_rate": 0.7777777777777777,
+        "harm_gt40_per_state": 0.2013888888888889,
+        "harm_gt40_per_override": 0.25606514924356005,
+        "mean_excess_harm_gt40": 12.281652379918981
+      },
+      "PAIR_REGRET_RISK35": {
+        "mean_gain_sec": -12.277330186631945,
+        "mean_regret_sec": 82.04460539641204,
+        "top1_hit": 0.10416666666666667,
+        "override_rate": 0.8680555555555555,
+        "harm_gt40_per_state": 0.2569444444444444,
+        "harm_gt40_per_override": 0.29565590659340657,
+        "mean_excess_harm_gt40": 17.854410807291668
+      },
+      "E0_SCORE_COVERAGE35": {
+        "mean_gain_sec": 1.6906557436342586,
+        "mean_regret_sec": 68.07661946614584,
+        "top1_hit": 0.15972222222222224,
+        "override_rate": 0.7222222222222222,
+        "harm_gt40_per_state": 0.2013888888888889,
+        "harm_gt40_per_override": 0.26347794362500243,
+        "mean_excess_harm_gt40": 10.572930230034723
+      }
+    }
+  },
+  "folds": {
+    "20": {
+      "task_0000": {
+        "counts": {
+          "heldout_task": "task_0000",
+          "n_train_states": 108,
+          "n_test_states": 36,
+          "n_full_one_step_actions": 3014,
+          "n_matched_one_step_actions": 837,
+          "n_multi_step_actions": 837,
+          "exactly_matched_candidate_ids_and_weights": true,
+          "train_tasks": [
+            "task_0001",
+            "task_0002",
+            "task_0003"
+          ],
+          "risk_model_oof": {
+            "n": 837,
+            "harm_prevalence": 0.361276455026455,
+            "brier": 0.22997330710510566,
+            "ece5": 0.004367819368181998,
+            "roc_auc": 0.5412481614282301,
+            "average_precision": 0.40133146313362666,
+            "bins": [
+              {
+                "lower": 0.2,
+                "upper": 0.4,
+                "n": 829,
+                "pred_mean": 0.3608632707511277,
+                "harm_rate": 0.3586575388211722
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.6000000000000001,
+                "n": 8,
+                "pred_mean": 0.4032806269447238,
+                "harm_rate": 0.6271186440677966
+              }
+            ],
+            "calibration_folds": [
+              {
+                "oof_task": "task_0001",
+                "fit_tasks": [
+                  "task_0002",
+                  "task_0003"
+                ],
+                "n_eval_candidates": 281,
+                "n_train_candidates": 556
+              },
+              {
+                "oof_task": "task_0002",
+                "fit_tasks": [
+                  "task_0001",
+                  "task_0003"
+                ],
+                "n_eval_candidates": 279,
+                "n_train_candidates": 558
+              },
+              {
+                "oof_task": "task_0003",
+                "fit_tasks": [
+                  "task_0001",
+                  "task_0002"
+                ],
+                "n_eval_candidates": 277,
+                "n_train_candidates": 560
+              }
+            ],
+            "n_training_candidates": 837,
+            "n_harm_candidates": 301,
+            "note": "Platt scaling on training-task OOF raw scores; three training tasks only"
+          },
+          "coverage_control": {
+            "oof_risk35_coverage": 0.2777777777777778,
+            "score_control_oof_coverage": 0.2777777777777778,
+            "score_control_threshold": 100.7629358499527,
+            "folds": [
+              {
+                "oof_task": "task_0001",
+                "fit_tasks": [
+                  "task_0002",
+                  "task_0003"
+                ],
+                "n_states": 36
+              },
+              {
+                "oof_task": "task_0002",
+                "fit_tasks": [
+                  "task_0001",
+                  "task_0003"
+                ],
+                "n_states": 36
+              },
+              {
+                "oof_task": "task_0003",
+                "fit_tasks": [
+                  "task_0001",
+                  "task_0002"
+                ],
+                "n_states": 36
+              }
+            ]
+          },
+          "oof_residual_folds": [
+            {
+              "oof_task": "task_0001",
+              "fit_tasks": [
+                "task_0002",
+                "task_0003"
+              ],
+              "n_one_step_training_actions": 2004,
+              "n_selected_actions": 281
+            },
+            {
+              "oof_task": "task_0002",
+              "fit_tasks": [
+                "task_0001",
+                "task_0003"
+              ],
+              "n_one_step_training_actions": 2009,
+              "n_selected_actions": 279
+            },
+            {
+              "oof_task": "task_0003",
+              "fit_tasks": [
+                "task_0001",
+                "task_0002"
+              ],
+              "n_one_step_training_actions": 2015,
+              "n_selected_actions": 277
+            }
+          ],
+          "rank_training_pairs": 3648,
+          "rank_regret_training_pairs": 3648,
+          "seed": 45,
+          "trees": 160
+        },
+        "metrics": {
+          "C3": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 115.71967230902777,
+            "top1_hit": 0.16666666666666666,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_FULL": {
+            "n_states": 36,
+            "mean_gain_sec": 28.247504340277768,
+            "mean_regret_sec": 87.47216796875001,
+            "top1_hit": 0.2222222222222222,
+            "override_rate": 0.6944444444444444,
+            "overrides": 25,
+            "negative_overrides": 9,
+            "harm_gt40_per_state": 0.1388888888888889,
+            "harm_gt40_per_override": 0.2,
+            "mean_excess_harm_gt40": 11.179597077546296
+          },
+          "E0_MATCHED": {
+            "n_states": 36,
+            "mean_gain_sec": 26.564724392361114,
+            "mean_regret_sec": 89.15494791666667,
+            "top1_hit": 0.25,
+            "override_rate": 0.4722222222222222,
+            "overrides": 17,
+            "negative_overrides": 6,
+            "harm_gt40_per_state": 0.08333333333333333,
+            "harm_gt40_per_override": 0.17647058823529413,
+            "mean_excess_harm_gt40": 8.797218605324073
+          },
+          "VQ_MEAN": {
+            "n_states": 36,
+            "mean_gain_sec": -7.480378327546295,
+            "mean_regret_sec": 123.20005063657408,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.3611111111111111,
+            "overrides": 13,
+            "negative_overrides": 8,
+            "harm_gt40_per_state": 0.1388888888888889,
+            "harm_gt40_per_override": 0.38461538461538464,
+            "mean_excess_harm_gt40": 9.758011429398149
+          },
+          "RESID_OOF25": {
+            "n_states": 36,
+            "mean_gain_sec": 24.193106192129626,
+            "mean_regret_sec": 91.52656611689815,
+            "top1_hit": 0.2222222222222222,
+            "override_rate": 0.6111111111111112,
+            "overrides": 22,
+            "negative_overrides": 8,
+            "harm_gt40_per_state": 0.1388888888888889,
+            "harm_gt40_per_override": 0.22727272727272727,
+            "mean_excess_harm_gt40": 11.179597077546296
+          },
+          "RESID_OOF50": {
+            "n_states": 36,
+            "mean_gain_sec": 20.03618706597222,
+            "mean_regret_sec": 95.68348524305556,
+            "top1_hit": 0.19444444444444445,
+            "override_rate": 0.4722222222222222,
+            "overrides": 17,
+            "negative_overrides": 5,
+            "harm_gt40_per_state": 0.08333333333333333,
+            "harm_gt40_per_override": 0.17647058823529413,
+            "mean_excess_harm_gt40": 6.99025245949074
+          },
+          "PAIR_RANK": {
+            "n_states": 36,
+            "mean_gain_sec": 25.19388382523148,
+            "mean_regret_sec": 90.52578848379629,
+            "top1_hit": 0.1111111111111111,
+            "override_rate": 0.8333333333333334,
+            "overrides": 30,
+            "negative_overrides": 12,
+            "harm_gt40_per_state": 0.19444444444444445,
+            "harm_gt40_per_override": 0.23333333333333334,
+            "mean_excess_harm_gt40": 13.851562500000002
+          },
+          "PAIR_REGRET": {
+            "n_states": 36,
+            "mean_gain_sec": 25.672923900462962,
+            "mean_regret_sec": 90.04674840856481,
+            "top1_hit": 0.1111111111111111,
+            "override_rate": 0.7777777777777778,
+            "overrides": 28,
+            "negative_overrides": 11,
+            "harm_gt40_per_state": 0.16666666666666666,
+            "harm_gt40_per_override": 0.21428571428571427,
+            "mean_excess_harm_gt40": 13.05931712962963
+          },
+          "E0_RISK20": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 115.71967230902777,
+            "top1_hit": 0.16666666666666666,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": 17.48974609375,
+            "mean_regret_sec": 98.22992621527777,
+            "top1_hit": 0.19444444444444445,
+            "override_rate": 0.2777777777777778,
+            "overrides": 10,
+            "negative_overrides": 3,
+            "harm_gt40_per_state": 0.05555555555555555,
+            "harm_gt40_per_override": 0.2,
+            "mean_excess_harm_gt40": 6.80908203125
+          },
+          "RESID25_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": 9.915816695601851,
+            "mean_regret_sec": 105.80385561342592,
+            "top1_hit": 0.16666666666666666,
+            "override_rate": 0.3055555555555556,
+            "overrides": 11,
+            "negative_overrides": 4,
+            "harm_gt40_per_state": 0.08333333333333333,
+            "harm_gt40_per_override": 0.2727272727272727,
+            "mean_excess_harm_gt40": 7.2008644386574066
+          },
+          "PAIR_REGRET_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": 4.20290798611111,
+            "mean_regret_sec": 111.51676432291667,
+            "top1_hit": 0.1111111111111111,
+            "override_rate": 0.3333333333333333,
+            "overrides": 12,
+            "negative_overrides": 6,
+            "harm_gt40_per_state": 0.08333333333333333,
+            "harm_gt40_per_override": 0.25,
+            "mean_excess_harm_gt40": 7.280381944444445
+          },
+          "E0_SCORE_COVERAGE35": {
+            "n_states": 36,
+            "mean_gain_sec": 11.87127459490741,
+            "mean_regret_sec": 103.84839771412037,
+            "top1_hit": 0.19444444444444445,
+            "override_rate": 0.1388888888888889,
+            "overrides": 5,
+            "negative_overrides": 1,
+            "harm_gt40_per_state": 0.027777777777777776,
+            "harm_gt40_per_override": 0.2,
+            "mean_excess_harm_gt40": 5.2889178240740735
+          }
+        },
+        "candidate_risk_diagnostics": {
+          "n": 284,
+          "harm_prevalence": 0.31746031746031744,
+          "brier": 0.21873916189085976,
+          "ece5": 0.041007808402539155,
+          "roc_auc": 0.5100188499273256,
+          "average_precision": 0.32418929665425794,
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.4,
+              "n": 279,
+              "pred_mean": 0.3576086530118538,
+              "harm_rate": 0.32306915699141847
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.6000000000000001,
+              "n": 5,
+              "pred_mean": 0.40711428922961623,
+              "harm_rate": 0.0
+            }
+          ]
+        },
+        "pairwise_accuracy_including_C3": {
+          "E0_FULL": 0.5481878306878307,
+          "E0_MATCHED": 0.5378042328042328,
+          "VQ_MEAN": 0.5089065255731922,
+          "RESID_OOF25": 0.5434215167548501,
+          "RESID_OOF50": 0.5342151675485008,
+          "PAIR_RANK": 0.5553747795414463,
+          "PAIR_REGRET": 0.5494223985890654
+        }
+      },
+      "task_0001": {
+        "counts": {
+          "heldout_task": "task_0001",
+          "n_train_states": 108,
+          "n_test_states": 36,
+          "n_full_one_step_actions": 3015,
+          "n_matched_one_step_actions": 840,
+          "n_multi_step_actions": 840,
+          "exactly_matched_candidate_ids_and_weights": true,
+          "train_tasks": [
+            "task_0000",
+            "task_0002",
+            "task_0003"
+          ],
+          "risk_model_oof": {
+            "n": 840,
+            "harm_prevalence": 0.3766534391534392,
+            "brier": 0.2347673919072866,
+            "ece5": 9.739878148889991e-05,
+            "roc_auc": 0.49929506780343885,
+            "average_precision": 0.37864346320023445,
+            "bins": [
+              {
+                "lower": 0.2,
+                "upper": 0.4,
+                "n": 840,
+                "pred_mean": 0.3767508379349281,
+                "harm_rate": 0.3766534391534392
+              }
+            ],
+            "calibration_folds": [
+              {
+                "oof_task": "task_0000",
+                "fit_tasks": [
+                  "task_0002",
+                  "task_0003"
+                ],
+                "n_eval_candidates": 284,
+                "n_train_candidates": 556
+              },
+              {
+                "oof_task": "task_0002",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0003"
+                ],
+                "n_eval_candidates": 279,
+                "n_train_candidates": 561
+              },
+              {
+                "oof_task": "task_0003",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0002"
+                ],
+                "n_eval_candidates": 277,
+                "n_train_candidates": 563
+              }
+            ],
+            "n_training_candidates": 840,
+            "n_harm_candidates": 316,
+            "note": "Platt scaling on training-task OOF raw scores; three training tasks only"
+          },
+          "coverage_control": {
+            "oof_risk35_coverage": 0.0,
+            "score_control_oof_coverage": 0.0,
+            "score_control_threshold": 274.8866669946909,
+            "folds": [
+              {
+                "oof_task": "task_0000",
+                "fit_tasks": [
+                  "task_0002",
+                  "task_0003"
+                ],
+                "n_states": 36
+              },
+              {
+                "oof_task": "task_0002",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0003"
+                ],
+                "n_states": 36
+              },
+              {
+                "oof_task": "task_0003",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0002"
+                ],
+                "n_states": 36
+              }
+            ]
+          },
+          "oof_residual_folds": [
+            {
+              "oof_task": "task_0000",
+              "fit_tasks": [
+                "task_0002",
+                "task_0003"
+              ],
+              "n_one_step_training_actions": 2004,
+              "n_selected_actions": 284
+            },
+            {
+              "oof_task": "task_0002",
+              "fit_tasks": [
+                "task_0000",
+                "task_0003"
+              ],
+              "n_one_step_training_actions": 2010,
+              "n_selected_actions": 279
+            },
+            {
+              "oof_task": "task_0003",
+              "fit_tasks": [
+                "task_0000",
+                "task_0002"
+              ],
+              "n_one_step_training_actions": 2016,
+              "n_selected_actions": 277
+            }
+          ],
+          "rank_training_pairs": 3662,
+          "rank_regret_training_pairs": 3662,
+          "seed": 45,
+          "trees": 160
+        },
+        "metrics": {
+          "C3": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 59.35483579282407,
+            "top1_hit": 0.16666666666666666,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_FULL": {
+            "n_states": 36,
+            "mean_gain_sec": 11.620750144675926,
+            "mean_regret_sec": 47.73408564814815,
+            "top1_hit": 0.19444444444444445,
+            "override_rate": 0.9166666666666666,
+            "overrides": 33,
+            "negative_overrides": 15,
+            "harm_gt40_per_state": 0.16666666666666666,
+            "harm_gt40_per_override": 0.18181818181818182,
+            "mean_excess_harm_gt40": 4.9305193865740735
+          },
+          "E0_MATCHED": {
+            "n_states": 36,
+            "mean_gain_sec": 8.860586660879628,
+            "mean_regret_sec": 50.49424913194445,
+            "top1_hit": 0.16666666666666666,
+            "override_rate": 0.9166666666666666,
+            "overrides": 33,
+            "negative_overrides": 15,
+            "harm_gt40_per_state": 0.2222222222222222,
+            "harm_gt40_per_override": 0.24242424242424243,
+            "mean_excess_harm_gt40": 6.301106770833334
+          },
+          "VQ_MEAN": {
+            "n_states": 36,
+            "mean_gain_sec": -6.275499131944446,
+            "mean_regret_sec": 65.6303349247685,
+            "top1_hit": 0.05555555555555555,
+            "override_rate": 0.5,
+            "overrides": 18,
+            "negative_overrides": 11,
+            "harm_gt40_per_state": 0.16666666666666666,
+            "harm_gt40_per_override": 0.3333333333333333,
+            "mean_excess_harm_gt40": 4.563368055555555
+          },
+          "RESID_OOF25": {
+            "n_states": 36,
+            "mean_gain_sec": 10.536404079861109,
+            "mean_regret_sec": 48.81843171296296,
+            "top1_hit": 0.19444444444444445,
+            "override_rate": 0.9166666666666666,
+            "overrides": 33,
+            "negative_overrides": 15,
+            "harm_gt40_per_state": 0.19444444444444445,
+            "harm_gt40_per_override": 0.21212121212121213,
+            "mean_excess_harm_gt40": 5.529803240740741
+          },
+          "RESID_OOF50": {
+            "n_states": 36,
+            "mean_gain_sec": 6.487214265046296,
+            "mean_regret_sec": 52.86762152777778,
+            "top1_hit": 0.19444444444444445,
+            "override_rate": 0.8888888888888888,
+            "overrides": 32,
+            "negative_overrides": 16,
+            "harm_gt40_per_state": 0.2222222222222222,
+            "harm_gt40_per_override": 0.25,
+            "mean_excess_harm_gt40": 7.126808449074073
+          },
+          "PAIR_RANK": {
+            "n_states": 36,
+            "mean_gain_sec": -0.3335684317129647,
+            "mean_regret_sec": 59.68840422453703,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.8055555555555556,
+            "overrides": 29,
+            "negative_overrides": 12,
+            "harm_gt40_per_state": 0.25,
+            "harm_gt40_per_override": 0.3103448275862069,
+            "mean_excess_harm_gt40": 9.966760706018519
+          },
+          "PAIR_REGRET": {
+            "n_states": 36,
+            "mean_gain_sec": 9.685673466435183,
+            "mean_regret_sec": 49.6691623263889,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.8333333333333334,
+            "overrides": 30,
+            "negative_overrides": 12,
+            "harm_gt40_per_state": 0.19444444444444445,
+            "harm_gt40_per_override": 0.23333333333333334,
+            "mean_excess_harm_gt40": 7.682834201388889
+          },
+          "E0_RISK20": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 59.35483579282407,
+            "top1_hit": 0.16666666666666666,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 59.35483579282407,
+            "top1_hit": 0.16666666666666666,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "RESID25_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 59.35483579282407,
+            "top1_hit": 0.16666666666666666,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "PAIR_REGRET_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 59.35483579282407,
+            "top1_hit": 0.16666666666666666,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_SCORE_COVERAGE35": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 59.35483579282407,
+            "top1_hit": 0.16666666666666666,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          }
+        },
+        "candidate_risk_diagnostics": {
+          "n": 281,
+          "harm_prevalence": 0.27132936507936506,
+          "brier": 0.2086006171892687,
+          "ece5": 0.10472482587626591,
+          "roc_auc": 0.5296829167823003,
+          "average_precision": 0.3379621496863597,
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.4,
+              "n": 281,
+              "pred_mean": 0.376054190955631,
+              "harm_rate": 0.27132936507936506
+            }
+          ]
+        },
+        "pairwise_accuracy_including_C3": {
+          "E0_FULL": 0.5233098177542622,
+          "E0_MATCHED": 0.5381393298059964,
+          "VQ_MEAN": 0.5097957084068195,
+          "RESID_OOF25": 0.5251396237507349,
+          "RESID_OOF50": 0.5267195767195767,
+          "PAIR_RANK": 0.5340388007054675,
+          "PAIR_REGRET": 0.5255070546737214
+        }
+      },
+      "task_0002": {
+        "counts": {
+          "heldout_task": "task_0002",
+          "n_train_states": 108,
+          "n_test_states": 36,
+          "n_full_one_step_actions": 3020,
+          "n_matched_one_step_actions": 842,
+          "n_multi_step_actions": 842,
+          "exactly_matched_candidate_ids_and_weights": true,
+          "train_tasks": [
+            "task_0000",
+            "task_0001",
+            "task_0003"
+          ],
+          "risk_model_oof": {
+            "n": 842,
+            "harm_prevalence": 0.33052248677248675,
+            "brier": 0.21997425094466425,
+            "ece5": 5.850009047181359e-07,
+            "roc_auc": 0.5436060213361809,
+            "average_precision": 0.37086799445469487,
+            "bins": [
+              {
+                "lower": 0.2,
+                "upper": 0.4,
+                "n": 842,
+                "pred_mean": 0.330521901771582,
+                "harm_rate": 0.33052248677248675
+              }
+            ],
+            "calibration_folds": [
+              {
+                "oof_task": "task_0000",
+                "fit_tasks": [
+                  "task_0001",
+                  "task_0003"
+                ],
+                "n_eval_candidates": 284,
+                "n_train_candidates": 558
+              },
+              {
+                "oof_task": "task_0001",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0003"
+                ],
+                "n_eval_candidates": 281,
+                "n_train_candidates": 561
+              },
+              {
+                "oof_task": "task_0003",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0001"
+                ],
+                "n_eval_candidates": 277,
+                "n_train_candidates": 565
+              }
+            ],
+            "n_training_candidates": 842,
+            "n_harm_candidates": 278,
+            "note": "Platt scaling on training-task OOF raw scores; three training tasks only"
+          },
+          "coverage_control": {
+            "oof_risk35_coverage": 0.6018518518518519,
+            "score_control_oof_coverage": 0.6018518518518519,
+            "score_control_threshold": 50.28364620305363,
+            "folds": [
+              {
+                "oof_task": "task_0000",
+                "fit_tasks": [
+                  "task_0001",
+                  "task_0003"
+                ],
+                "n_states": 36
+              },
+              {
+                "oof_task": "task_0001",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0003"
+                ],
+                "n_states": 36
+              },
+              {
+                "oof_task": "task_0003",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0001"
+                ],
+                "n_states": 36
+              }
+            ]
+          },
+          "oof_residual_folds": [
+            {
+              "oof_task": "task_0000",
+              "fit_tasks": [
+                "task_0001",
+                "task_0003"
+              ],
+              "n_one_step_training_actions": 2009,
+              "n_selected_actions": 284
+            },
+            {
+              "oof_task": "task_0001",
+              "fit_tasks": [
+                "task_0000",
+                "task_0003"
+              ],
+              "n_one_step_training_actions": 2010,
+              "n_selected_actions": 281
+            },
+            {
+              "oof_task": "task_0003",
+              "fit_tasks": [
+                "task_0000",
+                "task_0001"
+              ],
+              "n_one_step_training_actions": 2021,
+              "n_selected_actions": 277
+            }
+          ],
+          "rank_training_pairs": 3678,
+          "rank_regret_training_pairs": 3678,
+          "seed": 45,
+          "trees": 160
+        },
+        "metrics": {
+          "C3": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 77.9066478587963,
+            "top1_hit": 0.19444444444444445,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_FULL": {
+            "n_states": 36,
+            "mean_gain_sec": 4.64771412037037,
+            "mean_regret_sec": 73.25893373842592,
+            "top1_hit": 0.2222222222222222,
+            "override_rate": 0.6944444444444444,
+            "overrides": 25,
+            "negative_overrides": 13,
+            "harm_gt40_per_state": 0.2222222222222222,
+            "harm_gt40_per_override": 0.32,
+            "mean_excess_harm_gt40": 6.068739149305555
+          },
+          "E0_MATCHED": {
+            "n_states": 36,
+            "mean_gain_sec": -0.012207031249997434,
+            "mean_regret_sec": 77.9188548900463,
+            "top1_hit": 0.25,
+            "override_rate": 0.7777777777777778,
+            "overrides": 28,
+            "negative_overrides": 14,
+            "harm_gt40_per_state": 0.25,
+            "harm_gt40_per_override": 0.32142857142857145,
+            "mean_excess_harm_gt40": 14.414496527777779
+          },
+          "VQ_MEAN": {
+            "n_states": 36,
+            "mean_gain_sec": 3.6637369791666665,
+            "mean_regret_sec": 74.24291087962963,
+            "top1_hit": 0.25,
+            "override_rate": 0.5277777777777778,
+            "overrides": 19,
+            "negative_overrides": 10,
+            "harm_gt40_per_state": 0.16666666666666666,
+            "harm_gt40_per_override": 0.3157894736842105,
+            "mean_excess_harm_gt40": 7.164677372685184
+          },
+          "RESID_OOF25": {
+            "n_states": 36,
+            "mean_gain_sec": 8.761140046296298,
+            "mean_regret_sec": 69.14550781250001,
+            "top1_hit": 0.25,
+            "override_rate": 0.6944444444444444,
+            "overrides": 25,
+            "negative_overrides": 13,
+            "harm_gt40_per_state": 0.19444444444444445,
+            "harm_gt40_per_override": 0.28,
+            "mean_excess_harm_gt40": 4.5172345196759265
+          },
+          "RESID_OOF50": {
+            "n_states": 36,
+            "mean_gain_sec": 17.449417679398145,
+            "mean_regret_sec": 60.45723017939815,
+            "top1_hit": 0.3611111111111111,
+            "override_rate": 0.6944444444444444,
+            "overrides": 25,
+            "negative_overrides": 10,
+            "harm_gt40_per_state": 0.1388888888888889,
+            "harm_gt40_per_override": 0.2,
+            "mean_excess_harm_gt40": 2.863371672453704
+          },
+          "PAIR_RANK": {
+            "n_states": 36,
+            "mean_gain_sec": -21.207429108796298,
+            "mean_regret_sec": 99.1140769675926,
+            "top1_hit": 0.1111111111111111,
+            "override_rate": 0.8888888888888888,
+            "overrides": 32,
+            "negative_overrides": 23,
+            "harm_gt40_per_state": 0.3888888888888889,
+            "harm_gt40_per_override": 0.4375,
+            "mean_excess_harm_gt40": 18.25830078125
+          },
+          "PAIR_REGRET": {
+            "n_states": 36,
+            "mean_gain_sec": -13.540762442129632,
+            "mean_regret_sec": 91.44741030092592,
+            "top1_hit": 0.16666666666666666,
+            "override_rate": 0.8888888888888888,
+            "overrides": 32,
+            "negative_overrides": 21,
+            "harm_gt40_per_state": 0.3888888888888889,
+            "harm_gt40_per_override": 0.4375,
+            "mean_excess_harm_gt40": 18.25830078125
+          },
+          "E0_RISK20": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 77.9066478587963,
+            "top1_hit": 0.19444444444444445,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": 1.9634331597222234,
+            "mean_regret_sec": 75.94321469907408,
+            "top1_hit": 0.2777777777777778,
+            "override_rate": 0.6666666666666666,
+            "overrides": 24,
+            "negative_overrides": 11,
+            "harm_gt40_per_state": 0.19444444444444445,
+            "harm_gt40_per_override": 0.2916666666666667,
+            "mean_excess_harm_gt40": 13.714970341435183
+          },
+          "RESID25_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": 8.340223524305555,
+            "mean_regret_sec": 69.56642433449075,
+            "top1_hit": 0.2777777777777778,
+            "override_rate": 0.5555555555555556,
+            "overrides": 20,
+            "negative_overrides": 10,
+            "harm_gt40_per_state": 0.1388888888888889,
+            "harm_gt40_per_override": 0.25,
+            "mean_excess_harm_gt40": 3.8177083333333335
+          },
+          "PAIR_REGRET_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": -9.559769241898149,
+            "mean_regret_sec": 87.46641710069444,
+            "top1_hit": 0.19444444444444445,
+            "override_rate": 0.7777777777777778,
+            "overrides": 28,
+            "negative_overrides": 17,
+            "harm_gt40_per_state": 0.3333333333333333,
+            "harm_gt40_per_override": 0.42857142857142855,
+            "mean_excess_harm_gt40": 17.12496383101852
+          },
+          "E0_SCORE_COVERAGE35": {
+            "n_states": 36,
+            "mean_gain_sec": 12.266908998842595,
+            "mean_regret_sec": 65.63973885995371,
+            "top1_hit": 0.3055555555555556,
+            "override_rate": 0.6388888888888888,
+            "overrides": 23,
+            "negative_overrides": 11,
+            "harm_gt40_per_state": 0.19444444444444445,
+            "harm_gt40_per_override": 0.30434782608695654,
+            "mean_excess_harm_gt40": 5.322735821759259
+          }
+        },
+        "candidate_risk_diagnostics": {
+          "n": 279,
+          "harm_prevalence": 0.4097222222222222,
+          "brier": 0.25181418757134366,
+          "ece5": 0.07948694625073899,
+          "roc_auc": 0.3830661077990519,
+          "average_precision": 0.359784219366634,
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.4,
+              "n": 279,
+              "pred_mean": 0.3302352759714832,
+              "harm_rate": 0.4097222222222222
+            }
+          ]
+        },
+        "pairwise_accuracy_including_C3": {
+          "E0_FULL": 0.5594650205761317,
+          "E0_MATCHED": 0.5662992357436801,
+          "VQ_MEAN": 0.5207892416225749,
+          "RESID_OOF25": 0.5576131687242797,
+          "RESID_OOF50": 0.5533068783068784,
+          "PAIR_RANK": 0.5577454438565551,
+          "PAIR_REGRET": 0.5563932980599647
+        }
+      },
+      "task_0003": {
+        "counts": {
+          "heldout_task": "task_0003",
+          "n_train_states": 108,
+          "n_test_states": 36,
+          "n_full_one_step_actions": 3026,
+          "n_matched_one_step_actions": 844,
+          "n_multi_step_actions": 844,
+          "exactly_matched_candidate_ids_and_weights": true,
+          "train_tasks": [
+            "task_0000",
+            "task_0001",
+            "task_0002"
+          ],
+          "risk_model_oof": {
+            "n": 844,
+            "harm_prevalence": 0.33283730158730157,
+            "brier": 0.2214227255233783,
+            "ece5": 2.103400934427846e-06,
+            "roc_auc": 0.5337534033737337,
+            "average_precision": 0.3686247815103856,
+            "bins": [
+              {
+                "lower": 0.2,
+                "upper": 0.4,
+                "n": 844,
+                "pred_mean": 0.33283519818636714,
+                "harm_rate": 0.33283730158730157
+              }
+            ],
+            "calibration_folds": [
+              {
+                "oof_task": "task_0000",
+                "fit_tasks": [
+                  "task_0001",
+                  "task_0002"
+                ],
+                "n_eval_candidates": 284,
+                "n_train_candidates": 560
+              },
+              {
+                "oof_task": "task_0001",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0002"
+                ],
+                "n_eval_candidates": 281,
+                "n_train_candidates": 563
+              },
+              {
+                "oof_task": "task_0002",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0001"
+                ],
+                "n_eval_candidates": 279,
+                "n_train_candidates": 565
+              }
+            ],
+            "n_training_candidates": 844,
+            "n_harm_candidates": 281,
+            "note": "Platt scaling on training-task OOF raw scores; three training tasks only"
+          },
+          "coverage_control": {
+            "oof_risk35_coverage": 0.7685185185185185,
+            "score_control_oof_coverage": 0.7685185185185185,
+            "score_control_threshold": 24.824659574184995,
+            "folds": [
+              {
+                "oof_task": "task_0000",
+                "fit_tasks": [
+                  "task_0001",
+                  "task_0002"
+                ],
+                "n_states": 36
+              },
+              {
+                "oof_task": "task_0001",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0002"
+                ],
+                "n_states": 36
+              },
+              {
+                "oof_task": "task_0002",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0001"
+                ],
+                "n_states": 36
+              }
+            ]
+          },
+          "oof_residual_folds": [
+            {
+              "oof_task": "task_0000",
+              "fit_tasks": [
+                "task_0001",
+                "task_0002"
+              ],
+              "n_one_step_training_actions": 2015,
+              "n_selected_actions": 284
+            },
+            {
+              "oof_task": "task_0001",
+              "fit_tasks": [
+                "task_0000",
+                "task_0002"
+              ],
+              "n_one_step_training_actions": 2016,
+              "n_selected_actions": 281
+            },
+            {
+              "oof_task": "task_0002",
+              "fit_tasks": [
+                "task_0000",
+                "task_0001"
+              ],
+              "n_one_step_training_actions": 2021,
+              "n_selected_actions": 279
+            }
+          ],
+          "rank_training_pairs": 3694,
+          "rank_regret_training_pairs": 3694,
+          "seed": 45,
+          "trees": 160
+        },
+        "metrics": {
+          "C3": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 56.15142144097222,
+            "top1_hit": 0.19444444444444445,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_FULL": {
+            "n_states": 36,
+            "mean_gain_sec": -19.655870225694443,
+            "mean_regret_sec": 75.80729166666667,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.8888888888888888,
+            "overrides": 32,
+            "negative_overrides": 21,
+            "harm_gt40_per_state": 0.3611111111111111,
+            "harm_gt40_per_override": 0.40625,
+            "mean_excess_harm_gt40": 17.805031105324073
+          },
+          "E0_MATCHED": {
+            "n_states": 36,
+            "mean_gain_sec": -9.163773148148147,
+            "mean_regret_sec": 65.31519458912037,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.7222222222222222,
+            "overrides": 26,
+            "negative_overrides": 15,
+            "harm_gt40_per_state": 0.3333333333333333,
+            "harm_gt40_per_override": 0.46153846153846156,
+            "mean_excess_harm_gt40": 12.584056712962964
+          },
+          "VQ_MEAN": {
+            "n_states": 36,
+            "mean_gain_sec": -10.656810619212962,
+            "mean_regret_sec": 66.80823206018518,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.5555555555555556,
+            "overrides": 20,
+            "negative_overrides": 10,
+            "harm_gt40_per_state": 0.25,
+            "harm_gt40_per_override": 0.45,
+            "mean_excess_harm_gt40": 16.09427445023148
+          },
+          "RESID_OOF25": {
+            "n_states": 36,
+            "mean_gain_sec": -15.384277343750004,
+            "mean_regret_sec": 71.53569878472223,
+            "top1_hit": 0.1111111111111111,
+            "override_rate": 0.8055555555555556,
+            "overrides": 29,
+            "negative_overrides": 17,
+            "harm_gt40_per_state": 0.3611111111111111,
+            "harm_gt40_per_override": 0.4482758620689655,
+            "mean_excess_harm_gt40": 18.267343026620367
+          },
+          "RESID_OOF50": {
+            "n_states": 36,
+            "mean_gain_sec": -10.106861255787036,
+            "mean_regret_sec": 66.25828269675927,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.7777777777777778,
+            "overrides": 28,
+            "negative_overrides": 15,
+            "harm_gt40_per_state": 0.3333333333333333,
+            "harm_gt40_per_override": 0.42857142857142855,
+            "mean_excess_harm_gt40": 16.639232494212962
+          },
+          "PAIR_RANK": {
+            "n_states": 36,
+            "mean_gain_sec": -4.736273871527775,
+            "mean_regret_sec": 60.887695312499986,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.8055555555555556,
+            "overrides": 29,
+            "negative_overrides": 17,
+            "harm_gt40_per_state": 0.2222222222222222,
+            "harm_gt40_per_override": 0.27586206896551724,
+            "mean_excess_harm_gt40": 13.006329571759258
+          },
+          "PAIR_REGRET": {
+            "n_states": 36,
+            "mean_gain_sec": -3.7812861689814787,
+            "mean_regret_sec": 59.932707609953695,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.8055555555555556,
+            "overrides": 29,
+            "negative_overrides": 17,
+            "harm_gt40_per_state": 0.2222222222222222,
+            "harm_gt40_per_override": 0.27586206896551724,
+            "mean_excess_harm_gt40": 13.006329571759258
+          },
+          "E0_RISK20": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 56.15142144097222,
+            "top1_hit": 0.19444444444444445,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": -9.856119791666666,
+            "mean_regret_sec": 66.00754123263887,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.6111111111111112,
+            "overrides": 22,
+            "negative_overrides": 13,
+            "harm_gt40_per_state": 0.2777777777777778,
+            "harm_gt40_per_override": 0.45454545454545453,
+            "mean_excess_harm_gt40": 9.097475405092592
+          },
+          "RESID25_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": -16.66701027199074,
+            "mean_regret_sec": 72.81843171296298,
+            "top1_hit": 0.1111111111111111,
+            "override_rate": 0.6944444444444444,
+            "overrides": 25,
+            "negative_overrides": 15,
+            "harm_gt40_per_state": 0.3055555555555556,
+            "harm_gt40_per_override": 0.44,
+            "mean_excess_harm_gt40": 15.37114800347222
+          },
+          "PAIR_REGRET_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": -3.4458912037037024,
+            "mean_regret_sec": 59.59731264467592,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.6944444444444444,
+            "overrides": 25,
+            "negative_overrides": 14,
+            "harm_gt40_per_state": 0.19444444444444445,
+            "harm_gt40_per_override": 0.28,
+            "mean_excess_harm_gt40": 12.561089409722221
+          },
+          "E0_SCORE_COVERAGE35": {
+            "n_states": 36,
+            "mean_gain_sec": -1.8152126736111098,
+            "mean_regret_sec": 57.96663411458334,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.5833333333333334,
+            "overrides": 21,
+            "negative_overrides": 11,
+            "harm_gt40_per_state": 0.25,
+            "harm_gt40_per_override": 0.42857142857142855,
+            "mean_excess_harm_gt40": 8.595160590277779
+          }
+        },
+        "candidate_risk_diagnostics": {
+          "n": 277,
+          "harm_prevalence": 0.4027777777777778,
+          "brier": 0.24630825520844463,
+          "ece5": 0.06833914124103019,
+          "roc_auc": 0.45798487799289733,
+          "average_precision": 0.3734722577861628,
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.4,
+              "n": 277,
+              "pred_mean": 0.3344386365367476,
+              "harm_rate": 0.4027777777777778
+            }
+          ]
+        },
+        "pairwise_accuracy_including_C3": {
+          "E0_FULL": 0.5311948853615521,
+          "E0_MATCHED": 0.5354717813051146,
+          "VQ_MEAN": 0.5267857142857142,
+          "RESID_OOF25": 0.5335097001763669,
+          "RESID_OOF50": 0.5279541446208114,
+          "PAIR_RANK": 0.51005291005291,
+          "PAIR_REGRET": 0.5084876543209876
+        }
+      }
+    },
+    "50": {
+      "task_0000": {
+        "counts": {
+          "heldout_task": "task_0000",
+          "n_train_states": 108,
+          "n_test_states": 36,
+          "n_full_one_step_actions": 3014,
+          "n_matched_one_step_actions": 837,
+          "n_multi_step_actions": 837,
+          "exactly_matched_candidate_ids_and_weights": true,
+          "train_tasks": [
+            "task_0001",
+            "task_0002",
+            "task_0003"
+          ],
+          "risk_model_oof": {
+            "n": 837,
+            "harm_prevalence": 0.2953042328042328,
+            "brier": 0.2062413437259257,
+            "ece5": 7.174189251429874e-05,
+            "roc_auc": 0.5861098076020652,
+            "average_precision": 0.3588606426728357,
+            "bins": [
+              {
+                "lower": 0.2,
+                "upper": 0.4,
+                "n": 837,
+                "pred_mean": 0.2953759746967471,
+                "harm_rate": 0.2953042328042328
+              }
+            ],
+            "calibration_folds": [
+              {
+                "oof_task": "task_0001",
+                "fit_tasks": [
+                  "task_0002",
+                  "task_0003"
+                ],
+                "n_eval_candidates": 281,
+                "n_train_candidates": 556
+              },
+              {
+                "oof_task": "task_0002",
+                "fit_tasks": [
+                  "task_0001",
+                  "task_0003"
+                ],
+                "n_eval_candidates": 279,
+                "n_train_candidates": 558
+              },
+              {
+                "oof_task": "task_0003",
+                "fit_tasks": [
+                  "task_0001",
+                  "task_0002"
+                ],
+                "n_eval_candidates": 277,
+                "n_train_candidates": 560
+              }
+            ],
+            "n_training_candidates": 837,
+            "n_harm_candidates": 248,
+            "note": "Platt scaling on training-task OOF raw scores; three training tasks only"
+          },
+          "coverage_control": {
+            "oof_risk35_coverage": 0.8055555555555556,
+            "score_control_oof_coverage": 0.8055555555555556,
+            "score_control_threshold": 0.0,
+            "folds": [
+              {
+                "oof_task": "task_0001",
+                "fit_tasks": [
+                  "task_0002",
+                  "task_0003"
+                ],
+                "n_states": 36
+              },
+              {
+                "oof_task": "task_0002",
+                "fit_tasks": [
+                  "task_0001",
+                  "task_0003"
+                ],
+                "n_states": 36
+              },
+              {
+                "oof_task": "task_0003",
+                "fit_tasks": [
+                  "task_0001",
+                  "task_0002"
+                ],
+                "n_states": 36
+              }
+            ]
+          },
+          "oof_residual_folds": [
+            {
+              "oof_task": "task_0001",
+              "fit_tasks": [
+                "task_0002",
+                "task_0003"
+              ],
+              "n_one_step_training_actions": 2004,
+              "n_selected_actions": 281
+            },
+            {
+              "oof_task": "task_0002",
+              "fit_tasks": [
+                "task_0001",
+                "task_0003"
+              ],
+              "n_one_step_training_actions": 2009,
+              "n_selected_actions": 279
+            },
+            {
+              "oof_task": "task_0003",
+              "fit_tasks": [
+                "task_0001",
+                "task_0002"
+              ],
+              "n_one_step_training_actions": 2015,
+              "n_selected_actions": 277
+            }
+          ],
+          "rank_training_pairs": 3649,
+          "rank_regret_training_pairs": 3649,
+          "seed": 45,
+          "trees": 160
+        },
+        "metrics": {
+          "C3": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 90.33150679976852,
+            "top1_hit": 0.1111111111111111,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_FULL": {
+            "n_states": 36,
+            "mean_gain_sec": 16.609628182870367,
+            "mean_regret_sec": 73.72187861689815,
+            "top1_hit": 0.25,
+            "override_rate": 0.6944444444444444,
+            "overrides": 25,
+            "negative_overrides": 10,
+            "harm_gt40_per_state": 0.1111111111111111,
+            "harm_gt40_per_override": 0.16,
+            "mean_excess_harm_gt40": 14.484302662037035
+          },
+          "E0_MATCHED": {
+            "n_states": 36,
+            "mean_gain_sec": 15.965621383101851,
+            "mean_regret_sec": 74.36588541666667,
+            "top1_hit": 0.2222222222222222,
+            "override_rate": 0.4722222222222222,
+            "overrides": 17,
+            "negative_overrides": 6,
+            "harm_gt40_per_state": 0.027777777777777776,
+            "harm_gt40_per_override": 0.058823529411764705,
+            "mean_excess_harm_gt40": 6.451822916666667
+          },
+          "VQ_MEAN": {
+            "n_states": 36,
+            "mean_gain_sec": -6.09403935185185,
+            "mean_regret_sec": 96.42554615162038,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.6388888888888888,
+            "overrides": 23,
+            "negative_overrides": 11,
+            "harm_gt40_per_state": 0.16666666666666666,
+            "harm_gt40_per_override": 0.2608695652173913,
+            "mean_excess_harm_gt40": 13.182671440972221
+          },
+          "RESID_OOF25": {
+            "n_states": 36,
+            "mean_gain_sec": 30.675528067129626,
+            "mean_regret_sec": 59.655978732638886,
+            "top1_hit": 0.25,
+            "override_rate": 0.6388888888888888,
+            "overrides": 23,
+            "negative_overrides": 6,
+            "harm_gt40_per_state": 0.05555555555555555,
+            "harm_gt40_per_override": 0.08695652173913043,
+            "mean_excess_harm_gt40": 5.423755787037036
+          },
+          "RESID_OOF50": {
+            "n_states": 36,
+            "mean_gain_sec": 28.797327112268515,
+            "mean_regret_sec": 61.5341796875,
+            "top1_hit": 0.2222222222222222,
+            "override_rate": 0.6111111111111112,
+            "overrides": 22,
+            "negative_overrides": 6,
+            "harm_gt40_per_state": 0.05555555555555555,
+            "harm_gt40_per_override": 0.09090909090909091,
+            "mean_excess_harm_gt40": 5.423755787037036
+          },
+          "PAIR_RANK": {
+            "n_states": 36,
+            "mean_gain_sec": -2.204463252314815,
+            "mean_regret_sec": 92.53597005208333,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.7222222222222222,
+            "overrides": 26,
+            "negative_overrides": 13,
+            "harm_gt40_per_state": 0.19444444444444445,
+            "harm_gt40_per_override": 0.2692307692307692,
+            "mean_excess_harm_gt40": 16.586805555555557
+          },
+          "PAIR_REGRET": {
+            "n_states": 36,
+            "mean_gain_sec": -5.660988136574074,
+            "mean_regret_sec": 95.9924949363426,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.7222222222222222,
+            "overrides": 26,
+            "negative_overrides": 13,
+            "harm_gt40_per_state": 0.19444444444444445,
+            "harm_gt40_per_override": 0.2692307692307692,
+            "mean_excess_harm_gt40": 16.586805555555557
+          },
+          "E0_RISK20": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 90.33150679976852,
+            "top1_hit": 0.1111111111111111,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": 15.965621383101851,
+            "mean_regret_sec": 74.36588541666667,
+            "top1_hit": 0.2222222222222222,
+            "override_rate": 0.4722222222222222,
+            "overrides": 17,
+            "negative_overrides": 6,
+            "harm_gt40_per_state": 0.027777777777777776,
+            "harm_gt40_per_override": 0.058823529411764705,
+            "mean_excess_harm_gt40": 6.451822916666667
+          },
+          "RESID25_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": 30.675528067129626,
+            "mean_regret_sec": 59.655978732638886,
+            "top1_hit": 0.25,
+            "override_rate": 0.6388888888888888,
+            "overrides": 23,
+            "negative_overrides": 6,
+            "harm_gt40_per_state": 0.05555555555555555,
+            "harm_gt40_per_override": 0.08695652173913043,
+            "mean_excess_harm_gt40": 5.423755787037036
+          },
+          "PAIR_REGRET_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": -5.660988136574074,
+            "mean_regret_sec": 95.9924949363426,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.7222222222222222,
+            "overrides": 26,
+            "negative_overrides": 13,
+            "harm_gt40_per_state": 0.19444444444444445,
+            "harm_gt40_per_override": 0.2692307692307692,
+            "mean_excess_harm_gt40": 16.586805555555557
+          },
+          "E0_SCORE_COVERAGE35": {
+            "n_states": 36,
+            "mean_gain_sec": 15.965621383101851,
+            "mean_regret_sec": 74.36588541666667,
+            "top1_hit": 0.2222222222222222,
+            "override_rate": 0.4722222222222222,
+            "overrides": 17,
+            "negative_overrides": 6,
+            "harm_gt40_per_state": 0.027777777777777776,
+            "harm_gt40_per_override": 0.058823529411764705,
+            "mean_excess_harm_gt40": 6.451822916666667
+          }
+        },
+        "candidate_risk_diagnostics": {
+          "n": 284,
+          "harm_prevalence": 0.27232142857142855,
+          "brier": 0.19745200820319028,
+          "ece5": 0.020803157051733745,
+          "roc_auc": 0.5219926420100747,
+          "average_precision": 0.3815860174772231,
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.4,
+              "n": 284,
+              "pred_mean": 0.2931245856231623,
+              "harm_rate": 0.27232142857142855
+            }
+          ]
+        },
+        "pairwise_accuracy_including_C3": {
+          "E0_FULL": 0.5197178130511464,
+          "E0_MATCHED": 0.516873897707231,
+          "VQ_MEAN": 0.45458553791887124,
+          "RESID_OOF25": 0.5222266313932981,
+          "RESID_OOF50": 0.510352733686067,
+          "PAIR_RANK": 0.5082671957671958,
+          "PAIR_REGRET": 0.4965608465608466
+        }
+      },
+      "task_0001": {
+        "counts": {
+          "heldout_task": "task_0001",
+          "n_train_states": 108,
+          "n_test_states": 36,
+          "n_full_one_step_actions": 3015,
+          "n_matched_one_step_actions": 840,
+          "n_multi_step_actions": 840,
+          "exactly_matched_candidate_ids_and_weights": true,
+          "train_tasks": [
+            "task_0000",
+            "task_0002",
+            "task_0003"
+          ],
+          "risk_model_oof": {
+            "n": 840,
+            "harm_prevalence": 0.31200396825396826,
+            "brier": 0.2140915917106382,
+            "ece5": 1.791900773867594e-05,
+            "roc_auc": 0.5421687007844181,
+            "average_precision": 0.3348540816853378,
+            "bins": [
+              {
+                "lower": 0.2,
+                "upper": 0.4,
+                "n": 840,
+                "pred_mean": 0.31202188726170693,
+                "harm_rate": 0.31200396825396826
+              }
+            ],
+            "calibration_folds": [
+              {
+                "oof_task": "task_0000",
+                "fit_tasks": [
+                  "task_0002",
+                  "task_0003"
+                ],
+                "n_eval_candidates": 284,
+                "n_train_candidates": 556
+              },
+              {
+                "oof_task": "task_0002",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0003"
+                ],
+                "n_eval_candidates": 279,
+                "n_train_candidates": 561
+              },
+              {
+                "oof_task": "task_0003",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0002"
+                ],
+                "n_eval_candidates": 277,
+                "n_train_candidates": 563
+              }
+            ],
+            "n_training_candidates": 840,
+            "n_harm_candidates": 263,
+            "note": "Platt scaling on training-task OOF raw scores; three training tasks only"
+          },
+          "coverage_control": {
+            "oof_risk35_coverage": 0.7222222222222222,
+            "score_control_oof_coverage": 0.7222222222222222,
+            "score_control_threshold": 0.0,
+            "folds": [
+              {
+                "oof_task": "task_0000",
+                "fit_tasks": [
+                  "task_0002",
+                  "task_0003"
+                ],
+                "n_states": 36
+              },
+              {
+                "oof_task": "task_0002",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0003"
+                ],
+                "n_states": 36
+              },
+              {
+                "oof_task": "task_0003",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0002"
+                ],
+                "n_states": 36
+              }
+            ]
+          },
+          "oof_residual_folds": [
+            {
+              "oof_task": "task_0000",
+              "fit_tasks": [
+                "task_0002",
+                "task_0003"
+              ],
+              "n_one_step_training_actions": 2004,
+              "n_selected_actions": 284
+            },
+            {
+              "oof_task": "task_0002",
+              "fit_tasks": [
+                "task_0000",
+                "task_0003"
+              ],
+              "n_one_step_training_actions": 2010,
+              "n_selected_actions": 279
+            },
+            {
+              "oof_task": "task_0003",
+              "fit_tasks": [
+                "task_0000",
+                "task_0002"
+              ],
+              "n_one_step_training_actions": 2016,
+              "n_selected_actions": 277
+            }
+          ],
+          "rank_training_pairs": 3664,
+          "rank_regret_training_pairs": 3664,
+          "seed": 45,
+          "trees": 160
+        },
+        "metrics": {
+          "C3": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 43.11633752893519,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_FULL": {
+            "n_states": 36,
+            "mean_gain_sec": -4.447374131944446,
+            "mean_regret_sec": 47.56371166087963,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.9166666666666666,
+            "overrides": 33,
+            "negative_overrides": 20,
+            "harm_gt40_per_state": 0.1388888888888889,
+            "harm_gt40_per_override": 0.15151515151515152,
+            "mean_excess_harm_gt40": 6.0587384259259265
+          },
+          "E0_MATCHED": {
+            "n_states": 36,
+            "mean_gain_sec": -9.228334780092593,
+            "mean_regret_sec": 52.34467230902778,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.9166666666666666,
+            "overrides": 33,
+            "negative_overrides": 22,
+            "harm_gt40_per_state": 0.19444444444444445,
+            "harm_gt40_per_override": 0.21212121212121213,
+            "mean_excess_harm_gt40": 8.494176793981483
+          },
+          "VQ_MEAN": {
+            "n_states": 36,
+            "mean_gain_sec": -10.57033058449074,
+            "mean_regret_sec": 53.68666811342593,
+            "top1_hit": 0.1111111111111111,
+            "override_rate": 0.4722222222222222,
+            "overrides": 17,
+            "negative_overrides": 13,
+            "harm_gt40_per_state": 0.1388888888888889,
+            "harm_gt40_per_override": 0.29411764705882354,
+            "mean_excess_harm_gt40": 4.949291087962964
+          },
+          "RESID_OOF25": {
+            "n_states": 36,
+            "mean_gain_sec": -2.858217592592595,
+            "mean_regret_sec": 45.97455512152778,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.9166666666666666,
+            "overrides": 33,
+            "negative_overrides": 21,
+            "harm_gt40_per_state": 0.1111111111111111,
+            "harm_gt40_per_override": 0.12121212121212122,
+            "mean_excess_harm_gt40": 4.881835937500001
+          },
+          "RESID_OOF50": {
+            "n_states": 36,
+            "mean_gain_sec": -4.001157407407408,
+            "mean_regret_sec": 47.117494936342595,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.8888888888888888,
+            "overrides": 32,
+            "negative_overrides": 20,
+            "harm_gt40_per_state": 0.1388888888888889,
+            "harm_gt40_per_override": 0.15625,
+            "mean_excess_harm_gt40": 5.93504050925926
+          },
+          "PAIR_RANK": {
+            "n_states": 36,
+            "mean_gain_sec": -17.401855468750004,
+            "mean_regret_sec": 60.51819299768519,
+            "top1_hit": 0.027777777777777776,
+            "override_rate": 0.9166666666666666,
+            "overrides": 33,
+            "negative_overrides": 21,
+            "harm_gt40_per_state": 0.25,
+            "harm_gt40_per_override": 0.2727272727272727,
+            "mean_excess_harm_gt40": 12.184280960648149
+          },
+          "PAIR_REGRET": {
+            "n_states": 36,
+            "mean_gain_sec": -17.750994646990744,
+            "mean_regret_sec": 60.86733217592593,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.9722222222222222,
+            "overrides": 35,
+            "negative_overrides": 22,
+            "harm_gt40_per_state": 0.25,
+            "harm_gt40_per_override": 0.2571428571428571,
+            "mean_excess_harm_gt40": 12.299262152777779
+          },
+          "E0_RISK20": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 43.11633752893519,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": -9.228334780092593,
+            "mean_regret_sec": 52.34467230902778,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.9166666666666666,
+            "overrides": 33,
+            "negative_overrides": 22,
+            "harm_gt40_per_state": 0.19444444444444445,
+            "harm_gt40_per_override": 0.21212121212121213,
+            "mean_excess_harm_gt40": 8.494176793981483
+          },
+          "RESID25_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": -2.858217592592595,
+            "mean_regret_sec": 45.97455512152778,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.9166666666666666,
+            "overrides": 33,
+            "negative_overrides": 21,
+            "harm_gt40_per_state": 0.1111111111111111,
+            "harm_gt40_per_override": 0.12121212121212122,
+            "mean_excess_harm_gt40": 4.881835937500001
+          },
+          "PAIR_REGRET_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": -17.750994646990744,
+            "mean_regret_sec": 60.86733217592593,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.9722222222222222,
+            "overrides": 35,
+            "negative_overrides": 22,
+            "harm_gt40_per_state": 0.25,
+            "harm_gt40_per_override": 0.2571428571428571,
+            "mean_excess_harm_gt40": 12.299262152777779
+          },
+          "E0_SCORE_COVERAGE35": {
+            "n_states": 36,
+            "mean_gain_sec": -9.228334780092593,
+            "mean_regret_sec": 52.34467230902778,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.9166666666666666,
+            "overrides": 33,
+            "negative_overrides": 22,
+            "harm_gt40_per_state": 0.19444444444444445,
+            "harm_gt40_per_override": 0.21212121212121213,
+            "mean_excess_harm_gt40": 8.494176793981483
+          }
+        },
+        "candidate_risk_diagnostics": {
+          "n": 281,
+          "harm_prevalence": 0.2222222222222222,
+          "brier": 0.18022153488912174,
+          "ece5": 0.08671892931086711,
+          "roc_auc": 0.5209576576166178,
+          "average_precision": 0.23425358639189975,
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.4,
+              "n": 281,
+              "pred_mean": 0.3089411515330893,
+              "harm_rate": 0.2222222222222222
+            }
+          ]
+        },
+        "pairwise_accuracy_including_C3": {
+          "E0_FULL": 0.45992063492063484,
+          "E0_MATCHED": 0.46367577895355666,
+          "VQ_MEAN": 0.46194150499706055,
+          "RESID_OOF25": 0.4638668430335097,
+          "RESID_OOF50": 0.4686507936507936,
+          "PAIR_RANK": 0.4734935332157554,
+          "PAIR_REGRET": 0.47489711934156387
+        }
+      },
+      "task_0002": {
+        "counts": {
+          "heldout_task": "task_0002",
+          "n_train_states": 108,
+          "n_test_states": 36,
+          "n_full_one_step_actions": 3020,
+          "n_matched_one_step_actions": 842,
+          "n_multi_step_actions": 842,
+          "exactly_matched_candidate_ids_and_weights": true,
+          "train_tasks": [
+            "task_0000",
+            "task_0001",
+            "task_0003"
+          ],
+          "risk_model_oof": {
+            "n": 842,
+            "harm_prevalence": 0.27992724867724866,
+            "brier": 0.20015868189662508,
+            "ece5": 2.907136204033378e-05,
+            "roc_auc": 0.5674713804325637,
+            "average_precision": 0.3379297488591182,
+            "bins": [
+              {
+                "lower": 0.2,
+                "upper": 0.4,
+                "n": 842,
+                "pred_mean": 0.279956320039289,
+                "harm_rate": 0.27992724867724866
+              }
+            ],
+            "calibration_folds": [
+              {
+                "oof_task": "task_0000",
+                "fit_tasks": [
+                  "task_0001",
+                  "task_0003"
+                ],
+                "n_eval_candidates": 284,
+                "n_train_candidates": 558
+              },
+              {
+                "oof_task": "task_0001",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0003"
+                ],
+                "n_eval_candidates": 281,
+                "n_train_candidates": 561
+              },
+              {
+                "oof_task": "task_0003",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0001"
+                ],
+                "n_eval_candidates": 277,
+                "n_train_candidates": 565
+              }
+            ],
+            "n_training_candidates": 842,
+            "n_harm_candidates": 236,
+            "note": "Platt scaling on training-task OOF raw scores; three training tasks only"
+          },
+          "coverage_control": {
+            "oof_risk35_coverage": 0.7407407407407407,
+            "score_control_oof_coverage": 0.7407407407407407,
+            "score_control_threshold": 0.0,
+            "folds": [
+              {
+                "oof_task": "task_0000",
+                "fit_tasks": [
+                  "task_0001",
+                  "task_0003"
+                ],
+                "n_states": 36
+              },
+              {
+                "oof_task": "task_0001",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0003"
+                ],
+                "n_states": 36
+              },
+              {
+                "oof_task": "task_0003",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0001"
+                ],
+                "n_states": 36
+              }
+            ]
+          },
+          "oof_residual_folds": [
+            {
+              "oof_task": "task_0000",
+              "fit_tasks": [
+                "task_0001",
+                "task_0003"
+              ],
+              "n_one_step_training_actions": 2009,
+              "n_selected_actions": 284
+            },
+            {
+              "oof_task": "task_0001",
+              "fit_tasks": [
+                "task_0000",
+                "task_0003"
+              ],
+              "n_one_step_training_actions": 2010,
+              "n_selected_actions": 281
+            },
+            {
+              "oof_task": "task_0003",
+              "fit_tasks": [
+                "task_0000",
+                "task_0001"
+              ],
+              "n_one_step_training_actions": 2021,
+              "n_selected_actions": 277
+            }
+          ],
+          "rank_training_pairs": 3681,
+          "rank_regret_training_pairs": 3681,
+          "seed": 45,
+          "trees": 160
+        },
+        "metrics": {
+          "C3": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 86.93858506944444,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_FULL": {
+            "n_states": 36,
+            "mean_gain_sec": 6.725169994212964,
+            "mean_regret_sec": 80.21341507523147,
+            "top1_hit": 0.25,
+            "override_rate": 0.6944444444444444,
+            "overrides": 25,
+            "negative_overrides": 13,
+            "harm_gt40_per_state": 0.2222222222222222,
+            "harm_gt40_per_override": 0.32,
+            "mean_excess_harm_gt40": 13.717050057870372
+          },
+          "E0_MATCHED": {
+            "n_states": 36,
+            "mean_gain_sec": 9.571578414351851,
+            "mean_regret_sec": 77.3670066550926,
+            "top1_hit": 0.25,
+            "override_rate": 0.7777777777777778,
+            "overrides": 28,
+            "negative_overrides": 12,
+            "harm_gt40_per_state": 0.25,
+            "harm_gt40_per_override": 0.32142857142857145,
+            "mean_excess_harm_gt40": 15.104166666666666
+          },
+          "VQ_MEAN": {
+            "n_states": 36,
+            "mean_gain_sec": 22.173213252314813,
+            "mean_regret_sec": 64.76537181712963,
+            "top1_hit": 0.25,
+            "override_rate": 0.5555555555555556,
+            "overrides": 20,
+            "negative_overrides": 6,
+            "harm_gt40_per_state": 0.08333333333333333,
+            "harm_gt40_per_override": 0.15,
+            "mean_excess_harm_gt40": 5.234863281249999
+          },
+          "RESID_OOF25": {
+            "n_states": 36,
+            "mean_gain_sec": 2.4496346932870376,
+            "mean_regret_sec": 84.48895037615742,
+            "top1_hit": 0.19444444444444445,
+            "override_rate": 0.75,
+            "overrides": 27,
+            "negative_overrides": 13,
+            "harm_gt40_per_state": 0.25,
+            "harm_gt40_per_override": 0.3333333333333333,
+            "mean_excess_harm_gt40": 16.98043258101852
+          },
+          "RESID_OOF50": {
+            "n_states": 36,
+            "mean_gain_sec": 14.140751591435185,
+            "mean_regret_sec": 72.79783347800927,
+            "top1_hit": 0.2777777777777778,
+            "override_rate": 0.7777777777777778,
+            "overrides": 28,
+            "negative_overrides": 12,
+            "harm_gt40_per_state": 0.2222222222222222,
+            "harm_gt40_per_override": 0.2857142857142857,
+            "mean_excess_harm_gt40": 16.206669560185187
+          },
+          "PAIR_RANK": {
+            "n_states": 36,
+            "mean_gain_sec": -15.710521556712958,
+            "mean_regret_sec": 102.6491066261574,
+            "top1_hit": 0.05555555555555555,
+            "override_rate": 0.8333333333333334,
+            "overrides": 30,
+            "negative_overrides": 21,
+            "harm_gt40_per_state": 0.3055555555555556,
+            "harm_gt40_per_override": 0.36666666666666664,
+            "mean_excess_harm_gt40": 21.24801070601852
+          },
+          "PAIR_REGRET": {
+            "n_states": 36,
+            "mean_gain_sec": -13.195185908564815,
+            "mean_regret_sec": 100.13377097800925,
+            "top1_hit": 0.05555555555555555,
+            "override_rate": 0.8888888888888888,
+            "overrides": 32,
+            "negative_overrides": 22,
+            "harm_gt40_per_state": 0.2777777777777778,
+            "harm_gt40_per_override": 0.3125,
+            "mean_excess_harm_gt40": 19.31984230324074
+          },
+          "E0_RISK20": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 86.93858506944444,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": 9.571578414351851,
+            "mean_regret_sec": 77.3670066550926,
+            "top1_hit": 0.25,
+            "override_rate": 0.7777777777777778,
+            "overrides": 28,
+            "negative_overrides": 12,
+            "harm_gt40_per_state": 0.25,
+            "harm_gt40_per_override": 0.32142857142857145,
+            "mean_excess_harm_gt40": 15.104166666666666
+          },
+          "RESID25_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": 2.4496346932870376,
+            "mean_regret_sec": 84.48895037615742,
+            "top1_hit": 0.19444444444444445,
+            "override_rate": 0.75,
+            "overrides": 27,
+            "negative_overrides": 13,
+            "harm_gt40_per_state": 0.25,
+            "harm_gt40_per_override": 0.3333333333333333,
+            "mean_excess_harm_gt40": 16.98043258101852
+          },
+          "PAIR_REGRET_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": -13.195185908564815,
+            "mean_regret_sec": 100.13377097800925,
+            "top1_hit": 0.05555555555555555,
+            "override_rate": 0.8888888888888888,
+            "overrides": 32,
+            "negative_overrides": 22,
+            "harm_gt40_per_state": 0.2777777777777778,
+            "harm_gt40_per_override": 0.3125,
+            "mean_excess_harm_gt40": 19.31984230324074
+          },
+          "E0_SCORE_COVERAGE35": {
+            "n_states": 36,
+            "mean_gain_sec": 9.571578414351851,
+            "mean_regret_sec": 77.3670066550926,
+            "top1_hit": 0.25,
+            "override_rate": 0.7777777777777778,
+            "overrides": 28,
+            "negative_overrides": 12,
+            "harm_gt40_per_state": 0.25,
+            "harm_gt40_per_override": 0.32142857142857145,
+            "mean_excess_harm_gt40": 15.104166666666666
+          }
+        },
+        "candidate_risk_diagnostics": {
+          "n": 279,
+          "harm_prevalence": 0.31845238095238093,
+          "brier": 0.21772634250372472,
+          "ece5": 0.03300443202373243,
+          "roc_auc": 0.528612142730822,
+          "average_precision": 0.3449400320736402,
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.4,
+              "n": 279,
+              "pred_mean": 0.2854479489286485,
+              "harm_rate": 0.31845238095238093
+            }
+          ]
+        },
+        "pairwise_accuracy_including_C3": {
+          "E0_FULL": 0.5477807172251618,
+          "E0_MATCHED": 0.5510435038212816,
+          "VQ_MEAN": 0.5369121105232215,
+          "RESID_OOF25": 0.5454438565549675,
+          "RESID_OOF50": 0.5528880070546738,
+          "PAIR_RANK": 0.4411816578483245,
+          "PAIR_REGRET": 0.44464285714285723
+        }
+      },
+      "task_0003": {
+        "counts": {
+          "heldout_task": "task_0003",
+          "n_train_states": 108,
+          "n_test_states": 36,
+          "n_full_one_step_actions": 3026,
+          "n_matched_one_step_actions": 844,
+          "n_multi_step_actions": 844,
+          "exactly_matched_candidate_ids_and_weights": true,
+          "train_tasks": [
+            "task_0000",
+            "task_0001",
+            "task_0002"
+          ],
+          "risk_model_oof": {
+            "n": 844,
+            "harm_prevalence": 0.27099867724867727,
+            "brier": 0.1971545575183109,
+            "ece5": 2.358377523548061e-05,
+            "roc_auc": 0.525630017141431,
+            "average_precision": 0.28894313369773317,
+            "bins": [
+              {
+                "lower": 0.2,
+                "upper": 0.4,
+                "n": 844,
+                "pred_mean": 0.27102226102391275,
+                "harm_rate": 0.27099867724867727
+              }
+            ],
+            "calibration_folds": [
+              {
+                "oof_task": "task_0000",
+                "fit_tasks": [
+                  "task_0001",
+                  "task_0002"
+                ],
+                "n_eval_candidates": 284,
+                "n_train_candidates": 560
+              },
+              {
+                "oof_task": "task_0001",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0002"
+                ],
+                "n_eval_candidates": 281,
+                "n_train_candidates": 563
+              },
+              {
+                "oof_task": "task_0002",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0001"
+                ],
+                "n_eval_candidates": 279,
+                "n_train_candidates": 565
+              }
+            ],
+            "n_training_candidates": 844,
+            "n_harm_candidates": 231,
+            "note": "Platt scaling on training-task OOF raw scores; three training tasks only"
+          },
+          "coverage_control": {
+            "oof_risk35_coverage": 0.8425925925925926,
+            "score_control_oof_coverage": 0.8425925925925926,
+            "score_control_threshold": 0.0,
+            "folds": [
+              {
+                "oof_task": "task_0000",
+                "fit_tasks": [
+                  "task_0001",
+                  "task_0002"
+                ],
+                "n_states": 36
+              },
+              {
+                "oof_task": "task_0001",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0002"
+                ],
+                "n_states": 36
+              },
+              {
+                "oof_task": "task_0002",
+                "fit_tasks": [
+                  "task_0000",
+                  "task_0001"
+                ],
+                "n_states": 36
+              }
+            ]
+          },
+          "oof_residual_folds": [
+            {
+              "oof_task": "task_0000",
+              "fit_tasks": [
+                "task_0001",
+                "task_0002"
+              ],
+              "n_one_step_training_actions": 2015,
+              "n_selected_actions": 284
+            },
+            {
+              "oof_task": "task_0001",
+              "fit_tasks": [
+                "task_0000",
+                "task_0002"
+              ],
+              "n_one_step_training_actions": 2016,
+              "n_selected_actions": 281
+            },
+            {
+              "oof_task": "task_0002",
+              "fit_tasks": [
+                "task_0000",
+                "task_0001"
+              ],
+              "n_one_step_training_actions": 2021,
+              "n_selected_actions": 279
+            }
+          ],
+          "rank_training_pairs": 3697,
+          "rank_regret_training_pairs": 3697,
+          "seed": 45,
+          "trees": 160
+        },
+        "metrics": {
+          "C3": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 58.68267144097222,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_FULL": {
+            "n_states": 36,
+            "mean_gain_sec": -14.482910156250004,
+            "mean_regret_sec": 73.16558159722221,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.8888888888888888,
+            "overrides": 32,
+            "negative_overrides": 19,
+            "harm_gt40_per_state": 0.3888888888888889,
+            "harm_gt40_per_override": 0.4375,
+            "mean_excess_harm_gt40": 18.882396556712962
+          },
+          "E0_MATCHED": {
+            "n_states": 36,
+            "mean_gain_sec": -9.546242042824073,
+            "mean_regret_sec": 68.2289134837963,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.7222222222222222,
+            "overrides": 26,
+            "negative_overrides": 15,
+            "harm_gt40_per_state": 0.3333333333333333,
+            "harm_gt40_per_override": 0.46153846153846156,
+            "mean_excess_harm_gt40": 12.241554542824074
+          },
+          "VQ_MEAN": {
+            "n_states": 36,
+            "mean_gain_sec": -17.552589699074076,
+            "mean_regret_sec": 76.23526114004629,
+            "top1_hit": 0.05555555555555555,
+            "override_rate": 0.6666666666666666,
+            "overrides": 24,
+            "negative_overrides": 14,
+            "harm_gt40_per_state": 0.3055555555555556,
+            "harm_gt40_per_override": 0.4583333333333333,
+            "mean_excess_harm_gt40": 16.735514322916668
+          },
+          "RESID_OOF25": {
+            "n_states": 36,
+            "mean_gain_sec": -19.688313802083332,
+            "mean_regret_sec": 78.37098524305554,
+            "top1_hit": 0.05555555555555555,
+            "override_rate": 0.8055555555555556,
+            "overrides": 29,
+            "negative_overrides": 18,
+            "harm_gt40_per_state": 0.3888888888888889,
+            "harm_gt40_per_override": 0.4827586206896552,
+            "mean_excess_harm_gt40": 21.840585214120367
+          },
+          "RESID_OOF50": {
+            "n_states": 36,
+            "mean_gain_sec": -17.22994429976852,
+            "mean_regret_sec": 75.91261574074073,
+            "top1_hit": 0.05555555555555555,
+            "override_rate": 0.7777777777777778,
+            "overrides": 28,
+            "negative_overrides": 16,
+            "harm_gt40_per_state": 0.3333333333333333,
+            "harm_gt40_per_override": 0.42857142857142855,
+            "mean_excess_harm_gt40": 20.282606336805554
+          },
+          "PAIR_RANK": {
+            "n_states": 36,
+            "mean_gain_sec": -15.602774160879628,
+            "mean_regret_sec": 74.28544560185186,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.8333333333333334,
+            "overrides": 30,
+            "negative_overrides": 16,
+            "harm_gt40_per_state": 0.3333333333333333,
+            "harm_gt40_per_override": 0.4,
+            "mean_excess_harm_gt40": 23.681495949074073
+          },
+          "PAIR_REGRET": {
+            "n_states": 36,
+            "mean_gain_sec": -12.502152054398145,
+            "mean_regret_sec": 71.18482349537037,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.8888888888888888,
+            "overrides": 32,
+            "negative_overrides": 16,
+            "harm_gt40_per_state": 0.3055555555555556,
+            "harm_gt40_per_override": 0.34375,
+            "mean_excess_harm_gt40": 23.21173321759259
+          },
+          "E0_RISK20": {
+            "n_states": 36,
+            "mean_gain_sec": 0.0,
+            "mean_regret_sec": 58.68267144097222,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.0,
+            "overrides": 0,
+            "negative_overrides": 0,
+            "harm_gt40_per_state": 0.0,
+            "harm_gt40_per_override": 0.0,
+            "mean_excess_harm_gt40": 0.0
+          },
+          "E0_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": -9.546242042824073,
+            "mean_regret_sec": 68.2289134837963,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.7222222222222222,
+            "overrides": 26,
+            "negative_overrides": 15,
+            "harm_gt40_per_state": 0.3333333333333333,
+            "harm_gt40_per_override": 0.46153846153846156,
+            "mean_excess_harm_gt40": 12.241554542824074
+          },
+          "RESID25_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": -19.688313802083332,
+            "mean_regret_sec": 78.37098524305554,
+            "top1_hit": 0.05555555555555555,
+            "override_rate": 0.8055555555555556,
+            "overrides": 29,
+            "negative_overrides": 18,
+            "harm_gt40_per_state": 0.3888888888888889,
+            "harm_gt40_per_override": 0.4827586206896552,
+            "mean_excess_harm_gt40": 21.840585214120367
+          },
+          "PAIR_REGRET_RISK35": {
+            "n_states": 36,
+            "mean_gain_sec": -12.502152054398145,
+            "mean_regret_sec": 71.18482349537037,
+            "top1_hit": 0.1388888888888889,
+            "override_rate": 0.8888888888888888,
+            "overrides": 32,
+            "negative_overrides": 16,
+            "harm_gt40_per_state": 0.3055555555555556,
+            "harm_gt40_per_override": 0.34375,
+            "mean_excess_harm_gt40": 23.21173321759259
+          },
+          "E0_SCORE_COVERAGE35": {
+            "n_states": 36,
+            "mean_gain_sec": -9.546242042824073,
+            "mean_regret_sec": 68.2289134837963,
+            "top1_hit": 0.08333333333333333,
+            "override_rate": 0.7222222222222222,
+            "overrides": 26,
+            "negative_overrides": 15,
+            "harm_gt40_per_state": 0.3333333333333333,
+            "harm_gt40_per_override": 0.46153846153846156,
+            "mean_excess_harm_gt40": 12.241554542824074
+          }
+        },
+        "candidate_risk_diagnostics": {
+          "n": 277,
+          "harm_prevalence": 0.34523809523809523,
+          "brier": 0.2308209958931115,
+          "ece5": 0.0723149280726535,
+          "roc_auc": 0.5680512016718913,
+          "average_precision": 0.3848663853631641,
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.4,
+              "n": 277,
+              "pred_mean": 0.27292316716544174,
+              "harm_rate": 0.34523809523809523
+            }
+          ]
+        },
+        "pairwise_accuracy_including_C3": {
+          "E0_FULL": 0.49190917107583787,
+          "E0_MATCHED": 0.5102072310405644,
+          "VQ_MEAN": 0.503505291005291,
+          "RESID_OOF25": 0.48536155202821873,
+          "RESID_OOF50": 0.48408289241622576,
+          "PAIR_RANK": 0.5210537918871253,
+          "PAIR_REGRET": 0.5085978835978836
+        }
+      }
+    }
+  },
+  "risk_target": "1[mean of 3 paired C3-restart road gains < -40 seconds]",
+  "ranking_target": "Within-state mean Road.replay restart gains including actual C3=0",
+  "limits": [
+    "Only original TRAIN tasks; outer task leave-one-out. No R2 validation or internal_test labels.",
+    "LOTO evaluation contains only 4 correlated tasks x 12 states, NOT independent blind validation.",
+    "Search restart surrogate is NOT continuous 30s ALNS action value.",
+    "Three random restarts create noisy mean-harm labels; probability has no formal safety guarantee.",
+    "Platt calibration trained on only 3 outer train tasks; even task-OOF Platt can be unstable.",
+    "Online latency not measured; no 30-second improvement claim.",
+    "All alpha and risk cutoffs were fixed BEFORE LOTO evaluation, never tuned on heldout outcomes."
+  ]
+}
