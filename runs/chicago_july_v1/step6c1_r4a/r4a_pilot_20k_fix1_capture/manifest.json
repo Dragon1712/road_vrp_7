@@ -1,0 +1,46 @@
+{
+  "stage": "R4A-OFFICIAL-C3-PRESELECTION-SNAPSHOT-v1",
+  "arm": "capture",
+  "repo_commit_at_development": "be46ed5c8ff5b3dd657cb65a16f2c44131a3f55b",
+  "task_ids": [
+    "task_0008",
+    "task_0009"
+  ],
+  "scenario_ids": [
+    "2025-07-22_0800",
+    "2025-07-22_1700"
+  ],
+  "seeds": [
+    60,
+    61
+  ],
+  "search_wall_sec": 30,
+  "max_iterations": 20000,
+  "anneal_iterations": 5000,
+  "snapshot_iterations": [
+    500,
+    2500,
+    5000,
+    10000,
+    15000,
+    19000
+  ],
+  "section_only": true,
+  "max_snapshots": 16,
+  "top_k": 12,
+  "source_sha256": "28b8e1ee6bfa68eb697afb364eba7fdcdfe37a8c1b249dd53ce4778f87f9e01d",
+  "road_sha256": "3612b66ad23df15ed409c86f2585755d4393d7a9044c38dd3ee1a30e5b49dd68",
+  "edge_sha256": "23f5e3524e05004e5b597bb4d0edd945321a3ddb516cb939b344acf5e0ab52a1",
+  "solver_sha256": "1d77b5266bd0481d2a5231311efdc83f6dd21a84c40a23e1386f2e7e90086ea1",
+  "section_sha256": "ded8d785a2a817aa2c2fae6ce0064ac95d42de8fe4e8c9b0481bcd2bfbee456e",
+  "collector_sha256": "4857c816aabf25e96634967663762f58fd0e0701a10f707cda1d7d255c8d99e5",
+  "core_sha256": "561dafdcb72ca9df3b557a67798d214ac999a12a8f28ade5c911f436fa503cfc",
+  "alns_version": "7.0.0",
+  "split": "validation",
+  "limitations": [
+    "Unmodified original C3, captured BEFORE operator selection, no perturbations.",
+    "A snapshot by itself does NOT yet enable exact continuation; restoration still requires R4B.",
+    "Capture occurs within 30s search wall budget; JSON flushed afterwards.",
+    "Existing July Validation is DEVELOPMENT data, not blind test."
+  ]
+}
