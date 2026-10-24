@@ -1,0 +1,182 @@
+{
+  "stage": "R4C-CONTINUOUS-SECTION-COUNTERFACTUAL-v1",
+  "unit_spec": {
+    "task_id": "task_0009",
+    "scenario_id": "2025-07-22_1700",
+    "seed": 60,
+    "stop_count": 503,
+    "horizon": 1,
+    "arm": "A042"
+  },
+  "plan": {
+    "c3_identity": [
+      2,
+      0,
+      3
+    ],
+    "alternatives": [
+      {
+        "name": "A029",
+        "action_index": 29,
+        "route": 3,
+        "pos": 2,
+        "size": 3
+      },
+      {
+        "name": "A036",
+        "action_index": 36,
+        "route": 4,
+        "pos": 3,
+        "size": 2
+      },
+      {
+        "name": "A042",
+        "action_index": 42,
+        "route": 4,
+        "pos": 2,
+        "size": 3
+      },
+      {
+        "name": "A001",
+        "action_index": 1,
+        "route": 1,
+        "pos": 1,
+        "size": 2
+      },
+      {
+        "name": "A009",
+        "action_index": 9,
+        "route": 1,
+        "pos": 2,
+        "size": 3
+      },
+      {
+        "name": "A000",
+        "action_index": 0,
+        "route": 1,
+        "pos": 0,
+        "size": 2
+      },
+      {
+        "name": "A006",
+        "action_index": 6,
+        "route": 1,
+        "pos": 6,
+        "size": 2
+      },
+      {
+        "name": "A033",
+        "action_index": 33,
+        "route": 4,
+        "pos": 0,
+        "size": 2
+      }
+    ],
+    "candidate_count": 46,
+    "first_rng_after_original_C3_destroy_sha256": "a7e788c1ec07ba42a4d70646c2f82da112f05280c5f94389bf7d982b5930bfa4",
+    "sampling_state_identifier": "97e3fa53af9d1d151d3e8517",
+    "sampling_seed": 20261019
+  },
+  "result": {
+    "snapshot_spec": {
+      "task_id": "task_0009",
+      "scenario_id": "2025-07-22_1700",
+      "seed": 60,
+      "stop_count": 503
+    },
+    "horizon": 1,
+    "arm": "A042",
+    "first_action_id": [
+      4,
+      2,
+      3
+    ],
+    "first_original_c3_action_id": [
+      2,
+      0,
+      3
+    ],
+    "events": [
+      {
+        "stop_count": 503,
+        "current_route_sha256": "c0823a1acf37557ad9fa57ec440c95c8dc41b56f17fb6a51fd6bf655889ba790",
+        "best_route_sha256": "f0306f71ec25ed4714d83bd7c6ce50e2c6427dd59d9343812f475774c214241e",
+        "current_cost": 3904.2247565530706,
+        "best_cost": 3670.3257667657454,
+        "rng_state_sha256": "3fdcceb258c5e2939f199aba34a969ef96fe4ad6f603e470f09e1fa655ed5559",
+        "roulette_destroy_weights": [
+          1.5176681616057612,
+          1.8401587456551336,
+          2.1669171961412084,
+          0.8566090936488865
+        ],
+        "roulette_repair_weights": [
+          1.5577408338148555,
+          1.7373444567138667
+        ],
+        "anneal_temperature": 418.948339147716,
+        "destroy_index": 3,
+        "repair_index": 0,
+        "candidate_route_sha256": "49b0be79025ea8f93c811cbcfd55f2a4296834b62730b506aad00fe282bb9ff9",
+        "outcome": 2,
+        "anneal_temperature_after": 418.3863543999098,
+        "roulette_destroy_weights_after": [
+          1.5176681616057612,
+          1.8401587456551336,
+          2.1669171961412084,
+          0.8852872749191092
+        ],
+        "roulette_repair_weights_after": [
+          1.4461926670518845,
+          1.7373444567138667
+        ]
+      }
+    ],
+    "end_signature": {
+      "stop_count": 504,
+      "current_route_sha256": "49b0be79025ea8f93c811cbcfd55f2a4296834b62730b506aad00fe282bb9ff9",
+      "best_route_sha256": "f0306f71ec25ed4714d83bd7c6ce50e2c6427dd59d9343812f475774c214241e",
+      "current_cost": 4136.953906476498,
+      "best_cost": 3670.3257667657454,
+      "rng_state_sha256": "50dca836391b66c565a6cb9544921b733838343b7cc6b64b7c556a8d33cb8daa",
+      "roulette_destroy_weights": [
+        1.5176681616057612,
+        1.8401587456551336,
+        2.1669171961412084,
+        0.8852872749191092
+      ],
+      "roulette_repair_weights": [
+        1.4461926670518845,
+        1.7373444567138667
+      ],
+      "anneal_temperature": 418.3863543999098
+    },
+    "best_route_sha256": "f0306f71ec25ed4714d83bd7c6ce50e2c6427dd59d9343812f475774c214241e",
+    "current_route_sha256": "49b0be79025ea8f93c811cbcfd55f2a4296834b62730b506aad00fe282bb9ff9",
+    "static_best_sec": 3670.3257667657454,
+    "static_current_sec": 4136.953906476498,
+    "road_best_sec": 4112.75,
+    "road_current_sec": 4671.25,
+    "first_section_audit": {
+      "substitution_calls": 1,
+      "first_actual_section": [
+        2,
+        0,
+        3
+      ],
+      "first_chosen_section": [
+        4,
+        2,
+        3
+      ],
+      "sham_partial_equal": false,
+      "original_destroy_draws_preserved": true,
+      "post_original_C3_destroy_rng_sha256": "a7e788c1ec07ba42a4d70646c2f82da112f05280c5f94389bf7d982b5930bfa4"
+    },
+    "first_frozen_operator_pair": [
+      3,
+      0
+    ]
+  },
+  "checkpoint_source_sha256": "4da0996bca818ac7d15d836f283c1884abc78efedefda8a3367dfea6a445fa81"
+}

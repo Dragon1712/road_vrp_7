@@ -1,0 +1,44 @@
+{
+  "stage": "R4C-CONTINUOUS-SECTION-COUNTERFACTUAL-v1",
+  "source": "R4A actual Section preselection",
+  "frozen_solver_sha256": "1d77b5266bd0481d2a5231311efdc83f6dd21a84c40a23e1386f2e7e90086ea1",
+  "frozen_section_sha256": "ded8d785a2a817aa2c2fae6ce0064ac95d42de8fe4e8c9b0481bcd2bfbee456e",
+  "source_model_sha256": "28b8e1ee6bfa68eb697afb364eba7fdcdfe37a8c1b249dd53ce4778f87f9e01d",
+  "r4b_report_sha256": "acac082ae821cff404a17d64c95a87631127733703850ccc89e466a8be6c9b7e",
+  "r4b_manifest_sha256": "69db8b9305b8ddc4701702a8bc86206eed93084da60e60cf263d3d0eafa00900",
+  "r4b_paired_rows_sha256": "0ca3c7785a6430e2453268002e5ab6f5aac83569cddd2e0564d7f9c86aaaec87",
+  "r4a_snapshots_sha256": "4da0996bca818ac7d15d836f283c1884abc78efedefda8a3367dfea6a445fa81",
+  "horizons": [
+    1,
+    5,
+    20
+  ],
+  "max_cases": 1,
+  "max_snapshots_per_run": 1,
+  "action_count": 8,
+  "max_alternatives": 3,
+  "sampler_seed": 20261019,
+  "snapshot_ids": [
+    {
+      "task_id": "task_0008",
+      "scenario_id": "2025-07-22_0800",
+      "seed": 60,
+      "stop_count": 505,
+      "horizon": 0,
+      "arm": "S0"
+    }
+  ],
+  "code_sha256": {
+    "counterfactual_r4c.py": "db693f5989a9e30cabf633a149f56b244745502b9892bd50d8663b2cd7fe718e",
+    "r4c_core.py": "f3032a15c4f05b740c7d243427e3175211a776779aebf2250c7c87cb54f79bd3"
+  },
+  "evaluation": "FIXED_ITERATION_K_NOT_WALL_CLOCK_30SEC",
+  "data_role": "INSPECTED_JULY_VALIDATION_DEVELOPMENT_ONLY",
+  "warnings": [
+    "Intervention is an alternative FIRST Section partial, then original C3 policy runs K-1 steps.",
+    "Every arm consumes identical original Section RNG draw before substitution.",
+    "Road.replay is posthoc label, never online feature.",
+    "No inference about identical RNG draw streams after divergent interventions.",
+    "K-step counterfactual is NOT an exact 30-second remaining wall-clock effect."
+  ]
+}

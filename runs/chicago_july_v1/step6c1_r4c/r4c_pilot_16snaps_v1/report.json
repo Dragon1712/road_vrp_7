@@ -1,0 +1,57 @@
+{
+  "stage": "R4C-CONTINUOUS-SECTION-COUNTERFACTUAL-v1",
+  "status": "COMPLETE",
+  "n_branch_results": 628,
+  "n_counterfactual_labels": 500,
+  "n_snapshot_start_points": 16,
+  "n_sham_control_checks": 64,
+  "per_horizon": {
+    "1": {
+      "count": 125,
+      "mean_road_best_gain_sec": 0.0,
+      "positive_frac": 0.0,
+      "negative_frac": 0.0,
+      "zero_frac": 1.0,
+      "severe_harm_fraction": 0.0,
+      "min_road_best_gain_sec": 0.0,
+      "max_road_best_gain_sec": 0.0
+    },
+    "5": {
+      "count": 125,
+      "mean_road_best_gain_sec": 0.0,
+      "positive_frac": 0.0,
+      "negative_frac": 0.0,
+      "zero_frac": 1.0,
+      "severe_harm_fraction": 0.0,
+      "min_road_best_gain_sec": 0.0,
+      "max_road_best_gain_sec": 0.0
+    },
+    "20": {
+      "count": 125,
+      "mean_road_best_gain_sec": 1.535,
+      "positive_frac": 0.024,
+      "negative_frac": 0.008,
+      "zero_frac": 0.968,
+      "severe_harm_fraction": 0.0,
+      "min_road_best_gain_sec": -32.875,
+      "max_road_best_gain_sec": 103.0
+    },
+    "50": {
+      "count": 125,
+      "mean_road_best_gain_sec": 2.555,
+      "positive_frac": 0.04,
+      "negative_frac": 0.008,
+      "zero_frac": 0.952,
+      "severe_harm_fraction": 0.0,
+      "min_road_best_gain_sec": -32.875,
+      "max_road_best_gain_sec": 108.5
+    }
+  },
+  "limits": [
+    "Development data: original July validation only, not blind independent test.",
+    "Fixed-iteration continuation K; does not reproduce wall-clock budget.",
+    "Candidates stratified by deterministic static sampler; no future road traffic used in policy.",
+    "RNG matched up to original first Section destroy; subsequent stochastic streams may diverge.",
+    "Alternative actions estimated using one captured RNG trajectory, not a confidence interval."
+  ]
+}
