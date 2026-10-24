@@ -1,0 +1,40 @@
+{
+  "stage": "R4B-OFFICIAL-EXACT-CONTINUATION-AUDIT-v1",
+  "status": "COMPLETE",
+  "cases": 8,
+  "snapshots": 16,
+  "horizons": [
+    1,
+    5,
+    20,
+    50
+  ],
+  "n_comparisons": 64,
+  "exact_matches": 64,
+  "per_horizon": {
+    "1": {
+      "n": 16,
+      "exact": 16
+    },
+    "5": {
+      "n": 16,
+      "exact": 16
+    },
+    "20": {
+      "n": 16,
+      "exact": 16
+    },
+    "50": {
+      "n": 16,
+      "exact": 16
+    }
+  },
+  "source_snapshot_sha256": "4da0996bca818ac7d15d836f283c1884abc78efedefda8a3367dfea6a445fa81",
+  "limitations": [
+    "Only 4 corners of original July validation pilot, not blind test.",
+    "Source-verified ALNS v7.0.0 iteration K; not exact 30s wall-clock remaining time.",
+    "Replay uses frozen original C3, no intervention or learned Section substitution.",
+    "Exact transitions require no deadline-dependent branch within evaluated K steps.",
+    "R4-B establishes continuation machinery; counterfactual Section labels are future R4-C work."
+  ]
+}
