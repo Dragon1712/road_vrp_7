@@ -1,0 +1,37 @@
+{
+  "stage": "R3-VQ5-FIXED-PANEL-LOTO-v1",
+  "seed": 42,
+  "trees": 160,
+  "sizes": [
+    48,
+    96,
+    144,
+    192
+  ],
+  "panel_n": 192,
+  "horizons": [
+    20,
+    50
+  ],
+  "collection_manifest_sha256": "944926bbebdcf0f1b03b714e0e844f0b14dd34ee7817b07f3bfecf4fb714f4fc",
+  "collection_rollouts_sha256": "129fcaed3c92e94a18f6df9a4506810775461c64c85b93717b9898b7303e90fb",
+  "dataset_paired_sha256": "a1d50ca4a7f31baaf56805c077a2e2d3cb6ced422763d36e640ff5e2b2a29cf4",
+  "dataset_groups_sha256": "c9a9c975c204c1e81f0ce88d3151f7a4211e4e8437210e2751ce0fbe7e405825",
+  "frozen_vq3_code_sha256": {
+    "train_vq3.py": "88359219e021c1018cb1d3f83320950c9aa6c95215897578c1c8f03abaeda6b7",
+    "vq3_core.py": "dd73a3ccb20956cc3dfadb13c98a90a8a9a523be5ca2ee4347ab43d8077b91f0",
+    "vq2_core.py": "bd114085579cf4a5f671068981b26f3902725ba43a04980f3b8f5870bf534cc1",
+    "train_vq.py": "131c1743fee0774d4866ad52af54d7f36edd7ef07423555d45ecb5059b349e33"
+  },
+  "code_sha256": {
+    "fixed_panel_vq5.py": "45dbcc36869a5cd42ef3c5a429a2c124be9fcbff8c00be3978c4ab5738bb554e",
+    "vq5_core.py": "329f343c8b73a5fb5a21b1fdaaf83cb8259de5ae3dc349ad235cfa9fe487b5b5"
+  },
+  "source_role": "ORIGINAL_TRAIN_ONLY",
+  "evaluation": "FIXED FULL PANEL (all states of heldout task)",
+  "limits": [
+    "No original validation/internal_test tasks used.",
+    "Four correlated original TRAIN task groups only.",
+    "H-step label is C3 restart surrogate, not original ALNS continuation."
+  ]
+}
