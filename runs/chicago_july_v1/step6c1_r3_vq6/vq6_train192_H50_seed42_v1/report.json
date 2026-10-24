@@ -1,0 +1,82 @@
+{
+  "status": "COMPLETE",
+  "stage": "R3-VQ6-ONLINE-FROZEN-TRAIN-v1",
+  "models": {
+    "E0_MATCHED": {
+      "path": "runs/chicago_july_v1/step6c1_r3_vq6/vq6_train192_H50_seed42_v1/E0_MATCHED.joblib",
+      "sha256": "1af38eaf7ecbbc0f54717e6606026c36302f3082df11efc43eed8d453c746dbe"
+    },
+    "RESID_OOF50": {
+      "path": "runs/chicago_july_v1/step6c1_r3_vq6/vq6_train192_H50_seed42_v1/RESID_OOF50.joblib",
+      "sha256": "9283d3ae00f87cb084c268aec05aa24ede331239cd608ef46b560ddd18b49c36"
+    },
+    "DEFER_RESID": {
+      "path": "runs/chicago_july_v1/step6c1_r3_vq6/vq6_train192_H50_seed42_v1/DEFER_RESID.joblib",
+      "sha256": "594a4b0aa2629a57ed77a4c20727846d89f9162b154447c7a30aa7398315c275"
+    }
+  },
+  "training": {
+    "n_matched_actions": 1501,
+    "n_full_onestep_actions": 4025,
+    "n_residual_actions": 1501,
+    "n_train_tasks": 4,
+    "oof_folds": [
+      {
+        "oof_task": "task_0000",
+        "fit_tasks": [
+          "task_0001",
+          "task_0002",
+          "task_0003"
+        ],
+        "n_one_step_training_actions": 3014,
+        "n_selected_actions": 378
+      },
+      {
+        "oof_task": "task_0001",
+        "fit_tasks": [
+          "task_0000",
+          "task_0002",
+          "task_0003"
+        ],
+        "n_one_step_training_actions": 3015,
+        "n_selected_actions": 376
+      },
+      {
+        "oof_task": "task_0002",
+        "fit_tasks": [
+          "task_0000",
+          "task_0001",
+          "task_0003"
+        ],
+        "n_one_step_training_actions": 3020,
+        "n_selected_actions": 375
+      },
+      {
+        "oof_task": "task_0003",
+        "fit_tasks": [
+          "task_0000",
+          "task_0001",
+          "task_0002"
+        ],
+        "n_one_step_training_actions": 3026,
+        "n_selected_actions": 372
+      }
+    ],
+    "model_recipe": "VQ3 ExtraTrees maxdepth12 leaf3 160 trees, no weighting"
+  },
+  "train_task_ids": [
+    "task_0000",
+    "task_0001",
+    "task_0002",
+    "task_0003"
+  ],
+  "n_states": 192,
+  "horizon": 50,
+  "seed": 42,
+  "trees": 160,
+  "caveats": [
+    "Four original TRAIN tasks only",
+    "No new model-family hyperparameter search",
+    "The residual is a restart surrogate, not original continuous-ALNS Q"
+  ]
+}
