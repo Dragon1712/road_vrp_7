@@ -1,0 +1,20 @@
+{
+  "stage": "R4M-TRAIN-NESTED-RISK-CALIBRATED-SECTION-v1",
+  "source_github_commit": "62caafdac72b55053b7a932005f6e549aac00199",
+  "purpose": "Nested Train-only task-held-out empirical risk calibration of Section deferral; no online ALNS",
+  "files_sha256": {
+    "CHANGELOG.md": "cb771c71aba6a87c0ce950c360f49e15e4bd0a03be6a47a74b00e4938ab02351",
+    "README.md": "2394bd6945ad9fb80a0f32f3319a86b50549990db0e2f9986a58ec80a48f33f4",
+    "probe_r4m.py": "6391a94e8a65f1a41c77ad9fce1bd2bb2938784747380760c04739c858277680",
+    "r4m_core.py": "2d0ca7c55b312b372bf3ec953c772de6ab777d8a51ea0c774e009aeeb25252a5",
+    "run_r4m.sh": "7153323b9c0ae6a600c88a866ed517deccf520bc54a8ac007ffa1fe9bdc06f77",
+    "tests/test_r4m.py": "94036989b3eaa2c2f074be7b033c99ac420610ca6c3a1d53e3f1556a70796dc0"
+  },
+  "known_limitations": [
+    "Real Chicago study not run locally",
+    "Task-level calibration is empirical, not formal statistical coverage",
+    "Fixed K is not online 30 seconds",
+    "Source SHA must remain consistent with R4-L"
+  ],
+  "tests": "8 local synthetic unit/integration tests; Python and bash syntax checked"
+}
