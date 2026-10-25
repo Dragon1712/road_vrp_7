@@ -1,0 +1,47 @@
+{
+  "stage": "R4G-TRAIN-PREFIX-EXACT-v1",
+  "status": "COMPLETE",
+  "data_role": "TRAIN_ONLY",
+  "n_cases": 1,
+  "eligible_snapshots": 3,
+  "n_comparisons": 12,
+  "exact_matches": 12,
+  "per_horizon": {
+    "1": {
+      "eligible": 3,
+      "exact": 3,
+      "excluded": 0
+    },
+    "50": {
+      "eligible": 3,
+      "exact": 3,
+      "excluded": 0
+    },
+    "200": {
+      "eligible": 3,
+      "exact": 3,
+      "excluded": 0
+    },
+    "500": {
+      "eligible": 3,
+      "exact": 3,
+      "excluded": 0
+    }
+  },
+  "excluded_horizon_count": 0,
+  "source_audit": {
+    "strict_pass": 9,
+    "pairs": 16,
+    "route_road_equal": 16,
+    "wall_limited_pairs": 7,
+    "source_snapshots": 76,
+    "source_distinct_physical_states": 53
+  },
+  "limits": [
+    "Source 30s windows used ONLY for eligibility, not event trace evidence.",
+    "Reference re-run may use longer wall for exact fixed-K verification.",
+    "Origin check + all K events must agree before marked exact.",
+    "Not 30s online performance or a learned strategy label."
+  ],
+  "original_capture_snapshots_sha256": "dc74f2de2e6020bd181bca89f0b444fc6b5122ad48992cf4f09a8e2724d23004"
+}
