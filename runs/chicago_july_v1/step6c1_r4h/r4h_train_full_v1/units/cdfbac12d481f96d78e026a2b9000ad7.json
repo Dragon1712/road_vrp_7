@@ -1,0 +1,1849 @@
+{
+  "stage": "R4H-TRAIN-SECTION-COUNTERFACTUAL-v1",
+  "unit_spec": {
+    "task_id": "task_0002",
+    "scenario_id": "2025-07-09_1700",
+    "seed": 61,
+    "stop_count": 1005,
+    "horizon": 50,
+    "arm": "A009"
+  },
+  "plan": {
+    "c3_identity": [
+      0,
+      4,
+      2
+    ],
+    "alternatives": [
+      {
+        "name": "A026",
+        "action_index": 26,
+        "route": 3,
+        "pos": 8,
+        "size": 2
+      },
+      {
+        "name": "A031",
+        "action_index": 31,
+        "route": 3,
+        "pos": 3,
+        "size": 3
+      },
+      {
+        "name": "A007",
+        "action_index": 7,
+        "route": 0,
+        "pos": 2,
+        "size": 3
+      },
+      {
+        "name": "A001",
+        "action_index": 1,
+        "route": 0,
+        "pos": 1,
+        "size": 2
+      },
+      {
+        "name": "A032",
+        "action_index": 32,
+        "route": 3,
+        "pos": 4,
+        "size": 3
+      },
+      {
+        "name": "A000",
+        "action_index": 0,
+        "route": 0,
+        "pos": 0,
+        "size": 2
+      },
+      {
+        "name": "A028",
+        "action_index": 28,
+        "route": 3,
+        "pos": 0,
+        "size": 3
+      },
+      {
+        "name": "A009",
+        "action_index": 9,
+        "route": 2,
+        "pos": 0,
+        "size": 2
+      }
+    ],
+    "candidate_count": 46,
+    "first_rng_after_original_C3_destroy_sha256": "c7575cb01d7e303ddee25a754ac78a43dcab6fee95a6df599555081af5a4baf8",
+    "sampling_state_identifier": "7844d2dbc4c199258c369958",
+    "sampling_seed": 20261019
+  },
+  "result": {
+    "snapshot_spec": {
+      "task_id": "task_0002",
+      "scenario_id": "2025-07-09_1700",
+      "seed": 61,
+      "stop_count": 1005
+    },
+    "horizon": 50,
+    "arm": "A009",
+    "first_action_id": [
+      2,
+      0,
+      2
+    ],
+    "first_original_c3_action_id": [
+      0,
+      4,
+      2
+    ],
+    "events": [
+      {
+        "stop_count": 1005,
+        "current_route_sha256": "fb1dd409a6647fbf4cd73060b51e6568d343bf590255b9f2bb446701484ab4bc",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4288.600226301118,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "631a7762d851b13d3edbfe84be3266855a83283979ae78d685c08ee20fe1c58b",
+        "roulette_destroy_weights": [
+          2.647933759292588,
+          1.0676357370303315,
+          1.5222972621204125,
+          0.674454420091868
+        ],
+        "roulette_repair_weights": [
+          1.4835142766809981,
+          1.7087893836643966
+        ],
+        "anneal_temperature": 232.43078038021073,
+        "destroy_index": 3,
+        "repair_index": 1,
+        "candidate_route_sha256": "1bffd4c5a76115ad68986435fdbb2238dbe572105108b52068dfe8887dccf93c",
+        "outcome": 2,
+        "anneal_temperature_after": 232.11407427396207,
+        "roulette_destroy_weights_after": [
+          2.647933759292588,
+          1.0676357370303315,
+          1.5222972621204125,
+          0.7395635360734943
+        ],
+        "roulette_repair_weights_after": [
+          1.4835142766809981,
+          1.5670315069315173
+        ]
+      },
+      {
+        "stop_count": 1006,
+        "current_route_sha256": "1bffd4c5a76115ad68986435fdbb2238dbe572105108b52068dfe8887dccf93c",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4308.265643876628,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "50c099c7330b2ad5c1815fbb483f25c4dd2a7620e1d1c8638952c62ddd8dde2a",
+        "roulette_destroy_weights": [
+          2.647933759292588,
+          1.0676357370303315,
+          1.5222972621204125,
+          0.7395635360734943
+        ],
+        "roulette_repair_weights": [
+          1.4835142766809981,
+          1.5670315069315173
+        ],
+        "anneal_temperature": 232.11407427396207,
+        "destroy_index": 0,
+        "repair_index": 0,
+        "candidate_route_sha256": "76065a1a0e558c77a6cb2e16d1fde4a063f7d4a39ef0d417d9b1b0abc65c635a",
+        "outcome": 2,
+        "anneal_temperature_after": 231.79779970590113,
+        "roulette_destroy_weights_after": [
+          2.3183470074340704,
+          1.0676357370303315,
+          1.5222972621204125,
+          0.7395635360734943
+        ],
+        "roulette_repair_weights_after": [
+          1.3868114213447984,
+          1.5670315069315173
+        ]
+      },
+      {
+        "stop_count": 1007,
+        "current_route_sha256": "76065a1a0e558c77a6cb2e16d1fde4a063f7d4a39ef0d417d9b1b0abc65c635a",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4393.820954803028,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "d92f50e99559c64ebb5244d09c16eba6075b79c47df8c50d90485a39cb52a3b9",
+        "roulette_destroy_weights": [
+          2.3183470074340704,
+          1.0676357370303315,
+          1.5222972621204125,
+          0.7395635360734943
+        ],
+        "roulette_repair_weights": [
+          1.3868114213447984,
+          1.5670315069315173
+        ],
+        "anneal_temperature": 231.79779970590113,
+        "destroy_index": 0,
+        "repair_index": 0,
+        "candidate_route_sha256": "79e9812b4d3d514d86be7cfd9b934505284d8bb050a179d70ae9cd14a98b13fd",
+        "outcome": 2,
+        "anneal_temperature_after": 231.48195608802152,
+        "roulette_destroy_weights_after": [
+          2.0546776059472567,
+          1.0676357370303315,
+          1.5222972621204125,
+          0.7395635360734943
+        ],
+        "roulette_repair_weights_after": [
+          1.3094491370758388,
+          1.5670315069315173
+        ]
+      },
+      {
+        "stop_count": 1008,
+        "current_route_sha256": "79e9812b4d3d514d86be7cfd9b934505284d8bb050a179d70ae9cd14a98b13fd",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4429.624128303607,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "b895f876c06807c0389273c076a7d8cda255d6d8019040e9e113b24e58bdfe42",
+        "roulette_destroy_weights": [
+          2.0546776059472567,
+          1.0676357370303315,
+          1.5222972621204125,
+          0.7395635360734943
+        ],
+        "roulette_repair_weights": [
+          1.3094491370758388,
+          1.5670315069315173
+        ],
+        "anneal_temperature": 231.48195608802152,
+        "destroy_index": 0,
+        "repair_index": 0,
+        "candidate_route_sha256": "53c193bc1f65894c45bd3acd6c08d965b04aad45540b07888d0a19299b257cec",
+        "outcome": 2,
+        "anneal_temperature_after": 231.16654283311811,
+        "roulette_destroy_weights_after": [
+          1.8437420847578054,
+          1.0676357370303315,
+          1.5222972621204125,
+          0.7395635360734943
+        ],
+        "roulette_repair_weights_after": [
+          1.247559309660671,
+          1.5670315069315173
+        ]
+      },
+      {
+        "stop_count": 1009,
+        "current_route_sha256": "53c193bc1f65894c45bd3acd6c08d965b04aad45540b07888d0a19299b257cec",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4508.82841217122,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "bbee2d11bb9415442b2d63242eb8ff98342bdf92c904f3d6b0492b71fc5a1ce7",
+        "roulette_destroy_weights": [
+          1.8437420847578054,
+          1.0676357370303315,
+          1.5222972621204125,
+          0.7395635360734943
+        ],
+        "roulette_repair_weights": [
+          1.247559309660671,
+          1.5670315069315173
+        ],
+        "anneal_temperature": 231.16654283311811,
+        "destroy_index": 3,
+        "repair_index": 1,
+        "candidate_route_sha256": "bfa522e078fa14786867fdfc6c57b1f2a3b4b1b87c9cd8e84ae4b6d80dfd9c70",
+        "outcome": 1,
+        "anneal_temperature_after": 230.85155935478585,
+        "roulette_destroy_weights_after": [
+          1.8437420847578054,
+          1.0676357370303315,
+          1.5222972621204125,
+          1.3916508288587952
+        ],
+        "roulette_repair_weights_after": [
+          1.247559309660671,
+          2.053625205545214
+        ]
+      },
+      {
+        "stop_count": 1010,
+        "current_route_sha256": "bfa522e078fa14786867fdfc6c57b1f2a3b4b1b87c9cd8e84ae4b6d80dfd9c70",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4471.666338294977,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "d5909011a0e0d29cd32f07b98a16a40db2a8292cdd41bb594954ba0bde297ef9",
+        "roulette_destroy_weights": [
+          1.8437420847578054,
+          1.0676357370303315,
+          1.5222972621204125,
+          1.3916508288587952
+        ],
+        "roulette_repair_weights": [
+          1.247559309660671,
+          2.053625205545214
+        ],
+        "anneal_temperature": 230.85155935478585,
+        "destroy_index": 3,
+        "repair_index": 1,
+        "candidate_route_sha256": "3339db0c3f86c9a4ecd79b2c52ca57b5c67b36c6c28118ce2742e4f345031bb4",
+        "outcome": 1,
+        "anneal_temperature_after": 230.5370050674187,
+        "roulette_destroy_weights_after": [
+          1.8437420847578054,
+          1.0676357370303315,
+          1.5222972621204125,
+          1.913320663087036
+        ],
+        "roulette_repair_weights_after": [
+          1.247559309660671,
+          2.442900164436171
+        ]
+      },
+      {
+        "stop_count": 1011,
+        "current_route_sha256": "3339db0c3f86c9a4ecd79b2c52ca57b5c67b36c6c28118ce2742e4f345031bb4",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4187.082539081806,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "a04f32f69063c3545a787172cf701769474e69814a4a291f0e3626e55fcf33e0",
+        "roulette_destroy_weights": [
+          1.8437420847578054,
+          1.0676357370303315,
+          1.5222972621204125,
+          1.913320663087036
+        ],
+        "roulette_repair_weights": [
+          1.247559309660671,
+          2.442900164436171
+        ],
+        "anneal_temperature": 230.5370050674187,
+        "destroy_index": 0,
+        "repair_index": 1,
+        "candidate_route_sha256": "3339db0c3f86c9a4ecd79b2c52ca57b5c67b36c6c28118ce2742e4f345031bb4",
+        "outcome": 2,
+        "anneal_temperature_after": 230.2228793862086,
+        "roulette_destroy_weights_after": [
+          1.6749936678062445,
+          1.0676357370303315,
+          1.5222972621204125,
+          1.913320663087036
+        ],
+        "roulette_repair_weights_after": [
+          1.247559309660671,
+          2.1543201315489373
+        ]
+      },
+      {
+        "stop_count": 1012,
+        "current_route_sha256": "3339db0c3f86c9a4ecd79b2c52ca57b5c67b36c6c28118ce2742e4f345031bb4",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4187.082539081806,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "d706e0b099edd9cbcc3421bed5460e4b30736667e0d3ff956ef7ecfb9e4fbbe1",
+        "roulette_destroy_weights": [
+          1.6749936678062445,
+          1.0676357370303315,
+          1.5222972621204125,
+          1.913320663087036
+        ],
+        "roulette_repair_weights": [
+          1.247559309660671,
+          2.1543201315489373
+        ],
+        "anneal_temperature": 230.2228793862086,
+        "destroy_index": 0,
+        "repair_index": 1,
+        "candidate_route_sha256": "3339db0c3f86c9a4ecd79b2c52ca57b5c67b36c6c28118ce2742e4f345031bb4",
+        "outcome": 2,
+        "anneal_temperature_after": 229.9091817271443,
+        "roulette_destroy_weights_after": [
+          1.5399949342449957,
+          1.0676357370303315,
+          1.5222972621204125,
+          1.913320663087036
+        ],
+        "roulette_repair_weights_after": [
+          1.247559309660671,
+          1.92345610523915
+        ]
+      },
+      {
+        "stop_count": 1013,
+        "current_route_sha256": "3339db0c3f86c9a4ecd79b2c52ca57b5c67b36c6c28118ce2742e4f345031bb4",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4187.082539081806,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "11592207406c17931f8e597b99b38c595f071fd7e0a8ea7ed0da009f79699bfc",
+        "roulette_destroy_weights": [
+          1.5399949342449957,
+          1.0676357370303315,
+          1.5222972621204125,
+          1.913320663087036
+        ],
+        "roulette_repair_weights": [
+          1.247559309660671,
+          1.92345610523915
+        ],
+        "anneal_temperature": 229.9091817271443,
+        "destroy_index": 2,
+        "repair_index": 1,
+        "candidate_route_sha256": "3339db0c3f86c9a4ecd79b2c52ca57b5c67b36c6c28118ce2742e4f345031bb4",
+        "outcome": 2,
+        "anneal_temperature_after": 229.59591150701033,
+        "roulette_destroy_weights_after": [
+          1.5399949342449957,
+          1.0676357370303315,
+          1.41783780969633,
+          1.913320663087036
+        ],
+        "roulette_repair_weights_after": [
+          1.247559309660671,
+          1.73876488419132
+        ]
+      },
+      {
+        "stop_count": 1014,
+        "current_route_sha256": "3339db0c3f86c9a4ecd79b2c52ca57b5c67b36c6c28118ce2742e4f345031bb4",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4187.082539081806,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "38d20a866274660eb55fe1e126c98b16119faa291cba05577ceea76c71cae004",
+        "roulette_destroy_weights": [
+          1.5399949342449957,
+          1.0676357370303315,
+          1.41783780969633,
+          1.913320663087036
+        ],
+        "roulette_repair_weights": [
+          1.247559309660671,
+          1.73876488419132
+        ],
+        "anneal_temperature": 229.59591150701033,
+        "destroy_index": 2,
+        "repair_index": 1,
+        "candidate_route_sha256": "d5f91295c9d75a228929a0a6a5bde0cab6325e87868f6362b1fbd623a6dda01a",
+        "outcome": 3,
+        "anneal_temperature_after": 229.2830681433859,
+        "roulette_destroy_weights_after": [
+          1.5399949342449957,
+          1.0676357370303315,
+          1.134270247757064,
+          1.913320663087036
+        ],
+        "roulette_repair_weights_after": [
+          1.247559309660671,
+          1.391011907353056
+        ]
+      },
+      {
+        "stop_count": 1015,
+        "current_route_sha256": "3339db0c3f86c9a4ecd79b2c52ca57b5c67b36c6c28118ce2742e4f345031bb4",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4187.082539081806,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "f4c337d0760beb025e1a475fa6c7806e647de438c040143077feac9c3f6553f7",
+        "roulette_destroy_weights": [
+          1.5399949342449957,
+          1.0676357370303315,
+          1.134270247757064,
+          1.913320663087036
+        ],
+        "roulette_repair_weights": [
+          1.247559309660671,
+          1.391011907353056
+        ],
+        "anneal_temperature": 229.2830681433859,
+        "destroy_index": 0,
+        "repair_index": 0,
+        "candidate_route_sha256": "2a6ce7c23ee48368b75a9db984682ea7cae136d8f597aaf3b563815eb1bcc79f",
+        "outcome": 1,
+        "anneal_temperature_after": 228.97065105464378,
+        "roulette_destroy_weights_after": [
+          2.0319959473959965,
+          1.0676357370303315,
+          1.134270247757064,
+          1.913320663087036
+        ],
+        "roulette_repair_weights_after": [
+          1.7980474477285366,
+          1.391011907353056
+        ]
+      },
+      {
+        "stop_count": 1016,
+        "current_route_sha256": "2a6ce7c23ee48368b75a9db984682ea7cae136d8f597aaf3b563815eb1bcc79f",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4167.417121506296,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "2f0e71c4c5060d77f158dd9982a4be18a1df686d93bdfe061349d641145162ce",
+        "roulette_destroy_weights": [
+          2.0319959473959965,
+          1.0676357370303315,
+          1.134270247757064,
+          1.913320663087036
+        ],
+        "roulette_repair_weights": [
+          1.7980474477285366,
+          1.391011907353056
+        ],
+        "anneal_temperature": 228.97065105464378,
+        "destroy_index": 3,
+        "repair_index": 0,
+        "candidate_route_sha256": "1ec0b2b4e948a72d46098c312c444808db4de2c01f8eb4429b88b51bd68a9ba7",
+        "outcome": 2,
+        "anneal_temperature_after": 228.65865965994934,
+        "roulette_destroy_weights_after": [
+          2.0319959473959965,
+          1.0676357370303315,
+          1.134270247757064,
+          1.7306565304696289
+        ],
+        "roulette_repair_weights_after": [
+          1.6384379581828294,
+          1.391011907353056
+        ]
+      },
+      {
+        "stop_count": 1017,
+        "current_route_sha256": "1ec0b2b4e948a72d46098c312c444808db4de2c01f8eb4429b88b51bd68a9ba7",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4177.549707229366,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "36210e3a7408532547c4419a8ba6bfe7a16cc3200093b9854d1a49c798a968c3",
+        "roulette_destroy_weights": [
+          2.0319959473959965,
+          1.0676357370303315,
+          1.134270247757064,
+          1.7306565304696289
+        ],
+        "roulette_repair_weights": [
+          1.6384379581828294,
+          1.391011907353056
+        ],
+        "anneal_temperature": 228.65865965994934,
+        "destroy_index": 1,
+        "repair_index": 0,
+        "candidate_route_sha256": "747413665b958170dcea460925d5a9b8b14cb61909137f0861a322981e9f1a2b",
+        "outcome": 3,
+        "anneal_temperature_after": 228.34709337925932,
+        "roulette_destroy_weights_after": [
+          2.0319959473959965,
+          0.8541085896242653,
+          1.134270247757064,
+          1.7306565304696289
+        ],
+        "roulette_repair_weights_after": [
+          1.3107503665462636,
+          1.391011907353056
+        ]
+      },
+      {
+        "stop_count": 1018,
+        "current_route_sha256": "1ec0b2b4e948a72d46098c312c444808db4de2c01f8eb4429b88b51bd68a9ba7",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4177.549707229366,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "14468a1d952f3d22b51b63fc5c0bf75ca7fbf5a70324fa525a63aafe011a5c39",
+        "roulette_destroy_weights": [
+          2.0319959473959965,
+          0.8541085896242653,
+          1.134270247757064,
+          1.7306565304696289
+        ],
+        "roulette_repair_weights": [
+          1.3107503665462636,
+          1.391011907353056
+        ],
+        "anneal_temperature": 228.34709337925932,
+        "destroy_index": 0,
+        "repair_index": 0,
+        "candidate_route_sha256": "1ec0b2b4e948a72d46098c312c444808db4de2c01f8eb4429b88b51bd68a9ba7",
+        "outcome": 2,
+        "anneal_temperature_after": 228.03595163332082,
+        "roulette_destroy_weights_after": [
+          1.8255967579167973,
+          0.8541085896242653,
+          1.134270247757064,
+          1.7306565304696289
+        ],
+        "roulette_repair_weights_after": [
+          1.2486002932370108,
+          1.391011907353056
+        ]
+      },
+      {
+        "stop_count": 1019,
+        "current_route_sha256": "1ec0b2b4e948a72d46098c312c444808db4de2c01f8eb4429b88b51bd68a9ba7",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4177.549707229366,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "c2acdb437064ec10525b91d9b88ea3082be845cd2b88f97ff12986a1ebaa3a8f",
+        "roulette_destroy_weights": [
+          1.8255967579167973,
+          0.8541085896242653,
+          1.134270247757064,
+          1.7306565304696289
+        ],
+        "roulette_repair_weights": [
+          1.2486002932370108,
+          1.391011907353056
+        ],
+        "anneal_temperature": 228.03595163332082,
+        "destroy_index": 0,
+        "repair_index": 1,
+        "candidate_route_sha256": "1ec0b2b4e948a72d46098c312c444808db4de2c01f8eb4429b88b51bd68a9ba7",
+        "outcome": 2,
+        "anneal_temperature_after": 227.72523384367025,
+        "roulette_destroy_weights_after": [
+          1.660477406333438,
+          0.8541085896242653,
+          1.134270247757064,
+          1.7306565304696289
+        ],
+        "roulette_repair_weights_after": [
+          1.2486002932370108,
+          1.3128095258824448
+        ]
+      },
+      {
+        "stop_count": 1020,
+        "current_route_sha256": "1ec0b2b4e948a72d46098c312c444808db4de2c01f8eb4429b88b51bd68a9ba7",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4177.549707229366,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "63b01a19a0daf85a8b79f357870803c2fb5ad1dee44245e84ee7d36bfb700fd6",
+        "roulette_destroy_weights": [
+          1.660477406333438,
+          0.8541085896242653,
+          1.134270247757064,
+          1.7306565304696289
+        ],
+        "roulette_repair_weights": [
+          1.2486002932370108,
+          1.3128095258824448
+        ],
+        "anneal_temperature": 227.72523384367025,
+        "destroy_index": 0,
+        "repair_index": 0,
+        "candidate_route_sha256": "1ec0b2b4e948a72d46098c312c444808db4de2c01f8eb4429b88b51bd68a9ba7",
+        "outcome": 2,
+        "anneal_temperature_after": 227.4149394326322,
+        "roulette_destroy_weights_after": [
+          1.5283819250667505,
+          0.8541085896242653,
+          1.134270247757064,
+          1.7306565304696289
+        ],
+        "roulette_repair_weights_after": [
+          1.1988802345896086,
+          1.3128095258824448
+        ]
+      },
+      {
+        "stop_count": 1021,
+        "current_route_sha256": "1ec0b2b4e948a72d46098c312c444808db4de2c01f8eb4429b88b51bd68a9ba7",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4177.549707229366,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "d50904986c3784a3a4649655581dacdfc417d0b703221516295aa5cc9cec9831",
+        "roulette_destroy_weights": [
+          1.5283819250667505,
+          0.8541085896242653,
+          1.134270247757064,
+          1.7306565304696289
+        ],
+        "roulette_repair_weights": [
+          1.1988802345896086,
+          1.3128095258824448
+        ],
+        "anneal_temperature": 227.4149394326322,
+        "destroy_index": 3,
+        "repair_index": 0,
+        "candidate_route_sha256": "2a6ce7c23ee48368b75a9db984682ea7cae136d8f597aaf3b563815eb1bcc79f",
+        "outcome": 1,
+        "anneal_temperature_after": 227.10506782331836,
+        "roulette_destroy_weights_after": [
+          1.5283819250667505,
+          0.8541085896242653,
+          1.134270247757064,
+          2.1845252243757027
+        ],
+        "roulette_repair_weights_after": [
+          1.7591041876716869,
+          1.3128095258824448
+        ]
+      },
+      {
+        "stop_count": 1022,
+        "current_route_sha256": "2a6ce7c23ee48368b75a9db984682ea7cae136d8f597aaf3b563815eb1bcc79f",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4167.417121506296,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "7257be5812268b015b325b7ee125301108e84d40f4530023f217bff16fc7d820",
+        "roulette_destroy_weights": [
+          1.5283819250667505,
+          0.8541085896242653,
+          1.134270247757064,
+          2.1845252243757027
+        ],
+        "roulette_repair_weights": [
+          1.7591041876716869,
+          1.3128095258824448
+        ],
+        "anneal_temperature": 227.10506782331836,
+        "destroy_index": 0,
+        "repair_index": 0,
+        "candidate_route_sha256": "431fcfca4afbffa8f0095654f3d0ad9c2a6ebf54c5f2022c767d82ef40727857",
+        "outcome": 2,
+        "anneal_temperature_after": 226.79561843962657,
+        "roulette_destroy_weights_after": [
+          1.4227055400534006,
+          0.8541085896242653,
+          1.134270247757064,
+          2.1845252243757027
+        ],
+        "roulette_repair_weights_after": [
+          1.6072833501373496,
+          1.3128095258824448
+        ]
+      },
+      {
+        "stop_count": 1023,
+        "current_route_sha256": "431fcfca4afbffa8f0095654f3d0ad9c2a6ebf54c5f2022c767d82ef40727857",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4182.659954330069,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "880a832b349e498b633fe983b76bda8906ab6862995ddda7fccb539adfc6ccf7",
+        "roulette_destroy_weights": [
+          1.4227055400534006,
+          0.8541085896242653,
+          1.134270247757064,
+          2.1845252243757027
+        ],
+        "roulette_repair_weights": [
+          1.6072833501373496,
+          1.3128095258824448
+        ],
+        "anneal_temperature": 226.79561843962657,
+        "destroy_index": 3,
+        "repair_index": 1,
+        "candidate_route_sha256": "f3831cc345920c5d62539285761a87d93c1747592c83ddb5cd79bed98531db2a",
+        "outcome": 2,
+        "anneal_temperature_after": 226.48659070623955,
+        "roulette_destroy_weights_after": [
+          1.4227055400534006,
+          0.8541085896242653,
+          1.134270247757064,
+          1.9476201795005623
+        ],
+        "roulette_repair_weights_after": [
+          1.6072833501373496,
+          1.2502476207059559
+        ]
+      },
+      {
+        "stop_count": 1024,
+        "current_route_sha256": "f3831cc345920c5d62539285761a87d93c1747592c83ddb5cd79bed98531db2a",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4332.504226612975,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "71a3fa59f0495322422c790f4ee3b6fa39e61c03c673df9db580b9ab4fccec70",
+        "roulette_destroy_weights": [
+          1.4227055400534006,
+          0.8541085896242653,
+          1.134270247757064,
+          1.9476201795005623
+        ],
+        "roulette_repair_weights": [
+          1.6072833501373496,
+          1.2502476207059559
+        ],
+        "anneal_temperature": 226.48659070623955,
+        "destroy_index": 1,
+        "repair_index": 1,
+        "candidate_route_sha256": "b6abfae839d1ac98ecfe51cd3599d98963f88b0c1dcb3fcf251da3a9d2ecf774",
+        "outcome": 1,
+        "anneal_temperature_after": 226.177984048624,
+        "roulette_destroy_weights_after": [
+          1.4227055400534006,
+          1.483286871699412,
+          1.134270247757064,
+          1.9476201795005623
+        ],
+        "roulette_repair_weights_after": [
+          1.6072833501373496,
+          1.8001980965647646
+        ]
+      },
+      {
+        "stop_count": 1025,
+        "current_route_sha256": "b6abfae839d1ac98ecfe51cd3599d98963f88b0c1dcb3fcf251da3a9d2ecf774",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4152.181791360723,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "377d064e5ff1e0e2134204a43a862389bbed06bc631663883836461ebf6b8a50",
+        "roulette_destroy_weights": [
+          1.4227055400534006,
+          1.483286871699412,
+          1.134270247757064,
+          1.9476201795005623
+        ],
+        "roulette_repair_weights": [
+          1.6072833501373496,
+          1.8001980965647646
+        ],
+        "anneal_temperature": 226.177984048624,
+        "destroy_index": 0,
+        "repair_index": 1,
+        "candidate_route_sha256": "b6abfae839d1ac98ecfe51cd3599d98963f88b0c1dcb3fcf251da3a9d2ecf774",
+        "outcome": 2,
+        "anneal_temperature_after": 225.8697978930295,
+        "roulette_destroy_weights_after": [
+          1.3381644320427204,
+          1.483286871699412,
+          1.134270247757064,
+          1.9476201795005623
+        ],
+        "roulette_repair_weights_after": [
+          1.6072833501373496,
+          1.6401584772518116
+        ]
+      },
+      {
+        "stop_count": 1026,
+        "current_route_sha256": "b6abfae839d1ac98ecfe51cd3599d98963f88b0c1dcb3fcf251da3a9d2ecf774",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4152.181791360723,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "36336ec73081174f3d711ddbc9248e418df8716d53658fcebf9e205ad487d4cb",
+        "roulette_destroy_weights": [
+          1.3381644320427204,
+          1.483286871699412,
+          1.134270247757064,
+          1.9476201795005623
+        ],
+        "roulette_repair_weights": [
+          1.6072833501373496,
+          1.6401584772518116
+        ],
+        "anneal_temperature": 225.8697978930295,
+        "destroy_index": 2,
+        "repair_index": 0,
+        "candidate_route_sha256": "b6abfae839d1ac98ecfe51cd3599d98963f88b0c1dcb3fcf251da3a9d2ecf774",
+        "outcome": 2,
+        "anneal_temperature_after": 225.56203166648731,
+        "roulette_destroy_weights_after": [
+          1.3381644320427204,
+          1.483286871699412,
+          1.1074161982056512,
+          1.9476201795005623
+        ],
+        "roulette_repair_weights_after": [
+          1.4858266801098796,
+          1.6401584772518116
+        ]
+      },
+      {
+        "stop_count": 1027,
+        "current_route_sha256": "b6abfae839d1ac98ecfe51cd3599d98963f88b0c1dcb3fcf251da3a9d2ecf774",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4152.181791360723,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "08cfd02722e9fc387d3eed6281e37abb7fe44f2b158fda5eb3a65dd7c6b0d853",
+        "roulette_destroy_weights": [
+          1.3381644320427204,
+          1.483286871699412,
+          1.1074161982056512,
+          1.9476201795005623
+        ],
+        "roulette_repair_weights": [
+          1.4858266801098796,
+          1.6401584772518116
+        ],
+        "anneal_temperature": 225.56203166648731,
+        "destroy_index": 1,
+        "repair_index": 1,
+        "candidate_route_sha256": "4712ea41449e4c5dfbe5999e1f599aeb752a122a7c0c02536c34a052f022fa17",
+        "outcome": 2,
+        "anneal_temperature_after": 225.2546847968095,
+        "roulette_destroy_weights_after": [
+          1.3381644320427204,
+          1.3866294973595297,
+          1.1074161982056512,
+          1.9476201795005623
+        ],
+        "roulette_repair_weights_after": [
+          1.4858266801098796,
+          1.5121267818014494
+        ]
+      },
+      {
+        "stop_count": 1028,
+        "current_route_sha256": "4712ea41449e4c5dfbe5999e1f599aeb752a122a7c0c02536c34a052f022fa17",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4235.788310314878,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "d1d9fbfa596ea92dcdeb2b236f70700af634cfd848eb7594618b3290f986ba7b",
+        "roulette_destroy_weights": [
+          1.3381644320427204,
+          1.3866294973595297,
+          1.1074161982056512,
+          1.9476201795005623
+        ],
+        "roulette_repair_weights": [
+          1.4858266801098796,
+          1.5121267818014494
+        ],
+        "anneal_temperature": 225.2546847968095,
+        "destroy_index": 3,
+        "repair_index": 1,
+        "candidate_route_sha256": "ed31a975ac54943b7f7bd6ad9ba8ae7d119990ee1ba47d96833ddb1afb13008e",
+        "outcome": 2,
+        "anneal_temperature_after": 224.94775671258773,
+        "roulette_destroy_weights_after": [
+          1.3381644320427204,
+          1.3866294973595297,
+          1.1074161982056512,
+          1.7580961436004499
+        ],
+        "roulette_repair_weights_after": [
+          1.4858266801098796,
+          1.4097014254411595
+        ]
+      },
+      {
+        "stop_count": 1029,
+        "current_route_sha256": "ed31a975ac54943b7f7bd6ad9ba8ae7d119990ee1ba47d96833ddb1afb13008e",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4266.239613151178,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "7ad7f0a5271f1570f488df78429b671492dcbe808ced9d02121134b26c319307",
+        "roulette_destroy_weights": [
+          1.3381644320427204,
+          1.3866294973595297,
+          1.1074161982056512,
+          1.7580961436004499
+        ],
+        "roulette_repair_weights": [
+          1.4858266801098796,
+          1.4097014254411595
+        ],
+        "anneal_temperature": 224.94775671258773,
+        "destroy_index": 3,
+        "repair_index": 1,
+        "candidate_route_sha256": "a73a56f363aa576968a7ded4543f7a5de3efa17e92b70cd80af5f3d6af857b2b",
+        "outcome": 2,
+        "anneal_temperature_after": 224.6412468431923,
+        "roulette_destroy_weights_after": [
+          1.3381644320427204,
+          1.3866294973595297,
+          1.1074161982056512,
+          1.60647691488036
+        ],
+        "roulette_repair_weights_after": [
+          1.4858266801098796,
+          1.3277611403529277
+        ]
+      },
+      {
+        "stop_count": 1030,
+        "current_route_sha256": "a73a56f363aa576968a7ded4543f7a5de3efa17e92b70cd80af5f3d6af857b2b",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4344.356487949262,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "c6ed34fdd73bc8177cd9f4123c3b250d87a1759393c8c57e240eb9372215b763",
+        "roulette_destroy_weights": [
+          1.3381644320427204,
+          1.3866294973595297,
+          1.1074161982056512,
+          1.60647691488036
+        ],
+        "roulette_repair_weights": [
+          1.4858266801098796,
+          1.3277611403529277
+        ],
+        "anneal_temperature": 224.6412468431923,
+        "destroy_index": 0,
+        "repair_index": 0,
+        "candidate_route_sha256": "2313baee6fa2e56f7ed92900f848d07cd45bfff97738e87c9ce0ec4bb42497e1",
+        "outcome": 2,
+        "anneal_temperature_after": 224.335154618771,
+        "roulette_destroy_weights_after": [
+          1.2705315456341764,
+          1.3866294973595297,
+          1.1074161982056512,
+          1.60647691488036
+        ],
+        "roulette_repair_weights_after": [
+          1.3886613440879036,
+          1.3277611403529277
+        ]
+      },
+      {
+        "stop_count": 1031,
+        "current_route_sha256": "2313baee6fa2e56f7ed92900f848d07cd45bfff97738e87c9ce0ec4bb42497e1",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4410.701204485958,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "768c51ecc064f20bfb02ecbb0e60a4c7ee9f5000a2895cce7a4a730a5614bb7b",
+        "roulette_destroy_weights": [
+          1.2705315456341764,
+          1.3866294973595297,
+          1.1074161982056512,
+          1.60647691488036
+        ],
+        "roulette_repair_weights": [
+          1.3886613440879036,
+          1.3277611403529277
+        ],
+        "anneal_temperature": 224.335154618771,
+        "destroy_index": 3,
+        "repair_index": 0,
+        "candidate_route_sha256": "66eefdc7a4fe327c87a7964b173e41893b109e123815642fb5a9da5b4e8aa84c",
+        "outcome": 2,
+        "anneal_temperature_after": 224.02947947024816,
+        "roulette_destroy_weights_after": [
+          1.2705315456341764,
+          1.3866294973595297,
+          1.1074161982056512,
+          1.485181531904288
+        ],
+        "roulette_repair_weights_after": [
+          1.3109290752703229,
+          1.3277611403529277
+        ]
+      },
+      {
+        "stop_count": 1032,
+        "current_route_sha256": "66eefdc7a4fe327c87a7964b173e41893b109e123815642fb5a9da5b4e8aa84c",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4432.471326575265,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "ac918bdbaf27e8e1bf7f26a160b874df71212572f1fb546e2b58955047042060",
+        "roulette_destroy_weights": [
+          1.2705315456341764,
+          1.3866294973595297,
+          1.1074161982056512,
+          1.485181531904288
+        ],
+        "roulette_repair_weights": [
+          1.3109290752703229,
+          1.3277611403529277
+        ],
+        "anneal_temperature": 224.02947947024816,
+        "destroy_index": 1,
+        "repair_index": 1,
+        "candidate_route_sha256": "a26c25cb3f74191e9f1d58cffd556899f9258cd1823493540f3c3f5ad519b577",
+        "outcome": 3,
+        "anneal_temperature_after": 223.72422082932343,
+        "roulette_destroy_weights_after": [
+          1.2705315456341764,
+          1.1093035978876238,
+          1.1074161982056512,
+          1.485181531904288
+        ],
+        "roulette_repair_weights_after": [
+          1.3109290752703229,
+          1.0622089122823422
+        ]
+      },
+      {
+        "stop_count": 1033,
+        "current_route_sha256": "66eefdc7a4fe327c87a7964b173e41893b109e123815642fb5a9da5b4e8aa84c",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4432.471326575265,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "dc096449421ed50a8ddabeaf385923127b2b3773eaea55c79479f4071f0a9935",
+        "roulette_destroy_weights": [
+          1.2705315456341764,
+          1.1093035978876238,
+          1.1074161982056512,
+          1.485181531904288
+        ],
+        "roulette_repair_weights": [
+          1.3109290752703229,
+          1.0622089122823422
+        ],
+        "anneal_temperature": 223.72422082932343,
+        "destroy_index": 3,
+        "repair_index": 0,
+        "candidate_route_sha256": "01a5ea2f6ae4564441fc4e36a0efbb7a36e186e6d53365abd58834bce784b5dd",
+        "outcome": 1,
+        "anneal_temperature_after": 223.41937812847087,
+        "roulette_destroy_weights_after": [
+          1.2705315456341764,
+          1.1093035978876238,
+          1.1074161982056512,
+          1.9881452255234302
+        ],
+        "roulette_repair_weights_after": [
+          1.8487432602162581,
+          1.0622089122823422
+        ]
+      },
+      {
+        "stop_count": 1034,
+        "current_route_sha256": "01a5ea2f6ae4564441fc4e36a0efbb7a36e186e6d53365abd58834bce784b5dd",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4373.238928298815,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "1cddfef8edcea19876691483215015bafc13fede4acc43342d20705b49b66d00",
+        "roulette_destroy_weights": [
+          1.2705315456341764,
+          1.1093035978876238,
+          1.1074161982056512,
+          1.9881452255234302
+        ],
+        "roulette_repair_weights": [
+          1.8487432602162581,
+          1.0622089122823422
+        ],
+        "anneal_temperature": 223.41937812847087,
+        "destroy_index": 2,
+        "repair_index": 0,
+        "candidate_route_sha256": "b57c6f120b05ba2fdbee7a3dc974bb6c634dc2d17db3741492ca73db8e2d8107",
+        "outcome": 1,
+        "anneal_temperature_after": 223.11495080093783,
+        "roulette_destroy_weights_after": [
+          1.2705315456341764,
+          1.1093035978876238,
+          1.6859329585645209,
+          1.9881452255234302
+        ],
+        "roulette_repair_weights_after": [
+          2.278994608173006,
+          1.0622089122823422
+        ]
+      },
+      {
+        "stop_count": 1035,
+        "current_route_sha256": "b57c6f120b05ba2fdbee7a3dc974bb6c634dc2d17db3741492ca73db8e2d8107",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4345.757117385743,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "aee0cb6ae915a10ae2654909bc025847ed32c707c3dc887ae7fd3fffaba44274",
+        "roulette_destroy_weights": [
+          1.2705315456341764,
+          1.1093035978876238,
+          1.6859329585645209,
+          1.9881452255234302
+        ],
+        "roulette_repair_weights": [
+          2.278994608173006,
+          1.0622089122823422
+        ],
+        "anneal_temperature": 223.11495080093783,
+        "destroy_index": 2,
+        "repair_index": 1,
+        "candidate_route_sha256": "8946780aa6f82e747c465318a32da48d6b5878a7c958d116663b9c4935f48513",
+        "outcome": 1,
+        "anneal_temperature_after": 222.81093828074393,
+        "roulette_destroy_weights_after": [
+          1.2705315456341764,
+          1.1093035978876238,
+          2.1487463668516167,
+          1.9881452255234302
+        ],
+        "roulette_repair_weights_after": [
+          2.278994608173006,
+          1.6497671298258736
+        ]
+      },
+      {
+        "stop_count": 1036,
+        "current_route_sha256": "8946780aa6f82e747c465318a32da48d6b5878a7c958d116663b9c4935f48513",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4168.264337185654,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "a43e2ebdd6c3f13ccc27a1399a002d1efb47d85fe0a3e2417b598202c41867da",
+        "roulette_destroy_weights": [
+          1.2705315456341764,
+          1.1093035978876238,
+          2.1487463668516167,
+          1.9881452255234302
+        ],
+        "roulette_repair_weights": [
+          2.278994608173006,
+          1.6497671298258736
+        ],
+        "anneal_temperature": 222.81093828074393,
+        "destroy_index": 0,
+        "repair_index": 0,
+        "candidate_route_sha256": "8946780aa6f82e747c465318a32da48d6b5878a7c958d116663b9c4935f48513",
+        "outcome": 2,
+        "anneal_temperature_after": 222.5073400026799,
+        "roulette_destroy_weights_after": [
+          1.2164252365073411,
+          1.1093035978876238,
+          2.1487463668516167,
+          1.9881452255234302
+        ],
+        "roulette_repair_weights_after": [
+          2.023195686538405,
+          1.6497671298258736
+        ]
+      },
+      {
+        "stop_count": 1037,
+        "current_route_sha256": "8946780aa6f82e747c465318a32da48d6b5878a7c958d116663b9c4935f48513",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4168.264337185654,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "698c65d6b7a667e7a36d2caf932ccaeddea1c88492e3f46e978a3ac18e1dd633",
+        "roulette_destroy_weights": [
+          1.2164252365073411,
+          1.1093035978876238,
+          2.1487463668516167,
+          1.9881452255234302
+        ],
+        "roulette_repair_weights": [
+          2.023195686538405,
+          1.6497671298258736
+        ],
+        "anneal_temperature": 222.5073400026799,
+        "destroy_index": 3,
+        "repair_index": 0,
+        "candidate_route_sha256": "163f06968694e40823b08587bf738fe843008d68cac5c6924dc647b1afea92db",
+        "outcome": 2,
+        "anneal_temperature_after": 222.20415540230675,
+        "roulette_destroy_weights_after": [
+          1.2164252365073411,
+          1.1093035978876238,
+          2.1487463668516167,
+          1.7905161804187442
+        ],
+        "roulette_repair_weights_after": [
+          1.818556549230724,
+          1.6497671298258736
+        ]
+      },
+      {
+        "stop_count": 1038,
+        "current_route_sha256": "163f06968694e40823b08587bf738fe843008d68cac5c6924dc647b1afea92db",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4222.365764406393,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "0b94d7f10ec0b632e1ba5a4c97d18de0a0433afee447cdd7f1beef0336876b3a",
+        "roulette_destroy_weights": [
+          1.2164252365073411,
+          1.1093035978876238,
+          2.1487463668516167,
+          1.7905161804187442
+        ],
+        "roulette_repair_weights": [
+          1.818556549230724,
+          1.6497671298258736
+        ],
+        "anneal_temperature": 222.20415540230675,
+        "destroy_index": 2,
+        "repair_index": 0,
+        "candidate_route_sha256": "0b1c802939494a79ba8c40439d5978dd8f87506c8cd6b6041b131a28228239e7",
+        "outcome": 3,
+        "anneal_temperature_after": 221.90138391595445,
+        "roulette_destroy_weights_after": [
+          1.2164252365073411,
+          1.1093035978876238,
+          1.7189970934812935,
+          1.7905161804187442
+        ],
+        "roulette_repair_weights_after": [
+          1.4548452393845794,
+          1.6497671298258736
+        ]
+      },
+      {
+        "stop_count": 1039,
+        "current_route_sha256": "163f06968694e40823b08587bf738fe843008d68cac5c6924dc647b1afea92db",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4222.365764406393,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "7b74ee0b4662ea20f048dd1ce37eea9aa436d8613df1940d0b6a26c596fa3a96",
+        "roulette_destroy_weights": [
+          1.2164252365073411,
+          1.1093035978876238,
+          1.7189970934812935,
+          1.7905161804187442
+        ],
+        "roulette_repair_weights": [
+          1.4548452393845794,
+          1.6497671298258736
+        ],
+        "anneal_temperature": 221.90138391595445,
+        "destroy_index": 3,
+        "repair_index": 1,
+        "candidate_route_sha256": "8946780aa6f82e747c465318a32da48d6b5878a7c958d116663b9c4935f48513",
+        "outcome": 1,
+        "anneal_temperature_after": 221.5990249807211,
+        "roulette_destroy_weights_after": [
+          1.2164252365073411,
+          1.1093035978876238,
+          1.7189970934812935,
+          2.232412944334995
+        ],
+        "roulette_repair_weights_after": [
+          1.4548452393845794,
+          2.119813703860699
+        ]
+      },
+      {
+        "stop_count": 1040,
+        "current_route_sha256": "8946780aa6f82e747c465318a32da48d6b5878a7c958d116663b9c4935f48513",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4168.264337185654,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "f40beb128168289f1fc59371e0a9807aecc974dab81962efb9343a67b2f5c672",
+        "roulette_destroy_weights": [
+          1.2164252365073411,
+          1.1093035978876238,
+          1.7189970934812935,
+          2.232412944334995
+        ],
+        "roulette_repair_weights": [
+          1.4548452393845794,
+          2.119813703860699
+        ],
+        "anneal_temperature": 221.5990249807211,
+        "destroy_index": 1,
+        "repair_index": 1,
+        "candidate_route_sha256": "fae193fcbdc31cf6c1d1ce98cbea904434fe42301f7414fc0099cdf7be5315a1",
+        "outcome": 3,
+        "anneal_temperature_after": 221.2970780344718,
+        "roulette_destroy_weights_after": [
+          1.2164252365073411,
+          0.887442878310099,
+          1.7189970934812935,
+          2.232412944334995
+        ],
+        "roulette_repair_weights_after": [
+          1.4548452393845794,
+          1.6958509630885592
+        ]
+      },
+      {
+        "stop_count": 1041,
+        "current_route_sha256": "8946780aa6f82e747c465318a32da48d6b5878a7c958d116663b9c4935f48513",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4168.264337185654,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "91d57b4c3fd878d7e5e62a09bf5e4ff8830d03ab4d5c476889865f4632ccd114",
+        "roulette_destroy_weights": [
+          1.2164252365073411,
+          0.887442878310099,
+          1.7189970934812935,
+          2.232412944334995
+        ],
+        "roulette_repair_weights": [
+          1.4548452393845794,
+          1.6958509630885592
+        ],
+        "anneal_temperature": 221.2970780344718,
+        "destroy_index": 2,
+        "repair_index": 1,
+        "candidate_route_sha256": "8946780aa6f82e747c465318a32da48d6b5878a7c958d116663b9c4935f48513",
+        "outcome": 2,
+        "anneal_temperature_after": 220.99554251583757,
+        "roulette_destroy_weights_after": [
+          1.2164252365073411,
+          0.887442878310099,
+          1.575197674785035,
+          2.232412944334995
+        ],
+        "roulette_repair_weights_after": [
+          1.4548452393845794,
+          1.5566807704708474
+        ]
+      },
+      {
+        "stop_count": 1042,
+        "current_route_sha256": "8946780aa6f82e747c465318a32da48d6b5878a7c958d116663b9c4935f48513",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4168.264337185654,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "f34ad3f9216d0a6a3b5dd961c02bf7970e5afca7dbbe9a096c8b804d176d85fa",
+        "roulette_destroy_weights": [
+          1.2164252365073411,
+          0.887442878310099,
+          1.575197674785035,
+          2.232412944334995
+        ],
+        "roulette_repair_weights": [
+          1.4548452393845794,
+          1.5566807704708474
+        ],
+        "anneal_temperature": 220.99554251583757,
+        "destroy_index": 3,
+        "repair_index": 0,
+        "candidate_route_sha256": "13097b827e8ef284be72bd0b8ac9694150970064fd442b877c5c9a9bc0c5997b",
+        "outcome": 2,
+        "anneal_temperature_after": 220.69441786421436,
+        "roulette_destroy_weights_after": [
+          1.2164252365073411,
+          0.887442878310099,
+          1.575197674785035,
+          1.9859303554679961
+        ],
+        "roulette_repair_weights_after": [
+          1.3638761915076636,
+          1.5566807704708474
+        ]
+      },
+      {
+        "stop_count": 1043,
+        "current_route_sha256": "13097b827e8ef284be72bd0b8ac9694150970064fd442b877c5c9a9bc0c5997b",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4223.374858061201,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "2a60e7e2ecfdc7da2079f377a7ead2fc593e564051b396ad79a7c6504b00eac0",
+        "roulette_destroy_weights": [
+          1.2164252365073411,
+          0.887442878310099,
+          1.575197674785035,
+          1.9859303554679961
+        ],
+        "roulette_repair_weights": [
+          1.3638761915076636,
+          1.5566807704708474
+        ],
+        "anneal_temperature": 220.69441786421436,
+        "destroy_index": 3,
+        "repair_index": 0,
+        "candidate_route_sha256": "ef71250d882522140a009338c0ab9aa8d99f4030338b037f7f85e5f52bc37e28",
+        "outcome": 1,
+        "anneal_temperature_after": 220.39370351976197,
+        "roulette_destroy_weights_after": [
+          1.2164252365073411,
+          0.887442878310099,
+          1.575197674785035,
+          2.388744284374397
+        ],
+        "roulette_repair_weights_after": [
+          1.8911009532061307,
+          1.5566807704708474
+        ]
+      },
+      {
+        "stop_count": 1044,
+        "current_route_sha256": "ef71250d882522140a009338c0ab9aa8d99f4030338b037f7f85e5f52bc37e28",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4189.460694837733,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "4a4e62888faf766d99b279fe4c6cc735f65543d4f914dff7c20f9e32324dd8e4",
+        "roulette_destroy_weights": [
+          1.2164252365073411,
+          0.887442878310099,
+          1.575197674785035,
+          2.388744284374397
+        ],
+        "roulette_repair_weights": [
+          1.8911009532061307,
+          1.5566807704708474
+        ],
+        "anneal_temperature": 220.39370351976197,
+        "destroy_index": 3,
+        "repair_index": 0,
+        "candidate_route_sha256": "6278847ef230811a2aee5d7a878dba7ea9c09515d5265d16945e61715fa3e8cf",
+        "outcome": 2,
+        "anneal_temperature_after": 220.09339892340304,
+        "roulette_destroy_weights_after": [
+          1.2164252365073411,
+          0.887442878310099,
+          1.575197674785035,
+          2.1109954274995175
+        ],
+        "roulette_repair_weights_after": [
+          1.7128807625649045,
+          1.5566807704708474
+        ]
+      },
+      {
+        "stop_count": 1045,
+        "current_route_sha256": "6278847ef230811a2aee5d7a878dba7ea9c09515d5265d16945e61715fa3e8cf",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4284.698869640706,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "fb1a13a46ddb4354c27dc07e5c0f818a545f553819338f8f0f95f72c92599d40",
+        "roulette_destroy_weights": [
+          1.2164252365073411,
+          0.887442878310099,
+          1.575197674785035,
+          2.1109954274995175
+        ],
+        "roulette_repair_weights": [
+          1.7128807625649045,
+          1.5566807704708474
+        ],
+        "anneal_temperature": 220.09339892340304,
+        "destroy_index": 0,
+        "repair_index": 0,
+        "candidate_route_sha256": "b35ddf0337f6b0bd2bf8b955a731dae4927af9f2c90d972e97bc9dd36ffab460",
+        "outcome": 1,
+        "anneal_temperature_after": 219.79350351682203,
+        "roulette_destroy_weights_after": [
+          1.773140189205873,
+          0.887442878310099,
+          1.575197674785035,
+          2.1109954274995175
+        ],
+        "roulette_repair_weights_after": [
+          2.1703046100519234,
+          1.5566807704708474
+        ]
+      },
+      {
+        "stop_count": 1046,
+        "current_route_sha256": "b35ddf0337f6b0bd2bf8b955a731dae4927af9f2c90d972e97bc9dd36ffab460",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4102.201512049651,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "deaa279a8c09a720724ea2871563825e17194c7658afdab6ea840924c4b71ddc",
+        "roulette_destroy_weights": [
+          1.773140189205873,
+          0.887442878310099,
+          1.575197674785035,
+          2.1109954274995175
+        ],
+        "roulette_repair_weights": [
+          2.1703046100519234,
+          1.5566807704708474
+        ],
+        "anneal_temperature": 219.79350351682203,
+        "destroy_index": 3,
+        "repair_index": 0,
+        "candidate_route_sha256": "e9310fc540b1b95baec4ea0e07b5efe1500d362b9d893a30a9749a25468deadc",
+        "outcome": 2,
+        "anneal_temperature_after": 219.4940167424641,
+        "roulette_destroy_weights_after": [
+          1.773140189205873,
+          0.887442878310099,
+          1.575197674785035,
+          1.888796341999614
+        ],
+        "roulette_repair_weights_after": [
+          1.9362436880415388,
+          1.5566807704708474
+        ]
+      },
+      {
+        "stop_count": 1047,
+        "current_route_sha256": "e9310fc540b1b95baec4ea0e07b5efe1500d362b9d893a30a9749a25468deadc",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4141.287696409738,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "3c33b1fd83b32a82ec723e4e2a1384ab2f697220b56208991647cf49e9cd8204",
+        "roulette_destroy_weights": [
+          1.773140189205873,
+          0.887442878310099,
+          1.575197674785035,
+          1.888796341999614
+        ],
+        "roulette_repair_weights": [
+          1.9362436880415388,
+          1.5566807704708474
+        ],
+        "anneal_temperature": 219.4940167424641,
+        "destroy_index": 3,
+        "repair_index": 0,
+        "candidate_route_sha256": "8a02cf240f9170d3e5dfae63c0a6c72bb004a95b4cdd7037db67b695a5a6904f",
+        "outcome": 2,
+        "anneal_temperature_after": 219.19493804353417,
+        "roulette_destroy_weights_after": [
+          1.773140189205873,
+          0.887442878310099,
+          1.575197674785035,
+          1.7110370735996914
+        ],
+        "roulette_repair_weights_after": [
+          1.7489949504332312,
+          1.5566807704708474
+        ]
+      },
+      {
+        "stop_count": 1048,
+        "current_route_sha256": "8a02cf240f9170d3e5dfae63c0a6c72bb004a95b4cdd7037db67b695a5a6904f",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4289.86380336585,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "290d335f618df0e995ee6dbc108345c6b5c4be6b0f25d1c4ce6829a5097b7cca",
+        "roulette_destroy_weights": [
+          1.773140189205873,
+          0.887442878310099,
+          1.575197674785035,
+          1.7110370735996914
+        ],
+        "roulette_repair_weights": [
+          1.7489949504332312,
+          1.5566807704708474
+        ],
+        "anneal_temperature": 219.19493804353417,
+        "destroy_index": 0,
+        "repair_index": 0,
+        "candidate_route_sha256": "8a02cf240f9170d3e5dfae63c0a6c72bb004a95b4cdd7037db67b695a5a6904f",
+        "outcome": 2,
+        "anneal_temperature_after": 218.89626686399578,
+        "roulette_destroy_weights_after": [
+          1.6185121513646983,
+          0.887442878310099,
+          1.575197674785035,
+          1.7110370735996914
+        ],
+        "roulette_repair_weights_after": [
+          1.599195960346585,
+          1.5566807704708474
+        ]
+      },
+      {
+        "stop_count": 1049,
+        "current_route_sha256": "8a02cf240f9170d3e5dfae63c0a6c72bb004a95b4cdd7037db67b695a5a6904f",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4289.86380336585,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "9752dcf228a562f09fb60f3481d5655b5749a80bf33af424423def1f9979aa8d",
+        "roulette_destroy_weights": [
+          1.6185121513646983,
+          0.887442878310099,
+          1.575197674785035,
+          1.7110370735996914
+        ],
+        "roulette_repair_weights": [
+          1.599195960346585,
+          1.5566807704708474
+        ],
+        "anneal_temperature": 218.89626686399578,
+        "destroy_index": 2,
+        "repair_index": 1,
+        "candidate_route_sha256": "9fd11266600070833f1dfd1f1500bf2fdb9891793f118b464f15caa7c3c1451b",
+        "outcome": 2,
+        "anneal_temperature_after": 218.59800264857017,
+        "roulette_destroy_weights_after": [
+          1.6185121513646983,
+          0.887442878310099,
+          1.460158139828028,
+          1.7110370735996914
+        ],
+        "roulette_repair_weights_after": [
+          1.599195960346585,
+          1.4453446163766779
+        ]
+      },
+      {
+        "stop_count": 1050,
+        "current_route_sha256": "9fd11266600070833f1dfd1f1500bf2fdb9891793f118b464f15caa7c3c1451b",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4348.925966223818,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "957ae1eb1c061fe59bd37239f487349ae0d9d396363cd693f7600e982e4a922c",
+        "roulette_destroy_weights": [
+          1.6185121513646983,
+          0.887442878310099,
+          1.460158139828028,
+          1.7110370735996914
+        ],
+        "roulette_repair_weights": [
+          1.599195960346585,
+          1.4453446163766779
+        ],
+        "anneal_temperature": 218.59800264857017,
+        "destroy_index": 3,
+        "repair_index": 1,
+        "candidate_route_sha256": "7b8072aec5e65b3a1524865c586d83e2db46f843bad7088535d8d988a2ba2f6a",
+        "outcome": 2,
+        "anneal_temperature_after": 218.3001448427352,
+        "roulette_destroy_weights_after": [
+          1.6185121513646983,
+          0.887442878310099,
+          1.460158139828028,
+          1.5688296588797532
+        ],
+        "roulette_repair_weights_after": [
+          1.599195960346585,
+          1.3562756931013422
+        ]
+      },
+      {
+        "stop_count": 1051,
+        "current_route_sha256": "7b8072aec5e65b3a1524865c586d83e2db46f843bad7088535d8d988a2ba2f6a",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4535.904667136958,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "1bb6aae45bcb4aeaa39f22c2e3940dc4e0ecfdea689621d455bd85595e845e6c",
+        "roulette_destroy_weights": [
+          1.6185121513646983,
+          0.887442878310099,
+          1.460158139828028,
+          1.5688296588797532
+        ],
+        "roulette_repair_weights": [
+          1.599195960346585,
+          1.3562756931013422
+        ],
+        "anneal_temperature": 218.3001448427352,
+        "destroy_index": 2,
+        "repair_index": 0,
+        "candidate_route_sha256": "1f15765d40a638734a39fda89bd37bef0c7238af1601866d4077e2a86fa36e50",
+        "outcome": 2,
+        "anneal_temperature_after": 218.00269289272424,
+        "roulette_destroy_weights_after": [
+          1.6185121513646983,
+          0.887442878310099,
+          1.3681265118624224,
+          1.5688296588797532
+        ],
+        "roulette_repair_weights_after": [
+          1.4793567682772681,
+          1.3562756931013422
+        ]
+      },
+      {
+        "stop_count": 1052,
+        "current_route_sha256": "1f15765d40a638734a39fda89bd37bef0c7238af1601866d4077e2a86fa36e50",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4667.429275522358,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "330e0985b324b672007c4b90ae6853e9a1b184ab9264d71214836793dd37235d",
+        "roulette_destroy_weights": [
+          1.6185121513646983,
+          0.887442878310099,
+          1.3681265118624224,
+          1.5688296588797532
+        ],
+        "roulette_repair_weights": [
+          1.4793567682772681,
+          1.3562756931013422
+        ],
+        "anneal_temperature": 218.00269289272424,
+        "destroy_index": 0,
+        "repair_index": 0,
+        "candidate_route_sha256": "446b02714de1c155f725aefbda67082322fc80397f7851fa2eaf0bae1916170f",
+        "outcome": 1,
+        "anneal_temperature_after": 217.7056462455253,
+        "roulette_destroy_weights_after": [
+          2.0948097210917584,
+          0.887442878310099,
+          1.3681265118624224,
+          1.5688296588797532
+        ],
+        "roulette_repair_weights_after": [
+          1.9834854146218144,
+          1.3562756931013422
+        ]
+      },
+      {
+        "stop_count": 1053,
+        "current_route_sha256": "446b02714de1c155f725aefbda67082322fc80397f7851fa2eaf0bae1916170f",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4643.337904311717,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "c6ff412c6e379e8370d48a85dbeb6a45a5bd66775a12ebe1d95c2297e73954a0",
+        "roulette_destroy_weights": [
+          2.0948097210917584,
+          0.887442878310099,
+          1.3681265118624224,
+          1.5688296588797532
+        ],
+        "roulette_repair_weights": [
+          1.9834854146218144,
+          1.3562756931013422
+        ],
+        "anneal_temperature": 217.7056462455253,
+        "destroy_index": 3,
+        "repair_index": 1,
+        "candidate_route_sha256": "09d5301b0d2cf64a517357c3a60e0b9a38dcb174cd60a61e3b19277ac9306241",
+        "outcome": 3,
+        "anneal_temperature_after": 217.40900434887982,
+        "roulette_destroy_weights_after": [
+          2.0948097210917584,
+          0.887442878310099,
+          1.3681265118624224,
+          1.2550637271038028
+        ],
+        "roulette_repair_weights_after": [
+          1.9834854146218144,
+          1.0850205544810738
+        ]
+      },
+      {
+        "stop_count": 1054,
+        "current_route_sha256": "446b02714de1c155f725aefbda67082322fc80397f7851fa2eaf0bae1916170f",
+        "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+        "current_cost": 4643.337904311717,
+        "best_cost": 3896.298750909744,
+        "rng_state_sha256": "4a77a30376d9d84892299b5209ab2bf1038c49b7c0fcb9fa33fe95ef44eba763",
+        "roulette_destroy_weights": [
+          2.0948097210917584,
+          0.887442878310099,
+          1.3681265118624224,
+          1.2550637271038028
+        ],
+        "roulette_repair_weights": [
+          1.9834854146218144,
+          1.0850205544810738
+        ],
+        "anneal_temperature": 217.40900434887982,
+        "destroy_index": 0,
+        "repair_index": 0,
+        "candidate_route_sha256": "6d42df504705b50ad498695dd08bdb1051677dd2d590a37b325f40ddbe5f5ff7",
+        "outcome": 1,
+        "anneal_temperature_after": 217.11276665128185,
+        "roulette_destroy_weights_after": [
+          2.4758477768734064,
+          0.887442878310099,
+          1.3681265118624224,
+          1.2550637271038028
+        ],
+        "roulette_repair_weights_after": [
+          2.3867883316974514,
+          1.0850205544810738
+        ]
+      }
+    ],
+    "end_signature": {
+      "stop_count": 1055,
+      "current_route_sha256": "6d42df504705b50ad498695dd08bdb1051677dd2d590a37b325f40ddbe5f5ff7",
+      "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+      "current_cost": 4575.866104000481,
+      "best_cost": 3896.298750909744,
+      "rng_state_sha256": "c41dc81b3c11d8775b8604f4834c5dd1024c82fa9e9565d4fd9201106266e8a3",
+      "roulette_destroy_weights": [
+        2.4758477768734064,
+        0.887442878310099,
+        1.3681265118624224,
+        1.2550637271038028
+      ],
+      "roulette_repair_weights": [
+        2.3867883316974514,
+        1.0850205544810738
+      ],
+      "anneal_temperature": 217.11276665128185
+    },
+    "best_route_sha256": "500f5729844535ddbb449bc5377feec958ba036f3003682c320475b0e1398832",
+    "current_route_sha256": "6d42df504705b50ad498695dd08bdb1051677dd2d590a37b325f40ddbe5f5ff7",
+    "static_best_sec": 3896.298750909744,
+    "static_current_sec": 4575.866104000481,
+    "road_best_sec": 4636.5,
+    "road_current_sec": 5322.125,
+    "first_section_audit": {
+      "substitution_calls": 1,
+      "first_actual_section": [
+        0,
+        4,
+        2
+      ],
+      "first_chosen_section": [
+        2,
+        0,
+        2
+      ],
+      "sham_partial_equal": false,
+      "original_destroy_draws_preserved": true,
+      "post_original_C3_destroy_rng_sha256": "c7575cb01d7e303ddee25a754ac78a43dcab6fee95a6df599555081af5a4baf8"
+    },
+    "first_frozen_operator_pair": [
+      3,
+      1
+    ]
+  },
+  "source_manifest_sha256": "51c085425a41a6ffff4c41fe6955142567af2f2338c9dd2264eedac517d6c33b",
+  "source_snapshots_sha256": "dc74f2de2e6020bd181bca89f0b444fc6b5122ad48992cf4f09a8e2724d23004"
+}

@@ -1,0 +1,79 @@
+{
+  "stage": "R4H-TRAIN-SECTION-COUNTERFACTUAL-v1",
+  "status": "COMPLETE",
+  "data_role": "TRAIN_ONLY",
+  "n_branches": 240,
+  "n_labels": 192,
+  "n_sham_checks": 24,
+  "n_cross_k_prefix_checks": 160,
+  "new_units": 240,
+  "reused_units": 0,
+  "horizon_stability": {
+    "50_to_200": {
+      "sign_counts": {
+        "+->-": 1,
+        "0->+": 2,
+        "0->-": 6,
+        "0->0": 55
+      },
+      "positive_to_negative": 1,
+      "positive_to_negative_physical_states": 1,
+      "mean_C3_progress_for_flips_sec": 98.939453125,
+      "mean_alt_progress_for_flips_sec": 4.92578125
+    },
+    "200_to_500": {
+      "sign_counts": {
+        "+->+": 2,
+        "-->-": 7,
+        "0->+": 2,
+        "0->-": 1,
+        "0->0": 52
+      },
+      "positive_to_negative": 0,
+      "positive_to_negative_physical_states": 0,
+      "mean_C3_progress_for_flips_sec": 0.0,
+      "mean_alt_progress_for_flips_sec": 0.0
+    }
+  },
+  "n_scenario_snapshots": 8,
+  "n_distinct_physical_states": 8,
+  "per_horizon": {
+    "50": {
+      "n_actions": 64,
+      "n_scenario_snapshots": 8,
+      "positive": 1,
+      "negative": 0,
+      "zero": 63,
+      "mean_best_road_gain_sec": 0.864898681640625,
+      "positive_oracle_scenario_snapshots": 1,
+      "positive_oracle_distinct_physical_states": 1
+    },
+    "200": {
+      "n_actions": 64,
+      "n_scenario_snapshots": 8,
+      "positive": 2,
+      "negative": 7,
+      "zero": 55,
+      "mean_best_road_gain_sec": -4.039215087890625,
+      "positive_oracle_scenario_snapshots": 2,
+      "positive_oracle_distinct_physical_states": 2
+    },
+    "500": {
+      "n_actions": 64,
+      "n_scenario_snapshots": 8,
+      "positive": 4,
+      "negative": 8,
+      "zero": 52,
+      "mean_best_road_gain_sec": 0.81494140625,
+      "positive_oracle_scenario_snapshots": 2,
+      "positive_oracle_distinct_physical_states": 2
+    }
+  },
+  "source_prefix_exact_comparisons": 298,
+  "limitations": [
+    "Only TRAIN data, not independent model validation.",
+    "One RNG trajectory per physical state; correlated across K/actions/scenarios.",
+    "C3/SHAM is strict, K-step not remaining-wall-clock performance.",
+    "No model was fitted; benefits refer only to evaluated alternatives."
+  ]
+}
