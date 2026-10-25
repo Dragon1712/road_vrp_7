@@ -1,0 +1,20 @@
+{
+  "version": "R4-K v1",
+  "stage": "R4K-TRAIN-COUNTERFACTUAL-COVERAGE-v1",
+  "basis_github_commit": "95b3fbf78166e8a9db2d6985b26e3ae3abc4f951",
+  "file_sha256": {
+    "CHANGELOG.md": "71b485878fdf9bcc03eca218e395724e4c30910685e9a39e825dcc3937f7f6ad",
+    "README.md": "8f59d0f173cd04f5af4968dfbed018863abd584460c9fc5212759d04c732d2d1",
+    "audit_r4k.py": "97a74c79aa2f39f20eb655c057ba4b1c4406e1be209025e1ad06872a62695fe0",
+    "r4k_core.py": "003f1133c3756420d5059d1bf8327f126605a8d381304015b83121df63d7522c",
+    "run_r4k.sh": "bf6ce5c476f574d47a88c95e5f01d5f36b15ce966ec422b03b8b0c559c57181a",
+    "tests/test_r4k.py": "e391fa1d099ca4af3d750dda04c012a4d91c9f1ecae4911c9361d52542f6acd9"
+  },
+  "audit_limits": [
+    "Train only, no Validation/Test labels",
+    "No missing=zero",
+    "No claim of 30s online gain",
+    "No Chicago ALNS end-to-end test in this sandbox"
+  ],
+  "local_tests": "10 synthetic/golden and negative tests passed"
+}

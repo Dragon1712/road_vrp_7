@@ -1,0 +1,173 @@
+{
+  "stage": "R4K-TRAIN-COUNTERFACTUAL-COVERAGE-v1",
+  "status": "SOURCE_COMPLETE",
+  "data_role": "TRAIN_ONLY",
+  "source_commit_reviewed": "95b3fbf78166e8a9db2d6985b26e3ae3abc4f951",
+  "analysis": {
+    "planned_scenario_snapshots": 128,
+    "completed_scenario_snapshots": 128,
+    "incomplete_scenario_snapshots": 0,
+    "existing_unit_files": 3789,
+    "complete_exact_physical_states": 128,
+    "complete_coarse_search_starts": 64,
+    "complete_per_task": {
+      "task_0000": 32,
+      "task_0001": 32,
+      "task_0002": 32,
+      "task_0003": 32
+    },
+    "per_horizon": {
+      "50": {
+        "fully_evaluated_snapshots": 128,
+        "action_labels": 1007,
+        "positive": 71,
+        "negative": 41,
+        "zero": 895,
+        "mean_action_gain_sec": 1.7411692372144985,
+        "positive_oracle_snapshots": 25,
+        "per_task": {
+          "task_0000": {
+            "n": 249,
+            "positive": 12,
+            "negative": 25
+          },
+          "task_0001": {
+            "n": 251,
+            "positive": 11,
+            "negative": 8
+          },
+          "task_0002": {
+            "n": 251,
+            "positive": 43,
+            "negative": 5
+          },
+          "task_0003": {
+            "n": 256,
+            "positive": 5,
+            "negative": 3
+          }
+        }
+      },
+      "200": {
+        "fully_evaluated_snapshots": 128,
+        "action_labels": 1007,
+        "positive": 195,
+        "negative": 154,
+        "zero": 658,
+        "mean_action_gain_sec": 3.31823718346574,
+        "positive_oracle_snapshots": 51,
+        "per_task": {
+          "task_0000": {
+            "n": 249,
+            "positive": 61,
+            "negative": 39
+          },
+          "task_0001": {
+            "n": 251,
+            "positive": 15,
+            "negative": 45
+          },
+          "task_0002": {
+            "n": 251,
+            "positive": 83,
+            "negative": 37
+          },
+          "task_0003": {
+            "n": 256,
+            "positive": 36,
+            "negative": 33
+          }
+        }
+      },
+      "500": {
+        "fully_evaluated_snapshots": 128,
+        "action_labels": 1007,
+        "positive": 190,
+        "negative": 224,
+        "zero": 593,
+        "mean_action_gain_sec": 0.10168469153426019,
+        "positive_oracle_snapshots": 54,
+        "per_task": {
+          "task_0000": {
+            "n": 249,
+            "positive": 64,
+            "negative": 65
+          },
+          "task_0001": {
+            "n": 251,
+            "positive": 3,
+            "negative": 52
+          },
+          "task_0002": {
+            "n": 251,
+            "positive": 72,
+            "negative": 62
+          },
+          "task_0003": {
+            "n": 256,
+            "positive": 51,
+            "negative": 45
+          }
+        }
+      }
+    },
+    "horizon_transitions": {
+      "50_to_200": {
+        "n_pairs": 1007,
+        "sign_counts": {
+          "+->-": 16,
+          "0->-": 109,
+          "-->-": 29,
+          "0->0": 655,
+          "+->+": 52,
+          "0->+": 131,
+          "-->+": 12,
+          "+->0": 3
+        },
+        "positive_to_negative": 16,
+        "flipped_scenario_snapshots": 7,
+        "mean_C3_progress_in_flips": 144.99853515625,
+        "mean_alt_progress_in_flips": -18.66796875
+      },
+      "200_to_500": {
+        "n_pairs": 1007,
+        "sign_counts": {
+          "-->-": 120,
+          "0->0": 571,
+          "+->+": 121,
+          "0->+": 41,
+          "0->-": 46,
+          "+->-": 58,
+          "-->0": 6,
+          "-->+": 28,
+          "+->0": 16
+        },
+        "positive_to_negative": 58,
+        "flipped_scenario_snapshots": 17,
+        "mean_C3_progress_in_flips": 95.11163119612068,
+        "mean_alt_progress_in_flips": 12.260102370689655
+      }
+    },
+    "limitations": [
+      "PARTIAL sampling is execution-order selected, not representative or IID.",
+      "Only complete snapshot/arm/K triples enter reward metrics; no missing-as-zero.",
+      "Posthoc fixed-K Road.replay, not 30-second online policy performance.",
+      "Exact physical SA temperatures can differ slightly across scenarios; group correlations remain.",
+      "No model fitted, no Validation/Test used."
+    ]
+  },
+  "source_sha256": {
+    "prefix_report": "fa1677764b2cd347722f600f248e416eda98ac3decdd0e1a84f575e5baac58cf",
+    "prefix_manifest": "3593315eae3ccb63c734092026eeda3d4049caa79c03137150af5b546f868798",
+    "prefix_paired_rows": "b7fef133d46c39e011db48e882eb5ec592c4d3832dbbbdd3edab1994ec135fac",
+    "prefix_excluded_windows": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "capture_manifest": "69ccf92e30726339fd7d4816510e575df0c57d0dd81c6eb0024dd5eccd9a5af7",
+    "capture_provenance": "75602ba99975e5015d5a4838a6753da8526b867467156f4b2f91d0d58634a819",
+    "capture_snapshots": "cc2f71e294d4ecafff43f3f70ea5935ed8d62e5803accba799082c52a698cb62",
+    "capture_metrics": "4bca81646778e83fa3fca02a72d6b5876ebc95b873b94ffc0ccc8f1074fe1dc6",
+    "cf_manifest": "7e80ed3f3066b8184e4fd7c14b21301a3d0ff411e78424cc84b5e7297e48e775",
+    "cf_report": "43d78a1b8c0aa5e22de9fe594e4289fb736336ac4ae1e1c31a4cd8652b2fa3f3"
+  },
+  "no_model_fit": true,
+  "no_cf_execution": true
+}

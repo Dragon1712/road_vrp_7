@@ -1,0 +1,136 @@
+{
+  "stage": "R4K-TRAIN-COUNTERFACTUAL-COVERAGE-v1",
+  "status": "PARTIAL_COVERAGE_ONLY",
+  "data_role": "TRAIN_ONLY",
+  "source_commit_reviewed": "95b3fbf78166e8a9db2d6985b26e3ae3abc4f951",
+  "analysis": {
+    "planned_scenario_snapshots": 128,
+    "completed_scenario_snapshots": 16,
+    "incomplete_scenario_snapshots": 112,
+    "existing_unit_files": 480,
+    "complete_exact_physical_states": 16,
+    "complete_coarse_search_starts": 16,
+    "complete_per_task": {
+      "task_0000": 8,
+      "task_0001": 8
+    },
+    "per_horizon": {
+      "50": {
+        "fully_evaluated_snapshots": 16,
+        "action_labels": 124,
+        "positive": 5,
+        "negative": 5,
+        "zero": 114,
+        "mean_action_gain_sec": 0.7690587197580645,
+        "positive_oracle_snapshots": 2,
+        "per_task": {
+          "task_0000": {
+            "n": 60,
+            "positive": 5,
+            "negative": 5
+          },
+          "task_0001": {
+            "n": 64,
+            "positive": 0,
+            "negative": 0
+          }
+        }
+      },
+      "200": {
+        "fully_evaluated_snapshots": 16,
+        "action_labels": 124,
+        "positive": 8,
+        "negative": 29,
+        "zero": 87,
+        "mean_action_gain_sec": -5.28173828125,
+        "positive_oracle_snapshots": 5,
+        "per_task": {
+          "task_0000": {
+            "n": 60,
+            "positive": 5,
+            "negative": 16
+          },
+          "task_0001": {
+            "n": 64,
+            "positive": 3,
+            "negative": 13
+          }
+        }
+      },
+      "500": {
+        "fully_evaluated_snapshots": 16,
+        "action_labels": 124,
+        "positive": 6,
+        "negative": 37,
+        "zero": 81,
+        "mean_action_gain_sec": -7.961992817540323,
+        "positive_oracle_snapshots": 4,
+        "per_task": {
+          "task_0000": {
+            "n": 60,
+            "positive": 6,
+            "negative": 22
+          },
+          "task_0001": {
+            "n": 64,
+            "positive": 0,
+            "negative": 15
+          }
+        }
+      }
+    },
+    "horizon_transitions": {
+      "50_to_200": {
+        "n_pairs": 124,
+        "sign_counts": {
+          "+->-": 3,
+          "0->-": 21,
+          "-->-": 5,
+          "0->0": 87,
+          "+->+": 2,
+          "0->+": 6
+        },
+        "positive_to_negative": 3,
+        "flipped_scenario_snapshots": 1,
+        "mean_C3_progress_in_flips": 37.732421875,
+        "mean_alt_progress_in_flips": -49.639973958333336
+      },
+      "200_to_500": {
+        "n_pairs": 124,
+        "sign_counts": {
+          "-->-": 28,
+          "0->0": 80,
+          "+->+": 4,
+          "0->+": 2,
+          "0->-": 5,
+          "+->-": 4,
+          "-->0": 1
+        },
+        "positive_to_negative": 4,
+        "flipped_scenario_snapshots": 2,
+        "mean_C3_progress_in_flips": 26.4755859375,
+        "mean_alt_progress_in_flips": -7.88330078125
+      }
+    },
+    "limitations": [
+      "PARTIAL sampling is execution-order selected, not representative or IID.",
+      "Only complete snapshot/arm/K triples enter reward metrics; no missing-as-zero.",
+      "Posthoc fixed-K Road.replay, not 30-second online policy performance.",
+      "Exact physical SA temperatures can differ slightly across scenarios; group correlations remain.",
+      "No model fitted, no Validation/Test used."
+    ]
+  },
+  "source_sha256": {
+    "prefix_report": "fa1677764b2cd347722f600f248e416eda98ac3decdd0e1a84f575e5baac58cf",
+    "prefix_manifest": "3593315eae3ccb63c734092026eeda3d4049caa79c03137150af5b546f868798",
+    "prefix_paired_rows": "b7fef133d46c39e011db48e882eb5ec592c4d3832dbbbdd3edab1994ec135fac",
+    "prefix_excluded_windows": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "capture_manifest": "69ccf92e30726339fd7d4816510e575df0c57d0dd81c6eb0024dd5eccd9a5af7",
+    "capture_provenance": "75602ba99975e5015d5a4838a6753da8526b867467156f4b2f91d0d58634a819",
+    "capture_snapshots": "cc2f71e294d4ecafff43f3f70ea5935ed8d62e5803accba799082c52a698cb62",
+    "capture_metrics": "4bca81646778e83fa3fca02a72d6b5876ebc95b873b94ffc0ccc8f1074fe1dc6",
+    "cf_manifest": "7e80ed3f3066b8184e4fd7c14b21301a3d0ff411e78424cc84b5e7297e48e775"
+  },
+  "no_model_fit": true,
+  "no_cf_execution": true
+}
