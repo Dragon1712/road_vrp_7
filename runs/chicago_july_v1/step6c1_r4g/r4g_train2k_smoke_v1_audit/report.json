@@ -1,0 +1,39 @@
+{
+  "stage": "R4G-TRAIN-NONINTERFERENCE-AUDIT-v1",
+  "status": "COMPLETE",
+  "pairs": 1,
+  "strict_pass": 1,
+  "route_road_equal": 1,
+  "wall_limited_pairs": 0,
+  "n_snapshots": 4,
+  "n_distinct_physical_states": 4,
+  "multi_scenario_physical_states": 0,
+  "n_task_groups": 1,
+  "details": [
+    {
+      "task_id": "task_0000",
+      "scenario_id": "2025-07-02_0800",
+      "seed": 60,
+      "plain_iterations": 2000,
+      "capture_iterations": 2000,
+      "iteration_limited_both": true,
+      "route_and_road_equal": true,
+      "strong_pass": true,
+      "capture_minus_plain_wall_sec": -0.06683,
+      "n_snapshots": 4
+    }
+  ],
+  "limitations": [
+    "Only TRAIN role, not model performance.",
+    "Fixed-iteration equality only when both reach cap.",
+    "Same physical states in several scenarios are not independent.",
+    "No restored ALNS equivalence until R4G proof passes."
+  ],
+  "source_sha256": {
+    "runs/chicago_july_v1/step6c1_r4g/r4g_train2k_smoke_v1_plain/manifest.json": "9b0a00b7020c92d74baf22df9d4c205e8e3e0d1ade3d9f3aff61c34b498a1632",
+    "runs/chicago_july_v1/step6c1_r4g/r4g_train2k_smoke_v1_plain/metrics.jsonl": "5dedfcafcd4a32b3414e3e0fed4803a7ba463c73a727135fbc4ec3b6cf30a051",
+    "runs/chicago_july_v1/step6c1_r4g/r4g_train2k_smoke_v1_capture/manifest.json": "a0a4e9800b4fe223d32e7c19ef2383158a14b91dd43cdda953cbbe36c973c6b5",
+    "runs/chicago_july_v1/step6c1_r4g/r4g_train2k_smoke_v1_capture/metrics.jsonl": "54fe21416c6543b740301939f7225093b1d95ea89ec47a9aa75df1ae293b0185",
+    "runs/chicago_july_v1/step6c1_r4g/r4g_train2k_smoke_v1_capture/snapshots.jsonl": "ed3a421eeebca085fcbfaf2ff2ed8b2cc96e9e02f94c2ceee6c28432e3bd6df2"
+  }
+}

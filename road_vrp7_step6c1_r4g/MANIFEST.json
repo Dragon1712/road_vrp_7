@@ -1,0 +1,29 @@
+{
+  "stage": "R4G-TRAIN-CAPTURE-AND-EXACT-PROOF-v1.3",
+  "base_frozen_github_commit": "5014866fc4d2428b9b603959ea3dffa0c8761c9d",
+  "changes": [
+    "Persist diagnostic report before strict fail",
+    "Read-only diagnosis from existing Train results",
+    "Keep frozen ALNS and fixed-iteration proof protocol unchanged"
+  ],
+  "files_sha256": {
+    "CHANGELOG.md": "111ca6236a4e04088e6812d44d198a7b39b4cefed683799797da79a4837790db",
+    "README.md": "990ac7880d11a13d1fe8b242700c5b3e49e0052270a19e48d4a62864494f7202",
+    "audit_r4g.py": "baa20560ba966e776d0507691d47a78df7e843a1aeae72a7d4d0bfbd7d3d94db",
+    "collect_train_r4g.py": "111a4ae9c30b8d36dd39534b95a4f8b82898eb33ae2c64b46a5139ad0f555bef",
+    "r4g_core.py": "a025e3c4717db2ce9eb45d04fbc33ba11b6bf5f872149e9f6356c2ded50a0459",
+    "run_r4g.sh": "922d9877a18a5a15e2494bf4505200ae5790dc72f7018a4b93b1439704d0ed3d",
+    "tests/test_r4g.py": "19fad84179c960608f0d672c2b75c3e15c7a050014ee234e868b9c09dc3d8043",
+    "tests/test_r4g_audit_diag.py": "3766f93f483b769a5e86112972ca1e952656185b8cd5ad0eb1215459e585575b",
+    "tests/test_r4g_collector.py": "b9e8d10f17d121bcb165a3b5a7c21d73841a1a30b5ca73deff43cc996529411f",
+    "tests/test_r4g_shell.py": "6d2543ebd357f50d63517c549c82060147ed8c50ea57ae0d97b7da135d2e4c3e",
+    "verify_train_r4g.py": "a10d8b936818b390391dca6ea00947d2d0e323695cada2c8bab8ef146a74d70f"
+  },
+  "tests": "24 synthetic tests passed locally; real Chicago strict diagnosis pending",
+  "boundaries": [
+    "Train only",
+    "Strict noninterference not bypassed",
+    "30-second wall cap distinct from 20k iteration cap",
+    "No original ALNS or R4-A/B source changes"
+  ]
+}
