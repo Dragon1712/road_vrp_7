@@ -1,0 +1,81 @@
+{
+  "stage": "R4H-TRAIN-SECTION-COUNTERFACTUAL-v1",
+  "status": "COMPLETE",
+  "data_role": "TRAIN_ONLY",
+  "n_branches": 234,
+  "n_labels": 186,
+  "n_sham_checks": 24,
+  "n_cross_k_prefix_checks": 156,
+  "new_units": 234,
+  "reused_units": 0,
+  "horizon_stability": {
+    "50_to_200": {
+      "sign_counts": {
+        "+->+": 7,
+        "+->-": 3,
+        "-->+": 1,
+        "-->-": 2,
+        "0->+": 3,
+        "0->-": 14,
+        "0->0": 32
+      },
+      "positive_to_negative": 3,
+      "positive_to_negative_physical_states": 1,
+      "mean_C3_progress_for_flips_sec": 37.732421875,
+      "mean_alt_progress_for_flips_sec": -49.639973958333336
+    },
+    "200_to_500": {
+      "sign_counts": {
+        "+->+": 2,
+        "+->-": 9,
+        "-->-": 19,
+        "0->0": 32
+      },
+      "positive_to_negative": 9,
+      "positive_to_negative_physical_states": 2,
+      "mean_C3_progress_for_flips_sec": 161.2421875,
+      "mean_alt_progress_for_flips_sec": 22.45920138888889
+    }
+  },
+  "n_scenario_snapshots": 8,
+  "n_distinct_physical_states": 8,
+  "per_horizon": {
+    "50": {
+      "n_actions": 62,
+      "n_scenario_snapshots": 8,
+      "positive": 10,
+      "negative": 3,
+      "zero": 49,
+      "mean_best_road_gain_sec": 8.56637474798387,
+      "positive_oracle_scenario_snapshots": 2,
+      "positive_oracle_distinct_physical_states": 2
+    },
+    "200": {
+      "n_actions": 62,
+      "n_scenario_snapshots": 8,
+      "positive": 11,
+      "negative": 19,
+      "zero": 32,
+      "mean_best_road_gain_sec": 9.02699722782258,
+      "positive_oracle_scenario_snapshots": 2,
+      "positive_oracle_distinct_physical_states": 2
+    },
+    "500": {
+      "n_actions": 62,
+      "n_scenario_snapshots": 8,
+      "positive": 2,
+      "negative": 28,
+      "zero": 32,
+      "mean_best_road_gain_sec": -19.43485383064516,
+      "positive_oracle_scenario_snapshots": 1,
+      "positive_oracle_distinct_physical_states": 1
+    }
+  },
+  "source_prefix_exact_comparisons": 512,
+  "limitations": [
+    "Only TRAIN data, not independent model validation.",
+    "One RNG trajectory per physical state; correlated across K/actions/scenarios.",
+    "C3/SHAM is strict, K-step not remaining-wall-clock performance.",
+    "No model was fitted; benefits refer only to evaluated alternatives."
+  ]
+}

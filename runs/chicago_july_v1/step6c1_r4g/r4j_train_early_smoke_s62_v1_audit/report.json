@@ -1,0 +1,51 @@
+{
+  "stage": "R4G-TRAIN-NONINTERFERENCE-AUDIT-v1",
+  "status": "COMPLETE",
+  "strict_verdict": "VERIFIED",
+  "can_claim_fixed_iteration_noninterference": true,
+  "n_failed_pairs": 0,
+  "failure_reason_counts": {},
+  "pairs": 1,
+  "strict_pass": 1,
+  "route_road_equal": 1,
+  "wall_limited_pairs": 0,
+  "n_snapshots": 8,
+  "n_distinct_physical_states": 8,
+  "multi_scenario_physical_states": 0,
+  "n_task_groups": 1,
+  "details": [
+    {
+      "task_id": "task_0002",
+      "scenario_id": "2025-07-02_0800",
+      "seed": 62,
+      "plain_iterations": 20000,
+      "capture_iterations": 20000,
+      "plain_termination_reason": "iteration_budget",
+      "capture_termination_reason": "iteration_budget",
+      "plain_wall_sec": 23.525065346620977,
+      "capture_wall_sec": 23.947376620955765,
+      "road_delta_capture_minus_plain_sec": 0.0,
+      "route_equal": true,
+      "road_equal": true,
+      "iteration_limited_both": true,
+      "route_and_road_equal": true,
+      "strong_pass": true,
+      "failure_reasons": [],
+      "capture_minus_plain_wall_sec": 0.422311,
+      "n_snapshots": 8
+    }
+  ],
+  "limitations": [
+    "Only TRAIN role, not model performance.",
+    "Fixed-iteration equality only when both reach cap.",
+    "Same physical states in several scenarios are not independent.",
+    "No restored ALNS equivalence until R4G proof passes."
+  ],
+  "source_sha256": {
+    "runs/chicago_july_v1/step6c1_r4g/r4j_train_early_smoke_s62_v1_plain/manifest.json": "d6bba811059fa256ef62ea3dfef9e00f3b74616ae831a0fab2971b661113f205",
+    "runs/chicago_july_v1/step6c1_r4g/r4j_train_early_smoke_s62_v1_plain/metrics.jsonl": "53d08551f2260b0bc4e0a5c1df79e3a3a81dce6a0363ef5a716a68df95ddc78b",
+    "runs/chicago_july_v1/step6c1_r4g/r4j_train_early_smoke_s62_v1_capture/manifest.json": "0d8b4e9db3aa2449f0b2b41029ee0df969e8915ab89ef5ca12baf120f2422dc9",
+    "runs/chicago_july_v1/step6c1_r4g/r4j_train_early_smoke_s62_v1_capture/metrics.jsonl": "2b6792c64bbc4842a337a7a5c61fd3eeb895fd142415b571c31b3fa51433885b",
+    "runs/chicago_july_v1/step6c1_r4g/r4j_train_early_smoke_s62_v1_capture/snapshots.jsonl": "d68dc7d1cee82ee2abda20e45ed225eca1521ffe69ce0e21e1377eb4137c356b"
+  }
+}

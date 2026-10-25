@@ -1,0 +1,94 @@
+{
+  "stage": "R4H-TRAIN-SECTION-COUNTERFACTUAL-v1",
+  "status": "CONFIGURED",
+  "data_role": "TRAIN_ONLY",
+  "experiment": "FIRST_SECTION_ALT_THEN_OFFICIAL_C3_FIXED_K",
+  "eval_semantics": "FIXED_K_NOT_REMAINING_30S",
+  "horizons": [
+    50,
+    200,
+    500
+  ],
+  "action_count": 8,
+  "max_alternatives": 8,
+  "sampler_seed": 20261019,
+  "max_cases": 4,
+  "max_snapshots_per_case": 2,
+  "require_all_k": true,
+  "selected_snapshot_ids": [
+    [
+      "task_0000",
+      "2025-07-02_0800",
+      62,
+      101
+    ],
+    [
+      "task_0000",
+      "2025-07-02_0800",
+      62,
+      1758
+    ],
+    [
+      "task_0001",
+      "2025-07-02_0800",
+      62,
+      110
+    ],
+    [
+      "task_0001",
+      "2025-07-02_0800",
+      62,
+      1755
+    ],
+    [
+      "task_0002",
+      "2025-07-02_0800",
+      62,
+      118
+    ],
+    [
+      "task_0002",
+      "2025-07-02_0800",
+      62,
+      1752
+    ],
+    [
+      "task_0003",
+      "2025-07-02_0800",
+      62,
+      103
+    ],
+    [
+      "task_0003",
+      "2025-07-02_0800",
+      62,
+      1750
+    ]
+  ],
+  "source_sha256": {
+    "prefix_report": "fa1677764b2cd347722f600f248e416eda98ac3decdd0e1a84f575e5baac58cf",
+    "prefix_manifest": "3593315eae3ccb63c734092026eeda3d4049caa79c03137150af5b546f868798",
+    "prefix_paired_rows": "b7fef133d46c39e011db48e882eb5ec592c4d3832dbbbdd3edab1994ec135fac",
+    "prefix_excluded_windows": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "capture_manifest": "69ccf92e30726339fd7d4816510e575df0c57d0dd81c6eb0024dd5eccd9a5af7",
+    "capture_provenance": "75602ba99975e5015d5a4838a6753da8526b867467156f4b2f91d0d58634a819",
+    "capture_snapshots": "cc2f71e294d4ecafff43f3f70ea5935ed8d62e5803accba799082c52a698cb62",
+    "capture_metrics": "4bca81646778e83fa3fca02a72d6b5876ebc95b873b94ffc0ccc8f1074fe1dc6",
+    "frozen_solver": "1d77b5266bd0481d2a5231311efdc83f6dd21a84c40a23e1386f2e7e90086ea1",
+    "frozen_section": "ded8d785a2a817aa2c2fae6ce0064ac95d42de8fe4e8c9b0481bcd2bfbee456e",
+    "frozen_r4a": "561dafdcb72ca9df3b557a67798d214ac999a12a8f28ade5c911f436fa503cfc",
+    "frozen_r4b": "13526da3bd458d02ca361880c74c230257a531d5fea777b5db0abb95e0ddb453",
+    "r4c_run_one": "db693f5989a9e30cabf633a149f56b244745502b9892bd50d8663b2cd7fe718e",
+    "r4c_core": "f3032a15c4f05b740c7d243427e3175211a776779aebf2250c7c87cb54f79bd3",
+    "r4h_collector": "0c519ef0035ce4d20709c530af73c5b907b70e889cb625ce387b470bbe7e2ea8",
+    "r4h_core": "05d630fd7c903f735402c90d8c09ac7e4cf5da146bb33c0b4ac54d5a4dc7b14e"
+  },
+  "source_exact_comparisons": 512,
+  "warnings": [
+    "Never fit a model on Validation/Test labels.",
+    "SHAM and every K prefix must remain exact; alternatives do not preserve RNG after branching.",
+    "Static Section candidates, posthoc Road.replay labels; no road-label leakage into action.",
+    "K is fixed iterations not remaining 30-second wall time.",
+    "Physical search states repeat across traffic scenarios; group related samples."
+  ]
+}

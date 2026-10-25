@@ -1,0 +1,72 @@
+{
+  "stage": "R4H-TRAIN-SECTION-COUNTERFACTUAL-v1",
+  "status": "COMPLETE",
+  "data_role": "TRAIN_ONLY",
+  "n_branches": 30,
+  "n_labels": 24,
+  "n_sham_checks": 3,
+  "n_cross_k_prefix_checks": 20,
+  "new_units": 30,
+  "reused_units": 0,
+  "horizon_stability": {
+    "50_to_200": {
+      "sign_counts": {
+        "0->0": 8
+      },
+      "positive_to_negative": 0,
+      "positive_to_negative_physical_states": 0,
+      "mean_C3_progress_for_flips_sec": 0.0,
+      "mean_alt_progress_for_flips_sec": 0.0
+    },
+    "200_to_500": {
+      "sign_counts": {
+        "0->0": 8
+      },
+      "positive_to_negative": 0,
+      "positive_to_negative_physical_states": 0,
+      "mean_C3_progress_for_flips_sec": 0.0,
+      "mean_alt_progress_for_flips_sec": 0.0
+    }
+  },
+  "n_scenario_snapshots": 1,
+  "n_distinct_physical_states": 1,
+  "per_horizon": {
+    "50": {
+      "n_actions": 8,
+      "n_scenario_snapshots": 1,
+      "positive": 0,
+      "negative": 0,
+      "zero": 8,
+      "mean_best_road_gain_sec": 0.0,
+      "positive_oracle_scenario_snapshots": 0,
+      "positive_oracle_distinct_physical_states": 0
+    },
+    "200": {
+      "n_actions": 8,
+      "n_scenario_snapshots": 1,
+      "positive": 0,
+      "negative": 0,
+      "zero": 8,
+      "mean_best_road_gain_sec": 0.0,
+      "positive_oracle_scenario_snapshots": 0,
+      "positive_oracle_distinct_physical_states": 0
+    },
+    "500": {
+      "n_actions": 8,
+      "n_scenario_snapshots": 1,
+      "positive": 0,
+      "negative": 0,
+      "zero": 8,
+      "mean_best_road_gain_sec": 0.0,
+      "positive_oracle_scenario_snapshots": 0,
+      "positive_oracle_distinct_physical_states": 0
+    }
+  },
+  "source_prefix_exact_comparisons": 32,
+  "limitations": [
+    "Only TRAIN data, not independent model validation.",
+    "One RNG trajectory per physical state; correlated across K/actions/scenarios.",
+    "C3/SHAM is strict, K-step not remaining-wall-clock performance.",
+    "No model was fitted; benefits refer only to evaluated alternatives."
+  ]
+}

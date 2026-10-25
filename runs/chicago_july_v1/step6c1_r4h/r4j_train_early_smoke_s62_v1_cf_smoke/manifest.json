@@ -1,0 +1,52 @@
+{
+  "stage": "R4H-TRAIN-SECTION-COUNTERFACTUAL-v1",
+  "status": "CONFIGURED",
+  "data_role": "TRAIN_ONLY",
+  "experiment": "FIRST_SECTION_ALT_THEN_OFFICIAL_C3_FIXED_K",
+  "eval_semantics": "FIXED_K_NOT_REMAINING_30S",
+  "horizons": [
+    50,
+    200,
+    500
+  ],
+  "action_count": 8,
+  "max_alternatives": 8,
+  "sampler_seed": 20261019,
+  "max_cases": 1,
+  "max_snapshots_per_case": 1,
+  "require_all_k": true,
+  "selected_snapshot_ids": [
+    [
+      "task_0002",
+      "2025-07-02_0800",
+      62,
+      759
+    ]
+  ],
+  "source_sha256": {
+    "prefix_report": "1f715fb3f1d382e5fb46d4127db0a44b413d3bd43e08090e29d229b093eed1b0",
+    "prefix_manifest": "6c14ffeb8ea1ee854f345134e128143f10dbb8da3a09184b6a69430d21ba3fcf",
+    "prefix_paired_rows": "9a91340810dc45d119ecc6ff5493e20a6f45a00bab780a0ff699931e65df2c01",
+    "prefix_excluded_windows": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "capture_manifest": "0d8b4e9db3aa2449f0b2b41029ee0df969e8915ab89ef5ca12baf120f2422dc9",
+    "capture_provenance": "e381cda402828b8533fda2c1ebc24dd8134c8ebe26192093df5510820d2e1190",
+    "capture_snapshots": "d68dc7d1cee82ee2abda20e45ed225eca1521ffe69ce0e21e1377eb4137c356b",
+    "capture_metrics": "2b6792c64bbc4842a337a7a5c61fd3eeb895fd142415b571c31b3fa51433885b",
+    "frozen_solver": "1d77b5266bd0481d2a5231311efdc83f6dd21a84c40a23e1386f2e7e90086ea1",
+    "frozen_section": "ded8d785a2a817aa2c2fae6ce0064ac95d42de8fe4e8c9b0481bcd2bfbee456e",
+    "frozen_r4a": "561dafdcb72ca9df3b557a67798d214ac999a12a8f28ade5c911f436fa503cfc",
+    "frozen_r4b": "13526da3bd458d02ca361880c74c230257a531d5fea777b5db0abb95e0ddb453",
+    "r4c_run_one": "db693f5989a9e30cabf633a149f56b244745502b9892bd50d8663b2cd7fe718e",
+    "r4c_core": "f3032a15c4f05b740c7d243427e3175211a776779aebf2250c7c87cb54f79bd3",
+    "r4h_collector": "0c519ef0035ce4d20709c530af73c5b907b70e889cb625ce387b470bbe7e2ea8",
+    "r4h_core": "05d630fd7c903f735402c90d8c09ac7e4cf5da146bb33c0b4ac54d5a4dc7b14e"
+  },
+  "source_exact_comparisons": 32,
+  "warnings": [
+    "Never fit a model on Validation/Test labels.",
+    "SHAM and every K prefix must remain exact; alternatives do not preserve RNG after branching.",
+    "Static Section candidates, posthoc Road.replay labels; no road-label leakage into action.",
+    "K is fixed iterations not remaining 30-second wall time.",
+    "Physical search states repeat across traffic scenarios; group related samples."
+  ]
+}

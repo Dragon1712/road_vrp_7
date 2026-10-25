@@ -1,0 +1,80 @@
+{
+  "stage": "R4G-TRAIN-PREFIX-EXACT-v1",
+  "status": "CONFIGURED",
+  "source_sha256": {
+    "capture_manifest": "0d8b4e9db3aa2449f0b2b41029ee0df969e8915ab89ef5ca12baf120f2422dc9",
+    "capture_provenance": "e381cda402828b8533fda2c1ebc24dd8134c8ebe26192093df5510820d2e1190",
+    "capture_metrics": "2b6792c64bbc4842a337a7a5c61fd3eeb895fd142415b571c31b3fa51433885b",
+    "capture_snapshots": "d68dc7d1cee82ee2abda20e45ed225eca1521ffe69ce0e21e1377eb4137c356b",
+    "plain_manifest": "d6bba811059fa256ef62ea3dfef9e00f3b74616ae831a0fab2971b661113f205",
+    "plain_provenance": "e8b66fe0c08ec10e97374703d7f92022d83530f989cf1dcc65eda2a3e119ec27",
+    "plain_metrics": "53d08551f2260b0bc4e0a5c1df79e3a3a81dce6a0363ef5a716a68df95ddc78b",
+    "original_c3_solver": "1d77b5266bd0481d2a5231311efdc83f6dd21a84c40a23e1386f2e7e90086ea1",
+    "original_section": "ded8d785a2a817aa2c2fae6ce0064ac95d42de8fe4e8c9b0481bcd2bfbee456e",
+    "original_r4a_core": "561dafdcb72ca9df3b557a67798d214ac999a12a8f28ade5c911f436fa503cfc",
+    "original_r4g_collector": "111a4ae9c30b8d36dd39534b95a4f8b82898eb33ae2c64b46a5139ad0f555bef",
+    "code_verifier": "33e087304f100ff1538692627e3c5d9f24407f3ade8739b213d134b51955cde5",
+    "code_core": "5d628c6cd736bbbd9f6280f2c8fef1c7758f47e8c5b8c2c2590bc1520425a747",
+    "code_r4b_core": "13526da3bd458d02ca361880c74c230257a531d5fea777b5db0abb95e0ddb453",
+    "code_r4b_reference": "159f53d275bf49eadd0a0f26a0e17ffd48a1f6df933fa6719cca5dcda5c8f523",
+    "code_r4g_preflight": "a10d8b936818b390391dca6ea00947d2d0e323695cada2c8bab8ef146a74d70f",
+    "code_r4g_core": "a025e3c4717db2ce9eb45d04fbc33ba11b6bf5f872149e9f6356c2ded50a0459"
+  },
+  "data_role": "TRAIN_ONLY",
+  "horizons": [
+    1,
+    50,
+    200,
+    500
+  ],
+  "max_cases": 1,
+  "max_snapshots_per_case": 3,
+  "reference_wall_sec": 90.0,
+  "source_wall_sec": 30,
+  "source_max_iterations": 20000,
+  "case_plan": [
+    [
+      "task_0002",
+      "2025-07-02_0800",
+      62,
+      [
+        [
+          118,
+          [
+            1,
+            50,
+            200,
+            500
+          ]
+        ],
+        [
+          250,
+          [
+            1,
+            50,
+            200,
+            500
+          ]
+        ],
+        [
+          503,
+          [
+            1,
+            50,
+            200,
+            500
+          ]
+        ]
+      ]
+    ]
+  ],
+  "source_audit_strict_pass": 1,
+  "source_audit_pair_count": 1,
+  "source_audit_route_road_equal": 1,
+  "reference_protocol": "FRESH_OFFICIAL_C3_WITH_LONGER_REFERENCE_WALL_THEN_R4B_RESTORE",
+  "limitations": [
+    "The 90s reference is ONLY a deterministic trajectory verification control.",
+    "The original 30s wall cannot be exactly replayed.",
+    "No R4-G past results or frozen sources are overwritten."
+  ]
+}

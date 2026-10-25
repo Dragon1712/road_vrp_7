@@ -1,0 +1,50 @@
+{
+  "stage": "R4G-TRAIN-SECTION-SNAPSHOT-v1",
+  "arm": "plain",
+  "source_repository_commit": "5014866fc4d2428b9b603959ea3dffa0c8761c9d",
+  "task_ids": [
+    "task_0000",
+    "task_0001",
+    "task_0002",
+    "task_0003"
+  ],
+  "scenario_ids": [
+    "2025-07-02_0800",
+    "2025-07-09_1700"
+  ],
+  "seeds": [
+    62,
+    63
+  ],
+  "search_wall_sec": 30,
+  "max_iterations": 20000,
+  "anneal_iterations": 5000,
+  "snapshot_iterations": [
+    100,
+    250,
+    500,
+    750,
+    1000,
+    1250,
+    1500,
+    1750
+  ],
+  "section_only": false,
+  "max_snapshots": 8,
+  "top_k": 12,
+  "source_sha256": "28b8e1ee6bfa68eb697afb364eba7fdcdfe37a8c1b249dd53ce4778f87f9e01d",
+  "road_sha256": "3612b66ad23df15ed409c86f2585755d4393d7a9044c38dd3ee1a30e5b49dd68",
+  "edge_sha256": "23f5e3524e05004e5b597bb4d0edd945321a3ddb516cb939b344acf5e0ab52a1",
+  "solver_sha256": "1d77b5266bd0481d2a5231311efdc83f6dd21a84c40a23e1386f2e7e90086ea1",
+  "section_sha256": "ded8d785a2a817aa2c2fae6ce0064ac95d42de8fe4e8c9b0481bcd2bfbee456e",
+  "collector_sha256": "111a4ae9c30b8d36dd39534b95a4f8b82898eb33ae2c64b46a5139ad0f555bef",
+  "core_sha256": "561dafdcb72ca9df3b557a67798d214ac999a12a8f28ade5c911f436fa503cfc",
+  "alns_version": "7.0.0",
+  "split": "train",
+  "limitations": [
+    "Unmodified original C3, captured BEFORE operator selection, no perturbations.",
+    "A snapshot by itself does NOT yet enable exact continuation; restoration still requires R4B.",
+    "Capture occurs within 30s search wall budget; JSON flushed afterwards.",
+    "Strict task manifest TRAIN only; no labels created by capture."
+  ]
+}
