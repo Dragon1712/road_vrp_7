@@ -1,0 +1,1399 @@
+{
+  "stage": "R4I-TRAIN-SIGNAL-AND-CONSERVATIVE-UTILITY-PROBE-v1",
+  "status": "COMPLETE",
+  "data_role": "TRAIN_ONLY",
+  "source_provenance_sha256": {
+    "r4h_report": "37ccc323066157f07a2bf9cb33c540ec65fcebbed88746924fa380570dc5d36f",
+    "r4h_manifest": "449fa9f57f0662f7008cf25721b64d640fd1ef17c814c24c892d2354fc57b34a",
+    "r4h_labels": "1577dcf55f30ea8ea5f9b8b6540ed57622d22ac5c26d780ae5bba259c4ee90f5",
+    "r4h_branches": "4a41b5360b3c337e432e60607f128e80e5e0eae243b37a881b303dda013ab969",
+    "r4h_plans": "7732f43f01a1564b61c5e3a8d4fc0c29aab4a9efc8033815f67c2f95490bd39f",
+    "r4g_snapshots": "dc74f2de2e6020bd181bca89f0b444fc6b5122ad48992cf4f09a8e2724d23004",
+    "prefix_proof": "f719693d26dd03d52c61d15b902884b7bfeb567090b558204aac5ea5d86463a9"
+  },
+  "source_git_commit": "ef4de64795fe9b3e404552a431757a7d0d2b5a21",
+  "signal": {
+    "per_horizon": {
+      "50": {
+        "by_task": {
+          "task_0000": {
+            "n": 139,
+            "positive": 0,
+            "negative": 0,
+            "zero": 139,
+            "avg_gain_sec": 0.0
+          },
+          "task_0001": {
+            "n": 125,
+            "positive": 0,
+            "negative": 0,
+            "zero": 125,
+            "avg_gain_sec": 0.0
+          },
+          "task_0002": {
+            "n": 158,
+            "positive": 0,
+            "negative": 0,
+            "zero": 158,
+            "avg_gain_sec": 0.0
+          },
+          "task_0003": {
+            "n": 143,
+            "positive": 2,
+            "negative": 1,
+            "zero": 140,
+            "avg_gain_sec": 0.17284473339160839
+          }
+        },
+        "by_phase": {
+          "early_<=2000": {
+            "n": 125,
+            "positive": 2,
+            "negative": 1,
+            "zero": 122,
+            "avg_gain_sec": 0.197734375
+          },
+          "later_>2000": {
+            "n": 440,
+            "positive": 0,
+            "negative": 0,
+            "zero": 440,
+            "avg_gain_sec": 0.0
+          }
+        },
+        "positive_physical_states": 2
+      },
+      "200": {
+        "by_task": {
+          "task_0000": {
+            "n": 139,
+            "positive": 0,
+            "negative": 0,
+            "zero": 139,
+            "avg_gain_sec": 0.0
+          },
+          "task_0001": {
+            "n": 125,
+            "positive": 0,
+            "negative": 0,
+            "zero": 125,
+            "avg_gain_sec": 0.0
+          },
+          "task_0002": {
+            "n": 158,
+            "positive": 12,
+            "negative": 0,
+            "zero": 146,
+            "avg_gain_sec": 9.890587915348101
+          },
+          "task_0003": {
+            "n": 143,
+            "positive": 5,
+            "negative": 16,
+            "zero": 122,
+            "avg_gain_sec": -5.301327578671328
+          }
+        },
+        "by_phase": {
+          "early_<=2000": {
+            "n": 125,
+            "positive": 17,
+            "negative": 16,
+            "zero": 92,
+            "avg_gain_sec": 6.436984375
+          },
+          "later_>2000": {
+            "n": 440,
+            "positive": 0,
+            "negative": 0,
+            "zero": 440,
+            "avg_gain_sec": 0.0
+          }
+        },
+        "positive_physical_states": 7
+      },
+      "500": {
+        "by_task": {
+          "task_0000": {
+            "n": 139,
+            "positive": 0,
+            "negative": 1,
+            "zero": 138,
+            "avg_gain_sec": -0.12410071942446044
+          },
+          "task_0001": {
+            "n": 125,
+            "positive": 0,
+            "negative": 0,
+            "zero": 125,
+            "avg_gain_sec": 0.0
+          },
+          "task_0002": {
+            "n": 158,
+            "positive": 15,
+            "negative": 11,
+            "zero": 132,
+            "avg_gain_sec": -0.1253337618670886
+          },
+          "task_0003": {
+            "n": 143,
+            "positive": 3,
+            "negative": 18,
+            "zero": 122,
+            "avg_gain_sec": -3.550207604895105
+          }
+        },
+        "by_phase": {
+          "early_<=2000": {
+            "n": 125,
+            "positive": 18,
+            "negative": 30,
+            "zero": 77,
+            "avg_gain_sec": -4.357859375
+          },
+          "later_>2000": {
+            "n": 440,
+            "positive": 0,
+            "negative": 0,
+            "zero": 440,
+            "avg_gain_sec": 0.0
+          }
+        },
+        "positive_physical_states": 7
+      }
+    },
+    "n_snapshots": 72,
+    "n_physical_states": 51,
+    "n_repeated_state_groups": 21
+  },
+  "n_action_groups": 565,
+  "models": "regularized linear utility: K500 and min(K200,K500), fixed 4 abstain margins",
+  "training_group_weighting": "equal weight per distinct physical state",
+  "heldout_split": "LEAVE_ONE_TRAIN_TASK_OUT; EXPLORATORY ONLY",
+  "folds": [
+    {
+      "heldout_train_task": "task_0000",
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 0.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": -0.10648148148148148,
+      "stage_early_only_random_expected_mean_sec": -0.10648148148148148
+    },
+    {
+      "heldout_train_task": "task_0000",
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 5.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": -0.10648148148148148,
+      "stage_early_only_random_expected_mean_sec": -0.10648148148148148
+    },
+    {
+      "heldout_train_task": "task_0000",
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 15.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": -0.10648148148148148,
+      "stage_early_only_random_expected_mean_sec": -0.10648148148148148
+    },
+    {
+      "heldout_train_task": "task_0000",
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 30.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": -0.10648148148148148,
+      "stage_early_only_random_expected_mean_sec": -0.10648148148148148
+    },
+    {
+      "heldout_train_task": "task_0000",
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 0.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": -0.10648148148148148,
+      "stage_early_only_random_expected_mean_sec": -0.10648148148148148
+    },
+    {
+      "heldout_train_task": "task_0000",
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 5.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": -0.10648148148148148,
+      "stage_early_only_random_expected_mean_sec": -0.10648148148148148
+    },
+    {
+      "heldout_train_task": "task_0000",
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 15.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": -0.10648148148148148,
+      "stage_early_only_random_expected_mean_sec": -0.10648148148148148
+    },
+    {
+      "heldout_train_task": "task_0000",
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 30.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": -0.10648148148148148,
+      "stage_early_only_random_expected_mean_sec": -0.10648148148148148
+    },
+    {
+      "heldout_train_task": "task_0000",
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 0.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": -0.10648148148148148,
+      "stage_early_only_random_expected_mean_sec": -0.10648148148148148
+    },
+    {
+      "heldout_train_task": "task_0000",
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 5.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": -0.10648148148148148,
+      "stage_early_only_random_expected_mean_sec": -0.10648148148148148
+    },
+    {
+      "heldout_train_task": "task_0000",
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 15.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": -0.10648148148148148,
+      "stage_early_only_random_expected_mean_sec": -0.10648148148148148
+    },
+    {
+      "heldout_train_task": "task_0000",
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 30.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": -0.10648148148148148,
+      "stage_early_only_random_expected_mean_sec": -0.10648148148148148
+    },
+    {
+      "heldout_train_task": "task_0000",
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 0.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": -0.10648148148148148,
+      "stage_early_only_random_expected_mean_sec": -0.10648148148148148
+    },
+    {
+      "heldout_train_task": "task_0000",
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 5.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": -0.10648148148148148,
+      "stage_early_only_random_expected_mean_sec": -0.10648148148148148
+    },
+    {
+      "heldout_train_task": "task_0000",
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 15.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": -0.10648148148148148,
+      "stage_early_only_random_expected_mean_sec": -0.10648148148148148
+    },
+    {
+      "heldout_train_task": "task_0000",
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 30.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": -0.10648148148148148,
+      "stage_early_only_random_expected_mean_sec": -0.10648148148148148
+    },
+    {
+      "heldout_train_task": "task_0001",
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 0.0,
+      "n_snapshots": 16,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": 0.0,
+      "stage_early_only_random_expected_mean_sec": 0.0
+    },
+    {
+      "heldout_train_task": "task_0001",
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 5.0,
+      "n_snapshots": 16,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": 0.0,
+      "stage_early_only_random_expected_mean_sec": 0.0
+    },
+    {
+      "heldout_train_task": "task_0001",
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 15.0,
+      "n_snapshots": 16,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": 0.0,
+      "stage_early_only_random_expected_mean_sec": 0.0
+    },
+    {
+      "heldout_train_task": "task_0001",
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 30.0,
+      "n_snapshots": 16,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": 0.0,
+      "stage_early_only_random_expected_mean_sec": 0.0
+    },
+    {
+      "heldout_train_task": "task_0001",
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 0.0,
+      "n_snapshots": 16,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": 0.0,
+      "stage_early_only_random_expected_mean_sec": 0.0
+    },
+    {
+      "heldout_train_task": "task_0001",
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 5.0,
+      "n_snapshots": 16,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": 0.0,
+      "stage_early_only_random_expected_mean_sec": 0.0
+    },
+    {
+      "heldout_train_task": "task_0001",
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 15.0,
+      "n_snapshots": 16,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": 0.0,
+      "stage_early_only_random_expected_mean_sec": 0.0
+    },
+    {
+      "heldout_train_task": "task_0001",
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 30.0,
+      "n_snapshots": 16,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": 0.0,
+      "stage_early_only_random_expected_mean_sec": 0.0
+    },
+    {
+      "heldout_train_task": "task_0001",
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 0.0,
+      "n_snapshots": 16,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": 0.0,
+      "stage_early_only_random_expected_mean_sec": 0.0
+    },
+    {
+      "heldout_train_task": "task_0001",
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 5.0,
+      "n_snapshots": 16,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": 0.0,
+      "stage_early_only_random_expected_mean_sec": 0.0
+    },
+    {
+      "heldout_train_task": "task_0001",
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 15.0,
+      "n_snapshots": 16,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": 0.0,
+      "stage_early_only_random_expected_mean_sec": 0.0
+    },
+    {
+      "heldout_train_task": "task_0001",
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 30.0,
+      "n_snapshots": 16,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": 0.0,
+      "stage_early_only_random_expected_mean_sec": 0.0
+    },
+    {
+      "heldout_train_task": "task_0001",
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 0.0,
+      "n_snapshots": 16,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": 0.0,
+      "stage_early_only_random_expected_mean_sec": 0.0
+    },
+    {
+      "heldout_train_task": "task_0001",
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 5.0,
+      "n_snapshots": 16,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": 0.0,
+      "stage_early_only_random_expected_mean_sec": 0.0
+    },
+    {
+      "heldout_train_task": "task_0001",
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 15.0,
+      "n_snapshots": 16,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": 0.0,
+      "stage_early_only_random_expected_mean_sec": 0.0
+    },
+    {
+      "heldout_train_task": "task_0001",
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 30.0,
+      "n_snapshots": 16,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 0.0,
+      "random_expected_mean_sec": 0.0,
+      "stage_early_only_random_expected_mean_sec": 0.0
+    },
+    {
+      "heldout_train_task": "task_0002",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 0.0,
+      "n_snapshots": 20,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 16.467578125,
+      "random_expected_mean_sec": -0.11001519097222215,
+      "stage_early_only_random_expected_mean_sec": -0.11001519097222215
+    },
+    {
+      "heldout_train_task": "task_0002",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 5.0,
+      "n_snapshots": 20,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 16.467578125,
+      "random_expected_mean_sec": -0.11001519097222215,
+      "stage_early_only_random_expected_mean_sec": -0.11001519097222215
+    },
+    {
+      "heldout_train_task": "task_0002",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 15.0,
+      "n_snapshots": 20,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 16.467578125,
+      "random_expected_mean_sec": -0.11001519097222215,
+      "stage_early_only_random_expected_mean_sec": -0.11001519097222215
+    },
+    {
+      "heldout_train_task": "task_0002",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 30.0,
+      "n_snapshots": 20,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 16.467578125,
+      "random_expected_mean_sec": -0.11001519097222215,
+      "stage_early_only_random_expected_mean_sec": -0.11001519097222215
+    },
+    {
+      "heldout_train_task": "task_0002",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 0.0,
+      "n_snapshots": 20,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 16.467578125,
+      "random_expected_mean_sec": -0.11001519097222215,
+      "stage_early_only_random_expected_mean_sec": -0.11001519097222215
+    },
+    {
+      "heldout_train_task": "task_0002",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 5.0,
+      "n_snapshots": 20,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 16.467578125,
+      "random_expected_mean_sec": -0.11001519097222215,
+      "stage_early_only_random_expected_mean_sec": -0.11001519097222215
+    },
+    {
+      "heldout_train_task": "task_0002",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 15.0,
+      "n_snapshots": 20,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 16.467578125,
+      "random_expected_mean_sec": -0.11001519097222215,
+      "stage_early_only_random_expected_mean_sec": -0.11001519097222215
+    },
+    {
+      "heldout_train_task": "task_0002",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 30.0,
+      "n_snapshots": 20,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 16.467578125,
+      "random_expected_mean_sec": -0.11001519097222215,
+      "stage_early_only_random_expected_mean_sec": -0.11001519097222215
+    },
+    {
+      "heldout_train_task": "task_0002",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 0.0,
+      "n_snapshots": 20,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 16.467578125,
+      "random_expected_mean_sec": -0.11001519097222215,
+      "stage_early_only_random_expected_mean_sec": -0.11001519097222215
+    },
+    {
+      "heldout_train_task": "task_0002",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 5.0,
+      "n_snapshots": 20,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 16.467578125,
+      "random_expected_mean_sec": -0.11001519097222215,
+      "stage_early_only_random_expected_mean_sec": -0.11001519097222215
+    },
+    {
+      "heldout_train_task": "task_0002",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 15.0,
+      "n_snapshots": 20,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 16.467578125,
+      "random_expected_mean_sec": -0.11001519097222215,
+      "stage_early_only_random_expected_mean_sec": -0.11001519097222215
+    },
+    {
+      "heldout_train_task": "task_0002",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 30.0,
+      "n_snapshots": 20,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 16.467578125,
+      "random_expected_mean_sec": -0.11001519097222215,
+      "stage_early_only_random_expected_mean_sec": -0.11001519097222215
+    },
+    {
+      "heldout_train_task": "task_0002",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 0.0,
+      "n_snapshots": 20,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 16.467578125,
+      "random_expected_mean_sec": -0.11001519097222215,
+      "stage_early_only_random_expected_mean_sec": -0.11001519097222215
+    },
+    {
+      "heldout_train_task": "task_0002",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 5.0,
+      "n_snapshots": 20,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 16.467578125,
+      "random_expected_mean_sec": -0.11001519097222215,
+      "stage_early_only_random_expected_mean_sec": -0.11001519097222215
+    },
+    {
+      "heldout_train_task": "task_0002",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 15.0,
+      "n_snapshots": 20,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 16.467578125,
+      "random_expected_mean_sec": -0.11001519097222215,
+      "stage_early_only_random_expected_mean_sec": -0.11001519097222215
+    },
+    {
+      "heldout_train_task": "task_0002",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 30.0,
+      "n_snapshots": 20,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 16.467578125,
+      "random_expected_mean_sec": -0.11001519097222215,
+      "stage_early_only_random_expected_mean_sec": -0.11001519097222215
+    },
+    {
+      "heldout_train_task": "task_0003",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 0.0,
+      "n_snapshots": 18,
+      "delegations": 6,
+      "positive_delegations": 0,
+      "harmful_delegations": 2,
+      "mean_k500_gain_sec": -1.8182508680555556,
+      "sampled_oracle_mean_sec": 5.385416666666667,
+      "random_expected_mean_sec": -3.133825231481482,
+      "stage_early_only_random_expected_mean_sec": -3.133825231481482
+    },
+    {
+      "heldout_train_task": "task_0003",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 5.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 5.385416666666667,
+      "random_expected_mean_sec": -3.133825231481482,
+      "stage_early_only_random_expected_mean_sec": -3.133825231481482
+    },
+    {
+      "heldout_train_task": "task_0003",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 15.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 5.385416666666667,
+      "random_expected_mean_sec": -3.133825231481482,
+      "stage_early_only_random_expected_mean_sec": -3.133825231481482
+    },
+    {
+      "heldout_train_task": "task_0003",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 30.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 5.385416666666667,
+      "random_expected_mean_sec": -3.133825231481482,
+      "stage_early_only_random_expected_mean_sec": -3.133825231481482
+    },
+    {
+      "heldout_train_task": "task_0003",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 0.0,
+      "n_snapshots": 18,
+      "delegations": 18,
+      "positive_delegations": 0,
+      "harmful_delegations": 2,
+      "mean_k500_gain_sec": -4.366536458333333,
+      "sampled_oracle_mean_sec": 5.385416666666667,
+      "random_expected_mean_sec": -3.133825231481482,
+      "stage_early_only_random_expected_mean_sec": -3.133825231481482
+    },
+    {
+      "heldout_train_task": "task_0003",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 5.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 5.385416666666667,
+      "random_expected_mean_sec": -3.133825231481482,
+      "stage_early_only_random_expected_mean_sec": -3.133825231481482
+    },
+    {
+      "heldout_train_task": "task_0003",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 15.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 5.385416666666667,
+      "random_expected_mean_sec": -3.133825231481482,
+      "stage_early_only_random_expected_mean_sec": -3.133825231481482
+    },
+    {
+      "heldout_train_task": "task_0003",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "target": "k500",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 30.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 5.385416666666667,
+      "random_expected_mean_sec": -3.133825231481482,
+      "stage_early_only_random_expected_mean_sec": -3.133825231481482
+    },
+    {
+      "heldout_train_task": "task_0003",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 0.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 5.385416666666667,
+      "random_expected_mean_sec": -3.133825231481482,
+      "stage_early_only_random_expected_mean_sec": -3.133825231481482
+    },
+    {
+      "heldout_train_task": "task_0003",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 5.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 5.385416666666667,
+      "random_expected_mean_sec": -3.133825231481482,
+      "stage_early_only_random_expected_mean_sec": -3.133825231481482
+    },
+    {
+      "heldout_train_task": "task_0003",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 15.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 5.385416666666667,
+      "random_expected_mean_sec": -3.133825231481482,
+      "stage_early_only_random_expected_mean_sec": -3.133825231481482
+    },
+    {
+      "heldout_train_task": "task_0003",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": false,
+      "threshold_sec": 30.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 5.385416666666667,
+      "random_expected_mean_sec": -3.133825231481482,
+      "stage_early_only_random_expected_mean_sec": -3.133825231481482
+    },
+    {
+      "heldout_train_task": "task_0003",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 0.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 5.385416666666667,
+      "random_expected_mean_sec": -3.133825231481482,
+      "stage_early_only_random_expected_mean_sec": -3.133825231481482
+    },
+    {
+      "heldout_train_task": "task_0003",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 5.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 5.385416666666667,
+      "random_expected_mean_sec": -3.133825231481482,
+      "stage_early_only_random_expected_mean_sec": -3.133825231481482
+    },
+    {
+      "heldout_train_task": "task_0003",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 15.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 5.385416666666667,
+      "random_expected_mean_sec": -3.133825231481482,
+      "stage_early_only_random_expected_mean_sec": -3.133825231481482
+    },
+    {
+      "heldout_train_task": "task_0003",
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "target": "robust",
+      "negative_control_shuffled_train_labels": true,
+      "threshold_sec": 30.0,
+      "n_snapshots": 18,
+      "delegations": 0,
+      "positive_delegations": 0,
+      "harmful_delegations": 0,
+      "mean_k500_gain_sec": 0.0,
+      "sampled_oracle_mean_sec": 5.385416666666667,
+      "random_expected_mean_sec": -3.133825231481482,
+      "stage_early_only_random_expected_mean_sec": -3.133825231481482
+    }
+  ],
+  "limitations": [
+    "Only Train label diagnostics; NOT fresh independent validation/test.",
+    "K-step Road.replay counterfactuals not remaining 30s wall-clock performance.",
+    "Posthoc oracle depends on future search, never available at decision time.",
+    "Small number of positive physical states means no robust deployment guarantee.",
+    "Threshold sweep is pre-registered diagnostic; do not pick a winner on heldout task results.",
+    "Physical and scenario repeats, actions and K are correlated."
+  ]
+}
