@@ -1,0 +1,26 @@
+{
+  "stage": "R4P-STATIC-ROAD-SECTION-FUSION-v1",
+  "reviewed_github_commit": "453437f25aeda6c0c2a77d2b49516d8b504c30bc",
+  "change": "Frozen TRAIN comparison: route_context vs static road concat vs fixed conditioned interaction",
+  "online_safe_graph_inputs": [
+    "edge_index.csv: osm_u",
+    "edge_index.csv: osm_v",
+    "edge_index.csv: static_travel_sec"
+  ],
+  "not_in_feature_inputs": [
+    "edge_costs.npz",
+    "travel_sec_fifo",
+    "Road.replay",
+    "future outcome labels",
+    "Validation/Test data"
+  ],
+  "test_status": "12 local synthetic tests passed; server Chicago 180 evaluations pending",
+  "file_sha256": {
+    "CHANGELOG.md": "a36877e1afb605d267b30285923d9590c5654c66495715c94ffaf4117151129a",
+    "README.md": "5254c4bc7edd883f2672f8a620d38dde85360d390694fc5969c9b7fa2c02a4ca",
+    "probe_r4p.py": "816705df169992c6a437b69e3bd6d8aeaf29609f3213b0af8573cd60e45b43d5",
+    "r4p_core.py": "099f3c85666b2cf69a01d9ae2e3df994b3c6eaf96e14b46fa60d708e5e381fca",
+    "run_r4p.sh": "eed360d4520fdc88d3e93dcbdf488b43e32820132309a81ee6df93cedb598826",
+    "tests/test_r4p_core.py": "f9b5f21eef43ed62db70ddf33ae439fc4cf59484082dec903333b1f5ac0127d7"
+  }
+}
