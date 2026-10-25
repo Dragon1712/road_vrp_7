@@ -1,0 +1,7633 @@
+{
+  "stage": "R4N-TRAIN-SECTION-RANK-VS-GATE-v1",
+  "status": "COMPLETE",
+  "data_role": "TRAIN_ONLY",
+  "eval_semantics": "OFFLINE_FIXED_K_ONLY_NOT_30_SECOND_ONLINE",
+  "data_summary": {
+    "actions": 1572,
+    "snapshots": 200,
+    "coarse_starts": 100
+  },
+  "protocol": {
+    "splits": "4 TRAIN task-LOTO + 2 seed-pair transfer",
+    "features": [
+      "R4I_full",
+      "R4I_geometry"
+    ],
+    "shuffle_only_outer_training": true,
+    "pairwise_target": "within-snapshot K500 gain differences, no absolute score calibration",
+    "policies": [
+      "C3",
+      "ridge_ref",
+      "pairwise_forced_early",
+      "pairwise_with_ridge_gate",
+      "oracle_gate_pairwise_rank",
+      "ridge_gate_oracle_rank",
+      "sampled_oracle_early"
+    ],
+    "oracle_conditioned_policies": [
+      "oracle_gate_pairwise_rank",
+      "ridge_gate_oracle_rank",
+      "sampled_oracle_early"
+    ],
+    "rank_fit_regularization": 1.0,
+    "gate_model": "frozen R4L Ridge K500, threshold 0; Section <=2000 only"
+  },
+  "sources": {
+    "r4l_report_sha256": "a2254a5de06cc304308e1eed5281da482dd07405a88e36c4381fd7e813d9c352",
+    "r4l_fold_predictions_sha256": "712c01d99d68d379875ede6c7342411d43b70e11290e959b661bc291ba539db5",
+    "r4l_provenance_sha256": "46a26a522e67802aaa8b4c5f226f271c97e3f6381ebb5f682210757b698057ad",
+    "original": {
+      "r4h_report": "37ccc323066157f07a2bf9cb33c540ec65fcebbed88746924fa380570dc5d36f",
+      "r4h_manifest": "449fa9f57f0662f7008cf25721b64d640fd1ef17c814c24c892d2354fc57b34a",
+      "r4h_labels": "1577dcf55f30ea8ea5f9b8b6540ed57622d22ac5c26d780ae5bba259c4ee90f5",
+      "r4h_branches": "4a41b5360b3c337e432e60607f128e80e5e0eae243b37a881b303dda013ab969",
+      "r4h_plans": "7732f43f01a1564b61c5e3a8d4fc0c29aab4a9efc8033815f67c2f95490bd39f",
+      "r4g_snapshots": "dc74f2de2e6020bd181bca89f0b444fc6b5122ad48992cf4f09a8e2724d23004",
+      "prefix_proof": "f719693d26dd03d52c61d15b902884b7bfeb567090b558204aac5ea5d86463a9"
+    },
+    "new": {
+      "prefix_report": "fa1677764b2cd347722f600f248e416eda98ac3decdd0e1a84f575e5baac58cf",
+      "prefix_manifest": "3593315eae3ccb63c734092026eeda3d4049caa79c03137150af5b546f868798",
+      "prefix_paired_rows": "b7fef133d46c39e011db48e882eb5ec592c4d3832dbbbdd3edab1994ec135fac",
+      "prefix_excluded_windows": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "capture_manifest": "69ccf92e30726339fd7d4816510e575df0c57d0dd81c6eb0024dd5eccd9a5af7",
+      "capture_provenance": "75602ba99975e5015d5a4838a6753da8526b867467156f4b2f91d0d58634a819",
+      "capture_snapshots": "cc2f71e294d4ecafff43f3f70ea5935ed8d62e5803accba799082c52a698cb62",
+      "capture_metrics": "4bca81646778e83fa3fca02a72d6b5876ebc95b873b94ffc0ccc8f1074fe1dc6",
+      "cf_manifest": "7e80ed3f3066b8184e4fd7c14b21301a3d0ff411e78424cc84b5e7297e48e775",
+      "cf_report": "43d78a1b8c0aa5e22de9fe594e4289fb736336ac4ae1e1c31a4cd8652b2fa3f3"
+    },
+    "r4m_report_sha256": "c0fc943e54f043aaf1821929d96fea2de74bd9e76a07834067e0f4ba12a7b7e2",
+    "r4m_provenance_sha256": "93f9d6cbac64b428ac3c66a6597b932df978466e88e82cc1114d29a53cca61e4"
+  },
+  "folds": [
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1039,
+      "rank_informative_snapshots": 53,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 50,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.36363636363636365,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1039,
+      "rank_informative_snapshots": 53,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 18,
+      "positive": 5,
+      "negative": 2,
+      "zero": 43,
+      "total_gain_sec": 14.048828125,
+      "mean_gain_sec": 0.2809765625,
+      "sum_harm_sec": -27.693359375,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.22727272727272727,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.36363636363636365,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1039,
+      "rank_informative_snapshots": 53,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 8,
+      "negative": 6,
+      "zero": 36,
+      "total_gain_sec": 240.365234375,
+      "mean_gain_sec": 4.8073046875,
+      "sum_harm_sec": -177.861328125,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.36363636363636365,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.36363636363636365,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1039,
+      "rank_informative_snapshots": 53,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 18,
+      "positive": 4,
+      "negative": 2,
+      "zero": 44,
+      "total_gain_sec": 91.548828125,
+      "mean_gain_sec": 1.8309765625,
+      "sum_harm_sec": -68.5,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.18181818181818182,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.36363636363636365,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1039,
+      "rank_informative_snapshots": 53,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 22,
+      "positive": 8,
+      "negative": 4,
+      "zero": 38,
+      "total_gain_sec": 278.859375,
+      "mean_gain_sec": 5.5771875,
+      "sum_harm_sec": -139.3671875,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.36363636363636365,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.36363636363636365,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1039,
+      "rank_informative_snapshots": 53,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 12,
+      "positive": 12,
+      "negative": 0,
+      "zero": 38,
+      "total_gain_sec": 415.583984375,
+      "mean_gain_sec": 8.3116796875,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.5454545454545454,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.36363636363636365,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1039,
+      "rank_informative_snapshots": 53,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 22,
+      "positive": 22,
+      "negative": 0,
+      "zero": 28,
+      "total_gain_sec": 1046.84765625,
+      "mean_gain_sec": 20.936953125,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.36363636363636365,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1358,
+      "rank_informative_snapshots": 92,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 50,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.2727272727272727,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1358,
+      "rank_informative_snapshots": 92,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 33,
+      "positive": 6,
+      "negative": 5,
+      "zero": 39,
+      "total_gain_sec": 19.25,
+      "mean_gain_sec": 0.385,
+      "sum_harm_sec": -222.595703125,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.2727272727272727,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.2727272727272727,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1358,
+      "rank_informative_snapshots": 92,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 6,
+      "negative": 8,
+      "zero": 36,
+      "total_gain_sec": 44.947265625,
+      "mean_gain_sec": 0.8989453125,
+      "sum_harm_sec": -269.162109375,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.2727272727272727,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.2727272727272727,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1358,
+      "rank_informative_snapshots": 92,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 33,
+      "positive": 5,
+      "negative": 6,
+      "zero": 39,
+      "total_gain_sec": 39.94921875,
+      "mean_gain_sec": 0.798984375,
+      "sum_harm_sec": -237.53515625,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.22727272727272727,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.2727272727272727,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1358,
+      "rank_informative_snapshots": 92,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 22,
+      "positive": 6,
+      "negative": 6,
+      "zero": 38,
+      "total_gain_sec": 115.306640625,
+      "mean_gain_sec": 2.3061328125,
+      "sum_harm_sec": -198.802734375,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.2727272727272727,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.2727272727272727,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1358,
+      "rank_informative_snapshots": 92,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 20,
+      "positive": 20,
+      "negative": 0,
+      "zero": 30,
+      "total_gain_sec": 890.41015625,
+      "mean_gain_sec": 17.808203125,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.9090909090909091,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.2727272727272727,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1358,
+      "rank_informative_snapshots": 92,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 22,
+      "positive": 22,
+      "negative": 0,
+      "zero": 28,
+      "total_gain_sec": 1046.84765625,
+      "mean_gain_sec": 20.936953125,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.2727272727272727,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1039,
+      "rank_informative_snapshots": 53,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 50,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.36363636363636365,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1039,
+      "rank_informative_snapshots": 53,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 18,
+      "positive": 5,
+      "negative": 2,
+      "zero": 43,
+      "total_gain_sec": 14.048828125,
+      "mean_gain_sec": 0.2809765625,
+      "sum_harm_sec": -27.693359375,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.22727272727272727,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.36363636363636365,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1039,
+      "rank_informative_snapshots": 53,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 8,
+      "negative": 6,
+      "zero": 36,
+      "total_gain_sec": 240.365234375,
+      "mean_gain_sec": 4.8073046875,
+      "sum_harm_sec": -177.861328125,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.36363636363636365,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.36363636363636365,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1039,
+      "rank_informative_snapshots": 53,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 18,
+      "positive": 4,
+      "negative": 2,
+      "zero": 44,
+      "total_gain_sec": 91.548828125,
+      "mean_gain_sec": 1.8309765625,
+      "sum_harm_sec": -68.5,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.18181818181818182,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.36363636363636365,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1039,
+      "rank_informative_snapshots": 53,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 22,
+      "positive": 8,
+      "negative": 4,
+      "zero": 38,
+      "total_gain_sec": 278.859375,
+      "mean_gain_sec": 5.5771875,
+      "sum_harm_sec": -139.3671875,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.36363636363636365,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.36363636363636365,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1039,
+      "rank_informative_snapshots": 53,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 12,
+      "positive": 12,
+      "negative": 0,
+      "zero": 38,
+      "total_gain_sec": 415.583984375,
+      "mean_gain_sec": 8.3116796875,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.5454545454545454,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.36363636363636365,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1039,
+      "rank_informative_snapshots": 53,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 22,
+      "positive": 22,
+      "negative": 0,
+      "zero": 28,
+      "total_gain_sec": 1046.84765625,
+      "mean_gain_sec": 20.936953125,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.36363636363636365,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1358,
+      "rank_informative_snapshots": 92,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 50,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.2727272727272727,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1358,
+      "rank_informative_snapshots": 92,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 25,
+      "positive": 4,
+      "negative": 2,
+      "zero": 44,
+      "total_gain_sec": 86.41796875,
+      "mean_gain_sec": 1.728359375,
+      "sum_harm_sec": -72.625,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.18181818181818182,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.2727272727272727,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1358,
+      "rank_informative_snapshots": 92,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 6,
+      "negative": 8,
+      "zero": 36,
+      "total_gain_sec": 44.947265625,
+      "mean_gain_sec": 0.8989453125,
+      "sum_harm_sec": -269.162109375,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.2727272727272727,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.2727272727272727,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1358,
+      "rank_informative_snapshots": 92,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 25,
+      "positive": 3,
+      "negative": 3,
+      "zero": 44,
+      "total_gain_sec": 62.8046875,
+      "mean_gain_sec": 1.25609375,
+      "sum_harm_sec": -87.564453125,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.13636363636363635,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.2727272727272727,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1358,
+      "rank_informative_snapshots": 92,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 22,
+      "positive": 6,
+      "negative": 6,
+      "zero": 38,
+      "total_gain_sec": 115.306640625,
+      "mean_gain_sec": 2.3061328125,
+      "sum_harm_sec": -198.802734375,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.2727272727272727,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.2727272727272727,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1358,
+      "rank_informative_snapshots": 92,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 15,
+      "positive": 15,
+      "negative": 0,
+      "zero": 35,
+      "total_gain_sec": 632.12109375,
+      "mean_gain_sec": 12.642421875,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 0.6818181818181818,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.2727272727272727,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0000",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1358,
+      "rank_informative_snapshots": 92,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 22,
+      "positive": 22,
+      "negative": 0,
+      "zero": 28,
+      "total_gain_sec": 1046.84765625,
+      "mean_gain_sec": 20.936953125,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 22,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 22,
+      "rank_top1_recall_on_opportunities": 0.2727272727272727,
+      "sampled_oracle_mean_sec": 20.936953125
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1478,
+      "rank_informative_snapshots": 72,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 48,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1478,
+      "rank_informative_snapshots": 72,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 0,
+      "negative": 7,
+      "zero": 41,
+      "total_gain_sec": -265.185546875,
+      "mean_gain_sec": -5.524698893229167,
+      "sum_harm_sec": -265.185546875,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1478,
+      "rank_informative_snapshots": 72,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 0,
+      "negative": 7,
+      "zero": 41,
+      "total_gain_sec": -265.185546875,
+      "mean_gain_sec": -5.524698893229167,
+      "sum_harm_sec": -265.185546875,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1478,
+      "rank_informative_snapshots": 72,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 0,
+      "negative": 7,
+      "zero": 41,
+      "total_gain_sec": -265.185546875,
+      "mean_gain_sec": -5.524698893229167,
+      "sum_harm_sec": -265.185546875,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1478,
+      "rank_informative_snapshots": 72,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 1,
+      "positive": 0,
+      "negative": 1,
+      "zero": 47,
+      "total_gain_sec": -23.5,
+      "mean_gain_sec": -0.4895833333333333,
+      "sum_harm_sec": -23.5,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1478,
+      "rank_informative_snapshots": 72,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 1,
+      "positive": 1,
+      "negative": 0,
+      "zero": 47,
+      "total_gain_sec": 4.75,
+      "mean_gain_sec": 0.09895833333333333,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1478,
+      "rank_informative_snapshots": 72,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 1,
+      "positive": 1,
+      "negative": 0,
+      "zero": 47,
+      "total_gain_sec": 4.75,
+      "mean_gain_sec": 0.09895833333333333,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1665,
+      "rank_informative_snapshots": 105,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 48,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1665,
+      "rank_informative_snapshots": 105,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 1,
+      "negative": 6,
+      "zero": 41,
+      "total_gain_sec": -223.560546875,
+      "mean_gain_sec": -4.657511393229167,
+      "sum_harm_sec": -228.310546875,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1665,
+      "rank_informative_snapshots": 105,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 0,
+      "negative": 7,
+      "zero": 41,
+      "total_gain_sec": -271.224609375,
+      "mean_gain_sec": -5.6505126953125,
+      "sum_harm_sec": -271.224609375,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1665,
+      "rank_informative_snapshots": 105,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 0,
+      "negative": 7,
+      "zero": 41,
+      "total_gain_sec": -271.224609375,
+      "mean_gain_sec": -5.6505126953125,
+      "sum_harm_sec": -271.224609375,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1665,
+      "rank_informative_snapshots": 105,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 1,
+      "positive": 0,
+      "negative": 1,
+      "zero": 47,
+      "total_gain_sec": -23.5,
+      "mean_gain_sec": -0.4895833333333333,
+      "sum_harm_sec": -23.5,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1665,
+      "rank_informative_snapshots": 105,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 1,
+      "positive": 1,
+      "negative": 0,
+      "zero": 47,
+      "total_gain_sec": 4.75,
+      "mean_gain_sec": 0.09895833333333333,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1665,
+      "rank_informative_snapshots": 105,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 1,
+      "positive": 1,
+      "negative": 0,
+      "zero": 47,
+      "total_gain_sec": 4.75,
+      "mean_gain_sec": 0.09895833333333333,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1478,
+      "rank_informative_snapshots": 72,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 48,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1478,
+      "rank_informative_snapshots": 72,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 0,
+      "negative": 7,
+      "zero": 41,
+      "total_gain_sec": -265.185546875,
+      "mean_gain_sec": -5.524698893229167,
+      "sum_harm_sec": -265.185546875,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1478,
+      "rank_informative_snapshots": 72,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 0,
+      "negative": 7,
+      "zero": 41,
+      "total_gain_sec": -265.185546875,
+      "mean_gain_sec": -5.524698893229167,
+      "sum_harm_sec": -265.185546875,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1478,
+      "rank_informative_snapshots": 72,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 0,
+      "negative": 7,
+      "zero": 41,
+      "total_gain_sec": -265.185546875,
+      "mean_gain_sec": -5.524698893229167,
+      "sum_harm_sec": -265.185546875,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1478,
+      "rank_informative_snapshots": 72,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 1,
+      "positive": 0,
+      "negative": 1,
+      "zero": 47,
+      "total_gain_sec": -23.5,
+      "mean_gain_sec": -0.4895833333333333,
+      "sum_harm_sec": -23.5,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1478,
+      "rank_informative_snapshots": 72,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 1,
+      "positive": 1,
+      "negative": 0,
+      "zero": 47,
+      "total_gain_sec": 4.75,
+      "mean_gain_sec": 0.09895833333333333,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1478,
+      "rank_informative_snapshots": 72,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 1,
+      "positive": 1,
+      "negative": 0,
+      "zero": 47,
+      "total_gain_sec": 4.75,
+      "mean_gain_sec": 0.09895833333333333,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1665,
+      "rank_informative_snapshots": 105,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 48,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1665,
+      "rank_informative_snapshots": 105,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 1,
+      "negative": 6,
+      "zero": 41,
+      "total_gain_sec": -223.560546875,
+      "mean_gain_sec": -4.657511393229167,
+      "sum_harm_sec": -228.310546875,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1665,
+      "rank_informative_snapshots": 105,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 0,
+      "negative": 7,
+      "zero": 41,
+      "total_gain_sec": -271.224609375,
+      "mean_gain_sec": -5.6505126953125,
+      "sum_harm_sec": -271.224609375,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1665,
+      "rank_informative_snapshots": 105,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 0,
+      "negative": 7,
+      "zero": 41,
+      "total_gain_sec": -271.224609375,
+      "mean_gain_sec": -5.6505126953125,
+      "sum_harm_sec": -271.224609375,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1665,
+      "rank_informative_snapshots": 105,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 1,
+      "positive": 0,
+      "negative": 1,
+      "zero": 47,
+      "total_gain_sec": -23.5,
+      "mean_gain_sec": -0.4895833333333333,
+      "sum_harm_sec": -23.5,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1665,
+      "rank_informative_snapshots": 105,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 1,
+      "positive": 1,
+      "negative": 0,
+      "zero": 47,
+      "total_gain_sec": 4.75,
+      "mean_gain_sec": 0.09895833333333333,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0001",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0001"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1665,
+      "rank_informative_snapshots": 105,
+      "n_snapshots": 48,
+      "n_early": 36,
+      "delegations": 1,
+      "positive": 1,
+      "negative": 0,
+      "zero": 47,
+      "total_gain_sec": 4.75,
+      "mean_gain_sec": 0.09895833333333333,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 1,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 0,
+      "rank_top1_opportunities": 1,
+      "rank_top1_recall_on_opportunities": 0.0,
+      "sampled_oracle_mean_sec": 0.09895833333333333
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1024,
+      "rank_informative_snapshots": 56,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 52,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 10,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.5,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1024,
+      "rank_informative_snapshots": 56,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 52,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 10,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.5,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1024,
+      "rank_informative_snapshots": 56,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 10,
+      "negative": 12,
+      "zero": 30,
+      "total_gain_sec": 44.6796875,
+      "mean_gain_sec": 0.8592247596153846,
+      "sum_harm_sec": -724.83984375,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.5,
+      "rank_top1_hits_on_opportunities": 10,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.5,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1024,
+      "rank_informative_snapshots": 56,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 52,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 10,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.5,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1024,
+      "rank_informative_snapshots": 56,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 20,
+      "positive": 10,
+      "negative": 8,
+      "zero": 34,
+      "total_gain_sec": 156.9609375,
+      "mean_gain_sec": 3.0184795673076925,
+      "sum_harm_sec": -612.55859375,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.5,
+      "rank_top1_hits_on_opportunities": 10,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.5,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1024,
+      "rank_informative_snapshots": 56,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 52,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 10,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.5,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1024,
+      "rank_informative_snapshots": 56,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 20,
+      "positive": 20,
+      "negative": 0,
+      "zero": 32,
+      "total_gain_sec": 1901.251953125,
+      "mean_gain_sec": 36.56253756009615,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 10,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.5,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1276,
+      "rank_informative_snapshots": 91,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 52,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 12,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.6,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1276,
+      "rank_informative_snapshots": 91,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 52,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 12,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.6,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1276,
+      "rank_informative_snapshots": 91,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 12,
+      "negative": 12,
+      "zero": 28,
+      "total_gain_sec": 51.220703125,
+      "mean_gain_sec": 0.9850135216346154,
+      "sum_harm_sec": -1038.033203125,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.6,
+      "rank_top1_hits_on_opportunities": 12,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.6,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1276,
+      "rank_informative_snapshots": 91,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 52,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 12,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.6,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1276,
+      "rank_informative_snapshots": 91,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 20,
+      "positive": 12,
+      "negative": 8,
+      "zero": 32,
+      "total_gain_sec": 441.0234375,
+      "mean_gain_sec": 8.481219951923077,
+      "sum_harm_sec": -648.23046875,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.6,
+      "rank_top1_hits_on_opportunities": 12,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.6,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1276,
+      "rank_informative_snapshots": 91,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 52,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 12,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.6,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1276,
+      "rank_informative_snapshots": 91,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 20,
+      "positive": 20,
+      "negative": 0,
+      "zero": 32,
+      "total_gain_sec": 1901.251953125,
+      "mean_gain_sec": 36.56253756009615,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 12,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.6,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1024,
+      "rank_informative_snapshots": 56,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 52,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 10,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.5,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1024,
+      "rank_informative_snapshots": 56,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 52,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 10,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.5,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1024,
+      "rank_informative_snapshots": 56,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 10,
+      "negative": 12,
+      "zero": 30,
+      "total_gain_sec": 44.6796875,
+      "mean_gain_sec": 0.8592247596153846,
+      "sum_harm_sec": -724.83984375,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.5,
+      "rank_top1_hits_on_opportunities": 10,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.5,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1024,
+      "rank_informative_snapshots": 56,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 52,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 10,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.5,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1024,
+      "rank_informative_snapshots": 56,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 20,
+      "positive": 10,
+      "negative": 8,
+      "zero": 34,
+      "total_gain_sec": 156.9609375,
+      "mean_gain_sec": 3.0184795673076925,
+      "sum_harm_sec": -612.55859375,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.5,
+      "rank_top1_hits_on_opportunities": 10,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.5,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1024,
+      "rank_informative_snapshots": 56,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 52,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 10,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.5,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1024,
+      "rank_informative_snapshots": 56,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 20,
+      "positive": 20,
+      "negative": 0,
+      "zero": 32,
+      "total_gain_sec": 1901.251953125,
+      "mean_gain_sec": 36.56253756009615,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 10,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.5,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1276,
+      "rank_informative_snapshots": 91,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 52,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 12,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.6,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1276,
+      "rank_informative_snapshots": 91,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 52,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 12,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.6,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1276,
+      "rank_informative_snapshots": 91,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 12,
+      "negative": 12,
+      "zero": 28,
+      "total_gain_sec": 51.220703125,
+      "mean_gain_sec": 0.9850135216346154,
+      "sum_harm_sec": -1038.033203125,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.6,
+      "rank_top1_hits_on_opportunities": 12,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.6,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1276,
+      "rank_informative_snapshots": 91,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 52,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 12,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.6,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1276,
+      "rank_informative_snapshots": 91,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 20,
+      "positive": 12,
+      "negative": 8,
+      "zero": 32,
+      "total_gain_sec": 441.0234375,
+      "mean_gain_sec": 8.481219951923077,
+      "sum_harm_sec": -648.23046875,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.6,
+      "rank_top1_hits_on_opportunities": 12,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.6,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1276,
+      "rank_informative_snapshots": 91,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 52,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 12,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.6,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0002",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0002"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1276,
+      "rank_informative_snapshots": 91,
+      "n_snapshots": 52,
+      "n_early": 36,
+      "delegations": 20,
+      "positive": 20,
+      "negative": 0,
+      "zero": 32,
+      "total_gain_sec": 1901.251953125,
+      "mean_gain_sec": 36.56253756009615,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 20,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 12,
+      "rank_top1_opportunities": 20,
+      "rank_top1_recall_on_opportunities": 0.6,
+      "sampled_oracle_mean_sec": 36.56253756009615
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1184,
+      "rank_informative_snapshots": 59,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 50,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.3333333333333333,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1184,
+      "rank_informative_snapshots": 59,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 27,
+      "positive": 4,
+      "negative": 5,
+      "zero": 41,
+      "total_gain_sec": 64.326171875,
+      "mean_gain_sec": 1.2865234375,
+      "sum_harm_sec": -147.94921875,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.2222222222222222,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.3333333333333333,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1184,
+      "rank_informative_snapshots": 59,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 6,
+      "negative": 12,
+      "zero": 32,
+      "total_gain_sec": -200.060546875,
+      "mean_gain_sec": -4.0012109375,
+      "sum_harm_sec": -428.0625,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.3333333333333333,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.3333333333333333,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1184,
+      "rank_informative_snapshots": 59,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 27,
+      "positive": 3,
+      "negative": 7,
+      "zero": 40,
+      "total_gain_sec": -78.28515625,
+      "mean_gain_sec": -1.565703125,
+      "sum_harm_sec": -247.16015625,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.16666666666666666,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.3333333333333333,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1184,
+      "rank_informative_snapshots": 59,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 18,
+      "positive": 6,
+      "negative": 9,
+      "zero": 35,
+      "total_gain_sec": -105.90625,
+      "mean_gain_sec": -2.118125,
+      "sum_harm_sec": -333.908203125,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.3333333333333333,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.3333333333333333,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1184,
+      "rank_informative_snapshots": 59,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 12,
+      "positive": 12,
+      "negative": 0,
+      "zero": 38,
+      "total_gain_sec": 413.443359375,
+      "mean_gain_sec": 8.2688671875,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.6666666666666666,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.3333333333333333,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1184,
+      "rank_informative_snapshots": 59,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 18,
+      "positive": 18,
+      "negative": 0,
+      "zero": 32,
+      "total_gain_sec": 759.755859375,
+      "mean_gain_sec": 15.1951171875,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.3333333333333333,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1394,
+      "rank_informative_snapshots": 96,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 50,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.4444444444444444,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1394,
+      "rank_informative_snapshots": 96,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 8,
+      "negative": 5,
+      "zero": 37,
+      "total_gain_sec": -2.23828125,
+      "mean_gain_sec": -0.044765625,
+      "sum_harm_sec": -162.55859375,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.4444444444444444,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.4444444444444444,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1394,
+      "rank_informative_snapshots": 96,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 8,
+      "negative": 7,
+      "zero": 35,
+      "total_gain_sec": -36.115234375,
+      "mean_gain_sec": -0.7223046875,
+      "sum_harm_sec": -235.2109375,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.4444444444444444,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.4444444444444444,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1394,
+      "rank_informative_snapshots": 96,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 8,
+      "negative": 7,
+      "zero": 35,
+      "total_gain_sec": -36.115234375,
+      "mean_gain_sec": -0.7223046875,
+      "sum_harm_sec": -235.2109375,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.4444444444444444,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.4444444444444444,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1394,
+      "rank_informative_snapshots": 96,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 18,
+      "positive": 8,
+      "negative": 4,
+      "zero": 38,
+      "total_gain_sec": 61.361328125,
+      "mean_gain_sec": 1.2272265625,
+      "sum_harm_sec": -137.734375,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.4444444444444444,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.4444444444444444,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1394,
+      "rank_informative_snapshots": 96,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 18,
+      "positive": 18,
+      "negative": 0,
+      "zero": 32,
+      "total_gain_sec": 759.755859375,
+      "mean_gain_sec": 15.1951171875,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.4444444444444444,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1394,
+      "rank_informative_snapshots": 96,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 18,
+      "positive": 18,
+      "negative": 0,
+      "zero": 32,
+      "total_gain_sec": 759.755859375,
+      "mean_gain_sec": 15.1951171875,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.4444444444444444,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1184,
+      "rank_informative_snapshots": 59,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 50,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.3333333333333333,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1184,
+      "rank_informative_snapshots": 59,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 32,
+      "positive": 7,
+      "negative": 6,
+      "zero": 37,
+      "total_gain_sec": 113.548828125,
+      "mean_gain_sec": 2.2709765625,
+      "sum_harm_sec": -162.853515625,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.3888888888888889,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.3333333333333333,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1184,
+      "rank_informative_snapshots": 59,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 6,
+      "negative": 12,
+      "zero": 32,
+      "total_gain_sec": -200.060546875,
+      "mean_gain_sec": -4.0012109375,
+      "sum_harm_sec": -428.0625,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.3333333333333333,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.3333333333333333,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1184,
+      "rank_informative_snapshots": 59,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 32,
+      "positive": 6,
+      "negative": 9,
+      "zero": 35,
+      "total_gain_sec": -48.875,
+      "mean_gain_sec": -0.9775,
+      "sum_harm_sec": -276.876953125,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.3333333333333333,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.3333333333333333,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1184,
+      "rank_informative_snapshots": 59,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 18,
+      "positive": 6,
+      "negative": 9,
+      "zero": 35,
+      "total_gain_sec": -105.90625,
+      "mean_gain_sec": -2.118125,
+      "sum_harm_sec": -333.908203125,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.3333333333333333,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.3333333333333333,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1184,
+      "rank_informative_snapshots": 59,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 16,
+      "positive": 16,
+      "negative": 0,
+      "zero": 34,
+      "total_gain_sec": 638.291015625,
+      "mean_gain_sec": 12.7658203125,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.8888888888888888,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.3333333333333333,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1184,
+      "rank_informative_snapshots": 59,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 18,
+      "positive": 18,
+      "negative": 0,
+      "zero": 32,
+      "total_gain_sec": 759.755859375,
+      "mean_gain_sec": 15.1951171875,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 6,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.3333333333333333,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1394,
+      "rank_informative_snapshots": 96,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 50,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.4444444444444444,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1394,
+      "rank_informative_snapshots": 96,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 8,
+      "negative": 5,
+      "zero": 37,
+      "total_gain_sec": -2.23828125,
+      "mean_gain_sec": -0.044765625,
+      "sum_harm_sec": -162.55859375,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.4444444444444444,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.4444444444444444,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1394,
+      "rank_informative_snapshots": 96,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 8,
+      "negative": 7,
+      "zero": 35,
+      "total_gain_sec": -36.115234375,
+      "mean_gain_sec": -0.7223046875,
+      "sum_harm_sec": -235.2109375,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.4444444444444444,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.4444444444444444,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1394,
+      "rank_informative_snapshots": 96,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 36,
+      "positive": 8,
+      "negative": 7,
+      "zero": 35,
+      "total_gain_sec": -36.115234375,
+      "mean_gain_sec": -0.7223046875,
+      "sum_harm_sec": -235.2109375,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.4444444444444444,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.4444444444444444,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1394,
+      "rank_informative_snapshots": 96,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 18,
+      "positive": 8,
+      "negative": 4,
+      "zero": 38,
+      "total_gain_sec": 61.361328125,
+      "mean_gain_sec": 1.2272265625,
+      "sum_harm_sec": -137.734375,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 0.4444444444444444,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.4444444444444444,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1394,
+      "rank_informative_snapshots": 96,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 18,
+      "positive": 18,
+      "negative": 0,
+      "zero": 32,
+      "total_gain_sec": 759.755859375,
+      "mean_gain_sec": 15.1951171875,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.4444444444444444,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "hold_task_task_0003",
+      "split_type": "TASK_LOTO",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002"
+      ],
+      "heldout_tasks": [
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "rank_pairs": 1394,
+      "rank_informative_snapshots": 96,
+      "n_snapshots": 50,
+      "n_early": 36,
+      "delegations": 18,
+      "positive": 18,
+      "negative": 0,
+      "zero": 32,
+      "total_gain_sec": 759.755859375,
+      "mean_gain_sec": 15.1951171875,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 18,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 8,
+      "rank_top1_opportunities": 18,
+      "rank_top1_recall_on_opportunities": 0.4444444444444444,
+      "sampled_oracle_mean_sec": 15.1951171875
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 177,
+      "rank_informative_snapshots": 9,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 128,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 177,
+      "rank_informative_snapshots": 9,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 128,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 177,
+      "rank_informative_snapshots": 9,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 128,
+      "positive": 26,
+      "negative": 32,
+      "zero": 70,
+      "total_gain_sec": -583.73828125,
+      "mean_gain_sec": -4.560455322265625,
+      "sum_harm_sec": -1729.19921875,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.48148148148148145,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 177,
+      "rank_informative_snapshots": 9,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 128,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 177,
+      "rank_informative_snapshots": 9,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 54,
+      "positive": 26,
+      "negative": 18,
+      "zero": 84,
+      "total_gain_sec": 25.748046875,
+      "mean_gain_sec": 0.2011566162109375,
+      "sum_harm_sec": -1119.712890625,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.48148148148148145,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 177,
+      "rank_informative_snapshots": 9,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 128,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 177,
+      "rank_informative_snapshots": 9,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 54,
+      "positive": 54,
+      "negative": 0,
+      "zero": 74,
+      "total_gain_sec": 3286.31640625,
+      "mean_gain_sec": 25.674346923828125,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 33,
+      "rank_informative_snapshots": 3,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 128,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 33,
+      "rank_informative_snapshots": 3,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 128,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 33,
+      "rank_informative_snapshots": 3,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 128,
+      "positive": 26,
+      "negative": 24,
+      "zero": 78,
+      "total_gain_sec": 305.37109375,
+      "mean_gain_sec": 2.385711669921875,
+      "sum_harm_sec": -1003.24609375,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.48148148148148145,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 33,
+      "rank_informative_snapshots": 3,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 128,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 33,
+      "rank_informative_snapshots": 3,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 54,
+      "positive": 26,
+      "negative": 11,
+      "zero": 91,
+      "total_gain_sec": 970.607421875,
+      "mean_gain_sec": 7.5828704833984375,
+      "sum_harm_sec": -338.009765625,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.48148148148148145,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 33,
+      "rank_informative_snapshots": 3,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 128,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 33,
+      "rank_informative_snapshots": 3,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 54,
+      "positive": 54,
+      "negative": 0,
+      "zero": 74,
+      "total_gain_sec": 3286.31640625,
+      "mean_gain_sec": 25.674346923828125,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 177,
+      "rank_informative_snapshots": 9,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 128,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 177,
+      "rank_informative_snapshots": 9,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 128,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 177,
+      "rank_informative_snapshots": 9,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 128,
+      "positive": 26,
+      "negative": 32,
+      "zero": 70,
+      "total_gain_sec": -583.73828125,
+      "mean_gain_sec": -4.560455322265625,
+      "sum_harm_sec": -1729.19921875,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.48148148148148145,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 177,
+      "rank_informative_snapshots": 9,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 128,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 177,
+      "rank_informative_snapshots": 9,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 54,
+      "positive": 26,
+      "negative": 18,
+      "zero": 84,
+      "total_gain_sec": 25.748046875,
+      "mean_gain_sec": 0.2011566162109375,
+      "sum_harm_sec": -1119.712890625,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.48148148148148145,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 177,
+      "rank_informative_snapshots": 9,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 128,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 177,
+      "rank_informative_snapshots": 9,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 54,
+      "positive": 54,
+      "negative": 0,
+      "zero": 74,
+      "total_gain_sec": 3286.31640625,
+      "mean_gain_sec": 25.674346923828125,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 33,
+      "rank_informative_snapshots": 3,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 128,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 33,
+      "rank_informative_snapshots": 3,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 128,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 33,
+      "rank_informative_snapshots": 3,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 128,
+      "positive": 26,
+      "negative": 24,
+      "zero": 78,
+      "total_gain_sec": 305.37109375,
+      "mean_gain_sec": 2.385711669921875,
+      "sum_harm_sec": -1003.24609375,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.48148148148148145,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 33,
+      "rank_informative_snapshots": 3,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 128,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 33,
+      "rank_informative_snapshots": 3,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 54,
+      "positive": 26,
+      "negative": 11,
+      "zero": 91,
+      "total_gain_sec": 970.607421875,
+      "mean_gain_sec": 7.5828704833984375,
+      "sum_harm_sec": -338.009765625,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.48148148148148145,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 33,
+      "rank_informative_snapshots": 3,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 128,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "old_to_new",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        60,
+        61
+      ],
+      "heldout_seeds": [
+        62,
+        63
+      ],
+      "rank_pairs": 33,
+      "rank_informative_snapshots": 3,
+      "n_snapshots": 128,
+      "n_early": 128,
+      "delegations": 54,
+      "positive": 54,
+      "negative": 0,
+      "zero": 74,
+      "total_gain_sec": 3286.31640625,
+      "mean_gain_sec": 25.674346923828125,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 54,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 26,
+      "rank_top1_opportunities": 54,
+      "rank_top1_recall_on_opportunities": 0.48148148148148145,
+      "sampled_oracle_mean_sec": 25.674346923828125
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 1398,
+      "rank_informative_snapshots": 71,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 72,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 2,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.2857142857142857,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 1398,
+      "rank_informative_snapshots": 71,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 16,
+      "positive": 1,
+      "negative": 5,
+      "zero": 66,
+      "total_gain_sec": -179.212890625,
+      "mean_gain_sec": -2.4890679253472223,
+      "sum_harm_sec": -205.525390625,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.14285714285714285,
+      "rank_top1_hits_on_opportunities": 2,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.2857142857142857,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 1398,
+      "rank_informative_snapshots": 71,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 16,
+      "positive": 2,
+      "negative": 6,
+      "zero": 64,
+      "total_gain_sec": -92.529296875,
+      "mean_gain_sec": -1.2851291232638888,
+      "sum_harm_sec": -241.521484375,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.2857142857142857,
+      "rank_top1_hits_on_opportunities": 2,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.2857142857142857,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 1398,
+      "rank_informative_snapshots": 71,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 16,
+      "positive": 2,
+      "negative": 6,
+      "zero": 64,
+      "total_gain_sec": -92.529296875,
+      "mean_gain_sec": -1.2851291232638888,
+      "sum_harm_sec": -241.521484375,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.2857142857142857,
+      "rank_top1_hits_on_opportunities": 2,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.2857142857142857,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 1398,
+      "rank_informative_snapshots": 71,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 7,
+      "positive": 2,
+      "negative": 4,
+      "zero": 66,
+      "total_gain_sec": -30.154296875,
+      "mean_gain_sec": -0.4188096788194444,
+      "sum_harm_sec": -179.146484375,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.2857142857142857,
+      "rank_top1_hits_on_opportunities": 2,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.2857142857142857,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 1398,
+      "rank_informative_snapshots": 71,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 7,
+      "positive": 7,
+      "negative": 0,
+      "zero": 65,
+      "total_gain_sec": 426.2890625,
+      "mean_gain_sec": 5.920681423611111,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 2,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.2857142857142857,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": false,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 1398,
+      "rank_informative_snapshots": 71,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 7,
+      "positive": 7,
+      "negative": 0,
+      "zero": 65,
+      "total_gain_sec": 426.2890625,
+      "mean_gain_sec": 5.920681423611111,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 2,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.2857142857142857,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 2192,
+      "rank_informative_snapshots": 119,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 72,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 1,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.14285714285714285,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 2192,
+      "rank_informative_snapshots": 119,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 16,
+      "positive": 1,
+      "negative": 4,
+      "zero": 67,
+      "total_gain_sec": -279.39453125,
+      "mean_gain_sec": -3.8804796006944446,
+      "sum_harm_sec": -365.20703125,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.14285714285714285,
+      "rank_top1_hits_on_opportunities": 1,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.14285714285714285,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 2192,
+      "rank_informative_snapshots": 119,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 16,
+      "positive": 1,
+      "negative": 5,
+      "zero": 66,
+      "total_gain_sec": -290.224609375,
+      "mean_gain_sec": -4.030897352430555,
+      "sum_harm_sec": -376.037109375,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.14285714285714285,
+      "rank_top1_hits_on_opportunities": 1,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.14285714285714285,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 2192,
+      "rank_informative_snapshots": 119,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 16,
+      "positive": 1,
+      "negative": 5,
+      "zero": 66,
+      "total_gain_sec": -290.224609375,
+      "mean_gain_sec": -4.030897352430555,
+      "sum_harm_sec": -376.037109375,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.14285714285714285,
+      "rank_top1_hits_on_opportunities": 1,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.14285714285714285,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 2192,
+      "rank_informative_snapshots": 119,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 7,
+      "positive": 1,
+      "negative": 4,
+      "zero": 67,
+      "total_gain_sec": -250.287109375,
+      "mean_gain_sec": -3.4762098524305554,
+      "sum_harm_sec": -336.099609375,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.14285714285714285,
+      "rank_top1_hits_on_opportunities": 1,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.14285714285714285,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 2192,
+      "rank_informative_snapshots": 119,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 7,
+      "positive": 7,
+      "negative": 0,
+      "zero": 65,
+      "total_gain_sec": 426.2890625,
+      "mean_gain_sec": 5.920681423611111,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 1,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.14285714285714285,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "full",
+      "shuffled_training_labels": true,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 2192,
+      "rank_informative_snapshots": 119,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 7,
+      "positive": 7,
+      "negative": 0,
+      "zero": 65,
+      "total_gain_sec": 426.2890625,
+      "mean_gain_sec": 5.920681423611111,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 1,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.14285714285714285,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 1398,
+      "rank_informative_snapshots": 71,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 72,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 2,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.2857142857142857,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 1398,
+      "rank_informative_snapshots": 71,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 16,
+      "positive": 1,
+      "negative": 5,
+      "zero": 66,
+      "total_gain_sec": -179.212890625,
+      "mean_gain_sec": -2.4890679253472223,
+      "sum_harm_sec": -205.525390625,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.14285714285714285,
+      "rank_top1_hits_on_opportunities": 2,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.2857142857142857,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 1398,
+      "rank_informative_snapshots": 71,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 16,
+      "positive": 2,
+      "negative": 6,
+      "zero": 64,
+      "total_gain_sec": -92.529296875,
+      "mean_gain_sec": -1.2851291232638888,
+      "sum_harm_sec": -241.521484375,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.2857142857142857,
+      "rank_top1_hits_on_opportunities": 2,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.2857142857142857,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 1398,
+      "rank_informative_snapshots": 71,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 16,
+      "positive": 2,
+      "negative": 6,
+      "zero": 64,
+      "total_gain_sec": -92.529296875,
+      "mean_gain_sec": -1.2851291232638888,
+      "sum_harm_sec": -241.521484375,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.2857142857142857,
+      "rank_top1_hits_on_opportunities": 2,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.2857142857142857,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 1398,
+      "rank_informative_snapshots": 71,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 7,
+      "positive": 2,
+      "negative": 4,
+      "zero": 66,
+      "total_gain_sec": -30.154296875,
+      "mean_gain_sec": -0.4188096788194444,
+      "sum_harm_sec": -179.146484375,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.2857142857142857,
+      "rank_top1_hits_on_opportunities": 2,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.2857142857142857,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 1398,
+      "rank_informative_snapshots": 71,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 7,
+      "positive": 7,
+      "negative": 0,
+      "zero": 65,
+      "total_gain_sec": 426.2890625,
+      "mean_gain_sec": 5.920681423611111,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 2,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.2857142857142857,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": false,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 1398,
+      "rank_informative_snapshots": 71,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 7,
+      "positive": 7,
+      "negative": 0,
+      "zero": 65,
+      "total_gain_sec": 426.2890625,
+      "mean_gain_sec": 5.920681423611111,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 2,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.2857142857142857,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "C3",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 2192,
+      "rank_informative_snapshots": 119,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 0,
+      "positive": 0,
+      "negative": 0,
+      "zero": 72,
+      "total_gain_sec": 0.0,
+      "mean_gain_sec": 0.0,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.0,
+      "rank_top1_hits_on_opportunities": 1,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.14285714285714285,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "ridge_ref",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 2192,
+      "rank_informative_snapshots": 119,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 16,
+      "positive": 1,
+      "negative": 4,
+      "zero": 67,
+      "total_gain_sec": -279.39453125,
+      "mean_gain_sec": -3.8804796006944446,
+      "sum_harm_sec": -365.20703125,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.14285714285714285,
+      "rank_top1_hits_on_opportunities": 1,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.14285714285714285,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_forced_early",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 2192,
+      "rank_informative_snapshots": 119,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 16,
+      "positive": 1,
+      "negative": 5,
+      "zero": 66,
+      "total_gain_sec": -290.224609375,
+      "mean_gain_sec": -4.030897352430555,
+      "sum_harm_sec": -376.037109375,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.14285714285714285,
+      "rank_top1_hits_on_opportunities": 1,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.14285714285714285,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "pairwise_with_ridge_gate",
+      "oracle_conditioned": false,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 2192,
+      "rank_informative_snapshots": 119,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 16,
+      "positive": 1,
+      "negative": 5,
+      "zero": 66,
+      "total_gain_sec": -290.224609375,
+      "mean_gain_sec": -4.030897352430555,
+      "sum_harm_sec": -376.037109375,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.14285714285714285,
+      "rank_top1_hits_on_opportunities": 1,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.14285714285714285,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "oracle_gate_pairwise_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 2192,
+      "rank_informative_snapshots": 119,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 7,
+      "positive": 1,
+      "negative": 4,
+      "zero": 67,
+      "total_gain_sec": -250.287109375,
+      "mean_gain_sec": -3.4762098524305554,
+      "sum_harm_sec": -336.099609375,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 0.14285714285714285,
+      "rank_top1_hits_on_opportunities": 1,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.14285714285714285,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "ridge_gate_oracle_rank",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 2192,
+      "rank_informative_snapshots": 119,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 7,
+      "positive": 7,
+      "negative": 0,
+      "zero": 65,
+      "total_gain_sec": 426.2890625,
+      "mean_gain_sec": 5.920681423611111,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 1,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.14285714285714285,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    },
+    {
+      "split": "new_to_old",
+      "split_type": "SEED_PAIR_TRANSFER",
+      "feature_set": "geometry",
+      "shuffled_training_labels": true,
+      "policy": "sampled_oracle_early",
+      "oracle_conditioned": true,
+      "training_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "heldout_tasks": [
+        "task_0000",
+        "task_0001",
+        "task_0002",
+        "task_0003"
+      ],
+      "training_seeds": [
+        62,
+        63
+      ],
+      "heldout_seeds": [
+        60,
+        61
+      ],
+      "rank_pairs": 2192,
+      "rank_informative_snapshots": 119,
+      "n_snapshots": 72,
+      "n_early": 16,
+      "delegations": 7,
+      "positive": 7,
+      "negative": 0,
+      "zero": 65,
+      "total_gain_sec": 426.2890625,
+      "mean_gain_sec": 5.920681423611111,
+      "sum_harm_sec": 0.0,
+      "oracle_positive_states": 7,
+      "positive_oracle_recall": 1.0,
+      "rank_top1_hits_on_opportunities": 1,
+      "rank_top1_opportunities": 7,
+      "rank_top1_recall_on_opportunities": 0.14285714285714285,
+      "sampled_oracle_mean_sec": 5.920681423611111
+    }
+  ],
+  "limitations": [
+    "TRAIN only, 4 tasks: exploratory",
+    "Oracle-gated rows are not deployable",
+    "No real 30-second online ALNS and no Validation/Test",
+    "Near-repeated traffic scenarios share coarse starts",
+    "No heldout threshold tuning"
+  ]
+}
