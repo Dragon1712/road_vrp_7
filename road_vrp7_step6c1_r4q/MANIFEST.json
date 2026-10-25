@@ -1,0 +1,28 @@
+{
+  "stage": "R4Q-TRAIN-PAST-24H-ROAD-FUSION-v1.1",
+  "parent_stage": "R4Q-TRAIN-PAST-24H-ROAD-FUSION-v1",
+  "source_git_commit": "423d638a7a06be6db8da6fb231277c69dffa9c8e",
+  "patch_scope": "Stage2 left boundary missing historical slot only; preserve static baseline and 24h causal semantics",
+  "files_sha256": {
+    "CHANGELOG.md": "8030e820bad6be3be5f44900e3b1901c1fcb62c6093571bca9ece9d5833a63f1",
+    "README.md": "017318b355346153646ecda8d42fc8e9fcbf1139a14e09baa945d7f10e8a3dda",
+    "probe_r4q.py": "6d26c7ed8d08507f2dbf8830759d30ecb7e250dac061f35c88ef84254668fb4b",
+    "r4q_core.py": "e63deee08fd655161d86491dad9b300cc193fb34121d6aa5769684978b343eb5",
+    "run_r4q.sh": "ce1b9f79b7a912ade90623c1b6323505d43fb8f523d217723d183a09f57ccc7c",
+    "tests/test_r4q_core.py": "c222647cd95f39d7c95174f6be08c354133e8eef13398b8a2fe843c7f27d5b09"
+  },
+  "verified": "17 local synthetic/unit tests pass; py_compile and shell syntax pass; original Chicago real-server run not yet verified",
+  "known_data_boundary": {
+    "stage2_first_slot": "2025-07-02 00:00:00",
+    "july2_requested_24h": "2025-07-01 08:00:00",
+    "july2_mode": "STATIC_FALLBACK_NO_HISTORY",
+    "july9_requested_24h": "2025-07-08 17:00:00",
+    "july9_mode": "STRICT_EXACT_OBSERVATION"
+  },
+  "limits": [
+    "Only four frozen Train tasks",
+    "No future observations as features",
+    "No original ALNS/CF/labels changed",
+    "Fixed K500 offline only; not online 30s"
+  ]
+}
