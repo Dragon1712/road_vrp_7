@@ -1,0 +1,19 @@
+{
+  "stage": "R4L-TRAIN-CROSS-SEED-CONSERVATIVE-UTILITY-v1",
+  "reviewed_repository": "Dragon1712/road_vrp_7",
+  "reviewed_commit": "4f70819387a00a2721c9b84ba8dc70fb94d18a3f",
+  "files_sha256": {
+    "CHANGELOG.md": "57491a90d9dac0153998dc5591ea5d0a7202198e13f2ac129df08ef88b2d9bdf",
+    "README.md": "fe8c0a04f798a06f682a618e2dc40801bd93ce3c9f086fabf7d0e6ef4a07521d",
+    "probe_r4l.py": "1a769e8ea6acf9d67f5c6313dfe4bf98aefdf8c9daa20982963bec0b688d9fba",
+    "r4l_core.py": "6d1fbf2d843e89d3623565355c531c49c0e90781857a61beb9bdb358f4c9b286",
+    "run_r4l.sh": "5dd6c822001c792be5ec3c851980916076df2030b515d9c3979f26e39456728b",
+    "tests/test_r4l.py": "8ab196a950a6c8c1cc988cb40f20b6a22f01cc0083d1fbaf6c219de5bd42fccb"
+  },
+  "tests": "7 synthetic local tests pass, including full size synthetic 1007 alternatives; real Chicago end-to-end pending",
+  "limitations": [
+    "Training-role only, not Validation/Test",
+    "Fixed-K counterfactual, NOT 30s online performance",
+    "All source pins must match, especially CF full report absent from current GitHub tree"
+  ]
+}
